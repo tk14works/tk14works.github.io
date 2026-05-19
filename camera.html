@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tk14 Photography - Portal</title>
+    <style>
+        :root {
+            /* カラースキーム */
+            --bg-color: #F7F7F5;
+            --text-color: #1A1A1A;
+            --text-color-light: #555555;
+            --main-color: #1F2937;
+            --accent-color: #BFA46F;
+            
+            /* カードカラー */
+            --tk14-color: #374151; /* 都会的・上品・ミニマルなダークグレー */
+            --moment-color: #D6C7B8; /* やわらかい・ナチュラルなベージュ */
+            
+            /* その他デザイン変数 */
+            --max-width: 1100px;
+            --border-radius: 12px;
+            --transition-speed: 0.4s;
+            --transition-easing: cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        /* Reset & Base */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 4rem 1.5rem;
+        }
+
+        /* リンクのリセット */
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Typography */
+        h1, h2, h3 {
+            font-weight: 400;
+            line-height: 1.4;
+        }
+
+        p {
+            color: var(--text-color-light);
+        }
+
+        /* ヒーローセクション */
+        .hero {
+            text-align: center;
+            margin-bottom: 4rem;
+            max-width: 600px;
+        }
+
+        .brand-title {
+            font-size: 1.125rem;
+            letter-spacing: 0.1em;
+            margin-bottom: 2rem;
+            color: var(--main-color);
+        }
+
+        .main-copy {
+            font-size: 1.75rem;
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+
+        .sub-copy {
+            font-size: 0.9375rem;
+            line-height: 1.8;
+        }
+
+        /* スマホ用フォント調整 */
+        @media (min-width: 768px) {
+            .hero { margin-bottom: 5rem; }
+            .main-copy { font-size: 2.25rem; margin-bottom: 2rem; }
+            .sub-copy { font-size: 1rem; }
+        }
+
+        /* カードセクション */
+        .portal-container {
+            width: 100%;
+            max-width: var(--max-width);
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .card-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 3rem;
+            }
+        }
+
+        /* 個別カード */
+        .card {
+            background-color: #FFFFFF;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+            transition: transform var(--transition-speed) var(--transition-easing), 
+                        box-shadow var(--transition-speed) var(--transition-easing);
+            outline: 2px solid transparent; /* for focus */
+            outline-offset: 4px;
+        }
+
+        /* Focus / Active states */
+        .card:focus-visible {
+            outline-color: var(--accent-color);
+        }
+        
+        .card:active {
+            transform: scale(0.98);
+        }
+
+        /* カード上部ビジュアル（色付き四角） */
+        .card-visual {
+            width: 100%;
+            aspect-ratio: 16 / 7;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* ビジュアル内部の背景色レイヤー（JSアニメーション用） */
+        .card-visual-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transition: transform var(--transition-speed) var(--transition-easing),
+                        filter var(--transition-speed) var(--transition-easing);
+        }
+
+        .card--tk14 .card-visual-bg {
+            background-color: var(--tk14-color);
+        }
+
+        .card--moment .card-visual-bg {
+            background-color: var(--moment-color);
+        }
+
+        /* カード下部コンテンツ */
+        .card-content {
+            padding: 2.5rem 2rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            text-align: center;
+            align-items: center;
+        }
+
+        .card-brand-label {
+            font-size: 0.875rem;
+            letter-spacing: 0.05em;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: var(--main-color);
+            font-weight: 500;
+        }
+
+        .card-desc {
+            font-size: 0.9375rem;
+            margin-bottom: 2.5rem;
+            flex-grow: 1;
+        }
+
+        /* ボタン */
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            border: 1px solid var(--main-color);
+            border-radius: 50px;
+            color: var(--main-color);
+            font-size: 0.9375rem;
+            transition: background-color var(--transition-speed) ease,
+                        color var(--transition-speed) ease;
+        }
+
+        /* JSで付与するHover状態のスタイル */
+        .card.is-hovered {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .card.is-hovered .card-visual-bg {
+            transform: scale(1.05);
+            filter: brightness(1.1);
+        }
+
+        .card.is-hovered .btn {
+            background-color: var(--main-color);
+            color: #FFFFFF;
+        }
+
+        /* Intersection Observer フェードイン用 */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), 
+                        transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        .fade-in.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* 視差遅延 */
+        .delay-100 { transition-delay: 0.1s; }
+        .delay-200 { transition-delay: 0.2s; }
+
+        /* prefers-reduced-motion 対応 */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+            .fade-in {
+                opacity: 1;
+                transform: none;
+                transition: none;
+            }
+            .card.is-hovered {
+                transform: none;
+            }
+            .card.is-hovered .card-visual-bg {
+                transform: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero fade-in">
+        <!-- 編集ここ：ブランド名 -->
+        <h1 class="brand-title">tk14 Photography</h1>
+        
+        <!-- 編集ここ：メインコピー -->
+        <h2 class="main-copy">あなたの用途に合わせたお写真を。</h2>
+        
+        <!-- 編集ここ：サブコピー -->
+        <p class="sub-copy">
+            プロフィール写真と、<br>
+            家族の記念写真。<br><br>
+            撮影したい内容に合わせて、<br>
+            ページをご案内します。
+        </p>
+    </header>
+
+    <main class="portal-container">
+        <div class="card-grid">
+            
+            <!-- tk14 Card -->
+            <!-- 編集ここ：リンク先を profile.html 等に変更 -->
+            <a href="profile.html" class="card card--tk14 fade-in delay-100 js-hover-card">
+                <div class="card-visual">
+                    <div class="card-visual-bg"></div>
+                </div>
+                <div class="card-content">
+                    <!-- 編集ここ：ブランド名表示 -->
+                    <span class="card-brand-label">tk14</span>
+                    
+                    <!-- 編集ここ：タイトル -->
+                    <h3 class="card-title">プロフィール・SNS用写真</h3>
+                    
+                    <!-- 編集ここ：説明文 -->
+                    <p class="card-desc">
+                        プロフィール・SNS用・宣材写真など、<br>
+                        自然体で飾らない、<br>
+                        あなたらしさが伝わる写真を撮影します。
+                    </p>
+                    
+                    <!-- 編集ここ：ボタンテキスト -->
+                    <span class="btn">tk14を見る</span>
+                </div>
+            </a>
+
+            <!-- Moment Card -->
+            <!-- 編集ここ：リンク先を family.html 等に変更 -->
+            <a href="family.html" class="card card--moment fade-in delay-200 js-hover-card">
+                <div class="card-visual">
+                    <div class="card-visual-bg"></div>
+                </div>
+                <div class="card-content">
+                    <!-- 編集ここ：ブランド名表示 -->
+                    <span class="card-brand-label">Moment</span>
+                    
+                    <!-- 編集ここ：タイトル -->
+                    <h3 class="card-title">家族・七五三・ワンちゃん撮影</h3>
+                    
+                    <!-- 編集ここ：説明文 -->
+                    <p class="card-desc">
+                        - 今という『瞬間』を未来に残す - <br>
+                        家族・親子の思い出を宝物に
+                    </p>
+                    
+                    <!-- 編集ここ：ボタンテキスト -->
+                    <span class="btn">Momentを見る</span>
+                </div>
+            </a>
+
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // --- 1. prefers-reduced-motion のチェック ---
+            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+            // --- 2. Intersection Observer (フェードイン演出) ---
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            // アニメーションを減らす設定でない場合のみ実行
+            if (!prefersReducedMotion.matches) {
+                const observerOptions = {
+                    root: null,
+                    rootMargin: '0px',
+                    threshold: 0.15
+                };
+
+                const observer = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('is-visible');
+                            observer.unobserve(entry.target); // 一度発火したら監視を解除
+                        }
+                    });
+                }, observerOptions);
+
+                fadeElements.forEach(el => observer.observe(el));
+            } else {
+                // 減らす設定の場合は最初から表示状態にする
+                fadeElements.forEach(el => el.classList.add('is-visible'));
+            }
+
+            // --- 3. カードHover演出 (JavaScriptでのクラス制御) ---
+            const cards = document.querySelectorAll('.js-hover-card');
+
+            cards.forEach(card => {
+                // マウスエンター時
+                card.addEventListener('mouseenter', () => {
+                    if (!prefersReducedMotion.matches) {
+                        card.classList.add('is-hovered');
+                    }
+                });
+
+                // マウスリーブ時
+                card.addEventListener('mouseleave', () => {
+                    card.classList.remove('is-hovered');
+                });
+
+                // キーボード操作(フォーカス)時のアクセシビリティ対応
+                card.addEventListener('focus', () => {
+                    if (!prefersReducedMotion.matches) {
+                        card.classList.add('is-hovered');
+                    }
+                });
+
+                card.addEventListener('blur', () => {
+                    card.classList.remove('is-hovered');
+                });
+            });
+
+        });
+    </script>
+</body>
+</html>
