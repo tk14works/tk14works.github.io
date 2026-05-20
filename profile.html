@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
@@ -500,11 +500,22 @@
     }
 
     .pricing-card {
-      background: var(--color-white);
       border-radius: var(--radius-sm);
       padding: 40px 30px;
       text-align: center;
       box-shadow: var(--shadow-sm);
+    }
+
+    .pricing-card--location {
+      background-color: #F4F7F6; /* 自然・屋外をイメージさせる淡いグリーングレー */
+    }
+
+    .pricing-card--studio {
+      background-color: #F3F4F6; /* 洗練・都会的をイメージさせるクールグレー */
+    }
+
+    .pricing-card--combo {
+      background-color: #FAF6F0; /* プレミアム感・アクセントカラーを基調とした淡いベージュ */
     }
 
     .pricing-card__title {
@@ -532,7 +543,7 @@
     .pricing-card__list li {
       font-size: 0.95rem;
       padding: 10px 0;
-      border-bottom: 1px solid #F3F4F6;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
     }
 
     .pricing-card__list li:last-child {
@@ -837,7 +848,7 @@
               tk14は、「自然体で飾らない、あなたらしさが伝わる写真」を大切にしているプロフィールフォトブランドです。
             </p>
             <p>
-              ビジネスシーンでの信頼感、SNSでの親しみやすさ、アーティストとしての個性。
+              ビジネスシーンでの信頼感、SNSでの親しみやすさ、モデルとしての魅力、アーティストとしての個性。
               目的は様々ですが、作り込みすぎず、その人本来の魅力が引き立つ瞬間を丁寧に切り取ります。
             </p>
             <p>
@@ -900,7 +911,6 @@
           <button class="filter-btn is-active" data-filter="all">All</button>
           <button class="filter-btn" data-filter="profile">Profile</button>
           <button class="filter-btn" data-filter="sns">SNS</button>
-          <button class="filter-btn" data-filter="artist">Artist</button>
           <button class="filter-btn" data-filter="business">Business</button>
         </div>
 
@@ -912,17 +922,11 @@
           <div class="gallery-item fade-in" data-category="sns">
             <img src="images/gallery-2.jpg" alt="SNS用ポートレート" width="400" height="400" loading="lazy">
           </div>
-          <div class="gallery-item fade-in" data-category="artist">
-            <img src="images/gallery-3.jpg" alt="アーティスト宣材写真" width="400" height="400" loading="lazy">
-          </div>
           <div class="gallery-item fade-in" data-category="profile">
-            <img src="images/gallery-4.jpg" alt="プロフィール写真" width="400" height="400" loading="lazy">
-          </div>
-          <div class="gallery-item fade-in" data-category="sns">
-            <img src="images/gallery-5.jpg" alt="カフェでのSNS写真" width="400" height="400" loading="lazy">
+            <img src="images/gallery-3.jpg" alt="プロフィール写真" width="400" height="400" loading="lazy">
           </div>
           <div class="gallery-item fade-in" data-category="business">
-            <img src="images/gallery-6.jpg" alt="オフィスカジュアルポートレート" width="400" height="400" loading="lazy">
+            <img src="images/gallery-4.jpg" alt="オフィスカジュアルポートレート" width="400" height="400" loading="lazy">
           </div>
         </div>
       </div>
@@ -934,7 +938,7 @@
         <h2 class="section-title fade-in">Pricing</h2>
         <div class="pricing-grid">
           
-          <div class="pricing-card fade-in">
+          <div class="pricing-card pricing-card--location fade-in">
             <h3 class="pricing-card__title">Location</h3>
             <div class="pricing-card__price">¥20,000<span>(税込)</span></div>
             <ul class="pricing-card__list">
@@ -946,7 +950,7 @@
             </ul>
           </div>
 
-          <div class="pricing-card fade-in" style="transition-delay: 0.1s;">
+          <div class="pricing-card pricing-card--studio fade-in" style="transition-delay: 0.1s;">
             <h3 class="pricing-card__title">Studio</h3>
             <div class="pricing-card__price">¥25,000<span>(税込)</span></div>
             <ul class="pricing-card__list">
@@ -958,7 +962,7 @@
             </ul>
           </div>
 
-          <div class="pricing-card fade-in" style="transition-delay: 0.2s;">
+          <div class="pricing-card pricing-card--combo fade-in" style="transition-delay: 0.2s;">
             <h3 class="pricing-card__title">Location + Studio</h3>
             <div class="pricing-card__price">¥40,000<span>(税込)</span></div>
             <ul class="pricing-card__list">
@@ -1272,4 +1276,4 @@
     });
   </script>
 </body>
-</html>
+</html><!
