@@ -1,36 +1,11 @@
 <!DOCTYPE html>
-<html lang="ja" class="scroll-smooth">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>tk14 AI | AIをもっと身近に。</title>
-    <meta name="description" content="AIを活用して、個人事業・中小企業向けの発信・業務・活動づくりをサポートします。難しいをわかりやすく、一緒に整理する「tk14 AI」。">
+    <title>tk14 AI | AIをもっと身近に</title>
+    <meta name="description" content="AIを活用して、発信・業務・活動づくりをサポートします。難しいことをわかりやすく、一緒に整理するサポートを提供します。">
     
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        main: 'var(--main-color)',
-                        accent: 'var(--accent-color)',
-                        bg: 'var(--bg-color)',
-                        text: 'var(--text-color)',
-                    },
-                    fontFamily: {
-                        sans: ['system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
-                    },
-                    maxWidth: {
-                        'site': '1100px',
-                    }
-                }
-            }
-        }
-    </script>
-
-    <!-- ==========================================
-         style.css の内容（ここから）
-    =========================================== -->
     <style>
         :root {
             /* カラースキーム */
@@ -38,20 +13,354 @@
             --accent-color: #5C7CFA;
             --bg-color: #F7F7F5;
             --text-color: #1A1A1A;
+            --card-bg: #FFFFFF;
+            
+            /* レイアウト */
+            --max-width: 1100px;
+            --header-height: 70px;
+            
+            /* タイポグラフィ */
+            --font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            
+            /* その他 */
+            --radius: 6px; /* 控えめな角丸 */
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.04); /* 薄い影 */
+            --transition: all 0.3s ease;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
         body {
+            font-family: var(--font-family);
             background-color: var(--bg-color);
             color: var(--text-color);
-            font-family: system-ui, -apple-system, sans-serif;
             line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
-        /* フェードインアニメーション */
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        a:focus-visible {
+            outline: 2px solid var(--accent-color);
+            outline-offset: 2px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            vertical-align: bottom;
+        }
+
+        ul, ol {
+            list-style: none;
+        }
+
+        /* コンテナ */
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ヘッダー */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: var(--header-height);
+            background-color: rgba(247, 247, 245, 0.9);
+            backdrop-filter: blur(8px);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .header-inner {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            color: var(--main-color);
+        }
+
+        .logo:hover {
+            opacity: 0.7;
+        }
+
+        /* パンくずリスト */
+        .breadcrumb {
+            padding-top: calc(var(--header-height) + 20px);
+            padding-bottom: 20px;
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        .breadcrumb ol {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .breadcrumb li:not(:last-child)::after {
+            content: "/";
+            margin-left: 8px;
+            color: #999;
+        }
+
+        .breadcrumb a:hover {
+            opacity: 0.7;
+            color: var(--main-color);
+        }
+
+        /* セクション共通 */
+        section {
+            padding: 80px 0;
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: 60px 0;
+            }
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin-bottom: 48px;
+            letter-spacing: 0.05em;
+        }
+
+        /* ヒーローセクション */
+        .hero {
+            padding: 60px 0 100px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 24px;
+            color: var(--main-color);
+        }
+
+        .hero p {
+            font-size: clamp(1rem, 2vw, 1.125rem);
+            color: #4B5563;
+            margin-bottom: 40px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--main-color);
+            color: #fff;
+            padding: 16px 40px;
+            border-radius: var(--radius);
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            box-shadow: 0 4px 6px rgba(31, 41, 55, 0.1);
+        }
+
+        .btn:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(92, 124, 250, 0.2);
+        }
+
+        /* About セクション */
+        .about-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            .about-inner {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        .about-image {
+            border-radius: var(--radius);
+            overflow: hidden;
+            background-color: #eaeaea; /* 画像読み込み前のプレースホルダー色 */
+            aspect-ratio: 4/3;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .about-text h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            margin-bottom: 16px;
+            color: #4B5563;
+        }
+
+        /* サポート内容 (Cards) */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            padding: 32px 24px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .card-icon {
+            width: 48px;
+            height: 48px;
+            background-color: rgba(92, 124, 250, 0.1);
+            color: var(--accent-color);
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            font-size: 1.125rem;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: #4B5563;
+        }
+
+        /* 活用例 & こんな方におすすめ */
+        .list-section {
+            background-color: #FFFFFF;
+            border-radius: var(--radius);
+            padding: 48px;
+            box-shadow: var(--shadow);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .list-section {
+                padding: 32px 20px;
+            }
+        }
+
+        .check-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+        }
+
+        .check-list li {
+            position: relative;
+            padding-left: 28px;
+            color: #4B5563;
+        }
+
+        .check-list li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 6px;
+            width: 8px;
+            height: 14px;
+            border-right: 2px solid var(--accent-color);
+            border-bottom: 2px solid var(--accent-color);
+            transform: rotate(45deg);
+        }
+
+        /* Contact セクション */
+        .contact {
+            text-align: center;
+            background-color: var(--main-color);
+            color: #fff;
+            padding: 100px 0;
+            margin-top: 40px;
+        }
+
+        .contact .section-title {
+            color: #fff;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .contact-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #fff;
+            padding: 12px 32px;
+            border-radius: var(--radius);
+            font-weight: 500;
+        }
+
+        .contact-btn:hover {
+            background-color: #fff;
+            color: var(--main-color);
+        }
+
+        /* フッター */
+        .footer {
+            background-color: var(--main-color);
+            color: rgba(255, 255, 255, 0.7);
+            text-align: center;
+            padding: 32px 0;
+            font-size: 0.85rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* フェードインアニメーション用 */
         .fade-in {
             opacity: 0;
             transform: translateY(20px);
-            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: opacity 0.8s ease, transform 0.8s ease;
         }
 
         .fade-in.is-visible {
@@ -59,385 +368,260 @@
             transform: translateY(0);
         }
 
-        /* ナビゲーションのアクティブ状態 */
-        .nav-link.active {
-            color: var(--accent-color);
-            font-weight: 600;
-        }
-
-        /* prefers-reduced-motion対応 */
         @media (prefers-reduced-motion: reduce) {
-            html {
-                scroll-behavior: auto;
-            }
             .fade-in {
                 transition: none;
-                transform: none;
                 opacity: 1;
+                transform: none;
+            }
+            .btn:hover, .card:hover {
+                transform: none;
             }
         }
     </style>
-    <!-- ==========================================
-         style.css の内容（ここまで）
-    =========================================== -->
 </head>
-<body class="antialiased">
+<body>
 
-    <!-- Header -->
-    <header class="fixed top-0 left-0 w-full bg-bg/90 backdrop-blur-sm z-50 border-b border-gray-200/50 transition-all duration-300" id="header">
-        <div class="max-w-site mx-auto px-6 h-16 flex items-center justify-between">
-            <a href="#" class="text-xl font-bold tracking-tight text-main hover:text-accent transition-colors">tk14 AI</a>
-            <nav class="hidden md:flex gap-6 text-sm font-medium">
-                <a href="#about" class="nav-link text-gray-600 hover:text-accent transition-colors">About</a>
-                <a href="#service" class="nav-link text-gray-600 hover:text-accent transition-colors">Service</a>
-                <a href="#cases" class="nav-link text-gray-600 hover:text-accent transition-colors">Cases</a>
-                <a href="#contact" class="nav-link text-gray-600 hover:text-accent transition-colors">Contact</a>
-            </nav>
-            <!-- Mobile Menu Button (Visual Only) -->
-            <button class="md:hidden text-main p-2" aria-label="Menu">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-            </button>
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="container header-inner">
+            <!-- 1つ前のページ（例：総合トップ）に戻るリンク -->
+            <!-- 編集ここ：戻り先のURL (現在は仮で index.html としています) -->
+            <a href="index.html" class="logo">tk14 AI</a>
+            
+            <!-- スムーススクロール用の相談ボタン -->
+            <a href="#contact" class="btn" style="padding: 8px 20px; font-size: 0.9rem;">ご相談</a>
         </div>
     </header>
 
-    <main class="pt-16">
-        <!-- Breadcrumb -->
-        <div class="max-w-site mx-auto px-6 pt-4 text-sm text-gray-500 fade-in">
-            <nav aria-label="Breadcrumb">
-                <ol class="flex items-center space-x-2">
-                    <li>
-                        <!-- 編集ここ：URL (HOMEのリンク先を設定してください) -->
-                        <a href="index.html" class="hover:text-accent transition-colors flex items-center gap-1">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
-                            Home
-                        </a>
-                    </li>
-                    <li>
-                        <span class="text-gray-400">/</span>
-                    </li>
-                    <li class="text-main font-medium" aria-current="page">
-                        tk14 AI
-                    </li>
-                </ol>
-            </nav>
-        </div>
+    <div class="container">
+        <!-- パンくずリスト -->
+        <nav aria-label="パンくずリスト" class="breadcrumb">
+            <ol>
+                <!-- 編集ここ：戻り先のURL -->
+                <li><a href="index.html">TOP</a></li>
+                <li>tk14 AI</li>
+            </ol>
+        </nav>
+    </div>
 
-        <!-- Hero Section -->
-        <section class="min-h-[80vh] flex items-center justify-center relative px-6 py-20 overflow-hidden">
-            <div class="max-w-site mx-auto grid md:grid-cols-2 gap-12 items-center w-full">
-                <div class="fade-in order-2 md:order-1">
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-main leading-tight mb-6">
-                        AIを、<br>もっと身近に。
-                    </h1>
-                    <p class="text-lg text-gray-600 mb-8 leading-relaxed max-w-lg">
-                        AIを活用して、発信・業務・活動づくりをサポートします。<br>
-                        「難しい」を「わかりやすく」。<br>
-                        個人事業・中小企業のためのパートナーです。
-                    </p>
-                    <a href="#contact" class="inline-flex items-center justify-center bg-accent text-white px-8 py-3.5 rounded-md font-medium hover:bg-accent/90 hover:shadow-md transition-all duration-200">
-                        まずは相談してみる
-                    </a>
+    <main>
+        <!-- 1. ヒーローセクション -->
+        <section class="hero fade-in">
+            <div class="container">
+                <h1>AIを、もっと身近に。</h1>
+                <p>AIを活用して、<br class="sp-only">発信・業務・活動づくりをサポートします。<br>
+                「難しい」を「わかりやすく」、一緒に整理しましょう。</p>
+                <a href="#contact" class="btn">まずは相談してみる</a>
+            </div>
+        </section>
+
+        <!-- 2. About tk14 AI -->
+        <section id="about" class="container fade-in">
+            <div class="about-inner">
+                <div class="about-image">
+                    <!-- 編集ここ：画像ファイル名 -->
+                    <!-- <img src="images/ai-about.jpg" alt="AIサポートをしている様子のイメージ" width="600" height="450" loading="lazy"> -->
+                    <!-- プレースホルダー（実際の画像に差し替える際は上記コメントアウトを外し、下行を削除してください） -->
+                    <img src="https://placehold.co/600x450/e2e8f0/64748b?text=About+tk14+AI" alt="AIサポートのイメージ" width="600" height="450" loading="lazy">
                 </div>
-                <div class="fade-in order-1 md:order-2">
-                    <div class="aspect-[4/3] rounded-lg overflow-hidden bg-gray-100 shadow-sm relative">
-                        <!-- 編集ここ：画像ファイル名 -->
-                        <img src="images/hero.jpg" 
-                             alt="tk14 AIのサポートイメージ" 
-                             width="800" height="600" 
-                             loading="lazy" 
-                             class="w-full h-full object-cover"
-                             onerror="this.src='https://placehold.co/800x600/E5E7EB/1A1A1A?text=Hero+Image'">
-                    </div>
+                <div class="about-text">
+                    <h2 class="section-title" style="text-align: left; margin-bottom: 24px;">About tk14 AI</h2>
+                    <p>個人事業主や中小企業の方々へ向けて、AIを活用した業務効率化や発信サポートを行っています。</p>
+                    <p>「AIに興味はあるけれど、何から始めればいいかわからない」<br>
+                    そんなお悩みに寄り添い、専門用語を使わずに、あなたの状況に合わせた具体的な活用方法をご提案します。</p>
+                    <p>難しそうに見えるITやAIの技術を、親しみやすく、使いやすい形に整えてお届けすることが私のミッションです。</p>
                 </div>
             </div>
         </section>
 
-        <!-- About Section -->
-        <section id="about" class="py-24 px-6 bg-white">
-            <div class="max-w-site mx-auto fade-in">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl font-bold text-main mb-4">About tk14 AI</h2>
-                    <p class="text-gray-500">私たちが大切にしていること</p>
-                </div>
+        <!-- 3. サポート内容 -->
+        <section id="services" class="container fade-in">
+            <h2 class="section-title">サポート内容</h2>
+            <div class="services-grid">
                 
-                <div class="grid md:grid-cols-2 gap-12 items-center max-w-4xl mx-auto">
-                    <div class="aspect-square rounded-full overflow-hidden bg-bg max-w-[320px] mx-auto shadow-sm">
-                        <!-- 編集ここ：画像ファイル名 -->
-                        <img src="images/about.jpg" 
-                             alt="tk14 AIの活動風景" 
-                             width="400" height="400" 
-                             loading="lazy" 
-                             class="w-full h-full object-cover"
-                             onerror="this.src='https://placehold.co/400x400/F7F7F5/1A1A1A?text=About+Image'">
+                <div class="card">
+                    <div class="card-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
                     </div>
-                    <div>
-                        <h3 class="text-2xl font-semibold mb-6">「難しそう」を、一緒に整理する。</h3>
-                        <p class="text-gray-600 mb-4 leading-relaxed">
-                            AIのニュースを見かけるけれど、自分の仕事にどう活かせるかわからない。<br>
-                            そんな個人事業主や中小企業の方々へ向けたサポートを行っています。
-                        </p>
-                        <p class="text-gray-600 leading-relaxed">
-                            専門用語はなるべく使わず、あなたの現在の業務や発信スタイルをヒアリング。隣に座って一緒に整理するような感覚で、本当に必要なAIの使い方や、日々の負担を減らすための仕組みづくりをサポートします。
-                        </p>
-                    </div>
+                    <h3>AI活用サポート</h3>
+                    <p>あなたの業務や目標に合わせて、最適なAIツールの選び方から基本的な使い方までをレクチャーします。</p>
                 </div>
+
+                <div class="card">
+                    <div class="card-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </div>
+                    <h3>業務効率化</h3>
+                    <p>日々のルーティンワークや事務作業を洗い出し、AIを使って自動化・効率化できる部分を一緒に整理します。</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                    </div>
+                    <h3>発信サポート</h3>
+                    <p>SNSやブログのネタ出し、文章作成のベース作りなど、情報発信における負担をAIで軽減します。</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    </div>
+                    <h3>ChatGPT活用</h3>
+                    <p>プロンプト（指示文）のコツや、日常的に使える便利な活用アイデアを、実践を交えながらお伝えします。</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+                    </div>
+                    <h3>簡単なWebサイト作成</h3>
+                    <p>名刺代わりとなるシンプルなWebサイトやLP（ランディングページ）を、AIを活用してスピーディに制作・支援します。</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+                    </div>
+                    <h3>チビキャラ作成</h3>
+                    <p>SNSアイコンや資料のアクセントに使える、親しみやすいチビキャラ（アバター）の画像生成をサポートします。</p>
+                </div>
+
             </div>
         </section>
 
-        <!-- Service Section -->
-        <section id="service" class="py-24 px-6">
-            <div class="max-w-site mx-auto">
-                <div class="text-center mb-16 fade-in">
-                    <h2 class="text-3xl font-bold text-main mb-4">Service</h2>
-                    <p class="text-gray-500">サポート内容</p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    
-                    <!-- Card 1 -->
-                    <div class="bg-white p-8 rounded-md shadow-sm border border-gray-100 hover:shadow-md hover:-translate-y-1 transition-all duration-300 fade-in">
-                        <div class="w-12 h-12 bg-bg text-accent rounded-md flex items-center justify-center mb-6">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-3">AI活用サポート</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">
-                            あなたの事業や業務に合った、最適なAIツールと使い方を一緒に考え、導入をサポートします。
-                        </p>
-                    </div>
-
-                    <!-- Card 2 -->
-                    <div class="bg-white p-8 rounded-md shadow-sm border border-gray-100 hover:shadow-md hover:-translate-y-1 transition-all duration-300 fade-in">
-                        <div class="w-12 h-12 bg-bg text-accent rounded-md flex items-center justify-center mb-6">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-3">業務効率化</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">
-                            時間がかかっている手作業のルーティンを見直し、AIで自動化・効率化できる仕組みを作ります。
-                        </p>
-                    </div>
-
-                    <!-- Card 3 -->
-                    <div class="bg-white p-8 rounded-md shadow-sm border border-gray-100 hover:shadow-md hover:-translate-y-1 transition-all duration-300 fade-in">
-                        <div class="w-12 h-12 bg-bg text-accent rounded-md flex items-center justify-center mb-6">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"></path></svg>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-3">発信サポート</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">
-                            SNSの投稿アイデア出しや、ブログ記事の構成・文章作成など、継続的な発信をAIでラクにします。
-                        </p>
-                    </div>
-
-                    <!-- Card 4 -->
-                    <div class="bg-white p-8 rounded-md shadow-sm border border-gray-100 hover:shadow-md hover:-translate-y-1 transition-all duration-300 fade-in">
-                        <div class="w-12 h-12 bg-bg text-accent rounded-md flex items-center justify-center mb-6">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-3">ChatGPT活用</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">
-                            望む回答を得るための「プロンプト」のコツや、日常業務への具体的な組み込み方をレクチャーします。
-                        </p>
-                    </div>
-
-                    <!-- Card 5 -->
-                    <div class="bg-white p-8 rounded-md shadow-sm border border-gray-100 hover:shadow-md hover:-translate-y-1 transition-all duration-300 fade-in">
-                        <div class="w-12 h-12 bg-bg text-accent rounded-md flex items-center justify-center mb-6">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-3">簡単なWebサイト作成</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">
-                            名刺代わりになる、シンプルで伝わりやすいWebサイトの制作・公開をサポートします。
-                        </p>
-                    </div>
-
-                    <!-- Card 6 -->
-                    <div class="bg-white p-8 rounded-md shadow-sm border border-gray-100 hover:shadow-md hover:-translate-y-1 transition-all duration-300 fade-in">
-                        <div class="w-12 h-12 bg-bg text-accent rounded-md flex items-center justify-center mb-6">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-3">チビキャラ作成</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">
-                            SNSのアイコンや図解のワンポイントに使える、親しみやすいオリジナルキャラクターを作成します。
-                        </p>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Cases Section -->
-        <section id="cases" class="py-24 px-6 bg-white">
-            <div class="max-w-site mx-auto">
-                <div class="text-center mb-16 fade-in">
-                    <h2 class="text-3xl font-bold text-main mb-4">Use Cases</h2>
-                    <p class="text-gray-500">例えば、こんなことに活用できます</p>
-                </div>
-
-                <div class="max-w-3xl mx-auto grid sm:grid-cols-2 gap-4">
-                    <div class="flex items-start gap-4 p-4 rounded-md bg-bg/50 fade-in">
-                        <svg class="w-6 h-6 text-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                        <span class="text-gray-700">毎日のSNS投稿アイデア出しと文章作成</span>
-                    </div>
-                    <div class="flex items-start gap-4 p-4 rounded-md bg-bg/50 fade-in">
-                        <svg class="w-6 h-6 text-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                        <span class="text-gray-700">ブログ記事の構成案と下書きの自動化</span>
-                    </div>
-                    <div class="flex items-start gap-4 p-4 rounded-md bg-bg/50 fade-in">
-                        <svg class="w-6 h-6 text-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                        <span class="text-gray-700">頭の中のモヤモヤしたアイデアの壁打ち・整理</span>
-                    </div>
-                    <div class="flex items-start gap-4 p-4 rounded-md bg-bg/50 fade-in">
-                        <svg class="w-6 h-6 text-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                        <span class="text-gray-700">クライアントへの提案文・メール文面の作成</span>
-                    </div>
-                    <div class="flex items-start gap-4 p-4 rounded-md bg-bg/50 fade-in">
-                        <svg class="w-6 h-6 text-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                        <span class="text-gray-700">エクセルやスプレッドシートの業務整理</span>
-                    </div>
-                    <div class="flex items-start gap-4 p-4 rounded-md bg-bg/50 fade-in">
-                        <svg class="w-6 h-6 text-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                        <span class="text-gray-700">名刺代わりになるWebサイト作成サポート</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Target Section -->
-        <section class="py-24 px-6 relative overflow-hidden">
-            <!-- 背景の装飾 -->
-            <div class="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 rounded-full bg-accent/5 blur-3xl -z-10"></div>
-            <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-64 h-64 rounded-full bg-accent/5 blur-3xl -z-10"></div>
-
-            <div class="max-w-3xl mx-auto bg-white p-8 md:p-12 rounded-lg shadow-sm border border-gray-100 fade-in relative z-10">
-                <h2 class="text-2xl md:text-3xl font-bold text-main mb-8 text-center">こんな方におすすめです</h2>
-                
-                <ul class="space-y-4">
-                    <li class="flex items-center gap-4 text-gray-700 border-b border-gray-50 pb-4">
-                        <span class="w-8 h-8 rounded-full bg-accent/10 text-accent flex items-center justify-center flex-shrink-0 font-bold">✓</span>
-                        <span>AIに興味はあるけれど、何から始めればいいかわからない方</span>
-                    </li>
-                    <li class="flex items-center gap-4 text-gray-700 border-b border-gray-50 pb-4">
-                        <span class="w-8 h-8 rounded-full bg-accent/10 text-accent flex items-center justify-center flex-shrink-0 font-bold">✓</span>
-                        <span>日々の業務が忙しく、少しでも効率化する仕組みを作りたい方</span>
-                    </li>
-                    <li class="flex items-center gap-4 text-gray-700 border-b border-gray-50 pb-4">
-                        <span class="w-8 h-8 rounded-full bg-accent/10 text-accent flex items-center justify-center flex-shrink-0 font-bold">✓</span>
-                        <span>SNSやブログでの発信をもっと楽に、継続できるようになりたい方</span>
-                    </li>
-                    <li class="flex items-center gap-4 text-gray-700 border-b border-gray-50 pb-4">
-                        <span class="w-8 h-8 rounded-full bg-accent/10 text-accent flex items-center justify-center flex-shrink-0 font-bold">✓</span>
-                        <span>自分のビジネスやサービスに、AIをどう活かせるか相談したい方</span>
-                    </li>
-                    <li class="flex items-center gap-4 text-gray-700">
-                        <span class="w-8 h-8 rounded-full bg-accent/10 text-accent flex items-center justify-center flex-shrink-0 font-bold">✓</span>
-                        <span>専門用語や難しそうなことは抜きにして、わかりやすく教えてほしい方</span>
-                    </li>
+        <!-- 4. 活用例 -->
+        <section class="container fade-in">
+            <h2 class="section-title">こんな風に活用できます</h2>
+            <div class="list-section">
+                <ul class="check-list">
+                    <li>SNS投稿のアイデア出し・構成案</li>
+                    <li>ブログ記事のドラフト作成</li>
+                    <li>頭の中のアイデア整理・壁打ち</li>
+                    <li>クライアントへの提案文作成</li>
+                    <li>散らかっている業務タスクの整理</li>
+                    <li>Webサイトの文章・構成作成サポート</li>
                 </ul>
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="py-24 px-6 bg-main text-white text-center">
-            <div class="max-w-2xl mx-auto fade-in">
-                <h2 class="text-3xl font-bold mb-6">Contact</h2>
-                <p class="text-gray-300 mb-10 text-sm md:text-base leading-relaxed">
-                    どんな小さなことでも、まずはお気軽にご相談ください。<br>
-                    ご都合の良い方法でお問い合わせをお待ちしております。
-                </p>
+        <!-- 5. こんな方におすすめ -->
+        <section class="container fade-in" style="padding-top: 20px;">
+            <h2 class="section-title">こんな方におすすめです</h2>
+            <div class="list-section" style="background-color: transparent; border: 1px solid rgba(0,0,0,0.1); box-shadow: none;">
+                <ul class="check-list">
+                    <li>AIを使ってみたいけれど、一歩踏み出せない方</li>
+                    <li>何から始めれば自分の仕事に役立つかわからない方</li>
+                    <li>日々の事務作業や発信業務を少しでも楽に・効率化したい方</li>
+                    <li>SNSやブログの発信をもっと継続しやすくしたい方</li>
+                    <li>AIを自分の事業の強みとして活かしていきたい方</li>
+                </ul>
+            </div>
+        </section>
 
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <!-- 公式LINE -->
-                    <!-- 編集ここ：URL (LINE) -->
-                    <a href="#" class="flex items-center justify-center gap-2 bg-[#06C755] text-white px-8 py-4 rounded-md font-medium hover:bg-[#05b34c] transition-colors shadow-sm">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 10.304c0-5.369-5.383-9.738-12-9.738-6.616 0-12 4.369-12 9.738 0 4.814 3.54 8.892 8.448 9.585.344.075.808.232.932.534.112.274.036.702.016.974l-.168 1.007c-.052.316-.24.974.856.512.984-.415 5.308-3.125 7.256-5.352 1.76-2.022 2.66-4.048 2.66-6.842z"/></svg>
-                        公式LINEで相談する
+        <!-- 6. Contact -->
+        <section id="contact" class="contact fade-in">
+            <div class="container">
+                <h2 class="section-title" style="margin-bottom: 16px;">お問い合わせ・ご相談</h2>
+                <p>まずはお気軽にご相談ください。<br>あなたの状況に合わせたサポートをご提案します。</p>
+                
+                <div class="contact-links">
+                    <!-- 編集ここ：InstagramのURL -->
+                    <a href="https://instagram.com/your_account" target="_blank" rel="noopener noreferrer" class="contact-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                        Instagram
+                    </a>
+                    
+                    <!-- 編集ここ：公式LINEのURL -->
+                    <a href="https://lin.ee/your_id" target="_blank" rel="noopener noreferrer" class="contact-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                        公式LINE
                     </a>
 
-                    <!-- Instagram -->
-                    <!-- 編集ここ：URL (Instagram) -->
-                    <a href="#" class="flex items-center justify-center gap-2 bg-gradient-to-tr from-[#fd5949] to-[#d6249f] text-white px-8 py-4 rounded-md font-medium hover:opacity-90 transition-opacity shadow-sm">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-                        Instagramを見る
-                    </a>
-
-                    <!-- メール -->
-                    <!-- 編集ここ：URL (mailto:メールアドレス) -->
-                    <a href="mailto:info@example.com" class="flex items-center justify-center gap-2 bg-white/10 text-white px-8 py-4 rounded-md font-medium hover:bg-white/20 transition-colors border border-white/20 shadow-sm">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                        メールで問い合わせ
+                    <!-- 編集ここ：メールアドレス -->
+                    <a href="mailto:your_email@example.com" class="contact-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        メール
                     </a>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="py-8 text-center bg-white border-t border-gray-100">
-        <p class="text-sm text-gray-400">&copy; 2026 tk14 AI. All rights reserved.</p>
+    <!-- 7. フッター -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; tk14 AI All Rights Reserved.</p>
+        </div>
     </footer>
 
-    <!-- ==========================================
-         script.js の内容（ここから）
-    =========================================== -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             
-            // 1. Intersection Observer によるフェードインアニメーション
+            // 1. スムーススクロールの実装
+            const smoothScrollLinks = document.querySelectorAll('a[href^="#"]');
+            
+            smoothScrollLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    const targetId = this.getAttribute('href');
+                    
+                    // #のみのリンクは無視
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        e.preventDefault();
+                        
+                        // ヘッダーの高さを考慮してスクロール位置を調整
+                        const headerHeight = document.querySelector('.header').offsetHeight;
+                        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                        
+                        // prefers-reduced-motion を尊重する
+                        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: prefersReducedMotion ? 'auto' : 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // 2. IntersectionObserverによるフェードインアニメーション
             const fadeElements = document.querySelectorAll('.fade-in');
             
-            const fadeObserver = new IntersectionObserver((entries) => {
+            // IntersectionObserverがサポートされていないブラウザへのフォールバック
+            if (!('IntersectionObserver' in window)) {
+                fadeElements.forEach(el => el.classList.add('is-visible'));
+                return;
+            }
+
+            const observerOptions = {
+                root: null, // ビューポートをルートとする
+                rootMargin: '0px 0px -10% 0px', // 少し画面下部から入ったところで発火
+                threshold: 0.1 // 要素が10%見えたら発火
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
+                        // 要素が見えたらクラスを追加してアニメーション開始
                         entry.target.classList.add('is-visible');
-                        // 一度表示されたら監視を解除（再度スクロールしてもアニメーションしない）
-                        fadeObserver.unobserve(entry.target);
+                        // 一度アニメーションしたら監視を解除（軽量化のため）
+                        observer.unobserve(entry.target);
                     }
                 });
-            }, {
-                root: null,
-                rootMargin: '0px',
-                threshold: 0.15 // 15%見えたら発火
+            }, observerOptions);
+
+            fadeElements.forEach(el => {
+                observer.observe(el);
             });
-
-            fadeElements.forEach(el => fadeObserver.observe(el));
-
-            // 2. スクロールに応じたナビゲーションのアクティブ表示
-            const sections = document.querySelectorAll('section[id]');
-            const navLinks = document.querySelectorAll('.nav-link');
-
-            window.addEventListener('scroll', () => {
-                let current = '';
-                const scrollY = window.pageYOffset;
-
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    const sectionHeight = section.clientHeight;
-                    // ヘッダーの高さ(64px)と少しの余裕を考慮
-                    if (scrollY >= (sectionTop - 100)) {
-                        current = section.getAttribute('id');
-                    }
-                });
-
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href').includes(current) && current !== '') {
-                        link.classList.add('active');
-                    }
-                });
-            });
-
-            // 3. ヘッダーのシャドウ効果（スクロール時）
-            const header = document.getElementById('header');
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 10) {
-                    header.classList.add('shadow-sm');
-                } else {
-                    header.classList.remove('shadow-sm');
-                }
-            });
+            
+            // 3. ナビアクティブ表示（今回は固定のナビゲーションメニューがないため省略しますが、
+            // 今後セクションごとのナビゲーションを追加する場合はここにスクロールイベント連動の処理を記述します）
         });
     </script>
-    <!-- ==========================================
-         script.js の内容（ここまで）
-    =========================================== -->
 </body>
 </html>
