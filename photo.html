@@ -41,9 +41,6 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 4rem 1.5rem;
         }
 
         /* リンクのリセット */
@@ -60,6 +57,64 @@
 
         p {
             color: var(--text-color-light);
+        }
+
+        /* パンくずリスト */
+        .breadcrumb-container {
+            width: 100%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 1.5rem 1.5rem 0;
+        }
+
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            font-size: 0.875rem;
+            color: var(--text-color-light);
+        }
+
+        .breadcrumb li {
+            display: flex;
+            align-items: center;
+        }
+
+        .breadcrumb li:not(:last-child)::after {
+            content: '/';
+            margin: 0 0.5rem;
+            color: #9CA3AF;
+        }
+
+        .breadcrumb a {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            transition: color 0.2s ease;
+        }
+
+        .breadcrumb a:hover {
+            color: var(--accent-color);
+        }
+
+        .breadcrumb .current {
+            color: var(--main-color);
+            font-weight: 500;
+        }
+
+        .breadcrumb svg {
+            width: 1rem;
+            height: 1rem;
+        }
+
+        /* メインコンテンツラッパー (中央寄せ用) */
+        .content-wrapper {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2.5rem 1.5rem 4rem; /* breadcrumbの下余白を考慮して上paddingを少し減らす */
         }
 
         /* ヒーローセクション */
@@ -89,6 +144,7 @@
 
         /* スマホ用フォント調整 */
         @media (min-width: 768px) {
+            .content-wrapper { padding-top: 4rem; }
             .hero { margin-bottom: 5rem; }
             .main-copy { font-size: 2.25rem; margin-bottom: 2rem; }
             .sub-copy { font-size: 1rem; }
@@ -222,6 +278,20 @@
             color: #FFFFFF;
         }
 
+        /* Footer */
+        .site-footer {
+            padding: 2rem 1.5rem;
+            text-align: center;
+            background-color: #FFFFFF;
+            border-top: 1px solid #E5E7EB;
+            margin-top: auto; /* push to bottom */
+        }
+
+        .site-footer p {
+            font-size: 0.875rem;
+            color: #9CA3AF;
+        }
+
         /* Intersection Observer フェードイン用 */
         .fade-in {
             opacity: 0;
@@ -265,76 +335,101 @@
 </head>
 <body>
 
-    <header class="hero fade-in">
-        <!-- 編集ここ：ブランド名 -->
-        <h1 class="brand-title">tk14 Photography</h1>
-        
-        <!-- 編集ここ：メインコピー -->
-        <h2 class="main-copy">あなたの用途に、<br>あわせたお写真を。</h2>
-        
-        <!-- 編集ここ：サブコピー -->
-        <p class="sub-copy">
-            プロフィール写真と、<br>
-            家族の記念写真。<br><br>
-            撮影したい内容に合わせて、<br>
-            ページをご案内します。
-        </p>
-    </header>
+    <!-- パンくずリスト追加 -->
+    <div class="breadcrumb-container fade-in">
+        <nav aria-label="Breadcrumb">
+            <ol class="breadcrumb">
+                <li>
+                    <!-- 編集ここ：URL (HOMEのリンク先を設定してください) -->
+                    <a href="/">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                        Home
+                    </a>
+                </li>
+                <li class="current" aria-current="page">
+                    tk14 Photography
+                </li>
+            </ol>
+        </nav>
+    </div>
 
-    <main class="portal-container">
-        <div class="card-grid">
+    <div class="content-wrapper">
+        <header class="hero fade-in">
+            <!-- 編集ここ：ブランド名 -->
+            <h1 class="brand-title">tk14 Photography</h1>
             
-            <!-- tk14 Card -->
-            <!-- 編集ここ：リンク先を profile.html 等に変更 -->
-            <a href="profile.html" class="card card--tk14 fade-in delay-100 js-hover-card">
-                <div class="card-visual">
-                    <div class="card-visual-bg"></div>
-                </div>
-                <div class="card-content">
-                    <!-- 編集ここ：ブランド名表示 -->
-                    <span class="card-brand-label">tk14</span>
-                    
-                    <!-- 編集ここ：タイトル -->
-                    <h3 class="card-title">プロフィール・SNS用写真</h3>
-                    
-                    <!-- 編集ここ：説明文 -->
-                    <p class="card-desc">
-                        プロフィール・SNS用・宣材写真など、<br>
-                        自然体で飾らない、<br>
-                        あなたらしさが伝わる写真を撮影します。
-                    </p>
-                    
-                    <!-- 編集ここ：ボタンテキスト -->
-                    <span class="btn">tk14を見る</span>
-                </div>
-            </a>
+            <!-- 編集ここ：メインコピー -->
+            <h2 class="main-copy">あなたの用途に合わせたお写真を。</h2>
+            
+            <!-- 編集ここ：サブコピー -->
+            <p class="sub-copy">
+                プロフィール写真と、<br>
+                家族の記念写真。<br><br>
+                撮影したい内容に合わせて、<br>
+                ページをご案内します。
+            </p>
+        </header>
 
-            <!-- Moment Card -->
-            <!-- 編集ここ：リンク先を family.html 等に変更 -->
-            <a href="family.html" class="card card--moment fade-in delay-200 js-hover-card">
-                <div class="card-visual">
-                    <div class="card-visual-bg"></div>
-                </div>
-                <div class="card-content">
-                    <!-- 編集ここ：ブランド名表示 -->
-                    <span class="card-brand-label">Moment</span>
-                    
-                    <!-- 編集ここ：タイトル -->
-                    <h3 class="card-title">家族・七五三・ワンちゃん撮影</h3>
-                    
-                    <!-- 編集ここ：説明文 -->
-                    <p class="card-desc">
-                        今という『瞬間』を未来に残す <br>
-                        家族・親子の思い出を宝物に
-                    </p>
-                    
-                    <!-- 編集ここ：ボタンテキスト -->
-                    <span class="btn">Momentを見る</span>
-                </div>
-            </a>
+        <main class="portal-container">
+            <div class="card-grid">
+                
+                <!-- tk14 Card -->
+                <!-- 編集ここ：リンク先を profile.html 等に変更 -->
+                <a href="profile.html" class="card card--tk14 fade-in delay-100 js-hover-card">
+                    <div class="card-visual">
+                        <div class="card-visual-bg"></div>
+                    </div>
+                    <div class="card-content">
+                        <!-- 編集ここ：ブランド名表示 -->
+                        <span class="card-brand-label">tk14</span>
+                        
+                        <!-- 編集ここ：タイトル -->
+                        <h3 class="card-title">プロフィール・SNS用写真</h3>
+                        
+                        <!-- 編集ここ：説明文 -->
+                        <p class="card-desc">
+                            プロフィール・SNS用・宣材写真など、<br>
+                            自然体で飾らない、<br>
+                            あなたらしさが伝わる写真を撮影します。
+                        </p>
+                        
+                        <!-- 編集ここ：ボタンテキスト -->
+                        <span class="btn">tk14を見る</span>
+                    </div>
+                </a>
 
-        </div>
-    </main>
+                <!-- Moment Card -->
+                <!-- 編集ここ：リンク先を family.html 等に変更 -->
+                <a href="family.html" class="card card--moment fade-in delay-200 js-hover-card">
+                    <div class="card-visual">
+                        <div class="card-visual-bg"></div>
+                    </div>
+                    <div class="card-content">
+                        <!-- 編集ここ：ブランド名表示 -->
+                        <span class="card-brand-label">Moment</span>
+                        
+                        <!-- 編集ここ：タイトル -->
+                        <h3 class="card-title">家族・七五三・ワンちゃん撮影</h3>
+                        
+                        <!-- 編集ここ：説明文 -->
+                        <p class="card-desc">
+                            - 今という『瞬間』を未来に残す - <br>
+                            家族・親子の思い出を宝物に
+                        </p>
+                        
+                        <!-- 編集ここ：ボタンテキスト -->
+                        <span class="btn">Momentを見る</span>
+                    </div>
+                </a>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- フッター追加 -->
+    <footer class="site-footer">
+        <p>&copy; 2026 tk14 Photography. All rights reserved.</p>
+    </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
