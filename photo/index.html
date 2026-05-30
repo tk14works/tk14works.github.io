@@ -5,106 +5,69 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>写真撮影 | tk14 works</title>
   <meta name="description" content="プロフィール写真と家族写真を中心に、自然体で魅力が伝わる写真撮影を行っています。">
-  <link rel="stylesheet" href="/assets/css/site.css?v=2">
+  <link rel="stylesheet" href="/assets/css/site.css?v=4">
 </head>
-<body>
-  <header class="site-header">
-    <div class="header-inner">
-      <a class="brand" href="/">tk14 works</a>
-      <button class="nav-toggle" type="button" aria-label="メニューを開く" aria-expanded="false" data-nav-toggle>Menu</button>
-      <nav class="nav" aria-label="主要ナビゲーション" data-nav>
-        <a href="/ai/">AI</a>
-        <a href="/photo/" aria-current="page">Photo</a>
-        <a href="#contact">Contact</a>
+<body class="profile-minimal site-photo">
+  <header class="profile-header">
+    <div class="profile-header__inner">
+      <a class="profile-logo" href="/">tk14 works</a>
+      <button class="profile-menu-button" type="button" aria-label="メニューを開く" aria-expanded="false" data-nav-toggle>Menu</button>
+      <nav class="profile-nav" aria-label="写真ページメニュー" data-nav>
+        <a href="/photo/profile/">プロフィール写真</a>
+        <a href="/photo/family/">家族写真</a>
+        <a href="#contact">お問い合わせ</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="hero container">
-      <div>
-        <p class="eyebrow">Photography</p>
-        <h1>自然体のまま、伝わる写真を。</h1>
-        <p class="hero-copy">
-          プロフィール写真と家族写真を中心に、今のあなたらしさや大切な時間を残します。
-          目的に合わせて、撮影前の相談から一緒に整えていきます。
+    <section class="tk-hero" id="home">
+      <div class="tk-hero__image" data-reveal>
+        <img src="/images/profile-about.jpg" alt="写真撮影のイメージ">
+      </div>
+      <div class="tk-hero__copy" data-reveal>
+        <p class="tk-label">Photography</p>
+        <h1>自然体のまま、<br>伝わる写真を。</h1>
+        <p>
+          プロフィール写真と家族写真。目的は違っても、
+          大切にしたいのは、その人らしい空気が伝わることです。
         </p>
-        <div class="actions">
-          <a class="button" href="/photo/profile/">プロフィール写真</a>
-          <a class="button button-secondary" href="/photo/family/">家族写真</a>
-        </div>
-      </div>
-      <div class="visual-card" data-caption="プロフィールにも、家族の記録にも、自然な空気を。">
-        <img src="/images/profile-about.jpg" alt="自然光での撮影風景">
       </div>
     </section>
 
-    <section class="section section-soft">
-      <div class="container">
-        <div class="section-head" data-reveal>
-          <h2 class="section-title">撮影メニュー</h2>
-          <p class="section-lead">
-            仕事や発信に使う写真と、家族の今を残す写真。目的に合わせてページを分けています。
-          </p>
-        </div>
-        <div class="grid grid-2">
-          <a class="service-card photo" href="/photo/profile/" data-reveal>
-            <span class="tag">Profile</span>
-            <span>
-              <strong>プロフィール写真</strong>
-              <p>SNS、ホームページ、宣材写真など、人柄と信頼感が伝わる写真を撮影します。</p>
-            </span>
+    <section class="tk-section" id="services">
+      <div class="tk-container">
+        <h2 class="tk-title" data-reveal>撮影メニュー</h2>
+        <div class="tk-menu-grid">
+          <a class="tk-menu-card tk-menu-card--link" href="/photo/profile/" data-reveal>
+            <span>tk14</span>
+            <h3>プロフィール写真</h3>
+            <p>SNS、ホームページ、宣材写真など、人柄と信頼感が伝わる写真を撮影します。</p>
           </a>
-          <a class="service-card family" href="/photo/family/" data-reveal>
-            <span class="tag">Family</span>
-            <span>
-              <strong>家族写真</strong>
-              <p>家族写真、七五三、日常の記録など、今しかない時間を自然に残します。</p>
-            </span>
+          <a class="tk-menu-card tk-menu-card--link" href="/photo/family/" data-reveal>
+            <span>Moment</span>
+            <h3>家族写真</h3>
+            <p>家族写真、七五三、日常の記録など、今しかない時間を自然に残します。</p>
           </a>
         </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container">
-        <div class="section-head" data-reveal>
-          <h2 class="section-title">撮影で大切にしていること</h2>
-          <p class="section-lead">
-            撮影が苦手な方でも安心できるように、会話しながら無理のない表情と空気を探します。
-          </p>
-        </div>
-        <div class="photo-strip" data-reveal>
-          <div class="image-tile">
-            <img src="/images/profile-about.jpg" alt="撮影の様子">
-          </div>
-          <div class="placeholder-tile">
-            <p>作例写真はここに追加していけます。</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-soft" id="contact">
-      <div class="container">
-        <div class="cta" data-reveal>
-          <div>
-            <h2>撮影内容に合わせてご相談ください。</h2>
-            <p>プロフィール、家族写真、七五三など、希望の用途を添えてお問い合わせください。</p>
-          </div>
-          <a class="button" href="mailto:info@example.com">撮影を相談する</a>
+    <section class="tk-section tk-section--soft" id="contact">
+      <div class="tk-container">
+        <div class="tk-contact" data-reveal>
+          <h2>お問い合わせ</h2>
+          <p>撮影内容や希望時期を添えてご相談ください。</p>
+          <a class="tk-button" href="mailto:info@example.com">Contact</a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <span>tk14 works</span>
-      <a href="/">Top</a>
-    </div>
+  <footer class="tk-footer">
+    <a href="/">tk14 works</a>
   </footer>
 
-  <script src="/assets/js/site.js?v=2"></script>
+  <script src="/assets/js/site.js?v=4"></script>
 </body>
 </html>

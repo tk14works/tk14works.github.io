@@ -4,113 +4,94 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>tk14 works | AIと写真で、仕事と魅力を整える</title>
-  <meta name="description" content="tk14 worksは、AIによる業務効率化支援とプロフィール・家族写真の撮影を通して、仕事と人の魅力が伝わる形づくりをサポートします。">
-  <link rel="stylesheet" href="/assets/css/site.css?v=2">
+  <meta name="description" content="tk14 worksは、AIによる業務効率化支援と写真撮影を通して、仕事と人の魅力が伝わる形づくりをサポートします。">
+  <link rel="stylesheet" href="/assets/css/site.css?v=4">
 </head>
-<body>
-  <header class="site-header">
-    <div class="header-inner">
-      <a class="brand" href="/">tk14 works</a>
-      <button class="nav-toggle" type="button" aria-label="メニューを開く" aria-expanded="false" data-nav-toggle>Menu</button>
-      <nav class="nav" aria-label="主要ナビゲーション" data-nav>
+<body class="profile-minimal site-top">
+  <header class="profile-header">
+    <div class="profile-header__inner">
+      <a class="profile-logo" href="/">tk14 works</a>
+      <button class="profile-menu-button" type="button" aria-label="メニューを開く" aria-expanded="false" data-nav-toggle>Menu</button>
+      <nav class="profile-nav" aria-label="主要メニュー" data-nav>
         <a href="/ai/">AI</a>
-        <a href="/photo/">Photo</a>
-        <a href="#contact">Contact</a>
+        <a href="/photo/">写真</a>
+        <a href="#contact">お問い合わせ</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="hero container">
-      <div>
-        <p class="eyebrow">AI support / Photography</p>
-        <h1>AIで仕事を整える。写真で人柄を伝える。</h1>
-        <p class="hero-copy">
-          tk14 worksは、AIを使った業務効率化支援と、プロフィール・家族写真の撮影を行っています。
-          仕事の流れを軽くし、伝えたい魅力が自然に届く形を一緒につくります。
+    <section class="tk-hero" id="home">
+      <div class="tk-hero__image" data-reveal>
+        <img src="/images/profile-about.jpg" alt="tk14 worksのイメージ">
+      </div>
+      <div class="tk-hero__copy" data-reveal>
+        <p class="tk-label">AI support / Photography</p>
+        <h1>AIで仕事を整える。<br>写真で魅力を伝える。</h1>
+        <p>
+          tk14 worksは、AI業務効率化支援と写真撮影を通して、
+          個人や小さな事業の活動が自然に伝わる形づくりをサポートします。
         </p>
-        <div class="actions">
-          <a class="button" href="/ai/">AIの相談を見る</a>
-          <a class="button button-secondary" href="/photo/">写真撮影を見る</a>
-        </div>
-      </div>
-      <div class="visual-card" data-caption="作業と思い出、そのどちらにも整える視点を。">
-        <img src="/images/profile-about.jpg" alt="撮影の様子">
       </div>
     </section>
 
-    <section class="section section-soft">
-      <div class="container">
-        <div class="section-head" data-reveal>
-          <h2 class="section-title">2つの入口</h2>
-          <p class="section-lead">
-            業務を効率化したい方も、写真で自分や家族の今を残したい方も、まずは目的に近い入口からご覧ください。
-          </p>
-        </div>
-        <div class="grid grid-2">
-          <a class="service-card ai" href="/ai/" data-reveal>
-            <span class="tag">AI support</span>
-            <span>
-              <strong>AI業務効率化支援</strong>
-              <p>生成AIの使い方、日々の作業整理、文章作成や発信の仕組み化をサポートします。</p>
-            </span>
+    <section class="tk-section" id="services">
+      <div class="tk-container">
+        <h2 class="tk-title" data-reveal>入口を選ぶ</h2>
+        <p class="tk-section-lead" data-reveal>目的に近いページからご覧ください。</p>
+        <div class="tk-menu-grid">
+          <a class="tk-menu-card tk-menu-card--link" href="/ai/" data-reveal>
+            <span>AI</span>
+            <h3>AI業務効率化支援</h3>
+            <p>日々の作業、文章作成、発信、情報整理をAIで扱いやすく整えます。</p>
           </a>
-          <a class="service-card photo" href="/photo/" data-reveal>
-            <span class="tag">Photography</span>
-            <span>
-              <strong>写真撮影</strong>
-              <p>プロフィール写真と家族写真を中心に、自然体で伝わる写真を撮影します。</p>
-            </span>
+          <a class="tk-menu-card tk-menu-card--link" href="/photo/" data-reveal>
+            <span>Photo</span>
+            <h3>写真撮影</h3>
+            <p>プロフィール写真と家族写真を中心に、自然体で伝わる写真を撮影します。</p>
           </a>
         </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container">
-        <div class="section-head" data-reveal>
-          <h2 class="section-title">大切にしていること</h2>
-          <p class="section-lead">
-            AIも写真も、ただ便利にする・きれいに撮るだけではなく、その人らしい活動が続いていくことを大切にしています。
-          </p>
-        </div>
-        <div class="grid grid-3">
-          <article class="panel" data-reveal>
+    <section class="tk-section tk-section--soft">
+      <div class="tk-container">
+        <h2 class="tk-title" data-reveal>大切にしていること</h2>
+        <div class="tk-menu-grid">
+          <article class="tk-menu-card" data-reveal>
+            <span>01</span>
             <h3>わかりやすく整える</h3>
-            <p>難しい言葉や複雑な手順を減らし、すぐ使える形に落とし込みます。</p>
+            <p>複雑なことを、日々使えるシンプルな形へ落とし込みます。</p>
           </article>
-          <article class="panel" data-reveal>
-            <h3>自然体を引き出す</h3>
-            <p>無理に飾りすぎず、仕事や人柄が伝わる表現を一緒に探します。</p>
+          <article class="tk-menu-card" data-reveal>
+            <span>02</span>
+            <h3>自然体を残す</h3>
+            <p>無理に作り込みすぎず、その人らしい魅力が伝わる表現を大切にします。</p>
           </article>
-          <article class="panel" data-reveal>
+          <article class="tk-menu-card" data-reveal>
+            <span>03</span>
             <h3>小さく始める</h3>
-            <p>最初から大きく作り込まず、必要なところから無理なく育てます。</p>
+            <p>必要なところから始め、活動に合わせて少しずつ育てます。</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section section-soft" id="contact">
-      <div class="container">
-        <div class="cta" data-reveal>
-          <div>
-            <h2>まずは相談内容を聞かせてください。</h2>
-            <p>AI支援、プロフィール撮影、家族写真など、目的に合わせて入口をご案内します。</p>
-          </div>
-          <a class="button" href="mailto:info@example.com">問い合わせる</a>
+    <section class="tk-section" id="contact">
+      <div class="tk-container">
+        <div class="tk-contact" data-reveal>
+          <h2>お問い合わせ</h2>
+          <p>AI支援、写真撮影など、相談したい内容を添えてご連絡ください。</p>
+          <a class="tk-button" href="mailto:info@example.com">Contact</a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <span>tk14 works</span>
-      <span>AI support and photography</span>
-    </div>
+  <footer class="tk-footer">
+    <a href="/">tk14 works</a>
   </footer>
 
-  <script src="/assets/js/site.js?v=2"></script>
+  <script src="/assets/js/site.js?v=4"></script>
 </body>
 </html>

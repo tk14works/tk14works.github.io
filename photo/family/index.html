@@ -3,127 +3,76 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>家族写真 | tk14 works</title>
+  <title>Moment | 家族写真</title>
   <meta name="description" content="家族写真、七五三、日常の記録など、今しかない家族の時間を自然に残す撮影を行います。">
-  <link rel="stylesheet" href="/assets/css/site.css?v=2">
+  <link rel="stylesheet" href="/assets/css/site.css?v=4">
 </head>
-<body>
-  <header class="site-header">
-    <div class="header-inner">
-      <a class="brand" href="/">tk14 works</a>
-      <button class="nav-toggle" type="button" aria-label="メニューを開く" aria-expanded="false" data-nav-toggle>Menu</button>
-      <nav class="nav" aria-label="主要ナビゲーション" data-nav>
-        <a href="/ai/">AI</a>
-        <a href="/photo/" aria-current="page">Photo</a>
-        <a href="#contact">Contact</a>
+<body class="profile-minimal site-family">
+  <header class="profile-header">
+    <div class="profile-header__inner">
+      <a class="profile-logo" href="/photo/family/">Moment</a>
+      <button class="profile-menu-button" type="button" aria-label="メニューを開く" aria-expanded="false" data-nav-toggle>Menu</button>
+      <nav class="profile-nav" aria-label="Momentページメニュー" data-nav>
+        <a href="#about">大切にしていること</a>
+        <a href="#plan">撮影メニュー</a>
+        <a href="#contact">お問い合わせ</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="hero container">
-      <div>
-        <p class="eyebrow">Family photography</p>
-        <h1>今しかない家族の時間を、自然に残す。</h1>
-        <p class="hero-copy">
-          記念日だけでなく、いつもの表情や何気ない距離感も大切に撮影します。
-          家族写真、七五三、日常の記録など、無理なく過ごせる撮影を心がけています。
+    <section class="tk-hero" id="home">
+      <div class="tk-hero__image" data-reveal>
+        <img src="/images/profile-about.jpg" alt="家族写真のイメージ">
+      </div>
+      <div class="tk-hero__copy" data-reveal>
+        <p class="tk-label">Family photography</p>
+        <h1>今しかない家族の時間を、<br>自然に残す。</h1>
+        <p>
+          記念日だけでなく、いつもの表情や何気ない距離感も大切に。
+          家族らしい空気を、無理のない撮影で残します。
         </p>
-        <div class="actions">
-          <a class="button" href="#contact">家族写真を相談する</a>
-          <a class="button button-secondary" href="/photo/">フォト部門へ戻る</a>
-        </div>
-      </div>
-      <div class="visual-card" data-caption="かしこまった記念写真だけではなく、家族らしい空気を残します。">
-        <img src="/images/profile-about.jpg" alt="屋外での撮影風景">
+        <a class="tk-button" href="#contact">撮影を相談する</a>
       </div>
     </section>
 
-    <section class="section section-soft">
-      <div class="container">
-        <div class="section-head" data-reveal>
-          <h2 class="section-title">撮影メニュー</h2>
-          <p class="section-lead">家族のペースに合わせて、自然に過ごせる時間の中で撮影します。</p>
-        </div>
-        <div class="grid grid-3">
-          <article class="panel" data-reveal>
-            <h3>家族写真</h3>
-            <p>公園や思い出の場所など、いつもの空気に近い写真を残します。</p>
-          </article>
-          <article class="panel" data-reveal>
-            <h3>七五三</h3>
-            <p>お子さまの表情や家族のやりとりを、落ち着いたペースで撮影します。</p>
-          </article>
-          <article class="panel" data-reveal>
-            <h3>日常の記録</h3>
-            <p>特別な日でなくても、今の家族らしさを写真に残します。</p>
-          </article>
+    <section class="tk-section" id="plan">
+      <div class="tk-container">
+        <h2 class="tk-title" data-reveal>撮影メニュー</h2>
+        <div class="tk-menu-grid">
+          <article class="tk-menu-card" data-reveal><span>01</span><h3>家族写真</h3><p>公園や思い出の場所など、いつもの空気に近い写真を残します。</p></article>
+          <article class="tk-menu-card" data-reveal><span>02</span><h3>七五三</h3><p>お子さまの表情や家族のやりとりを、落ち着いたペースで撮影します。</p></article>
+          <article class="tk-menu-card" data-reveal><span>03</span><h3>日常の記録</h3><p>特別な日でなくても、今の家族らしさを写真に残します。</p></article>
         </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container">
-        <div class="section-head" data-reveal>
-          <h2 class="section-title">大切にしていること</h2>
-          <p class="section-lead">小さなお子さまがいても、無理にポーズを作らず、その日の空気を見ながら進めます。</p>
-        </div>
-        <div class="grid grid-2">
-          <article class="panel" data-reveal>
-            <h3>家族のペースを優先</h3>
-            <p>緊張や人見知りも含めて、その子らしさとして受け止めながら撮影します。</p>
-          </article>
-          <article class="panel" data-reveal>
-            <h3>あとから見返したくなる写真</h3>
-            <p>きれいな一枚だけでなく、会話や手元、移動中の表情も大切にします。</p>
-          </article>
+    <section class="tk-section tk-section--soft" id="about">
+      <div class="tk-container">
+        <h2 class="tk-title" data-reveal>大切にしていること</h2>
+        <div class="tk-menu-grid">
+          <article class="tk-menu-card" data-reveal><span>01</span><h3>家族のペース</h3><p>緊張や人見知りも含めて、その子らしさとして受け止めます。</p></article>
+          <article class="tk-menu-card" data-reveal><span>02</span><h3>自然な記録</h3><p>きれいな一枚だけでなく、会話や手元、移動中の表情も大切にします。</p></article>
+          <article class="tk-menu-card" data-reveal><span>03</span><h3>無理のない時間</h3><p>予定通りに進めるより、その日の空気に合わせて撮影します。</p></article>
         </div>
       </div>
     </section>
 
-    <section class="section section-soft">
-      <div class="container">
-        <div class="section-head" data-reveal>
-          <h2 class="section-title">撮影の流れ</h2>
-          <p class="section-lead">事前に希望を聞きながら、当日は家族の様子に合わせて進めます。</p>
-        </div>
-        <div class="grid grid-3 steps">
-          <article class="step" data-reveal>
-            <h3>相談</h3>
-            <p>人数、場所、撮りたい雰囲気、記念日の有無を確認します。</p>
-          </article>
-          <article class="step" data-reveal>
-            <h3>撮影</h3>
-            <p>遊びながら、歩きながら、自然なやりとりを撮影します。</p>
-          </article>
-          <article class="step" data-reveal>
-            <h3>納品</h3>
-            <p>セレクトと調整を行い、見返しやすい形でお渡しします。</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="contact">
-      <div class="container">
-        <div class="cta" data-reveal>
-          <div>
-            <h2>家族写真の相談はこちらから。</h2>
-            <p>撮影したい時期、人数、場所の希望があれば添えてご連絡ください。</p>
-          </div>
-          <a class="button" href="mailto:info@example.com">家族写真を相談する</a>
+    <section class="tk-section" id="contact">
+      <div class="tk-container">
+        <div class="tk-contact" data-reveal>
+          <h2>お問い合わせ</h2>
+          <p>撮影したい時期、人数、場所の希望があれば添えてご相談ください。</p>
+          <a class="tk-button" href="mailto:info@example.com">Contact</a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <span>tk14 works</span>
-      <a href="/photo/">Photo</a>
-    </div>
+  <footer class="tk-footer">
+    <a href="/photo/">Photo top</a>
   </footer>
 
-  <script src="/assets/js/site.js?v=2"></script>
+  <script src="/assets/js/site.js?v=4"></script>
 </body>
 </html>

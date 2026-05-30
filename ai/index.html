@@ -5,128 +5,91 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI業務効率化支援 | tk14 works</title>
   <meta name="description" content="生成AIを活用した業務効率化、文章作成、発信整理、日々の作業改善をわかりやすくサポートします。">
-  <link rel="stylesheet" href="/assets/css/site.css?v=2">
+  <link rel="stylesheet" href="/assets/css/site.css?v=4">
 </head>
-<body>
-  <header class="site-header">
-    <div class="header-inner">
-      <a class="brand" href="/">tk14 works</a>
-      <button class="nav-toggle" type="button" aria-label="メニューを開く" aria-expanded="false" data-nav-toggle>Menu</button>
-      <nav class="nav" aria-label="主要ナビゲーション" data-nav>
-        <a href="/ai/" aria-current="page">AI</a>
-        <a href="/photo/">Photo</a>
-        <a href="#contact">Contact</a>
+<body class="profile-minimal site-ai">
+  <header class="profile-header">
+    <div class="profile-header__inner">
+      <a class="profile-logo" href="/">tk14 works</a>
+      <button class="profile-menu-button" type="button" aria-label="メニューを開く" aria-expanded="false" data-nav-toggle>Menu</button>
+      <nav class="profile-nav" aria-label="AIページメニュー" data-nav>
+        <a href="#support">できること</a>
+        <a href="#flow">進め方</a>
+        <a href="#contact">お問い合わせ</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="hero container">
-      <div>
-        <p class="eyebrow">AI support</p>
-        <h1>AIを、毎日の仕事で使える形に。</h1>
-        <p class="hero-copy">
-          生成AIに興味はあるけれど、何から始めればいいかわからない。そんな方に向けて、
-          業務の棚卸しから具体的な使い方、続けられる仕組みづくりまでサポートします。
+    <section class="tk-hero" id="home">
+      <div class="tk-hero__image tk-hero__image--abstract" data-reveal>
+        <div class="tk-signal">
+          <span>Task</span>
+          <strong>Prompt</strong>
+          <em>Output</em>
+        </div>
+      </div>
+      <div class="tk-hero__copy" data-reveal>
+        <p class="tk-label">AI support</p>
+        <h1>AIを、毎日の仕事で<br>使える形に。</h1>
+        <p>
+          生成AIを導入するだけで終わらせず、仕事の流れに合わせて、
+          使いやすい手順とプロンプトを一緒に整えます。
         </p>
-        <div class="actions">
-          <a class="button" href="#contact">AIについて相談する</a>
-          <a class="button button-secondary" href="/">トップへ戻る</a>
-        </div>
-      </div>
-      <div class="abstract-visual" aria-label="AI業務整理のイメージ">
-        <div class="signal-board">
-          <div class="signal-row"><span class="signal-label">Task</span><span class="signal-line"></span></div>
-          <div class="signal-row"><span class="signal-label">Prompt</span><span class="signal-line"></span></div>
-          <div class="signal-row"><span class="signal-label">Output</span><span class="signal-line"></span></div>
-        </div>
+        <a class="tk-button" href="#contact">AIについて相談する</a>
       </div>
     </section>
 
-    <section class="section section-soft">
-      <div class="container">
-        <div class="section-head" data-reveal>
-          <h2 class="section-title">できること</h2>
-          <p class="section-lead">
-            ツールを増やすことより、日々の仕事の中に無理なくAIを入れることを重視します。
-          </p>
-        </div>
-        <div class="grid grid-3">
-          <article class="panel" data-reveal>
+    <section class="tk-section" id="support">
+      <div class="tk-container">
+        <h2 class="tk-title" data-reveal>できること</h2>
+        <p class="tk-section-lead" data-reveal>難しいツール紹介より、実務で続く使い方を重視します。</p>
+        <div class="tk-menu-grid">
+          <article class="tk-menu-card" data-reveal>
+            <span>01</span>
             <h3>業務の棚卸し</h3>
-            <p>時間がかかっている作業を整理し、AIで軽くできる部分を見つけます。</p>
+            <p>時間がかかっている作業を整理し、AI化できる部分を見つけます。</p>
           </article>
-          <article class="panel" data-reveal>
+          <article class="tk-menu-card" data-reveal>
+            <span>02</span>
             <h3>プロンプト設計</h3>
-            <p>文章作成、要約、企画、SNS投稿など、繰り返し使える依頼文を整えます。</p>
+            <p>文章作成、要約、企画、SNS投稿などに使える依頼文を整えます。</p>
           </article>
-          <article class="panel" data-reveal>
+          <article class="tk-menu-card" data-reveal>
+            <span>03</span>
             <h3>運用サポート</h3>
-            <p>使い方を一度教えて終わりにせず、実務に合う形へ調整します。</p>
+            <p>一度教えて終わりではなく、実務に合わせて調整します。</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container">
-        <div class="section-head" data-reveal>
-          <h2 class="section-title">こんな方へ</h2>
-          <p class="section-lead">
-            中小企業、個人事業主、ひとりで発信や事務作業を抱えている方に向いています。
-          </p>
-        </div>
-        <ul class="list" data-reveal>
-          <li><strong>文章作成に時間がかかる</strong> メール、提案文、SNS投稿、ブログの下書きを効率化したい。</li>
-          <li><strong>情報整理が追いつかない</strong> メモ、議事録、資料、アイデアを使いやすくまとめたい。</li>
-          <li><strong>AIを試したが続かなかった</strong> 自分の仕事に合う使い方まで落とし込みたい。</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="section section-soft">
-      <div class="container">
-        <div class="section-head" data-reveal>
-          <h2 class="section-title">進め方</h2>
-          <p class="section-lead">最初は小さく始めて、実際の業務に合わせながら整えていきます。</p>
-        </div>
-        <div class="grid grid-3 steps">
-          <article class="step" data-reveal>
-            <h3>ヒアリング</h3>
-            <p>仕事内容、困っている作業、使っているツールを確認します。</p>
-          </article>
-          <article class="step" data-reveal>
-            <h3>設計と実践</h3>
-            <p>AIを使う場面を決め、実際に使えるプロンプトや手順を作ります。</p>
-          </article>
-          <article class="step" data-reveal>
-            <h3>調整</h3>
-            <p>使ってみて違和感がある部分を直し、続けやすい形にします。</p>
-          </article>
+    <section class="tk-section tk-section--soft" id="flow">
+      <div class="tk-container">
+        <h2 class="tk-title" data-reveal>進め方</h2>
+        <div class="tk-flow">
+          <article data-reveal><span>01</span><h3>ヒアリング</h3><p>仕事内容や困っている作業を確認します。</p></article>
+          <article data-reveal><span>02</span><h3>設計</h3><p>AIを使う場面と具体的な手順を決めます。</p></article>
+          <article data-reveal><span>03</span><h3>定着</h3><p>使ってみて違和感のある部分を調整します。</p></article>
         </div>
       </div>
     </section>
 
-    <section class="section" id="contact">
-      <div class="container">
-        <div class="cta" data-reveal>
-          <div>
-            <h2>AI活用の最初の一歩から相談できます。</h2>
-            <p>相談内容、現在の課題、試してみたいことを簡単に送ってください。</p>
-          </div>
-          <a class="button" href="mailto:info@example.com">AI支援を相談する</a>
+    <section class="tk-section" id="contact">
+      <div class="tk-container">
+        <div class="tk-contact" data-reveal>
+          <h2>お問い合わせ</h2>
+          <p>現在の課題、試してみたいこと、相談したい業務を簡単に送ってください。</p>
+          <a class="tk-button" href="mailto:info@example.com">Contact</a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <span>tk14 works</span>
-      <a href="/">Top</a>
-    </div>
+  <footer class="tk-footer">
+    <a href="/">tk14 works</a>
   </footer>
 
-  <script src="/assets/js/site.js?v=2"></script>
+  <script src="/assets/js/site.js?v=4"></script>
 </body>
 </html>
