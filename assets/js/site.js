@@ -34,3 +34,34 @@ if ("IntersectionObserver" in window) {
 } else {
   revealTargets.forEach((target) => target.classList.add("is-visible"));
 }
+
+document.querySelectorAll("[data-carousel]").forEach((carousel) => {
+  const dots = carousel.nextElementSibling;
+  if (!dots || !dots.matches("[data-carousel-dots]")) return;
+
+  const dotItems = Array.from(dots.querySelectorAll("span"));
+  const cards = Array.from(carousel.children);
+
+  const setActiveDot = () => {
+    const center = carousel.scrollLeft + carousel.clientWidth / 2;
+    let activeIndex = 0;
+    let shortestDistance = Infinity;
+
+    cards.forEach((card, index) => {
+      const cardCenter = card.offsetLeft + card.clientWidth / 2;
+      const distance = Math.abs(center - cardCenter);
+      if (distance < shortestDistance) {
+        shortestDistance = distance;
+        activeIndex = index;
+      }
+    });
+
+    dotItems.forEach((dot, index) => {
+      dot.classList.toggle("is-active", index === activeIndex);
+    });
+  };
+
+  carousel.addEventListener("scroll", setActiveDot, { passive: true });
+  window.addEventListener("resize", setActiveDot);
+  setActiveDot();
+});

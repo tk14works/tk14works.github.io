@@ -1059,13 +1059,37 @@ h1 {
 
 .profile-minimal .profile-menu-button {
   display: none;
-  min-width: 50px;
-  min-height: 50px;
-  border: 1px solid var(--tk-line);
-  border-radius: 999px;
-  background: var(--tk-white);
+  position: relative;
+  min-width: 64px;
+  min-height: 36px;
+  padding: 0 0 0 24px;
+  border: 0;
+  border-bottom: 1px solid var(--tk-gold);
+  border-radius: 0;
+  background: transparent;
   color: var(--tk-ink);
   font: inherit;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.profile-minimal .profile-menu-button::before,
+.profile-minimal .profile-menu-button::after {
+  position: absolute;
+  left: 0;
+  width: 16px;
+  height: 1px;
+  background: var(--tk-ink);
+  content: "";
+}
+
+.profile-minimal .profile-menu-button::before {
+  top: 12px;
+}
+
+.profile-minimal .profile-menu-button::after {
+  top: 19px;
 }
 
 .tk-container {
@@ -1237,9 +1261,10 @@ h1 {
 .tk-pricing {
   display: flex;
   gap: 18px;
-  margin: 0 -20px;
-  padding: 2px 20px 18px;
+  margin: 0 calc(50% - 50vw);
+  padding: 2px calc((100vw - min(76vw, 350px)) / 2) 18px;
   overflow-x: auto;
+  scroll-padding-inline: calc((100vw - min(76vw, 350px)) / 2);
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
@@ -1252,8 +1277,28 @@ h1 {
 
 .tk-gallery-card,
 .tk-price-card {
-  flex: 0 0 min(84vw, 350px);
-  scroll-snap-align: start;
+  flex: 0 0 min(76vw, 350px);
+  scroll-snap-align: center;
+}
+
+.tk-carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.tk-carousel-dots span {
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: rgba(44, 47, 51, 0.18);
+  transition: width 180ms ease, background-color 180ms ease;
+}
+
+.tk-carousel-dots span.is-active {
+  width: 20px;
+  background: var(--tk-gold);
 }
 
 .tk-gallery-card {
@@ -1412,6 +1457,7 @@ h1 {
     margin: 0;
     padding: 0;
     overflow: visible;
+    scroll-padding-inline: 0;
   }
 
   .tk-gallery {
@@ -1426,6 +1472,10 @@ h1 {
   .tk-gallery-card,
   .tk-price-card {
     flex-basis: auto;
+  }
+
+  .tk-carousel-dots {
+    display: none;
   }
 }
 
