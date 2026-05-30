@@ -1,405 +1,116 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- 編集ここ：サイトタイトル -->
-    <title>tk14 Works | 写真とAIで、活動をつくる。</title>
-    <!-- 編集ここ：メタディスクリプション -->
-    <meta name="description" content="PhotographyとAIを通して、あなたらしい発信や活動をサポートします。">
-    <style>
-        /* =========================================
-           CSS Variables & Reset
-        ========================================= */
-        :root {
-            --color-bg: #F7F7F5;
-            --color-text: #1A1A1A;
-            --color-main: #1F2937;
-            --color-accent: #BFA46F;
-            --color-card-bg: #FFFFFF;
-            
-            --font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            
-            --spacing-xs: 0.5rem;
-            --spacing-sm: 1rem;
-            --spacing-md: 2rem;
-            --spacing-lg: 4rem;
-            --spacing-xl: 6rem;
-            
-            --transition-speed: 0.4s;
-            --transition-easing: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-
-        *, *::before, *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: var(--font-family);
-            background-color: var(--color-bg);
-            color: var(--color-text);
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        button, a.button {
-            cursor: pointer;
-            font-family: inherit;
-        }
-
-        /* =========================================
-           Typography
-        ========================================= */
-        h1, h2, h3 {
-            font-weight: 400;
-            line-height: 1.3;
-        }
-
-        .text-center { text-align: center; }
-        .tracking-wide { letter-spacing: 0.05em; }
-        
-        /* =========================================
-           Layout
-        ========================================= */
-        .container {
-            width: 100%;
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 var(--spacing-sm);
-        }
-
-        main {
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: var(--spacing-xl) 0;
-        }
-
-        /* =========================================
-           Hero Section
-        ========================================= */
-        .hero {
-            margin-bottom: var(--spacing-xl);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .hero__brand {
-            font-size: 1.2rem;
-            letter-spacing: 0.1em;
-            margin-bottom: var(--spacing-lg);
-            color: var(--color-main);
-            text-transform: uppercase;
-        }
-
-        .hero__title {
-            font-size: clamp(2rem, 5vw, 3.5rem);
-            margin-bottom: var(--spacing-md);
-            letter-spacing: 0.02em;
-        }
-
-        .hero__subtitle {
-            font-size: clamp(1rem, 2vw, 1.125rem);
-            color: #555;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        /* =========================================
-           Portal Cards Section
-        ========================================= */
-        .portals {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: var(--spacing-lg);
-        }
-
-        @media (min-width: 768px) {
-            .portals {
-                grid-template-columns: 1fr 1fr;
-                gap: var(--spacing-md);
-            }
-        }
-
-        .card {
-            background-color: var(--color-card-bg);
-            border-radius: 8px;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            transition: transform var(--transition-speed) var(--transition-easing), 
-                        box-shadow var(--transition-speed) var(--transition-easing);
-            text-decoration: none;
-            color: var(--color-text);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
-            position: relative;
-        }
-
-        .card:hover, .card:focus-visible {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
-            outline: none;
-        }
-
-        .card:active {
-            transform: translateY(-2px);
-        }
-
-        .card__color-wrapper {
-            position: relative;
-            width: 100%;
-            /* 縦長を解消するため、高さを抑えて視認しやすい横長な比率(16:7)に変更 */
-            aspect-ratio: 16 / 7; 
-            overflow: hidden;
-        }
-
-        .card__color-block {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            /* 背景色の変化もアニメーションに含める */
-            transition: transform 0.8s var(--transition-easing), filter 0.4s ease, background-color 0.4s ease;
-        }
-
-        .color-block--ai {
-            /* AI部門はメインカラー（ダークグレー）を設定 */
-            background-color: var(--color-main);
-        }
-
-        .color-block--photo {
-            /* Photo部門はアクセントカラー（ゴールド系）を設定 */
-            background-color: var(--color-accent);
-        }
-
-        /* ホバー時に少しズーム */
-        .card:hover .card__color-block, .card:focus-visible .card__color-block {
-            transform: scale(1.08); 
-        }
-
-        /* ダークカラーのAI部門は、色を直接明るくして変化をはっきりさせる */
-        .card:hover .color-block--ai, .card:focus-visible .color-block--ai {
-            background-color: #3f4e63; /* メインカラーより数段明るいグレーブルー */
-            filter: brightness(1.1);
-        }
-
-        /* Photo部門は少し明るくする演出 */
-        .card:hover .color-block--photo, .card:focus-visible .color-block--photo {
-            filter: brightness(1.15);
-        }
-
-        .card__content {
-            padding: var(--spacing-md);
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-            align-items: center;
-            text-align: center;
-        }
-
-        .card__brand {
-            font-size: 0.875rem;
-            color: var(--color-accent);
-            letter-spacing: 0.1em;
-            margin-bottom: var(--spacing-xs);
-            text-transform: uppercase;
-        }
-
-        .card__title {
-            font-size: 1.5rem;
-            margin-bottom: var(--spacing-sm);
-            color: var(--color-main);
-        }
-
-        .card__description {
-            font-size: 0.9375rem;
-            color: #555;
-            margin-bottom: var(--spacing-md);
-            flex-grow: 1;
-        }
-
-        .card__button {
-            display: inline-block;
-            padding: 0.75rem 2rem;
-            background-color: transparent;
-            color: var(--color-main);
-            border: 1px solid var(--color-main);
-            border-radius: 4px;
-            font-size: 0.9375rem;
-            transition: all 0.3s ease;
-            width: fit-content;
-        }
-
-        .card:hover .card__button, .card:focus-visible .card__button {
-            background-color: var(--color-main);
-            color: white;
-        }
-
-        /* =========================================
-           Footer
-        ========================================= */
-        footer {
-            padding: var(--spacing-md) 0;
-            text-align: center;
-            font-size: 0.875rem;
-            color: #888;
-        }
-
-        /* =========================================
-           Animation Classes
-        ========================================= */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.8s var(--transition-easing), 
-                        transform 0.8s var(--transition-easing);
-        }
-
-        .fade-in.is-visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* prefers-reduced-motion */
-        @media (prefers-reduced-motion: reduce) {
-            *,
-            *::before,
-            *::after {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-                scroll-behavior: auto !important;
-            }
-            .fade-in {
-                opacity: 1;
-                transform: none;
-                transition: none;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tk14 works | AIと写真で、仕事と魅力を整える</title>
+  <meta name="description" content="tk14 worksは、AIによる業務効率化支援とプロフィール・家族写真の撮影を通して、仕事と人の魅力が伝わる形づくりをサポートします。">
+  <link rel="stylesheet" href="/assets/css/site.css?v=2">
 </head>
 <body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/">tk14 works</a>
+      <button class="nav-toggle" type="button" aria-label="メニューを開く" aria-expanded="false" data-nav-toggle>Menu</button>
+      <nav class="nav" aria-label="主要ナビゲーション" data-nav>
+        <a href="/ai/">AI</a>
+        <a href="/photo/">Photo</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-    <main>
-        <div class="container">
-            <!-- Hero Section -->
-            <section class="hero fade-in">
-                <!-- 編集ここ：ブランド名 -->
-                <!-- text-transform: uppercase によって大文字にならないよう、CSSを外すか小文字を強制する必要があります。ここではインラインで小文字化 -->
-                <p class="hero__brand" style="text-transform: none;">tk14 Works</p>
-                <!-- 編集ここ：メインコピー -->
-                <h1 class="hero__title text-center tracking-wide">写真とAIで、<br>活動をつくる。</h1>
-                <!-- 編集ここ：サブコピー -->
-                <p class="hero__subtitle text-center">Photography と AI を通して、<br>あなたらしい発信や活動をサポートします。</p>
-            </section>
-
-            <!-- Portal Cards Section -->
-            <section class="portals">
-                <!-- Photo Card -->
-                <!-- 編集ここ：Photo部門リンク先 -->
-                <a href="photo/" class="card fade-in" aria-label="写真撮影・ポートフォリオの詳細を見る">
-                    <div class="card__color-wrapper">
-                        <!-- 画像の代わりに色付き四角を配置 -->
-                        <div class="card__color-block color-block--photo"></div>
-                    </div>
-                    <div class="card__content">
-                        <!-- 編集ここ：Photo部門ブランド名 -->
-                        <!-- text-transformの影響を回避 -->
-                        <span class="card__brand" style="text-transform: none;">tk14 Photography</span>
-                        <!-- 編集ここ：Photo部門タイトル -->
-                        <h2 class="card__title">写真撮影</h2>
-                        <!-- 編集ここ：Photo部門説明 -->
-                        <p class="card__description">プロフィール・SNS用・家族写真など、<br>自然体であなたらしい写真を撮影しています。</p>
-                        <!-- 編集ここ：Photo部門ボタンテキスト -->
-                        <span class="card__button">Photo部門を見る</span>
-                    </div>
-                </a>
-
-                <!-- AI Card -->
-                <!-- 編集ここ：AI部門リンク先 -->
-                <a href="ai/" class="card fade-in" aria-label="AI業務支援・効率化サポートの詳細を見る">
-                    <div class="card__color-wrapper">
-                        <!-- 画像の代わりに色付き四角を配置 -->
-                        <div class="card__color-block color-block--ai"></div>
-                    </div>
-                    <div class="card__content">
-                        <!-- 編集ここ：AI部門ブランド名 -->
-                        <!-- text-transformの影響を回避 -->
-                        <span class="card__brand" style="text-transform: none;">tk14 AI</span>
-                        <!-- 編集ここ：AI部門タイトル -->
-                        <h2 class="card__title">AI業務支援・効率化サポート</h2>
-                        <!-- 編集ここ：AI部門説明 -->
-                        <p class="card__description">生成AIを活用した業務効率化など、<br>中小企業・個人事業主のサポートを行っています。</p>
-                        <!-- 編集ここ：AI部門ボタンテキスト -->
-                        <span class="card__button">AI部門を見る</span>
-                    </div>
-                </a>
-            </section>
+  <main>
+    <section class="hero container">
+      <div>
+        <p class="eyebrow">AI support / Photography</p>
+        <h1>AIで仕事を整える。写真で人柄を伝える。</h1>
+        <p class="hero-copy">
+          tk14 worksは、AIを使った業務効率化支援と、プロフィール・家族写真の撮影を行っています。
+          仕事の流れを軽くし、伝えたい魅力が自然に届く形を一緒につくります。
+        </p>
+        <div class="actions">
+          <a class="button" href="/ai/">AIの相談を見る</a>
+          <a class="button button-secondary" href="/photo/">写真撮影を見る</a>
         </div>
-    </main>
+      </div>
+      <div class="visual-card" data-caption="作業と思い出、そのどちらにも整える視点を。">
+        <img src="/images/profile-about.jpg" alt="撮影の様子">
+      </div>
+    </section>
 
-    <footer>
-        <div class="container">
-            <!-- 編集ここ：コピーライト -->
-            <p>&copy; 2026 tk14 Works. All rights reserved.</p>
+    <section class="section section-soft">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <h2 class="section-title">2つの入口</h2>
+          <p class="section-lead">
+            業務を効率化したい方も、写真で自分や家族の今を残したい方も、まずは目的に近い入口からご覧ください。
+          </p>
         </div>
-    </footer>
+        <div class="grid grid-2">
+          <a class="service-card ai" href="/ai/" data-reveal>
+            <span class="tag">AI support</span>
+            <span>
+              <strong>AI業務効率化支援</strong>
+              <p>生成AIの使い方、日々の作業整理、文章作成や発信の仕組み化をサポートします。</p>
+            </span>
+          </a>
+          <a class="service-card photo" href="/photo/" data-reveal>
+            <span class="tag">Photography</span>
+            <span>
+              <strong>写真撮影</strong>
+              <p>プロフィール写真と家族写真を中心に、自然体で伝わる写真を撮影します。</p>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // ユーザーがアニメーションの軽減を要求しているかチェック
-            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    <section class="section">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <h2 class="section-title">大切にしていること</h2>
+          <p class="section-lead">
+            AIも写真も、ただ便利にする・きれいに撮るだけではなく、その人らしい活動が続いていくことを大切にしています。
+          </p>
+        </div>
+        <div class="grid grid-3">
+          <article class="panel" data-reveal>
+            <h3>わかりやすく整える</h3>
+            <p>難しい言葉や複雑な手順を減らし、すぐ使える形に落とし込みます。</p>
+          </article>
+          <article class="panel" data-reveal>
+            <h3>自然体を引き出す</h3>
+            <p>無理に飾りすぎず、仕事や人柄が伝わる表現を一緒に探します。</p>
+          </article>
+          <article class="panel" data-reveal>
+            <h3>小さく始める</h3>
+            <p>最初から大きく作り込まず、必要なところから無理なく育てます。</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-            if (!prefersReducedMotion) {
-                // IntersectionObserverのオプション
-                const observerOptions = {
-                    root: null, // ビューポートをルートとする
-                    rootMargin: '0px',
-                    threshold: 0.15 // 要素が15%見えたらコールバックを実行
-                };
+    <section class="section section-soft" id="contact">
+      <div class="container">
+        <div class="cta" data-reveal>
+          <div>
+            <h2>まずは相談内容を聞かせてください。</h2>
+            <p>AI支援、プロフィール撮影、家族写真など、目的に合わせて入口をご案内します。</p>
+          </div>
+          <a class="button" href="mailto:info@example.com">問い合わせる</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
-                // Observerのコールバック関数
-                const observerCallback = (entries, observer) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            // is-visibleクラスを追加してアニメーションをトリガー
-                            entry.target.classList.add('is-visible');
-                            // 一度表示されたら監視を解除
-                            observer.unobserve(entry.target);
-                        }
-                    });
-                };
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>tk14 works</span>
+      <span>AI support and photography</span>
+    </div>
+  </footer>
 
-                // IntersectionObserverのインスタンスを作成
-                const observer = new IntersectionObserver(observerCallback, observerOptions);
-
-                // .fade-in クラスを持つすべての要素を監視
-                const fadeElements = document.querySelectorAll('.fade-in');
-                fadeElements.forEach(el => {
-                    observer.observe(el);
-                });
-            }
-        });
-    </script>
+  <script src="/assets/js/site.js?v=2"></script>
 </body>
 </html>

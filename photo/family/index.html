@@ -3,936 +3,127 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Moment | ファミリーフォト</title>
-  <meta name="description" content="今しかない家族の時間を、自然に残します。家族写真、七五三、ワンちゃん撮影を行うファミリーフォトブランド「Moment」。">
-  
-  <style>
-    /* CSS Variables */
-    :root {
-      --color-main: #8C6A5D;
-      --color-accent: #D8A48F;
-      --color-bg: #FAF7F2;
-      --color-text: #2B2B2B;
-      --max-width: 1100px;
-      --header-height: 70px;
-    }
-
-    /* Reset & Base */
-    *, *::before, *::after {
-      box-sizing: border-box;
-    }
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      background-color: var(--color-bg);
-      color: var(--color-text);
-      line-height: 1.8;
-      -webkit-font-smoothing: antialiased;
-    }
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    h1, h2, h3, p {
-      margin: 0 0 1em 0;
-    }
-
-    .inner {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-    .section {
-      padding: 100px 0;
-    }
-    .section-title {
-      text-align: center;
-      font-size: 2rem;
-      font-weight: 400;
-      margin-bottom: 3rem;
-      letter-spacing: 0.05em;
-      color: var(--color-main);
-    }
-    
-    /* Utility Classes */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.8s ease, transform 0.8s ease;
-    }
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    
-    /* Buttons */
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 16px 40px;
-      background-color: var(--color-main);
-      color: #fff;
-      border-radius: 4px;
-      font-weight: 500;
-      letter-spacing: 0.05em;
-      transition: background-color 0.3s ease, transform 0.3s ease;
-      cursor: pointer;
-      border: none;
-    }
-    .btn:hover {
-      background-color: var(--color-accent);
-      transform: translateY(-2px);
-    }
-    .btn:focus-visible {
-      outline: 2px solid var(--color-text);
-      outline-offset: 2px;
-    }
-    .btn-outline {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 14px 38px;
-      border: 1px solid var(--color-main);
-      color: var(--color-main);
-      background-color: transparent;
-      border-radius: 4px;
-      transition: all 0.3s ease;
-      cursor: pointer;
-    }
-    .btn-outline:hover {
-      background-color: var(--color-main);
-      color: #fff;
-    }
-
-    header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: var(--header-height);
-      background-color: rgba(250, 247, 242, 0.95);
-      backdrop-filter: blur(5px);
-      z-index: 100;
-      display: flex;
-      align-items: center;
-      box-shadow: 0 1px 5px rgba(0,0,0,0.02);
-    }
-    .header-inner {
-      width: 100%;
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 0 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .logo {
-      font-size: 1.5rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      color: var(--color-main);
-    }
-    .nav-list {
-      display: flex;
-      gap: 30px;
-    }
-    .nav-link {
-      font-size: 0.95rem;
-      color: var(--color-text);
-      transition: color 0.3s ease;
-    }
-    .nav-link:hover, .nav-link.active {
-      color: var(--color-accent);
-    }
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      gap: 6px;
-      cursor: pointer;
-      z-index: 101;
-    }
-    .hamburger span {
-      width: 25px;
-      height: 2px;
-      background-color: var(--color-main);
-      transition: 0.3s;
-    }
-
-    /* Hero */
-    .hero {
-      padding-top: var(--header-height);
-      position: relative;
-    }
-    .hero-img-wrap {
-      width: 100%;
-      height: 80vh;
-      max-height: 800px;
-      overflow: hidden;
-    }
-    .hero-img-wrap img {
-      width: 100%;
-      height: 100%;
-    }
-    .hero-content {
-      text-align: center;
-      padding: 60px 20px;
-    }
-    .hero-content h2 {
-      font-size: 2.2rem;
-      font-weight: 400;
-      color: var(--color-main);
-      margin-bottom: 20px;
-    }
-    .hero-content p {
-      font-size: 1.05rem;
-      color: var(--color-text);
-      margin-bottom: 40px;
-    }
-
-    /* About */
-    .about-flex {
-      display: flex;
-      gap: 60px;
-      align-items: center;
-    }
-    .about-text {
-      flex: 1;
-    }
-    .about-text p {
-      margin-bottom: 1.5em;
-    }
-    .about-img {
-      flex: 1;
-      border-radius: 4px;
-      overflow: hidden;
-    }
-    .about-img img {
-      width: 100%;
-      height: auto;
-    }
-
-    /* Menu */
-    .menu-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 40px;
-    }
-    .menu-card {
-      background: #fff;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.03);
-    }
-    .menu-card-img {
-      width: 100%;
-      height: 240px;
-    }
-    .menu-card-img img {
-      width: 100%;
-      height: 100%;
-    }
-    .menu-card-body {
-      padding: 30px;
-      text-align: center;
-    }
-    .menu-card-body h3 {
-      font-size: 1.3rem;
-      font-weight: 400;
-      color: var(--color-main);
-      margin-bottom: 15px;
-    }
-
-    /* Gallery */
-    .gallery-filters {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      margin-bottom: 40px;
-      flex-wrap: wrap;
-    }
-    .filter-btn {
-      background: transparent;
-      border: none;
-      cursor: pointer;
-      font-size: 1rem;
-      color: var(--color-text);
-      padding: 5px 10px;
-      transition: color 0.3s;
-    }
-    .filter-btn.active, .filter-btn:hover {
-      color: var(--color-accent);
-      border-bottom: 1px solid var(--color-accent);
-    }
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 20px;
-    }
-    .gallery-item {
-      aspect-ratio: 4 / 3;
-      border-radius: 4px;
-      overflow: hidden;
-      cursor: pointer;
-      position: relative;
-    }
-    .gallery-item img {
-      width: 100%;
-      height: 100%;
-      transition: transform 0.5s ease;
-    }
-    .gallery-item:hover img {
-      transform: scale(1.05);
-    }
-
-    /* Plan */
-    .plan-card {
-      background: #fff;
-      max-width: 700px;
-      margin: 0 auto;
-      padding: 50px;
-      border-radius: 8px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.04);
-      text-align: center;
-    }
-    .plan-card h3 {
-      font-size: 1.5rem;
-      color: var(--color-main);
-      font-weight: 400;
-      margin-bottom: 30px;
-      padding-bottom: 20px;
-      border-bottom: 1px solid rgba(140, 106, 93, 0.2);
-    }
-    .plan-list {
-      text-align: left;
-      margin: 0 auto 30px auto;
-      max-width: 400px;
-    }
-    .plan-list li {
-      margin-bottom: 15px;
-      display: flex;
-      align-items: center;
-    }
-    .plan-list li::before {
-      content: "";
-      display: inline-block;
-      width: 6px;
-      height: 6px;
-      background-color: var(--color-accent);
-      border-radius: 50%;
-      margin-right: 15px;
-    }
-    .plan-desc {
-      color: #666;
-      font-size: 0.95rem;
-    }
-
-    /* Flow */
-    .flow-list {
-      max-width: 600px;
-      margin: 0 auto;
-      counter-reset: flow-counter;
-    }
-    .flow-item {
-      display: flex;
-      align-items: flex-start;
-      margin-bottom: 30px;
-      background: #fff;
-      padding: 25px;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.02);
-    }
-    .flow-item::before {
-      counter-increment: flow-counter;
-      content: counter(flow-counter);
-      background-color: var(--color-main);
-      color: #fff;
-      width: 32px;
-      height: 32px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 50%;
-      margin-right: 20px;
-      flex-shrink: 0;
-      font-weight: 500;
-    }
-
-    /* FAQ */
-    .faq-list {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    .faq-item {
-      background: #fff;
-      margin-bottom: 15px;
-      border-radius: 4px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
-    }
-    .faq-item summary {
-      padding: 20px 25px;
-      cursor: pointer;
-      font-weight: 500;
-      color: var(--color-main);
-      list-style: none;
-      position: relative;
-    }
-    .faq-item summary::-webkit-details-marker {
-      display: none;
-    }
-    .faq-item summary::after {
-      content: "+";
-      position: absolute;
-      right: 25px;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 1.2rem;
-      color: var(--color-accent);
-    }
-    .faq-item[open] summary::after {
-      content: "-";
-    }
-    .faq-answer {
-      padding: 0 25px 25px 25px;
-      color: #555;
-    }
-
-    /* Contact */
-    .contact-wrap {
-      text-align: center;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-    .contact-links {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      margin-top: 40px;
-      align-items: center;
-    }
-    .contact-links > * {
-      width: 100%;
-      max-width: 300px;
-    }
-
-    /* Footer */
-    footer {
-      background-color: var(--color-main);
-      color: #fff;
-      text-align: center;
-      padding: 60px 20px 30px;
-    }
-    .footer-sns {
-      margin-bottom: 30px;
-    }
-    .footer-sns a {
-      font-size: 1.1rem;
-      transition: opacity 0.3s;
-    }
-    .footer-sns a:hover {
-      opacity: 0.8;
-    }
-    .copyright {
-      font-size: 0.85rem;
-      opacity: 0.8;
-      letter-spacing: 0.05em;
-    }
-
-    /* Modal */
-    .modal {
-      display: none;
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background-color: rgba(0,0,0,0.85);
-      z-index: 1000;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-    .modal.active {
-      display: flex;
-      opacity: 1;
-    }
-    .modal-content {
-      position: relative;
-      max-width: 90%;
-      max-height: 90vh;
-    }
-    .modal-content img {
-      max-width: 100%;
-      max-height: 90vh;
-      border-radius: 4px;
-      box-shadow: 0 5px 25px rgba(0,0,0,0.2);
-    }
-    .modal-close {
-      position: absolute;
-      top: -40px;
-      right: 0;
-      color: #fff;
-      font-size: 2rem;
-      cursor: pointer;
-      background: none;
-      border: none;
-      padding: 0;
-    }
-
-    /* Media Queries */
-    @media (max-width: 768px) {
-      .hamburger {
-        display: flex;
-      }
-      .nav-list {
-        position: fixed;
-        top: var(--header-height);
-        left: 0;
-        width: 100%;
-        background-color: var(--color-bg);
-        flex-direction: column;
-        align-items: center;
-        padding: 40px 0;
-        box-shadow: 0 10px 15px rgba(0,0,0,0.05);
-        transform: translateY(-150%);
-        transition: transform 0.4s ease;
-        opacity: 0;
-        pointer-events: none;
-      }
-      .nav-list.active {
-        transform: translateY(0);
-        opacity: 1;
-        pointer-events: auto;
-      }
-      .about-flex {
-        flex-direction: column;
-        gap: 40px;
-      }
-      .hero-content h2 {
-        font-size: 1.6rem;
-      }
-      .hero-img-wrap {
-        height: 60vh;
-      }
-      .plan-card {
-        padding: 30px 20px;
-      }
-    }
-
-    /* Prefers Reduced Motion */
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-      }
-      .fade-in {
-        opacity: 1;
-        transform: none;
-      }
-    }
-  </style>
+  <title>家族写真 | tk14 works</title>
+  <meta name="description" content="家族写真、七五三、日常の記録など、今しかない家族の時間を自然に残す撮影を行います。">
+  <link rel="stylesheet" href="/assets/css/site.css?v=2">
 </head>
 <body>
-
-  <header>
+  <header class="site-header">
     <div class="header-inner">
-      <div class="logo">
-        <a href="../">Moment</a>
-      </div>
-      <nav>
-        <ul class="nav-list" id="nav-list">
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#menu" class="nav-link">Menu</a></li>
-          <li><a href="#gallery" class="nav-link">Gallery</a></li>
-          <li><a href="#plan" class="nav-link">Plan</a></li>
-          <li><a href="#flow" class="nav-link">Flow</a></li>
-          <li><a href="#faq" class="nav-link">FAQ</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
+      <a class="brand" href="/">tk14 works</a>
+      <button class="nav-toggle" type="button" aria-label="メニューを開く" aria-expanded="false" data-nav-toggle>Menu</button>
+      <nav class="nav" aria-label="主要ナビゲーション" data-nav>
+        <a href="/ai/">AI</a>
+        <a href="/photo/" aria-current="page">Photo</a>
+        <a href="#contact">Contact</a>
       </nav>
-      <div class="hamburger" id="hamburger">
-        <span></span><span></span><span></span>
-      </div>
     </div>
   </header>
 
   <main>
-    <section id="hero" class="hero">
-      <div class="hero-img-wrap fade-in">
-        <!-- 編集ここ：画像ファイル名 -->
-        <img src="../../images/hero.jpg" alt="自然な笑顔の家族写真" width="1200" height="800" loading="lazy" style="object-fit: cover;">
-      </div>
-      <div class="hero-content fade-in">
-        <h2>今しかない家族の時間を、<br>自然に残します。</h2>
-        <p>家族写真 / 七五三 / ワンちゃん撮影<br>自然な表情と、やさしい空気感を大切に撮影しています。</p>
-        <a href="#contact" class="btn">撮影の相談をする</a>
-      </div>
-    </section>
-
-    <section id="about" class="section">
-      <div class="inner">
-        <h2 class="section-title fade-in">About Moment</h2>
-        <div class="about-flex">
-          <div class="about-text fade-in">
-            <p>Momentは、家族の今しかない時間や、自然な表情を大切に残すファミリーフォトブランドです。</p>
-            <p>作り込みすぎず、やさしい空気感・自然体・温かさを大切にしています。</p>
-            <p>お子さまやワンちゃんが無理なく、いつもの笑顔でいられるような、リラックスした撮影スタイルを心がけています。何気ない瞬間が、未来の宝物になるように。</p>
-          </div>
-          <div class="about-img fade-in">
-            <!-- 編集ここ：画像ファイル名 -->
-            <img src="../../images/family-about.jpg" alt="やさしい光の中での撮影風景" width="600" height="400" loading="lazy" style="object-fit: cover;">
-          </div>
+    <section class="hero container">
+      <div>
+        <p class="eyebrow">Family photography</p>
+        <h1>今しかない家族の時間を、自然に残す。</h1>
+        <p class="hero-copy">
+          記念日だけでなく、いつもの表情や何気ない距離感も大切に撮影します。
+          家族写真、七五三、日常の記録など、無理なく過ごせる撮影を心がけています。
+        </p>
+        <div class="actions">
+          <a class="button" href="#contact">家族写真を相談する</a>
+          <a class="button button-secondary" href="/photo/">フォト部門へ戻る</a>
         </div>
       </div>
+      <div class="visual-card" data-caption="かしこまった記念写真だけではなく、家族らしい空気を残します。">
+        <img src="/images/profile-about.jpg" alt="屋外での撮影風景">
+      </div>
     </section>
 
-    <section id="menu" class="section" style="background-color: #F5EFEB;">
-      <div class="inner">
-        <h2 class="section-title fade-in">撮影メニュー</h2>
-        <div class="menu-grid">
-          <!-- 家族写真 -->
-          <article class="menu-card fade-in">
-            <div class="menu-card-img">
-              <!-- 編集ここ：画像ファイル名 -->
-              <img src="../../images/menu-family.jpg" alt="公園での家族写真" width="400" height="300" loading="lazy" style="object-fit: cover;">
-            </div>
-            <div class="menu-card-body">
-              <h3>家族写真</h3>
-              <p>お誕生日、記念日、あるいは何でもない日。いつもの自然なご家族の姿を切り取ります。</p>
-            </div>
+    <section class="section section-soft">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <h2 class="section-title">撮影メニュー</h2>
+          <p class="section-lead">家族のペースに合わせて、自然に過ごせる時間の中で撮影します。</p>
+        </div>
+        <div class="grid grid-3">
+          <article class="panel" data-reveal>
+            <h3>家族写真</h3>
+            <p>公園や思い出の場所など、いつもの空気に近い写真を残します。</p>
           </article>
-          <!-- 七五三 -->
-          <article class="menu-card fade-in">
-            <div class="menu-card-img">
-              <!-- 編集ここ：画像ファイル名 -->
-              <img src="../../images/menu-753.jpg" alt="笑顔の七五三撮影" width="400" height="300" loading="lazy" style="object-fit: cover;">
-            </div>
-            <div class="menu-card-body">
-              <h3>七五三</h3>
-              <p>お子さまの成長を祝う大切な日。型にはまりすぎない、自然な笑顔を大切に残します。</p>
-            </div>
+          <article class="panel" data-reveal>
+            <h3>七五三</h3>
+            <p>お子さまの表情や家族のやりとりを、落ち着いたペースで撮影します。</p>
           </article>
-          <!-- ワンちゃん撮影 -->
-          <article class="menu-card fade-in">
-            <div class="menu-card-img">
-              <!-- 編集ここ：画像ファイル名 -->
-              <img src="../../images/menu-dog.jpg" alt="走るワンちゃんの写真" width="400" height="300" loading="lazy" style="object-fit: cover;">
-            </div>
-            <div class="menu-card-body">
-              <h3>ワンちゃん撮影</h3>
-              <p>大切な家族の一員であるワンちゃん。のびのびと遊ぶ姿や、ご家族との触れ合いを撮影します。</p>
-            </div>
+          <article class="panel" data-reveal>
+            <h3>日常の記録</h3>
+            <p>特別な日でなくても、今の家族らしさを写真に残します。</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="gallery" class="section">
-      <div class="inner">
-        <h2 class="section-title fade-in">Gallery</h2>
-        
-        <div class="gallery-filters fade-in">
-          <button class="filter-btn active" data-filter="all">All</button>
-          <button class="filter-btn" data-filter="family">Family</button>
-          <button class="filter-btn" data-filter="753">753</button>
-          <button class="filter-btn" data-filter="dog">Dog</button>
+    <section class="section">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <h2 class="section-title">大切にしていること</h2>
+          <p class="section-lead">小さなお子さまがいても、無理にポーズを作らず、その日の空気を見ながら進めます。</p>
         </div>
-
-        <div class="gallery-grid fade-in">
-          <!-- 編集ここ：各画像のファイル名とカテゴリ(data-category) -->
-          <div class="gallery-item" data-category="family">
-            <img src="../../images/gallery-family1.jpg" alt="家族写真ギャラリー1" width="400" height="300" loading="lazy" style="object-fit: cover;">
-          </div>
-          <div class="gallery-item" data-category="753">
-            <img src="../../images/gallery-753-1.jpg" alt="七五三ギャラリー1" width="400" height="300" loading="lazy" style="object-fit: cover;">
-          </div>
-          <div class="gallery-item" data-category="dog">
-            <img src="../../images/gallery-dog1.jpg" alt="ワンちゃんギャラリー1" width="400" height="300" loading="lazy" style="object-fit: cover;">
-          </div>
-          <div class="gallery-item" data-category="family">
-            <img src="../../images/gallery-family2.jpg" alt="家族写真ギャラリー2" width="400" height="300" loading="lazy" style="object-fit: cover;">
-          </div>
-          <div class="gallery-item" data-category="753">
-            <img src="../../images/gallery-753-2.jpg" alt="七五三ギャラリー2" width="400" height="300" loading="lazy" style="object-fit: cover;">
-          </div>
-          <div class="gallery-item" data-category="dog">
-            <img src="../../images/gallery-dog2.jpg" alt="ワンちゃんギャラリー2" width="400" height="300" loading="lazy" style="object-fit: cover;">
-          </div>
+        <div class="grid grid-2">
+          <article class="panel" data-reveal>
+            <h3>家族のペースを優先</h3>
+            <p>緊張や人見知りも含めて、その子らしさとして受け止めながら撮影します。</p>
+          </article>
+          <article class="panel" data-reveal>
+            <h3>あとから見返したくなる写真</h3>
+            <p>きれいな一枚だけでなく、会話や手元、移動中の表情も大切にします。</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section id="plan" class="section" style="background-color: #F5EFEB;">
-      <div class="inner">
-        <h2 class="section-title fade-in">撮影プラン</h2>
-        <div class="plan-card fade-in">
-          <!-- 編集ここ：プラン名や料金のテキスト変更 -->
-          <h3>個別撮影プラン</h3>
-          <ul class="plan-list">
-            <li>所要時間：60分</li>
-            <li>料金：¥23,000 (税込)</li>
-            <li>納品枚数：50枚〜 (オンラインデータ納品)</li>
-            <li>対象：家族写真 / 七五三 / ワンちゃん撮影</li>
-          </ul>
-          <p class="plan-desc">ご家族の自然な時間や、今しかない瞬間をゆっくり撮影します。<br>※土日祝日は＋¥5,000となります。</p>
+    <section class="section section-soft">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <h2 class="section-title">撮影の流れ</h2>
+          <p class="section-lead">事前に希望を聞きながら、当日は家族の様子に合わせて進めます。</p>
+        </div>
+        <div class="grid grid-3 steps">
+          <article class="step" data-reveal>
+            <h3>相談</h3>
+            <p>人数、場所、撮りたい雰囲気、記念日の有無を確認します。</p>
+          </article>
+          <article class="step" data-reveal>
+            <h3>撮影</h3>
+            <p>遊びながら、歩きながら、自然なやりとりを撮影します。</p>
+          </article>
+          <article class="step" data-reveal>
+            <h3>納品</h3>
+            <p>セレクトと調整を行い、見返しやすい形でお渡しします。</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section id="flow" class="section">
-      <div class="inner">
-        <h2 class="section-title fade-in">撮影の流れ</h2>
-        <div class="flow-list fade-in">
-          <div class="flow-item">
-            <div class="flow-text">
-              <h4>お問い合わせ</h4>
-              <p>LINE、InstagramのDM、またはメールよりお気軽にお問い合わせください。</p>
-            </div>
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="cta" data-reveal>
+          <div>
+            <h2>家族写真の相談はこちらから。</h2>
+            <p>撮影したい時期、人数、場所の希望があれば添えてご連絡ください。</p>
           </div>
-          <div class="flow-item">
-            <div class="flow-text">
-              <h4>日程・場所の相談</h4>
-              <p>ご希望の撮影時期や、思い出の場所・お近くの公園などを相談して決定します。</p>
-            </div>
-          </div>
-          <div class="flow-item">
-            <div class="flow-text">
-              <h4>撮影当日</h4>
-              <p>お子さまやワンちゃんのペースに合わせて、遊びながら楽しく撮影を行います。</p>
-            </div>
-          </div>
-          <div class="flow-item">
-            <div class="flow-text">
-              <h4>当日プラン選択</h4>
-              <p>撮影終了後、実際の写真の雰囲気をご覧いただいた上で最終的なプランをご確認いただけます。</p>
-            </div>
-          </div>
-          <div class="flow-item">
-            <div class="flow-text">
-              <h4>データ納品</h4>
-              <p>撮影後、約2週間〜3週間でオンラインアルバムのURLをお送りいたします。</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="faq" class="section" style="background-color: #F5EFEB;">
-      <div class="inner">
-        <h2 class="section-title fade-in">FAQ</h2>
-        <div class="faq-list fade-in">
-          <!-- 編集ここ：FAQの追加や編集 -->
-          <details class="faq-item">
-            <summary>子どもが人見知りでも大丈夫ですか？</summary>
-            <div class="faq-answer"><p>はい、大丈夫です。無理にカメラを向けず、遊びながら少しずつ距離を縮めていきます。ありのままの表情も素敵な思い出になります。</p></div>
-          </details>
-          <details class="faq-item">
-            <summary>雨の日はどうなりますか？</summary>
-            <div class="faq-answer"><p>前日の天気予報で雨天が予想される場合は、無料で延期・日程変更が可能です。</p></div>
-          </details>
-          <details class="faq-item">
-            <summary>撮影場所は相談できますか？</summary>
-            <div class="faq-answer"><p>はい、お気軽にご相談ください。おすすめの公園の提案や、お客様の思い入れのある場所への出張も可能です。</p></div>
-          </details>
-          <details class="faq-item">
-            <summary>納品はどのように行いますか？</summary>
-            <div class="faq-answer"><p>色味や明るさを丁寧に調整した高画質データを、スマートフォンやパソコンからダウンロードできるオンラインアルバムでお渡しします。</p></div>
-          </details>
-          <details class="faq-item">
-            <summary>SNS掲載なしでも依頼できますか？</summary>
-            <div class="faq-answer"><p>はい、掲載NGのお客様も多数いらっしゃいます。ご予約時に確認いたしますのでご安心ください。</p></div>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section">
-      <div class="inner">
-        <h2 class="section-title fade-in">Contact</h2>
-        <div class="contact-wrap fade-in">
-          <p>撮影のご相談やご予約は、<br>以下のいずれかよりお気軽にご連絡ください。</p>
-          <div class="contact-links">
-            <!-- 編集ここ：URL (Instagramのリンク先) -->
-            <a href="https://instagram.com/..." target="_blank" rel="noopener noreferrer" class="btn">Instagram DMで相談する</a>
-            
-            <!-- 編集ここ：URL (公式LINEのリンク先) -->
-            <a href="https://lin.ee/..." target="_blank" rel="noopener noreferrer" class="btn-outline">公式LINEで相談する</a>
-            
-            <!-- 編集ここ：URL (メールアドレス) -->
-            <a href="mailto:info@example.com" class="btn-outline">メールで問い合わせる</a>
-          </div>
+          <a class="button" href="mailto:info@example.com">家族写真を相談する</a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="inner">
-      <div class="copyright">
-        <p>&copy; Moment Photography. All Rights Reserved.</p>
-      </div>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>tk14 works</span>
+      <a href="/photo/">Photo</a>
     </div>
   </footer>
 
-  <!-- Modal -->
-  <div class="modal" id="modal">
-    <div class="modal-content">
-      <button class="modal-close" id="modal-close">&times;</button>
-      <img src="" alt="" id="modal-img">
-    </div>
-  </div>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      
-      // 1. Intersection Observer (Fade in animation)
-      const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.1
-      };
-      const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            // 一度発火したら監視を解除する場合（繰り返しフェードインさせたい場合は外す）
-            observer.unobserve(entry.target);
-          }
-        });
-      }, observerOptions);
-
-      document.querySelectorAll('.fade-in').forEach(el => {
-        observer.observe(el);
-      });
-
-      // 2. Smooth Scroll & Active Nav on Scroll
-      const headerHeight = document.querySelector('header').offsetHeight;
-      const navLinks = document.querySelectorAll('.nav-link');
-      const sections = document.querySelectorAll('section');
-
-      navLinks.forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-          e.preventDefault();
-          const targetId = this.getAttribute('href');
-          if(targetId === '#') return;
-          
-          const targetElement = document.querySelector(targetId);
-          if (targetElement) {
-            const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
-            window.scrollTo({
-              top: targetPosition - headerHeight,
-              behavior: 'smooth'
-            });
-            // モバイルメニューを閉じる
-            if (navList.classList.contains('active')) {
-              navList.classList.remove('active');
-            }
-          }
-        });
-      });
-
-      window.addEventListener('scroll', () => {
-        let current = '';
-        sections.forEach(section => {
-          const sectionTop = section.offsetTop;
-          // ヘッダーの高さ分＋少しのオフセットを引いて判定
-          if (pageYOffset >= sectionTop - headerHeight - 50) {
-            current = section.getAttribute('id');
-          }
-        });
-
-        navLinks.forEach(link => {
-          link.classList.remove('active');
-          if (link.getAttribute('href').substring(1) === current) {
-            link.classList.add('active');
-          }
-        });
-      });
-
-      // 3. Hamburger Menu
-      const hamburger = document.getElementById('hamburger');
-      const navList = document.getElementById('nav-list');
-      
-      hamburger.addEventListener('click', () => {
-        navList.classList.toggle('active');
-      });
-
-      // 4. Gallery Filter
-      const filterBtns = document.querySelectorAll('.filter-btn');
-      const galleryItems = document.querySelectorAll('.gallery-item');
-
-      filterBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-          // Remove active class from all buttons
-          filterBtns.forEach(b => b.classList.remove('active'));
-          // Add active class to clicked button
-          btn.classList.add('active');
-          
-          const filterValue = btn.getAttribute('data-filter');
-          
-          galleryItems.forEach(item => {
-            if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
-              item.style.display = 'block';
-              // 少し遅延を入れてフェードイン効果をつける
-              setTimeout(() => {
-                item.style.opacity = '1';
-                item.style.transform = 'scale(1)';
-              }, 50);
-            } else {
-              item.style.opacity = '0';
-              item.style.transform = 'scale(0.8)';
-              setTimeout(() => {
-                item.style.display = 'none';
-              }, 300); // transition時間と合わせる
-            }
-          });
-        });
-      });
-
-      // 5. Modal
-      const modal = document.getElementById('modal');
-      const modalImg = document.getElementById('modal-img');
-      const modalClose = document.getElementById('modal-close');
-
-      galleryItems.forEach(item => {
-        item.addEventListener('click', () => {
-          const img = item.querySelector('img');
-          modalImg.src = img.src;
-          modalImg.alt = img.alt;
-          modal.classList.add('active');
-        });
-      });
-
-      const closeModal = () => {
-        modal.classList.remove('active');
-      };
-
-      modalClose.addEventListener('click', closeModal);
-      modal.addEventListener('click', (e) => {
-        if (e.target === modal) {
-          closeModal();
-        }
-      });
-      // Escキーで閉じる
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && modal.classList.contains('active')) {
-          closeModal();
-        }
-      });
-    });
-  </script>
+  <script src="/assets/js/site.js?v=2"></script>
 </body>
 </html>
