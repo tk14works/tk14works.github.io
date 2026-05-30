@@ -36,15 +36,18 @@ if ("IntersectionObserver" in window) {
 }
 
 document.querySelectorAll("[data-carousel]").forEach((carousel) => {
-  const dots = carousel.nextElementSibling;
-  if (!dots || !dots.matches("[data-carousel-dots]")) return;
+  const container = carousel.closest(".tk-container") || carousel.parentElement;
+  if (!container) return;
 
-  const dotItems = Array.from(dots.querySelectorAll("span"));
+  const dots = container.querySelector("[data-carousel-dots]");
+  const dotItems = dots ? Array.from(dots.querySelectorAll("span")) : [];
+  const prevButton = container.querySelector("[data-carousel-prev]");
+  const nextButton = container.querySelector("[data-carousel-next]");
   const cards = Array.from(carousel.children);
+  let activeIndex = 0;
 
-  const setActiveDot = () => {
+  const updateCarouselState = () => {
     const center = carousel.scrollLeft + carousel.clientWidth / 2;
-    let activeIndex = 0;
     let shortestDistance = Infinity;
 
     cards.forEach((card, index) => {
@@ -59,9 +62,36 @@ document.querySelectorAll("[data-carousel]").forEach((carousel) => {
     dotItems.forEach((dot, index) => {
       dot.classList.toggle("is-active", index === activeIndex);
     });
+
+    if (prevButton instanceof HTMLButtonElement) {
+      prevButton.disabled = activeIndex === 0;
+    }
+
+    if (nextButton instanceof HTMLButtonElement) {
+      nextButton.disabled = activeIndex === cards.length - 1;
+    }
   };
 
-  carousel.addEventListener("scroll", setActiveDot, { passive: true });
-  window.addEventListener("resize", setActiveDot);
-  setActiveDot();
+  const scrollToCard = (index) => {
+    const card = cards[index];
+    if (!card) return;
+
+    card.scrollIntoView({
+      behavior: "smooth",
+      block: "nearest",
+      inline: "center",
+    });
+  };
+
+  prevButton?.addEventListener("click", () => {
+    scrollToCard(Math.max(activeIndex - 1, 0));
+  });
+
+  nextButton?.addEventListener("click", () => {
+    scrollToCard(Math.min(activeIndex + 1, cards.length - 1));
+  });
+
+  carousel.addEventListener("scroll", updateCarouselState, { passive: true });
+  window.addEventListener("resize", updateCarouselState);
+  updateCarouselState();
 });

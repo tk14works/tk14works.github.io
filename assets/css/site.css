@@ -1128,6 +1128,52 @@ h1 {
   top: 19px;
 }
 
+.tk-breadcrumb {
+  background: var(--tk-white);
+  border-bottom: 1px solid rgba(44, 47, 51, 0.05);
+  color: #85817a;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+}
+
+.tk-breadcrumb ol {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  width: min(100%, 1120px);
+  margin: 0 auto;
+  padding: 12px 20px;
+  list-style: none;
+}
+
+.tk-breadcrumb li {
+  display: inline-flex;
+  align-items: center;
+  min-width: 0;
+}
+
+.tk-breadcrumb li + li::before {
+  margin-right: 6px;
+  color: #b8b2a9;
+  content: "＞";
+}
+
+.tk-breadcrumb a {
+  color: #85817a;
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+
+.tk-breadcrumb a:hover {
+  color: #4f4c48;
+}
+
+.tk-breadcrumb [aria-current="page"] {
+  color: #3f3c38;
+  font-weight: 600;
+}
+
 .tk-container {
   width: min(100%, 1120px);
   margin: 0 auto;
@@ -1355,6 +1401,43 @@ h1 {
   margin-top: 8px;
 }
 
+.tk-carousel-controls {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.tk-carousel-arrow {
+  display: inline-grid;
+  width: 40px;
+  height: 40px;
+  padding: 0 0 2px;
+  place-items: center;
+  border: 1px solid var(--tk-line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: 0 14px 34px rgba(44, 47, 51, 0.08);
+  color: var(--tk-ink);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1.45rem;
+  line-height: 1;
+  transition: border-color 180ms ease, color 180ms ease, opacity 180ms ease, transform 180ms ease;
+}
+
+.tk-carousel-arrow:hover {
+  border-color: rgba(180, 156, 104, 0.54);
+  color: var(--tk-gold);
+  transform: translateY(-1px);
+}
+
+.tk-carousel-arrow:disabled {
+  cursor: default;
+  opacity: 0.28;
+  transform: none;
+}
+
 .tk-carousel-dots span {
   width: 7px;
   height: 7px;
@@ -1541,6 +1624,7 @@ h1 {
     flex-basis: auto;
   }
 
+  .tk-carousel-controls,
   .tk-carousel-dots {
     display: none;
   }
