@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>tk14 | 自然体で飾らないプロフィール写真</title>
+  <title>tk14 Photography | 自然体で飾らないプロフィール写真</title>
   <meta name="description" content="自然体で飾らない、あなたらしさが伝わるプロフィール写真・宣材写真を撮影します。SNS、ホームページ、起業・活動用の写真に。">
-  <link rel="stylesheet" href="../../assets/css/site.css?v=6">
+  <link rel="stylesheet" href="../../assets/css/site.css?v=7">
 </head>
 <body class="profile-page profile-minimal">
   <header class="profile-header">
     <div class="profile-header__inner">
-      <a class="profile-logo" href="/">tk14</a>
+      <a class="profile-logo" href="/photo/profile/">tk14 Photography</a>
       <button class="profile-menu-button" type="button" aria-label="メニューを開く" aria-expanded="false" data-nav-toggle>Menu</button>
       <nav class="profile-nav" aria-label="プロフィール写真ページ内メニュー" data-nav>
         <a href="#works">作品紹介</a>
@@ -26,14 +26,17 @@
     <ol>
       <li><a href="/">HOME</a></li>
       <li><a href="/photo/">写真</a></li>
-      <li><span aria-current="page">TK14</span></li>
+      <li><span aria-current="page">tk14 Photography</span></li>
     </ol>
   </nav>
 
   <main>
     <section class="tk-hero" id="home">
       <div class="tk-hero__image" data-reveal>
-        <img src="../../images/profile-about.jpg" alt="自然体で飾らないプロフィール写真">
+        <picture>
+          <source media="(max-width: 759px)" srcset="../../images/profile-hero-sp.jpg">
+          <img src="../../images/profile-hero-pc.jpg" alt="自然体で飾らないプロフィール写真">
+        </picture>
       </div>
       <div class="tk-hero__copy" data-reveal>
         <p class="tk-label">Profile photography</p>
@@ -52,14 +55,25 @@
         <p class="tk-section-lead" data-reveal>雰囲気や用途に合わせて、自然体の表情を残します。</p>
         <div class="tk-gallery" data-carousel>
           <figure class="tk-gallery-card" data-reveal>
-            <img src="../../images/profile-about.jpg" alt="プロフィール写真の作例">
-            <figcaption>SNS profile</figcaption>
+            <img src="../../images/gallery-profile-photo.jpg" alt="プロフィール写真の作例">
+            <figcaption>
+              <strong>プロフィール写真</strong>
+              <span>Profile Photos</span>
+            </figcaption>
           </figure>
-          <figure class="tk-gallery-card tk-gallery-card--blank" data-reveal>
-            <figcaption>Website portrait</figcaption>
+          <figure class="tk-gallery-card" data-reveal>
+            <img src="../../images/gallery-sns-photo.jpg" alt="SNS用写真の作例">
+            <figcaption>
+              <strong>SNS用写真</strong>
+              <span>Social Media Content</span>
+            </figcaption>
           </figure>
-          <figure class="tk-gallery-card tk-gallery-card--blank" data-reveal>
-            <figcaption>Branding image</figcaption>
+          <figure class="tk-gallery-card" data-reveal>
+            <img src="../../images/gallery-headshots-photo.jpg" alt="宣材写真の作例">
+            <figcaption>
+              <strong>宣材写真</strong>
+              <span>Professional Headshots</span>
+            </figcaption>
           </figure>
         </div>
         <div class="tk-carousel-controls" aria-label="作品紹介の切り替え">
@@ -95,7 +109,7 @@
       </div>
     </section>
 
-    <section class="tk-section tk-section--soft" id="pricing">
+    <section class="tk-section" id="pricing">
       <div class="tk-container">
         <h2 class="tk-title" data-reveal>料金プラン</h2>
         <p class="tk-section-lead" data-reveal>用途に合わせて選べる、シンプルな撮影プランです。</p>
@@ -181,6 +195,6 @@
     <a href="/">tk14</a>
   </footer>
 
-  <script src="../../assets/js/site.js?v=6"></script>
+  <script src="../../assets/js/site.js?v=7"></script>
 </body>
 </html>

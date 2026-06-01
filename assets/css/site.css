@@ -1059,6 +1059,7 @@ h1 {
   font-size: 1.35rem;
   font-weight: 400;
   letter-spacing: 0.12em;
+  white-space: nowrap;
 }
 
 .profile-minimal .profile-nav {
@@ -1475,16 +1476,35 @@ h1 {
 }
 
 .tk-gallery-card figcaption {
+  display: grid;
+  gap: 4px;
   align-self: end;
   padding: 20px;
   color: var(--tk-muted);
-  letter-spacing: 0.05em;
+}
+
+.tk-gallery-card figcaption strong {
+  color: var(--tk-ink);
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+}
+
+.tk-gallery-card figcaption span {
+  font-size: 0.76rem;
+  letter-spacing: 0.08em;
+  line-height: 1.45;
 }
 
 .tk-gallery-card--blank {
   place-items: end start;
   padding: 20px;
   background: linear-gradient(135deg, rgba(185, 161, 111, 0.12), transparent), var(--tk-bg);
+}
+
+.tk-gallery-card--blank figcaption {
+  padding: 0;
 }
 
 .tk-price-card {
@@ -1650,6 +1670,11 @@ h1 {
 @media (max-width: 759px) {
   .profile-minimal .profile-header__inner {
     min-height: 72px;
+  }
+
+  .profile-minimal .profile-logo {
+    font-size: 1.05rem;
+    letter-spacing: 0.08em;
   }
 
   .profile-minimal .profile-menu-button {
