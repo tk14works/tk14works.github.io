@@ -1220,6 +1220,11 @@ h1 {
   display: none;
 }
 
+.tk-section-action {
+  margin-top: 34px;
+  text-align: center;
+}
+
 .tk-label {
   margin: 0 0 18px;
   color: var(--tk-muted);
@@ -1550,11 +1555,26 @@ h1 {
 }
 
 .tk-price-card h3 {
+  display: grid;
+  gap: 5px;
   margin: 0 0 24px;
-  color: #a9b0ba;
   text-align: center;
-  font-size: 1.25rem;
+}
+
+.tk-price-card h3 strong {
+  color: var(--tk-ink);
+  font-size: 1.18rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  line-height: 1.45;
+}
+
+.tk-price-card h3 span {
+  color: #a9b0ba;
+  font-size: 0.82rem;
   font-weight: 400;
+  letter-spacing: 0.08em;
+  line-height: 1.35;
 }
 
 .tk-price {
@@ -1819,8 +1839,16 @@ h1 {
     object-fit: cover;
   }
 
+  .profile-page .tk-hero {
+    min-height: auto;
+  }
+
   .tk-hero__copy {
     padding-top: 44px;
+  }
+
+  .profile-page .tk-hero__copy {
+    padding-bottom: 52px;
   }
 
   .tk-hero__copy h1 {
@@ -1836,8 +1864,43 @@ h1 {
     padding: 78px 0;
   }
 
+  .profile-page .tk-section {
+    padding: 60px 0;
+  }
+
   .tk-title {
     margin-bottom: 36px;
+  }
+
+  .profile-page .tk-title {
+    margin-bottom: 30px;
+  }
+
+  .profile-page .tk-title::after {
+    margin-top: 18px;
+  }
+
+  .profile-page .tk-section-lead {
+    margin-top: -16px;
+    margin-bottom: 28px;
+  }
+
+  .profile-page .tk-about {
+    gap: 28px;
+  }
+
+  .profile-page #pricing .tk-section-action {
+    margin-top: 42px;
+  }
+
+  .profile-page #pricing .tk-carousel-dots {
+    margin-top: 12px;
+  }
+
+  .profile-page .tk-contact__links {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
   }
 
   .tk-price-card {
