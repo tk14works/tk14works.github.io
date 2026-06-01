@@ -1248,6 +1248,16 @@ h1 {
   background: var(--tk-white);
 }
 
+.tk-hero--text-only {
+  align-items: center;
+  min-height: min(640px, calc(100svh - 126px));
+}
+
+.tk-hero--text-only .tk-hero__copy {
+  padding-top: clamp(78px, 14vw, 132px);
+  padding-bottom: clamp(78px, 14vw, 132px);
+}
+
 .tk-hero__image {
   overflow: hidden;
   background: var(--tk-bg);
@@ -1599,6 +1609,13 @@ h1 {
   .tk-menu-grid,
   .tk-flow {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .tk-menu-grid--two {
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
+    width: min(100%, 760px);
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .tk-gallery,
