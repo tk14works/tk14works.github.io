@@ -1215,6 +1215,11 @@ h1 {
   text-align: center;
 }
 
+.tk-section-lead--works br,
+.tk-section-lead--pricing br {
+  display: none;
+}
+
 .tk-label {
   margin: 0 0 18px;
   color: var(--tk-muted);
@@ -1257,6 +1262,20 @@ h1 {
 .tk-hero--text-only .tk-hero__copy {
   padding-top: clamp(78px, 14vw, 132px);
   padding-bottom: clamp(78px, 14vw, 132px);
+}
+
+.site-top .tk-hero--text-only {
+  min-height: 430px;
+}
+
+.site-top .tk-hero--text-only .tk-hero__copy {
+  padding-top: 86px;
+  padding-bottom: 72px;
+}
+
+.site-top #services {
+  padding-top: 72px;
+  padding-bottom: 96px;
 }
 
 .tk-hero__image {
@@ -1315,6 +1334,10 @@ h1 {
   font-weight: 300;
   line-height: 1.42;
   letter-spacing: 0.05em;
+}
+
+.tk-hero-title--profile {
+  text-wrap: balance;
 }
 
 .tk-hero__copy p:not(.tk-label) {
@@ -1609,6 +1632,36 @@ h1 {
   margin-top: 32px;
 }
 
+.tk-contact__links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 22px;
+  margin-top: 18px;
+  color: var(--tk-muted);
+  font-size: 0.86rem;
+}
+
+.tk-contact__links a {
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.tk-contact__links a::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  background: currentColor;
+  content: "";
+  opacity: 0.28;
+}
+
+.tk-contact__links a:hover {
+  color: var(--tk-ink);
+}
+
 .tk-footer {
   padding: 42px 20px;
   background: var(--tk-bg);
@@ -1620,6 +1673,12 @@ h1 {
 @media (min-width: 760px) {
   .tk-section {
     padding: 118px 0;
+  }
+
+  .tk-hero__image {
+    width: min(100%, 1280px);
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .tk-about {
@@ -1672,6 +1731,33 @@ h1 {
     min-height: 72px;
   }
 
+  .site-top .tk-hero--text-only {
+    min-height: auto;
+  }
+
+  .site-top .tk-hero--text-only .tk-hero__copy {
+    padding-top: 58px;
+    padding-bottom: 46px;
+  }
+
+  .site-top #services {
+    padding-top: 56px;
+    padding-bottom: 72px;
+  }
+
+  .site-top #services .tk-title {
+    margin-bottom: 30px;
+  }
+
+  .site-top #services .tk-section-lead {
+    margin-bottom: 28px;
+  }
+
+  .tk-section-lead--works br,
+  .tk-section-lead--pricing br {
+    display: block;
+  }
+
   .profile-minimal .profile-logo {
     font-size: 1.05rem;
     letter-spacing: 0.08em;
@@ -1717,6 +1803,10 @@ h1 {
   .tk-hero__copy h1 {
     font-size: clamp(2rem, 8.2vw, 2.45rem);
     line-height: 1.55;
+  }
+
+  .tk-hero-title--profile {
+    font-size: clamp(1.78rem, 7vw, 2.28rem);
   }
 
   .tk-section {
