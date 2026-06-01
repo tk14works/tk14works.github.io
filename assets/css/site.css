@@ -1807,9 +1807,16 @@ h1 {
   }
 
   .profile-page .tk-hero__image img {
-    height: 42vh;
-    min-height: 280px;
-    max-height: 360px;
+    aspect-ratio: 7 / 5;
+    height: auto;
+    min-height: 0;
+    max-height: none;
+  }
+
+  .profile-page .tk-about__image img {
+    aspect-ratio: 7 / 5;
+    min-height: 0;
+    object-fit: cover;
   }
 
   .tk-hero__copy {
