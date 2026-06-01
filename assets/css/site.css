@@ -1270,6 +1270,7 @@ h1 {
 }
 
 .site-top .tk-hero--text-only {
+  background: #f3f0ea;
   min-height: 430px;
 }
 
@@ -1281,6 +1282,14 @@ h1 {
 .site-top #services {
   padding-top: 72px;
   padding-bottom: 96px;
+}
+
+.profile-page #works {
+  border-top: 1px solid rgba(44, 47, 51, 0.06);
+}
+
+.site-photo .tk-hero {
+  background: #f6f1e8;
 }
 
 .tk-hero__image {
@@ -1499,7 +1508,8 @@ h1 {
 }
 
 .tk-gallery-card img {
-  height: 360px;
+  aspect-ratio: 4 / 5;
+  height: auto;
   object-fit: cover;
 }
 
