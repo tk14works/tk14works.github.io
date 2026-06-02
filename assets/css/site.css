@@ -1775,6 +1775,14 @@ h1 {
     margin-left: auto;
   }
 
+  .site-ai .tk-hero__image {
+    aspect-ratio: 2.6 / 1;
+  }
+
+  .site-photo .tk-hero__image {
+    aspect-ratio: 2.6 / 1;
+  }
+
   .tk-hero__image img {
     min-height: 0;
     max-height: none;
