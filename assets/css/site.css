@@ -1804,6 +1804,7 @@ h1 {
   }
 
   .site-top #services .tk-section-lead {
+    margin-top: -12px;
     margin-bottom: 28px;
   }
 
