@@ -1297,8 +1297,12 @@ h1 {
   background: var(--tk-white);
 }
 
-.site-ai #contact {
+.site-ai #about {
   background: var(--tk-bg);
+}
+
+.site-ai #contact {
+  background: var(--tk-white);
 }
 
 .site-photo .tk-hero {
@@ -1410,6 +1414,13 @@ h1 {
   background: var(--tk-white);
 }
 
+.site-ai .tk-support-carousel .tk-menu-card,
+.site-ai .tk-flow-carousel article {
+  display: flex;
+  flex-direction: column;
+  min-height: 238px;
+}
+
 .tk-menu-card__image {
   margin: -34px -34px 26px;
   overflow: hidden;
@@ -1442,8 +1453,15 @@ h1 {
   color: var(--tk-muted);
 }
 
+.site-ai .tk-support-carousel .tk-menu-card p,
+.site-ai .tk-flow-carousel article p {
+  margin-top: auto;
+}
+
 .tk-gallery,
-.tk-pricing {
+.tk-pricing,
+.site-ai .tk-support-carousel,
+.site-ai .tk-flow-carousel {
   display: flex;
   gap: 18px;
   margin: 0 calc(50% - 50vw);
@@ -1456,12 +1474,16 @@ h1 {
 }
 
 .tk-gallery::-webkit-scrollbar,
-.tk-pricing::-webkit-scrollbar {
+.tk-pricing::-webkit-scrollbar,
+.site-ai .tk-support-carousel::-webkit-scrollbar,
+.site-ai .tk-flow-carousel::-webkit-scrollbar {
   display: none;
 }
 
 .tk-gallery-card,
-.tk-price-card {
+.tk-price-card,
+.site-ai .tk-support-carousel .tk-menu-card,
+.site-ai .tk-flow-carousel article {
   flex: 0 0 min(76vw, 350px);
   scroll-snap-align: center;
 }
@@ -1738,7 +1760,8 @@ h1 {
   }
 
   .profile-page .tk-hero__image img,
-  .site-ai .tk-hero__image {
+  .site-ai .tk-hero__image,
+  .site-ai .tk-hero__image img {
     height: 50vh;
     min-height: 340px;
     max-height: 520px;
@@ -1768,8 +1791,24 @@ h1 {
     margin-left: auto;
   }
 
+  .site-ai #support .tk-menu-grid {
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
+    width: min(100%, 820px);
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .site-ai #flow .tk-flow {
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
+    width: min(100%, 820px);
+    margin-right: auto;
+    margin-left: auto;
+  }
+
   .tk-gallery,
-  .tk-pricing {
+  .tk-pricing,
+  .site-ai .tk-support-carousel,
+  .site-ai .tk-flow-carousel {
     display: grid;
     margin: 0;
     padding: 0;
@@ -1787,7 +1826,9 @@ h1 {
   }
 
   .tk-gallery-card,
-  .tk-price-card {
+  .tk-price-card,
+  .site-ai .tk-support-carousel .tk-menu-card,
+  .site-ai .tk-flow-carousel article {
     flex-basis: auto;
   }
 
@@ -1885,6 +1926,13 @@ h1 {
   .site-ai .tk-hero__image {
     aspect-ratio: 7 / 5;
     min-height: 0;
+  }
+
+  .site-ai .tk-hero__image img {
+    aspect-ratio: 7 / 5;
+    height: auto;
+    min-height: 0;
+    max-height: none;
   }
 
   .profile-page .tk-about__image img {

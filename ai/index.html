@@ -15,6 +15,7 @@
       <nav class="profile-nav" aria-label="AIページメニュー" data-nav>
         <a href="#support">できること</a>
         <a href="#flow">進め方</a>
+        <a href="#about">サポートする人</a>
         <a href="#contact">お問い合わせ</a>
       </nav>
     </div>
@@ -29,12 +30,8 @@
 
   <main>
     <section class="tk-hero" id="home">
-      <div class="tk-hero__image tk-hero__image--abstract" data-reveal>
-        <div class="tk-signal">
-          <span>Task</span>
-          <strong>Prompt</strong>
-          <em>Output</em>
-        </div>
+      <div class="tk-hero__image" data-reveal>
+        <img src="/images/top-card-ai.jpg" alt="AI活用サポートをイメージしたデスク風景">
       </div>
       <div class="tk-hero__copy" data-reveal>
         <p class="tk-label">AI support</p>
@@ -50,22 +47,37 @@
       <div class="tk-container">
         <h2 class="tk-title" data-reveal>できること</h2>
         <p class="tk-section-lead" data-reveal>仕事や活動に合わせて、AIを使いやすい形に整えます。</p>
-        <div class="tk-menu-grid">
+        <div class="tk-menu-grid tk-support-carousel" data-carousel>
           <article class="tk-menu-card" data-reveal>
             <span>01</span>
-            <h3>AI導入の相談</h3>
-            <p>何から始めればよいか、今の仕事にAIをどう取り入れるかを一緒に整理します。</p>
+            <h3>AI活用の相談</h3>
+            <p>AIを仕事や活動にどう取り入れるか、目的や状況に合わせて一緒に整理します。</p>
           </article>
           <article class="tk-menu-card" data-reveal>
             <span>02</span>
-            <h3>文章作成・発信サポート</h3>
-            <p>メール、資料、SNS投稿、企画文など、日々の文章作成をAIで扱いやすくします。</p>
+            <h3>パソコン作業の効率化</h3>
+            <p>時間がかかっている作業を見直し、AIやツールを使って扱いやすく整えます。</p>
           </article>
           <article class="tk-menu-card" data-reveal>
             <span>03</span>
-            <h3>業務フロー整理</h3>
-            <p>繰り返し発生する作業や情報整理の流れを見直し、AIを使える場面を見つけます。</p>
+            <h3>ホームページ制作サポート</h3>
+            <p>構成づくりや文章整理、ページ制作の進め方を一緒に整えていきます。</p>
           </article>
+          <article class="tk-menu-card" data-reveal>
+            <span>04</span>
+            <h3>AIでできることの整理</h3>
+            <p>何に使えるかわからない段階から、目的に合わせた活用方法を考えます。</p>
+          </article>
+        </div>
+        <div class="tk-carousel-controls" aria-label="できることの切り替え">
+          <button class="tk-carousel-arrow" type="button" aria-label="前のできることへ" data-carousel-prev>‹</button>
+          <button class="tk-carousel-arrow" type="button" aria-label="次のできることへ" data-carousel-next>›</button>
+        </div>
+        <div class="tk-carousel-dots" aria-label="できることの表示位置" data-carousel-dots>
+          <span class="is-active"></span>
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
       </div>
     </section>
@@ -73,10 +85,44 @@
     <section class="tk-section tk-section--soft" id="flow">
       <div class="tk-container">
         <h2 class="tk-title" data-reveal>進め方</h2>
-        <div class="tk-flow">
-          <article data-reveal><span>01</span><h3>ヒアリング</h3><p>仕事内容や困っている作業を確認します。</p></article>
-          <article data-reveal><span>02</span><h3>活用方法の設計</h3><p>AIを使う場面、手順、必要なプロンプトを具体的に整えます。</p></article>
-          <article data-reveal><span>03</span><h3>実践・調整</h3><p>実際に使いながら、仕事に合う形へ少しずつ調整していきます。</p></article>
+        <p class="tk-section-lead" data-reveal>AIに詳しくなくても大丈夫です。導入から本運用まで、使いやすい形に整えます。</p>
+        <div class="tk-flow tk-flow-carousel" data-carousel>
+          <article data-reveal><span>01</span><h3>現状の整理</h3><p>現在の仕事内容、困っている作業、AIで試してみたいことを確認します。</p></article>
+          <article data-reveal><span>02</span><h3>活用方法の設計</h3><p>AIをどの作業で使うか、どんな流れで進めるかを整理します。</p></article>
+          <article data-reveal><span>03</span><h3>導入・調整</h3><p>実際の作業に取り入れながら、使いにくい部分や不足している部分を調整します。</p></article>
+          <article data-reveal><span>04</span><h3>本運用</h3><p>日々の業務や活動の中で、無理なく使い続けられる状態を目指します。</p></article>
+        </div>
+        <div class="tk-carousel-controls" aria-label="進め方の切り替え">
+          <button class="tk-carousel-arrow" type="button" aria-label="前の進め方へ" data-carousel-prev>‹</button>
+          <button class="tk-carousel-arrow" type="button" aria-label="次の進め方へ" data-carousel-next>›</button>
+        </div>
+        <div class="tk-carousel-dots" aria-label="進め方の表示位置" data-carousel-dots>
+          <span class="is-active"></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="tk-section" id="about">
+      <div class="tk-container">
+        <h2 class="tk-title" data-reveal>サポートする人</h2>
+        <div class="tk-about">
+          <div class="tk-about__image" data-reveal>
+            <img src="/images/ai-about.jpg" alt="AI活用をサポートするtk14">
+          </div>
+          <div class="tk-about__text" data-reveal>
+            <p>
+              AIを特別なものとしてではなく、日々の仕事や活動を少し楽にする道具として活用できるようサポートしています。
+            </p>
+            <p>
+              文章作成、発信、情報整理、日々の作業など、今の仕事の流れを確認しながら、無理なく続けられる使い方を一緒に整えていきます。
+            </p>
+            <p>
+              写真や発信に関わる仕事もしているため、個人で活動する方や小さな事業の方にも相談しやすいサポートを心がけています。
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -85,8 +131,11 @@
       <div class="tk-container">
         <div class="tk-contact" data-reveal>
           <h2>お問い合わせ</h2>
-          <p>現在の課題、試してみたいこと、相談したい業務を簡単に送ってください。</p>
-          <a class="tk-button" href="mailto:info@example.com">Contact</a>
+          <p>AIで何ができるかわからない段階でも大丈夫です。今の仕事や活動で気になっていることから、お気軽にご相談ください。</p>
+          <a class="tk-button" href="https://lin.ee/ylWvSbq" target="_blank" rel="noopener">公式LINEで相談する</a>
+          <div class="tk-contact__links" aria-label="その他のお問い合わせ方法">
+            <a href="mailto:takumi.photo.moment@gmail.com">takumi.photo.moment@gmail.com</a>
+          </div>
         </div>
       </div>
     </section>
