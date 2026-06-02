@@ -1288,6 +1288,19 @@ h1 {
   border-top: 1px solid rgba(44, 47, 51, 0.06);
 }
 
+.site-ai #support {
+  border-top: 1px solid rgba(44, 47, 51, 0.06);
+  background: var(--tk-bg);
+}
+
+.site-ai #flow {
+  background: var(--tk-white);
+}
+
+.site-ai #contact {
+  background: var(--tk-bg);
+}
+
 .site-photo .tk-hero {
   background: #f6f1e8;
 }
@@ -1717,13 +1730,17 @@ h1 {
     padding: 118px 0;
   }
 
-  .profile-page .tk-hero__image {
+  .profile-page .tk-hero__image,
+  .site-ai .tk-hero__image {
     width: min(calc(100% - 40px), 1040px);
     margin-right: auto;
     margin-left: auto;
   }
 
-  .profile-page .tk-hero__image img {
+  .profile-page .tk-hero__image img,
+  .site-ai .tk-hero__image {
+    height: 50vh;
+    min-height: 340px;
     max-height: 520px;
   }
 
@@ -1795,7 +1812,7 @@ h1 {
   }
 
   .site-top #services {
-    padding-top: 56px;
+    padding-top: 42px;
     padding-bottom: 72px;
   }
 
@@ -1851,7 +1868,8 @@ h1 {
     min-height: 330px;
   }
 
-  .profile-page .tk-hero__image {
+  .profile-page .tk-hero__image,
+  .site-ai .tk-hero__image {
     width: calc(100% - 40px);
     margin-right: auto;
     margin-left: auto;
@@ -1864,13 +1882,19 @@ h1 {
     max-height: none;
   }
 
+  .site-ai .tk-hero__image {
+    aspect-ratio: 7 / 5;
+    min-height: 0;
+  }
+
   .profile-page .tk-about__image img {
     aspect-ratio: 7 / 5;
     min-height: 0;
     object-fit: cover;
   }
 
-  .profile-page .tk-hero {
+  .profile-page .tk-hero,
+  .site-ai .tk-hero {
     min-height: auto;
   }
 
