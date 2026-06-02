@@ -1271,12 +1271,12 @@ h1 {
 
 .site-top .tk-hero--text-only {
   background: #f3f0ea;
-  min-height: 430px;
+  min-height: 360px;
 }
 
 .site-top .tk-hero--text-only .tk-hero__copy {
-  padding-top: 86px;
-  padding-bottom: 72px;
+  padding-top: 66px;
+  padding-bottom: 58px;
 }
 
 .site-top #services {
@@ -1395,6 +1395,17 @@ h1 {
   padding: 34px;
   border: 1px solid var(--tk-line);
   background: var(--tk-white);
+}
+
+.tk-menu-card__image {
+  margin: -34px -34px 26px;
+  overflow: hidden;
+  background: var(--tk-bg);
+}
+
+.tk-menu-card__image img {
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
 }
 
 .tk-menu-card span,
@@ -1779,8 +1790,8 @@ h1 {
   }
 
   .site-top .tk-hero--text-only .tk-hero__copy {
-    padding-top: 58px;
-    padding-bottom: 46px;
+    padding-top: 48px;
+    padding-bottom: 34px;
   }
 
   .site-top #services {

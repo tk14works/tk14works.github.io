@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Photo placeholder</title>
+  <desc id="desc">Temporary placeholder image for the photo top hero section.</desc>
+  <rect width="1600" height="900" fill="#f6f1e8"/>
+  <rect x="80" y="80" width="1440" height="740" fill="none" stroke="#d8cbb8" stroke-width="2"/>
+  <text x="800" y="430" fill="#756b5e" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="72" font-weight="400" letter-spacing="8" text-anchor="middle">Photo</text>
+  <text x="800" y="505" fill="#9a9082" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="28" font-weight="400" letter-spacing="5" text-anchor="middle">Sample Image</text>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1536" height="1024" viewBox="0 0 1536 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Family photo sample</title>
+  <desc id="desc">Temporary placeholder image for the family photography card.</desc>
+  <rect width="1536" height="1024" fill="#f7eee9"/>
+  <rect x="72" y="72" width="1392" height="880" fill="none" stroke="#dcc7bc" stroke-width="2"/>
+  <text x="768" y="485" fill="#7b665d" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="58" font-weight="400" letter-spacing="6" text-anchor="middle">Family Photo</text>
+  <text x="768" y="555" fill="#9b877e" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="30" font-weight="400" letter-spacing="6" text-anchor="middle">SAMPLE</text>
+</svg>
