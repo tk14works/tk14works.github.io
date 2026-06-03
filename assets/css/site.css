@@ -1389,6 +1389,10 @@ h1 {
   color: var(--tk-muted);
 }
 
+.tk-mobile-break {
+  display: none;
+}
+
 .tk-hero__copy .tk-button {
   margin-top: 30px;
 }
@@ -1887,6 +1891,10 @@ h1 {
     margin-bottom: 28px;
   }
 
+  .tk-mobile-break {
+    display: block;
+  }
+
   .tk-section-lead--works br,
   .tk-section-lead--pricing br {
     display: block;
@@ -1937,7 +1945,8 @@ h1 {
     max-height: none;
   }
 
-  .profile-page .tk-about__image img {
+  .profile-page .tk-about__image img,
+  .site-ai .tk-about__image img {
     aspect-ratio: 7 / 5;
     min-height: 0;
     object-fit: cover;
@@ -1990,6 +1999,22 @@ h1 {
   }
 
   .profile-page .tk-section-lead {
+    margin-top: -16px;
+    margin-bottom: 28px;
+  }
+
+  .site-ai #support .tk-title,
+  .site-ai #flow .tk-title {
+    margin-bottom: 30px;
+  }
+
+  .site-ai #support .tk-title::after,
+  .site-ai #flow .tk-title::after {
+    margin-top: 18px;
+  }
+
+  .site-ai #support .tk-section-lead,
+  .site-ai #flow .tk-section-lead {
     margin-top: -16px;
     margin-bottom: 28px;
   }
