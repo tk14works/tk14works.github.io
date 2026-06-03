@@ -1418,7 +1418,7 @@ h1 {
 .tk-about__text .tk-about__name {
   margin: 0;
   color: var(--tk-ink);
-  font-size: 1.18rem;
+  font-size: 1.32rem;
   font-weight: 500;
   letter-spacing: 0.08em;
 }
@@ -2045,6 +2045,10 @@ h1 {
 
   .profile-page .tk-about {
     gap: 28px;
+  }
+
+  .tk-about__text .tk-about__name {
+    font-size: 1.18rem;
   }
 
   .profile-page #pricing .tk-section-action {
