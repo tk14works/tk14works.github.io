@@ -1309,8 +1309,12 @@ h1 {
   background: var(--tk-bg);
 }
 
-.site-ai #contact {
+.site-ai #faq {
   background: var(--tk-white);
+}
+
+.site-ai #contact {
+  background: var(--tk-bg);
 }
 
 .site-photo .tk-hero {
@@ -1405,6 +1409,26 @@ h1 {
 
 .tk-about__text p {
   color: var(--tk-muted);
+}
+
+.tk-about__profile {
+  margin-bottom: 24px;
+}
+
+.tk-about__text .tk-about__name {
+  margin: 0;
+  color: var(--tk-ink);
+  font-size: 1.18rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+}
+
+.tk-about__text .tk-about__role {
+  margin: 4px 0 0;
+  color: var(--tk-gold);
+  font-size: 0.86rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
 }
 
 .tk-about__image {
