@@ -95,3 +95,27 @@ document.querySelectorAll("[data-carousel]").forEach((carousel) => {
   window.addEventListener("resize", updateCarouselState);
   updateCarouselState();
 });
+
+document.querySelectorAll("[data-gallery-filters]").forEach((filters) => {
+  const container = filters.closest(".tk-container");
+  const grid = container?.querySelector("[data-gallery-grid]");
+  if (!grid) return;
+
+  const buttons = Array.from(filters.querySelectorAll("[data-gallery-filter]"));
+  const items = Array.from(grid.querySelectorAll("[data-gallery-category]"));
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const filter = button.getAttribute("data-gallery-filter") || "all";
+
+      buttons.forEach((item) => {
+        item.classList.toggle("is-active", item === button);
+      });
+
+      items.forEach((item) => {
+        const categories = (item.getAttribute("data-gallery-category") || "").split(" ");
+        item.classList.toggle("is-hidden", filter !== "all" && !categories.includes(filter));
+      });
+    });
+  });
+});

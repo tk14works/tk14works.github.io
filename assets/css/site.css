@@ -1229,6 +1229,10 @@ h1 {
   text-align: center;
 }
 
+.tk-section-action--gallery {
+  margin-top: 38px;
+}
+
 .tk-label {
   margin: 0 0 18px;
   color: var(--tk-muted);
@@ -1255,6 +1259,17 @@ h1 {
 .tk-button:hover {
   background: var(--tk-gold);
   border-color: var(--tk-gold);
+}
+
+.tk-button--outline {
+  background: transparent;
+  color: var(--tk-ink);
+}
+
+.tk-button--outline:hover {
+  background: var(--tk-ink);
+  border-color: var(--tk-ink);
+  color: #fff;
 }
 
 .tk-hero {
@@ -1784,6 +1799,72 @@ h1 {
   color: var(--tk-ink);
 }
 
+.moment-gallery-hero {
+  padding-top: 82px;
+}
+
+.moment-gallery-hero .tk-label {
+  margin-bottom: 14px;
+  text-align: center;
+}
+
+.moment-gallery-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 42px auto 40px;
+}
+
+.moment-gallery-filters button {
+  min-height: 40px;
+  padding: 0 16px;
+  border: 1px solid var(--tk-line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--tk-muted);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.86rem;
+  letter-spacing: 0.04em;
+}
+
+.moment-gallery-filters button.is-active {
+  border-color: var(--tk-ink);
+  background: var(--tk-ink);
+  color: #fff;
+}
+
+.moment-gallery-grid {
+  columns: 1;
+  column-gap: 18px;
+}
+
+.moment-gallery-item {
+  display: block;
+  margin: 0 0 18px;
+  overflow: hidden;
+  break-inside: avoid;
+  background: var(--tk-bg);
+}
+
+.moment-gallery-item.is-hidden {
+  display: none;
+}
+
+.moment-gallery-item img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.moment-gallery-item--portrait img {
+  aspect-ratio: 4 / 5;
+}
+
+.moment-gallery-item--landscape img {
+  aspect-ratio: 3 / 2;
+}
+
 .tk-footer {
   padding: 42px 20px;
   background: var(--tk-bg);
@@ -1877,6 +1958,15 @@ h1 {
   .tk-pricing {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 32px;
+  }
+
+  .moment-gallery-grid {
+    columns: 3;
+    column-gap: 22px;
+  }
+
+  .moment-gallery-item {
+    margin-bottom: 22px;
   }
 
   .tk-gallery-card,
