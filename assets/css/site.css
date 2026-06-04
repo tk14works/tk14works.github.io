@@ -1681,6 +1681,11 @@ h1 {
   line-height: 1;
 }
 
+.tk-price--note {
+  font-size: clamp(1.55rem, 5.8vw, 2rem);
+  line-height: 1.2;
+}
+
 .tk-price span {
   margin-left: 3px;
   font-size: 0.9rem;

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Moment | 家族写真</title>
   <meta name="description" content="家族写真、七五三、日常の記録など、今しかない家族の時間を自然に残す撮影を行います。">
-  <link rel="stylesheet" href="/assets/css/site.css?v=7">
+  <link rel="stylesheet" href="/assets/css/site.css?v=9">
 </head>
 <body class="profile-minimal site-family">
   <header class="profile-header">
@@ -13,8 +13,10 @@
       <a class="profile-logo" href="/photo/family/">Moment</a>
       <button class="profile-menu-button" type="button" aria-label="メニューを開く" aria-expanded="false" data-nav-toggle>Menu</button>
       <nav class="profile-nav" aria-label="Momentページメニュー" data-nav>
+        <a href="#works">ギャラリー</a>
         <a href="#about">大切にしていること</a>
-        <a href="#plan">撮影メニュー</a>
+        <a href="#pricing">撮影メニュー</a>
+        <a href="#faq">よくある質問</a>
         <a href="#contact">お問い合わせ</a>
       </nav>
     </div>
@@ -44,13 +46,67 @@
       </div>
     </section>
 
-    <section class="tk-section" id="plan">
+    <section class="tk-section" id="works">
       <div class="tk-container">
-        <h2 class="tk-title" data-reveal>撮影メニュー</h2>
-        <div class="tk-menu-grid">
-          <article class="tk-menu-card" data-reveal><span>01</span><h3>家族写真</h3><p>公園や思い出の場所など、いつもの空気に近い写真を残します。</p></article>
-          <article class="tk-menu-card" data-reveal><span>02</span><h3>七五三</h3><p>お子さまの表情や家族のやりとりを、落ち着いたペースで撮影します。</p></article>
-          <article class="tk-menu-card" data-reveal><span>03</span><h3>日常の記録</h3><p>特別な日でなくても、今の家族らしさを写真に残します。</p></article>
+        <h2 class="tk-title" data-reveal>ギャラリー</h2>
+        <p class="tk-section-lead tk-section-lead--works" data-reveal>
+          家族の表情や空気感を、<br>自然な距離感で残します。
+        </p>
+        <div class="tk-gallery" data-carousel>
+          <figure class="tk-gallery-card" data-reveal>
+            <img src="/images/placeholder-family-card.svg" alt="家族写真ギャラリーの仮画像">
+            <figcaption>
+              <strong>家族の時間</strong>
+              <span>Family Time</span>
+            </figcaption>
+          </figure>
+          <figure class="tk-gallery-card" data-reveal>
+            <img src="/images/placeholder-family-card.svg" alt="親子写真ギャラリーの仮画像">
+            <figcaption>
+              <strong>親子の時間</strong>
+              <span>Parent and Child</span>
+            </figcaption>
+          </figure>
+          <figure class="tk-gallery-card" data-reveal>
+            <img src="/images/placeholder-family-card.svg" alt="子どもの表情ギャラリーの仮画像">
+            <figcaption>
+              <strong>子どもの表情</strong>
+              <span>Children</span>
+            </figcaption>
+          </figure>
+          <figure class="tk-gallery-card" data-reveal>
+            <img src="/images/placeholder-family-card.svg" alt="日常の記録ギャラリーの仮画像">
+            <figcaption>
+              <strong>日常の記録</strong>
+              <span>Everyday Moments</span>
+            </figcaption>
+          </figure>
+          <figure class="tk-gallery-card" data-reveal>
+            <img src="/images/placeholder-family-card.svg" alt="七五三撮影ギャラリーの仮画像">
+            <figcaption>
+              <strong>七五三</strong>
+              <span>Shichi-Go-San</span>
+            </figcaption>
+          </figure>
+          <figure class="tk-gallery-card" data-reveal>
+            <img src="/images/placeholder-family-card.svg" alt="記念日撮影ギャラリーの仮画像">
+            <figcaption>
+              <strong>記念日</strong>
+              <span>Anniversary</span>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="tk-carousel-controls" aria-label="ギャラリーの切り替え">
+          <button class="tk-carousel-arrow" type="button" aria-label="前の写真へ" data-carousel-prev>‹</button>
+          <button class="tk-carousel-arrow" type="button" aria-label="次の写真へ" data-carousel-next>›</button>
+        </div>
+        <div class="tk-carousel-dots" aria-label="ギャラリーの表示位置" data-carousel-dots>
+          <span class="is-active"></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
       </div>
     </section>
@@ -66,12 +122,102 @@
       </div>
     </section>
 
+    <section class="tk-section" id="pricing">
+      <div class="tk-container">
+        <h2 class="tk-title" data-reveal>撮影メニュー</h2>
+        <p class="tk-section-lead tk-section-lead--pricing" data-reveal>
+          ご希望の内容に合わせて、<br>家族の時間を自然に残します。
+        </p>
+        <div class="tk-pricing" data-carousel>
+          <article class="tk-price-card tk-price-card--location" data-reveal>
+            <h3>
+              <strong>出張撮影</strong>
+              <span>Location</span>
+            </h3>
+            <p class="tk-price">¥23,000<span>税込</span></p>
+            <ul>
+              <li>ご希望の場所で撮影</li>
+              <li>家族写真、日常の記録に</li>
+              <li>自然な表情や空気感を撮影</li>
+              <li>詳細はご相談ください</li>
+            </ul>
+          </article>
+          <article class="tk-price-card tk-price-card--studio" data-reveal>
+            <h3>
+              <strong>七五三撮影</strong>
+              <span>Shichi-Go-San</span>
+            </h3>
+            <p class="tk-price">¥35,000<span>税込</span></p>
+            <ul>
+              <li>神社やご希望の場所で撮影</li>
+              <li>七五三の記念に</li>
+              <li>家族のやりとりも大切に撮影</li>
+              <li>詳細はご相談ください</li>
+            </ul>
+          </article>
+          <article class="tk-price-card tk-price-card--full" data-reveal>
+            <h3>
+              <strong>撮影会</strong>
+              <span>Photo Session</span>
+            </h3>
+            <p class="tk-price tk-price--note">不定期開催</p>
+            <ul>
+              <li>季節や場所に合わせて開催</li>
+              <li>短時間で気軽に撮影</li>
+              <li>開催内容により料金が異なります</li>
+              <li>詳細はお問い合わせください</li>
+            </ul>
+          </article>
+        </div>
+        <div class="tk-carousel-controls" aria-label="撮影メニューの切り替え">
+          <button class="tk-carousel-arrow" type="button" aria-label="前の撮影メニューへ" data-carousel-prev>‹</button>
+          <button class="tk-carousel-arrow" type="button" aria-label="次の撮影メニューへ" data-carousel-next>›</button>
+        </div>
+        <div class="tk-carousel-dots" aria-label="撮影メニューの表示位置" data-carousel-dots>
+          <span class="is-active"></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="tk-section-action" data-reveal>
+          <a class="tk-button" href="#contact">撮影の相談をする</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="tk-section tk-section--soft" id="faq">
+      <div class="tk-container">
+        <h2 class="tk-title" data-reveal>よくある質問</h2>
+        <div class="tk-faq">
+          <details data-reveal>
+            <summary>撮影場所が決まっていなくても相談できますか？</summary>
+            <p>はい。ご自宅、公園、神社など、ご希望や撮影したい雰囲気に合わせて一緒に考えられます。</p>
+          </details>
+          <details data-reveal>
+            <summary>子どもが人見知りでも大丈夫ですか？</summary>
+            <p>大丈夫です。無理にポーズをつくるのではなく、その日のペースに合わせて自然な表情を残します。</p>
+          </details>
+          <details data-reveal>
+            <summary>七五三撮影も相談できますか？</summary>
+            <p>はい。神社やご希望の場所で、七五三の大切な一日を家族の雰囲気ごと撮影します。</p>
+          </details>
+          <details data-reveal>
+            <summary>撮影会はいつ開催していますか？</summary>
+            <p>撮影会は不定期で開催しています。開催内容や料金は、その都度ご案内します。</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
     <section class="tk-section" id="contact">
       <div class="tk-container">
         <div class="tk-contact" data-reveal>
           <h2>お問い合わせ</h2>
           <p>撮影したい時期、人数、場所の希望があれば添えてご相談ください。</p>
-          <a class="tk-button" href="mailto:info@example.com">Contact</a>
+          <a class="tk-button" href="https://lin.ee/ylWvSbq" target="_blank" rel="noopener">公式LINEで相談する</a>
+          <div class="tk-contact__links" aria-label="その他のお問い合わせ方法">
+            <a href="https://www.instagram.com/tk14.takumi?igsh=NHZpbjJ6NDhkMjVz&amp;utm_source=qr" target="_blank" rel="noopener">Instagram DM</a>
+            <a href="mailto:takumi.photo.moment@gmail.com">takumi.photo.moment@gmail.com</a>
+          </div>
         </div>
       </div>
     </section>
@@ -81,6 +227,6 @@
     <a href="/">tk14</a>
   </footer>
 
-  <script src="/assets/js/site.js?v=7"></script>
+  <script src="/assets/js/site.js?v=8"></script>
 </body>
 </html>
