@@ -1822,6 +1822,13 @@ h1 {
   text-align: center;
 }
 
+.moment-gallery-hero .tk-title {
+  width: fit-content;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
 .moment-gallery-filters {
   display: flex;
   flex-wrap: wrap;
