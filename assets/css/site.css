@@ -1323,18 +1323,6 @@ h1 {
   border-top: 1px solid rgba(44, 47, 51, 0.06);
 }
 
-.site-family #about {
-  border-top: 1px solid rgba(44, 47, 51, 0.06);
-}
-
-.site-family #photographer {
-  padding-bottom: 64px;
-}
-
-.site-family #about {
-  padding-top: 64px;
-}
-
 .site-ai #support {
   border-top: 1px solid rgba(44, 47, 51, 0.06);
   background: var(--tk-bg);
@@ -1953,14 +1941,6 @@ h1 {
 
   .profile-page #works {
     padding-top: 78px;
-  }
-
-  .site-family #photographer {
-    padding-bottom: 76px;
-  }
-
-  .site-family #about {
-    padding-top: 76px;
   }
 
   .tk-about {
