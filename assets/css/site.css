@@ -1228,6 +1228,10 @@ h1 {
   display: block;
 }
 
+.tk-lead-line {
+  display: block;
+}
+
 .tk-section-action {
   margin-top: 34px;
   text-align: center;
@@ -1321,6 +1325,14 @@ h1 {
 
 .site-family #about {
   border-top: 1px solid rgba(44, 47, 51, 0.06);
+}
+
+.site-family #photographer {
+  padding-bottom: 64px;
+}
+
+.site-family #about {
+  padding-top: 64px;
 }
 
 .site-ai #support {
@@ -1728,7 +1740,7 @@ h1 {
   color: var(--tk-ink);
   font-size: 0.94rem;
   font-weight: 600;
-  text-align: left;
+  text-align: center;
 }
 
 .tk-price-card li {
@@ -1941,6 +1953,14 @@ h1 {
 
   .profile-page #works {
     padding-top: 78px;
+  }
+
+  .site-family #photographer {
+    padding-bottom: 76px;
+  }
+
+  .site-family #about {
+    padding-top: 76px;
   }
 
   .tk-about {
