@@ -107,6 +107,7 @@ document.querySelectorAll("[data-gallery-filters]").forEach((filters) => {
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
       const filter = button.getAttribute("data-gallery-filter") || "all";
+      grid.setAttribute("data-gallery-active", filter);
 
       buttons.forEach((item) => {
         item.classList.toggle("is-active", item === button);

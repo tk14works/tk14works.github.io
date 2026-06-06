@@ -2005,8 +2005,20 @@ h1 {
     column-gap: 22px;
   }
 
+  .moment-gallery-grid[data-gallery-active="maternity"] {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 22px;
+    row-gap: 22px;
+    columns: initial;
+  }
+
   .moment-gallery-item {
     margin-bottom: 22px;
+  }
+
+  .moment-gallery-grid[data-gallery-active="maternity"] .moment-gallery-item {
+    margin-bottom: 0;
   }
 
   .tk-gallery-card,
