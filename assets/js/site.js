@@ -38,8 +38,11 @@ if ("IntersectionObserver" in window) {
 document.querySelectorAll("[data-hero-slideshow]").forEach((slideshow) => {
   const slides = Array.from(slideshow.querySelectorAll("[data-hero-slide]"));
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const initialSlideDelay = 4000;
+  const slideDelay = 6000;
   let activeIndex = 0;
-  let intervalId;
+  let hasAdvanced = false;
+  let timeoutId;
 
   if (slides.length < 2 || reducedMotion.matches) return;
 
@@ -52,27 +55,29 @@ document.querySelectorAll("[data-hero-slideshow]").forEach((slideshow) => {
   };
 
   const stopSlideshow = () => {
-    window.clearInterval(intervalId);
-    intervalId = undefined;
+    window.clearTimeout(timeoutId);
+    timeoutId = undefined;
   };
 
-  const startSlideshow = () => {
+  const scheduleNextSlide = (delay = slideDelay) => {
     stopSlideshow();
-    intervalId = window.setInterval(() => {
+    timeoutId = window.setTimeout(() => {
       activeIndex = (activeIndex + 1) % slides.length;
+      hasAdvanced = true;
       showSlide(activeIndex);
-    }, 6000);
+      scheduleNextSlide();
+    }, delay);
   };
 
   document.addEventListener("visibilitychange", () => {
     if (document.hidden) {
       stopSlideshow();
     } else {
-      startSlideshow();
+      scheduleNextSlide(hasAdvanced ? slideDelay : initialSlideDelay);
     }
   });
 
-  startSlideshow();
+  scheduleNextSlide(initialSlideDelay);
 });
 
 document.querySelectorAll("[data-carousel]").forEach((carousel) => {
