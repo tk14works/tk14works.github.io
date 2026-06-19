@@ -1987,6 +1987,11 @@ h1 {
   letter-spacing: 0.12em;
 }
 
+.tk-footer--white {
+  border-top: 1px solid var(--tk-line);
+  background: var(--tk-white);
+}
+
 @media (min-width: 760px) {
   .tk-section {
     padding: 118px 0;
