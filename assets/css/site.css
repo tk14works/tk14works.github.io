@@ -1355,7 +1355,24 @@ h1 {
 
 .tk-hero__image picture {
   display: block;
+  width: 100%;
   height: 100%;
+}
+
+.tk-hero__image[data-hero-slideshow] {
+  position: relative;
+}
+
+.tk-hero__image[data-hero-slideshow] .tk-hero-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1.6s ease;
+}
+
+.tk-hero__image[data-hero-slideshow] .tk-hero-slide.is-active {
+  z-index: 1;
+  opacity: 1;
 }
 
 .tk-hero__image--abstract {
@@ -1390,9 +1407,16 @@ h1 {
 }
 
 .tk-hero__image img {
+  width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center 20%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tk-hero__image[data-hero-slideshow] .tk-hero-slide {
+    transition: none;
+  }
 }
 
 .tk-hero__copy {

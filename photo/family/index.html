@@ -32,10 +32,22 @@
 
   <main>
     <section class="tk-hero" id="home">
-      <div class="tk-hero__image" data-reveal>
-        <picture>
+      <div class="tk-hero__image" data-hero-slideshow data-reveal>
+        <picture class="tk-hero-slide is-active" data-hero-slide>
           <source media="(max-width: 759px)" srcset="/images/moment/moment-hero-sp.jpg">
-          <img src="/images/moment/moment-hero-pc.jpg" alt="家族で自然に過ごすMomentの撮影イメージ">
+          <img src="/images/moment/moment-hero-pc.jpg" alt="親子で自然に過ごすMomentの撮影イメージ" fetchpriority="high">
+        </picture>
+        <picture class="tk-hero-slide" data-hero-slide aria-hidden="true">
+          <source media="(max-width: 759px)" srcset="/images/moment/moment-family-sp.jpg">
+          <img src="/images/moment/moment-family-pc.jpg" alt="家族で過ごすMomentの撮影イメージ" decoding="async">
+        </picture>
+        <picture class="tk-hero-slide" data-hero-slide aria-hidden="true">
+          <source media="(max-width: 759px)" srcset="/images/moment/moment-maternity-sp.jpg">
+          <img src="/images/moment/moment-maternity-pc.jpg" alt="ご夫婦のマタニティ撮影イメージ" decoding="async">
+        </picture>
+        <picture class="tk-hero-slide" data-hero-slide aria-hidden="true">
+          <source media="(max-width: 759px)" srcset="/images/moment/moment-dog-sp.jpg">
+          <img src="/images/moment/moment-dog-pc.jpg" alt="愛犬と過ごすMomentの撮影イメージ" decoding="async">
         </picture>
       </div>
       <div class="tk-hero__copy" data-reveal>

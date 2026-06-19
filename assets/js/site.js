@@ -35,6 +35,46 @@ if ("IntersectionObserver" in window) {
   revealTargets.forEach((target) => target.classList.add("is-visible"));
 }
 
+document.querySelectorAll("[data-hero-slideshow]").forEach((slideshow) => {
+  const slides = Array.from(slideshow.querySelectorAll("[data-hero-slide]"));
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  let activeIndex = 0;
+  let intervalId;
+
+  if (slides.length < 2 || reducedMotion.matches) return;
+
+  const showSlide = (index) => {
+    slides.forEach((slide, slideIndex) => {
+      const isActive = slideIndex === index;
+      slide.classList.toggle("is-active", isActive);
+      slide.setAttribute("aria-hidden", String(!isActive));
+    });
+  };
+
+  const stopSlideshow = () => {
+    window.clearInterval(intervalId);
+    intervalId = undefined;
+  };
+
+  const startSlideshow = () => {
+    stopSlideshow();
+    intervalId = window.setInterval(() => {
+      activeIndex = (activeIndex + 1) % slides.length;
+      showSlide(activeIndex);
+    }, 6000);
+  };
+
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+      stopSlideshow();
+    } else {
+      startSlideshow();
+    }
+  });
+
+  startSlideshow();
+});
+
 document.querySelectorAll("[data-carousel]").forEach((carousel) => {
   const container = carousel.closest(".tk-container") || carousel.parentElement;
   if (!container) return;
