@@ -1332,6 +1332,10 @@ h1 {
   border-top: 1px solid rgba(44, 47, 51, 0.06);
 }
 
+.site-family #voices {
+  scroll-margin-top: 92px;
+}
+
 .site-ai #support {
   border-top: 1px solid rgba(44, 47, 51, 0.06);
   background: var(--tk-bg);
@@ -1560,6 +1564,7 @@ h1 {
 
 .tk-gallery,
 .tk-pricing,
+.tk-voices,
 .site-ai .tk-support-carousel,
 .site-ai .tk-flow-carousel {
   display: flex;
@@ -1575,6 +1580,7 @@ h1 {
 
 .tk-gallery::-webkit-scrollbar,
 .tk-pricing::-webkit-scrollbar,
+.tk-voices::-webkit-scrollbar,
 .site-ai .tk-support-carousel::-webkit-scrollbar,
 .site-ai .tk-flow-carousel::-webkit-scrollbar {
   display: none;
@@ -1582,6 +1588,7 @@ h1 {
 
 .tk-gallery-card,
 .tk-price-card,
+.tk-voice-card,
 .site-ai .tk-support-carousel .tk-menu-card,
 .site-ai .tk-flow-carousel article {
   flex: 0 0 min(76vw, 350px);
@@ -1708,6 +1715,44 @@ h1 {
 
 .tk-price-card--full {
   background: var(--tk-card-beige);
+}
+
+.tk-voice-card {
+  display: flex;
+  min-height: 390px;
+  padding: 36px 32px 32px;
+  flex-direction: column;
+  border: 1px solid var(--tk-line);
+  border-radius: 3px;
+  background: var(--tk-white);
+  box-shadow: 0 10px 28px rgba(44, 47, 51, 0.035);
+}
+
+.tk-voice-card__label {
+  color: var(--tk-gold);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.tk-voice-card blockquote {
+  margin: 24px 0;
+}
+
+.tk-voice-card blockquote p {
+  margin: 0;
+  color: var(--tk-ink);
+  line-height: 1.9;
+}
+
+.tk-voice-card__category {
+  margin: auto 0 0;
+  padding-top: 20px;
+  border-top: 1px solid var(--tk-line);
+  color: var(--tk-gold);
+  font-size: 0.84rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
 }
 
 .tk-price-card h3 {
@@ -2038,6 +2083,7 @@ h1 {
 
   .tk-gallery,
   .tk-pricing,
+  .tk-voices,
   .site-ai .tk-support-carousel,
   .site-ai .tk-flow-carousel {
     display: grid;
@@ -2054,6 +2100,11 @@ h1 {
   .tk-pricing {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 32px;
+  }
+
+  .tk-voices {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
   }
 
   .moment-gallery-grid {
@@ -2079,6 +2130,7 @@ h1 {
 
   .tk-gallery-card,
   .tk-price-card,
+  .tk-voice-card,
   .site-ai .tk-support-carousel .tk-menu-card,
   .site-ai .tk-flow-carousel article {
     flex-basis: auto;
