@@ -1319,6 +1319,10 @@ h1 {
   border-top: 1px solid rgba(44, 47, 51, 0.06);
 }
 
+.profile-page #flow {
+  scroll-margin-top: 92px;
+}
+
 .site-family #works {
   border-top: 1px solid rgba(44, 47, 51, 0.06);
 }
@@ -2002,6 +2006,29 @@ h1 {
     width: min(100%, 820px);
     margin-right: auto;
     margin-left: auto;
+  }
+
+  .profile-page .tk-profile-flow {
+    grid-template-columns: 1fr;
+    width: min(100%, 960px);
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .profile-page .tk-profile-flow article {
+    display: grid;
+    grid-template-columns: 54px minmax(220px, 0.8fr) minmax(0, 1.2fr);
+    gap: 28px;
+    align-items: start;
+  }
+
+  .profile-page .tk-profile-flow article span {
+    padding-top: 3px;
+  }
+
+  .profile-page .tk-profile-flow article h3,
+  .profile-page .tk-profile-flow article p {
+    margin: 0;
   }
 
   .tk-gallery,
