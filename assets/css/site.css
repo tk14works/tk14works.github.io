@@ -1323,6 +1323,11 @@ h1 {
   scroll-margin-top: 92px;
 }
 
+.profile-page .tk-profile-flow span {
+  font-size: 1.05rem;
+  letter-spacing: 0.12em;
+}
+
 .site-family #works {
   border-top: 1px solid rgba(44, 47, 51, 0.06);
 }
