@@ -1397,6 +1397,10 @@ h1 {
   will-change: transform;
 }
 
+.tk-hero__image[data-hero-slideshow] .tk-hero-slide[data-hero-initial].is-active img {
+  animation-duration: 4s;
+}
+
 @keyframes tk-hero-zoom {
   from {
     transform: scale(1);

@@ -38,7 +38,7 @@ if ("IntersectionObserver" in window) {
 document.querySelectorAll("[data-hero-slideshow]").forEach((slideshow) => {
   const slides = Array.from(slideshow.querySelectorAll("[data-hero-slide]"));
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-  const initialSlideDelay = 5000;
+  const initialSlideDelay = 4000;
   const slideDelay = 5000;
   let activeIndex = 0;
   let hasAdvanced = false;
@@ -65,6 +65,7 @@ document.querySelectorAll("[data-hero-slideshow]").forEach((slideshow) => {
       activeIndex = (activeIndex + 1) % slides.length;
       hasAdvanced = true;
       showSlide(activeIndex);
+      slides.forEach((slide) => slide.removeAttribute("data-hero-initial"));
       scheduleNextSlide();
     }, delay);
   };
