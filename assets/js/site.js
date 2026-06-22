@@ -38,8 +38,8 @@ if ("IntersectionObserver" in window) {
 document.querySelectorAll("[data-hero-slideshow]").forEach((slideshow) => {
   const slides = Array.from(slideshow.querySelectorAll("[data-hero-slide]"));
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-  const initialSlideDelay = 4000;
-  const slideDelay = 6000;
+  const initialSlideDelay = 5000;
+  const slideDelay = 5000;
   let activeIndex = 0;
   let hasAdvanced = false;
   let timeoutId;

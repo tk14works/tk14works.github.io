@@ -1388,6 +1388,25 @@ h1 {
   opacity: 1;
 }
 
+.tk-hero__image[data-hero-slideshow] .tk-hero-slide img {
+  transform: scale(1.06);
+}
+
+.tk-hero__image[data-hero-slideshow] .tk-hero-slide.is-active img {
+  animation: tk-hero-zoom 5s ease-out both;
+  will-change: transform;
+}
+
+@keyframes tk-hero-zoom {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.06);
+  }
+}
+
 .tk-hero__image--abstract {
   display: grid;
   place-items: center;
@@ -1429,6 +1448,11 @@ h1 {
 @media (prefers-reduced-motion: reduce) {
   .tk-hero__image[data-hero-slideshow] .tk-hero-slide {
     transition: none;
+  }
+
+  .tk-hero__image[data-hero-slideshow] .tk-hero-slide img {
+    animation: none;
+    transform: none;
   }
 }
 
