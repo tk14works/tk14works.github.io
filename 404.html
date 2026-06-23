@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TK14</title>
+  <script>
+    var next = 'https://tk14.jp' + location.pathname + location.search + location.hash;
+    location.replace(next);
+  </script>
+</head>
+<body>
+  <p>TK14のサイトは <a id="redirect-link" href="https://tk14.jp/">https://tk14.jp/</a> に移動しました。</p>
+  <script>
+    var link = document.getElementById('redirect-link');
+    if (link) link.href = 'https://tk14.jp' + location.pathname + location.search + location.hash;
+  </script>
+</body>
+</html>
