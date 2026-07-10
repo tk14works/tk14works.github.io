@@ -1411,6 +1411,27 @@ h1 {
   }
 }
 
+@media (max-width: 759px) {
+  .tk-hero__image[data-hero-slideshow] .tk-hero-slide img {
+    transform: scale(1.08);
+  }
+
+  .tk-hero__image[data-hero-slideshow] .tk-hero-slide.is-active img {
+    animation-duration: 4s;
+    animation-name: tk-hero-zoom-mobile;
+  }
+}
+
+@keyframes tk-hero-zoom-mobile {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.08);
+  }
+}
+
 .tk-hero__image--abstract {
   display: grid;
   place-items: center;
