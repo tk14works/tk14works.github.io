@@ -2273,6 +2273,12 @@ h1 {
     margin-left: auto;
   }
 
+  .site-family .tk-hero__image {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
   .tk-hero__image img {
     min-height: 0;
     max-height: none;
@@ -2295,6 +2301,11 @@ h1 {
     padding-top: 44px;
   }
 
+  .site-family .tk-hero__copy {
+    padding-top: 36px;
+    padding-bottom: 54px;
+  }
+
   .profile-page .tk-hero__copy {
     padding-bottom: 36px;
   }
@@ -2306,6 +2317,11 @@ h1 {
   .tk-hero__copy h1 {
     font-size: clamp(2rem, 8.2vw, 2.45rem);
     line-height: 1.55;
+  }
+
+  .site-family .tk-hero__copy h1 {
+    line-height: 1.38;
+    letter-spacing: 0.035em;
   }
 
   .tk-hero-title--profile {
