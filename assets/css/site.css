@@ -1225,38 +1225,6 @@ h1 {
   display: none;
 }
 
-.tk-section-heading-row {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  max-width: 820px;
-  margin: 0 auto 34px;
-}
-
-.tk-section-heading-row::after {
-  display: block;
-  flex: 1;
-  height: 1px;
-  background: var(--tk-line);
-  content: "";
-}
-
-.tk-title--inline {
-  margin: 0;
-  text-align: left;
-}
-
-.tk-title--inline::after {
-  display: none;
-}
-
-.tk-section-heading-row span {
-  color: var(--tk-muted);
-  font-size: 0.78rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-}
-
 .tk-br-pc {
   display: none;
 }
@@ -2447,21 +2415,6 @@ h1 {
 
   .tk-title {
     margin-bottom: 36px;
-  }
-
-  .tk-section-heading-row {
-    gap: 12px;
-    margin-bottom: 26px;
-  }
-
-  .tk-title--inline {
-    font-size: clamp(1.55rem, 7vw, 1.9rem);
-    white-space: nowrap;
-  }
-
-  .tk-section-heading-row span {
-    font-size: 0.72rem;
-    letter-spacing: 0.14em;
   }
 
   .tk-text-list article {
