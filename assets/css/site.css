@@ -1089,6 +1089,11 @@ h1 {
   transition: opacity 180ms ease, transform 180ms ease;
 }
 
+.site-family .profile-nav {
+  gap: clamp(10px, 1.35vw, 22px);
+  font-size: 0.88rem;
+}
+
 .profile-minimal .profile-nav a:hover::after {
   opacity: 1;
   transform: scaleX(1);
@@ -1218,6 +1223,38 @@ h1 {
 .tk-section-lead--works br,
 .tk-section-lead--pricing br {
   display: none;
+}
+
+.tk-section-heading-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  max-width: 820px;
+  margin: 0 auto 34px;
+}
+
+.tk-section-heading-row::after {
+  display: block;
+  flex: 1;
+  height: 1px;
+  background: var(--tk-line);
+  content: "";
+}
+
+.tk-title--inline {
+  margin: 0;
+  text-align: left;
+}
+
+.tk-title--inline::after {
+  display: none;
+}
+
+.tk-section-heading-row span {
+  color: var(--tk-muted);
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
 }
 
 .tk-br-pc {
@@ -1887,6 +1924,78 @@ h1 {
   color: var(--tk-muted);
 }
 
+.tk-info-section {
+  scroll-margin-top: 92px;
+}
+
+.tk-text-list,
+.tk-flow-list {
+  display: grid;
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.tk-text-list article,
+.tk-flow-list article {
+  border-top: 1px solid var(--tk-line);
+}
+
+.tk-text-list article:last-child,
+.tk-flow-list article:last-child {
+  border-bottom: 1px solid var(--tk-line);
+}
+
+.tk-text-list article {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 28px;
+  padding: 22px 0;
+}
+
+.tk-text-list__meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--tk-muted);
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+
+.tk-text-list__meta span {
+  padding: 2px 8px;
+  border: 1px solid var(--tk-line);
+  border-radius: 999px;
+  color: var(--tk-ink);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+}
+
+.tk-text-list p,
+.tk-flow-list p {
+  margin: 0;
+  color: var(--tk-muted);
+}
+
+.tk-flow-list article {
+  display: grid;
+  grid-template-columns: 54px minmax(0, 1fr);
+  gap: 24px;
+  padding: 24px 0;
+}
+
+.tk-flow-list article > span {
+  color: var(--tk-gold);
+  font-size: 0.86rem;
+  letter-spacing: 0.14em;
+}
+
+.tk-flow-list h3 {
+  margin: 0 0 6px;
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
 .tk-contact {
   max-width: 760px;
   margin: 0 auto;
@@ -2338,6 +2447,37 @@ h1 {
 
   .tk-title {
     margin-bottom: 36px;
+  }
+
+  .tk-section-heading-row {
+    gap: 12px;
+    margin-bottom: 26px;
+  }
+
+  .tk-title--inline {
+    font-size: clamp(1.55rem, 7vw, 1.9rem);
+    white-space: nowrap;
+  }
+
+  .tk-section-heading-row span {
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+  }
+
+  .tk-text-list article {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 20px 0;
+  }
+
+  .tk-text-list__meta {
+    font-size: 0.78rem;
+  }
+
+  .tk-flow-list article {
+    grid-template-columns: 42px minmax(0, 1fr);
+    gap: 16px;
+    padding: 22px 0;
   }
 
   .profile-page .tk-title {
