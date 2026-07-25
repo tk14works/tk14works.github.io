@@ -1500,7 +1500,10 @@ h1 {
 }
 
 .site-top .tk-menu-card--ai {
-  border-top: 4px solid #273b55;
+  border-top: 4px solid #75d4cd;
+  background: #102a43;
+  color: #fff;
+  box-shadow: 12px 12px 0 rgba(16, 42, 67, 0.11);
 }
 
 .site-top .tk-menu-card[data-reveal] {
@@ -1514,14 +1517,20 @@ h1 {
 
 .site-top .tk-menu-card--profile {
   border-top: 4px solid #a88963;
+  background: #f5eee7;
 }
 
 .site-top .tk-menu-card--family {
   border-top: 4px solid #7bcf63;
+  background: #edf8e9;
 }
 
 .site-top .tk-menu-card--ai span {
-  color: #273b55;
+  color: #8ce0d9;
+}
+
+.site-top .tk-menu-card--ai h3 {
+  color: #fff;
 }
 
 .site-top .tk-menu-card--profile span {
@@ -1576,7 +1585,43 @@ h1 {
 }
 
 .site-ai .profile-header {
-  border-bottom-color: rgba(16, 42, 67, 0.1);
+  background: rgba(13, 32, 55, 0.97);
+  border-bottom-color: rgba(140, 224, 217, 0.28);
+  color: #fff;
+}
+
+.site-ai .profile-logo,
+.site-ai .profile-nav,
+.site-ai .profile-menu-button {
+  color: #f4fbfb;
+}
+
+.site-ai .profile-menu-button::before,
+.site-ai .profile-menu-button::after {
+  background: #f4fbfb;
+}
+
+.site-ai .tk-breadcrumb {
+  border-bottom-color: rgba(140, 224, 217, 0.2);
+  background: #102a43;
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.site-ai .tk-breadcrumb a,
+.site-ai .tk-breadcrumb li + li::before {
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.site-ai .tk-breadcrumb [aria-current="page"] {
+  color: #8ce0d9;
+}
+
+@media (max-width: 759px) {
+  .site-ai .profile-nav {
+    border-color: rgba(140, 224, 217, 0.3);
+    background: #102a43;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.24);
+  }
 }
 
 .ai-hero {
