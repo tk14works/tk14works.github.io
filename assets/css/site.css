@@ -2925,6 +2925,20 @@ h1 {
     margin-bottom: 28px;
   }
 
+  /* TOPのメニューカードは、スマホでは画像より下の情報をコンパクトにして
+     次のサービスへ視線を移しやすくする。 */
+  .site-top .tk-menu-card {
+    padding: 21px 24px 22px;
+  }
+
+  .site-top .tk-menu-card__image {
+    margin: -21px -24px 16px;
+  }
+
+  .site-top .tk-menu-card h3 {
+    margin-top: 10px;
+  }
+
   .tk-mobile-break {
     display: block;
   }
