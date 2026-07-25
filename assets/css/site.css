@@ -1135,11 +1135,6 @@ h1 {
   letter-spacing: 0.01em;
 }
 
-.site-family .tk-price-card--studio .tk-price,
-.site-family .tk-price-card--studio h3 span {
-  color: #9d4f3f;
-}
-
 .site-family .tk-price-card li {
   border-top-color: rgba(73, 104, 90, 0.14);
 }
