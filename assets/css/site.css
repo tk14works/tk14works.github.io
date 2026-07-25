@@ -1464,8 +1464,12 @@ h1 {
 
 .site-top .tk-hero--text-only .tk-hero__copy {
   width: min(100%, 1040px);
-  padding-top: 46px;
-  padding-bottom: 36px;
+  padding-top: 36px;
+  padding-bottom: 46px;
+}
+
+.site-top .tk-hero__copy .tk-label {
+  margin-bottom: 6px;
 }
 
 .site-top .tk-hero__copy h1 {
