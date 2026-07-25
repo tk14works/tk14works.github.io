@@ -1036,8 +1036,8 @@ h1 {
 }
 
 .site-family .tk-button--outline {
-  border-color: #9fb59b;
-  background: #f1f7ee;
+  border-color: #a3cc96;
+  background: #e6f8de;
   color: var(--tk-accent-deep);
 }
 
@@ -1069,7 +1069,7 @@ h1 {
 
 .site-family .tk-voice-card {
   border-color: var(--tk-line);
-  background: #f4f9f2;
+  background: #e6f8de;
   box-shadow: 0 14px 32px rgba(44, 51, 46, 0.055);
 }
 
