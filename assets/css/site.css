@@ -1036,9 +1036,9 @@ h1 {
 }
 
 .site-family .tk-button--outline {
-  border-color: transparent;
-  background: #e6f8de;
-  color: var(--tk-accent-deep);
+  border-color: var(--tk-gold);
+  background: var(--tk-gold);
+  color: var(--tk-ink);
 }
 
 .site-family .tk-button:hover {
