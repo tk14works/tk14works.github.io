@@ -1590,7 +1590,7 @@ h1 {
 
 .ai-hero__inner {
   display: grid;
-  gap: clamp(42px, 6vw, 92px);
+  gap: clamp(42px, 4vw, 64px);
   width: min(100%, 1120px);
   margin: 0 auto;
 }
@@ -1616,7 +1616,7 @@ h1 {
 .ai-hero__copy h1 {
   margin: 16px 0 0;
   color: #fff;
-  font-size: clamp(2.4rem, 5.2vw, 4.6rem);
+  font-size: clamp(2.4rem, 4.2vw, 3.6rem);
   font-weight: 400;
   line-height: 1.2;
   letter-spacing: 0.045em;
@@ -1660,21 +1660,13 @@ h1 {
 .ai-feature__heading {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 18px;
   color: #8ce0d9;
-}
-
-.ai-feature__heading span {
-  color: rgba(255, 255, 255, 0.58);
-  font-size: 0.76rem;
-  letter-spacing: 0.08em;
 }
 
 .ai-feature__track {
   position: relative;
-  min-height: 286px;
-  margin-top: 26px;
+  min-height: 250px;
+  margin-top: 8px;
 }
 
 .ai-feature__card {
@@ -1695,12 +1687,8 @@ h1 {
   transform: translateX(0);
 }
 
-.ai-feature__number {
-  color: rgba(255, 255, 255, 0.42);
-}
-
 .ai-feature__category {
-  margin-top: auto;
+  margin-top: 18px;
   color: #8ce0d9;
 }
 
@@ -1783,7 +1771,7 @@ h1 {
 
 @media (min-width: 760px) {
   .ai-hero__inner {
-    grid-template-columns: minmax(0, 0.88fr) minmax(420px, 1.12fr);
+    grid-template-columns: minmax(0, 0.95fr) minmax(420px, 1.05fr);
     align-items: center;
   }
 }
