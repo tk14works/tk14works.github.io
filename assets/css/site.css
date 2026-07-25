@@ -1524,6 +1524,19 @@ h1 {
   background: #edf8e9;
 }
 
+/* TOPのサービスカードは、画像を主役にしつつ、情報面を軽くまとめる。 */
+.site-top .tk-menu-card {
+  padding: 21px 24px 22px;
+}
+
+.site-top .tk-menu-card__image {
+  margin: -21px -24px 16px;
+}
+
+.site-top .tk-menu-card h3 {
+  margin-top: 10px;
+}
+
 .site-top .tk-menu-card--ai span {
   color: #8ce0d9;
 }
@@ -2923,20 +2936,6 @@ h1 {
   .site-top #services .tk-section-lead {
     margin-top: -12px;
     margin-bottom: 28px;
-  }
-
-  /* TOPのメニューカードは、スマホでは画像より下の情報をコンパクトにして
-     次のサービスへ視線を移しやすくする。 */
-  .site-top .tk-menu-card {
-    padding: 21px 24px 22px;
-  }
-
-  .site-top .tk-menu-card__image {
-    margin: -21px -24px 16px;
-  }
-
-  .site-top .tk-menu-card h3 {
-    margin-top: 10px;
   }
 
   .tk-mobile-break {
