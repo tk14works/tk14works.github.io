@@ -1458,18 +1458,69 @@ h1 {
 }
 
 .site-top .tk-hero--text-only {
-  background: #f3f0ea;
-  min-height: 360px;
+  background: #eae8e1;
+  min-height: 320px;
 }
 
 .site-top .tk-hero--text-only .tk-hero__copy {
-  padding-top: 66px;
-  padding-bottom: 58px;
+  width: min(100%, 1040px);
+  padding-top: 58px;
+  padding-bottom: 46px;
+}
+
+.site-top .tk-hero__copy h1 {
+  width: 100%;
+  max-width: none;
+  font-size: clamp(2.15rem, 4.2vw, 3rem);
+}
+
+.tk-desktop-break {
+  display: none;
+}
+
+@media (min-width: 760px) {
+  .tk-desktop-break {
+    display: block;
+  }
 }
 
 .site-top #services {
-  padding-top: 72px;
+  padding-top: 42px;
   padding-bottom: 96px;
+}
+
+.site-top .profile-nav {
+  gap: clamp(12px, 1.5vw, 22px);
+  font-size: 0.84rem;
+}
+
+.site-top .tk-menu-grid--top {
+  width: min(100%, 1120px);
+  margin: 0 auto;
+}
+
+.site-top .tk-menu-card--ai {
+  border-top: 4px solid #273b55;
+}
+
+.site-top .tk-menu-card--profile {
+  border-top: 4px solid #a88963;
+}
+
+.site-top .tk-menu-card--family {
+  border-top: 4px solid #7bcf63;
+}
+
+.site-top .tk-menu-card--ai span {
+  color: #273b55;
+}
+
+.site-top .tk-menu-card--profile span {
+  color: #8b735d;
+}
+
+.site-top .tk-menu-card--family span {
+  color: #49685a;
 }
 
 .profile-page #works {
@@ -2442,13 +2493,19 @@ h1 {
   }
 
   .site-top .tk-hero--text-only .tk-hero__copy {
-    padding-top: 48px;
-    padding-bottom: 34px;
+    padding-top: 40px;
+    padding-bottom: 30px;
   }
 
   .site-top #services {
-    padding-top: 42px;
+    padding-top: 28px;
     padding-bottom: 72px;
+  }
+
+  .site-top .tk-hero__copy h1 {
+    font-size: clamp(1.78rem, 7.2vw, 2.2rem);
+    line-height: 1.45;
+    letter-spacing: 0.035em;
   }
 
   .site-top #services .tk-title {
