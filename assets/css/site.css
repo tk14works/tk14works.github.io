@@ -1564,23 +1564,77 @@ h1 {
 
 .site-ai #support {
   border-top: 1px solid rgba(44, 47, 51, 0.06);
-  background: var(--tk-bg);
+  background: #eaf2f5;
 }
 
 .site-ai #flow {
-  background: var(--tk-white);
+  background: #102a43;
+  color: #fff;
 }
 
 .site-ai #about {
-  background: var(--tk-bg);
+  background: #e6f3f2;
 }
 
 .site-ai #faq {
-  background: var(--tk-white);
+  background: #153d50;
+  color: #fff;
 }
 
 .site-ai #contact {
-  background: var(--tk-bg);
+  background: #0d2037;
+  color: #fff;
+}
+
+.site-ai #flow .tk-title,
+.site-ai #faq .tk-title,
+.site-ai #contact .tk-contact h2,
+.site-ai #flow .tk-flow-list h3,
+.site-ai #faq .tk-faq summary {
+  color: #fff;
+}
+
+.site-ai #flow .tk-title::after,
+.site-ai #faq .tk-title::after {
+  background: #8ce0d9;
+}
+
+.site-ai #flow .tk-section-lead,
+.site-ai #flow .tk-flow-list p,
+.site-ai #faq .tk-faq p,
+.site-ai #contact .tk-contact p,
+.site-ai #contact .tk-contact__links {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.site-ai #flow .tk-flow-list article,
+.site-ai #faq .tk-faq details {
+  border-color: rgba(140, 224, 217, 0.26);
+}
+
+.site-ai #flow .ai-flow-list article > span {
+  color: #8ce0d9;
+}
+
+.site-ai #contact .tk-button {
+  border-color: #8ce0d9;
+  background: #8ce0d9;
+  color: #102a43;
+}
+
+.site-ai #contact .tk-button:hover {
+  border-color: #fff;
+  background: #fff;
+}
+
+.site-ai #contact .tk-contact__links a:hover {
+  color: #8ce0d9;
+}
+
+.site-ai .tk-footer {
+  border-top: 1px solid rgba(140, 224, 217, 0.16);
+  background: #0d2037;
+  color: rgba(255, 255, 255, 0.56);
 }
 
 .site-ai .profile-header {
