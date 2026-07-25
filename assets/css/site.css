@@ -1036,7 +1036,7 @@ h1 {
 }
 
 .site-family .tk-button--outline {
-  border-color: #a3cc96;
+  border-color: transparent;
   background: #e6f8de;
   color: var(--tk-accent-deep);
 }
@@ -1071,6 +1071,19 @@ h1 {
   border-color: var(--tk-line);
   background: #e6f8de;
   box-shadow: 0 14px 32px rgba(44, 51, 46, 0.055);
+}
+
+/* Momentは写真と情報の移動を軽くするため、通常セクションの余白を少し詰める。 */
+.site-family .tk-section {
+  padding: clamp(74px, 7vw, 92px) 0;
+}
+
+.site-family .tk-title {
+  margin-bottom: clamp(36px, 3vw, 42px);
+}
+
+.site-family .tk-section-lead {
+  margin-bottom: 28px;
 }
 
 .tk-menu-card--link {
