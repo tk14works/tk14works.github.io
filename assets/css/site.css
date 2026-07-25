@@ -1459,13 +1459,13 @@ h1 {
 
 .site-top .tk-hero--text-only {
   background: #eae8e1;
-  min-height: 320px;
+  min-height: 280px;
 }
 
 .site-top .tk-hero--text-only .tk-hero__copy {
   width: min(100%, 1040px);
-  padding-top: 58px;
-  padding-bottom: 46px;
+  padding-top: 46px;
+  padding-bottom: 36px;
 }
 
 .site-top .tk-hero__copy h1 {
@@ -1491,6 +1491,11 @@ h1 {
 
 .site-top .tk-menu-card--ai {
   border-top: 4px solid #273b55;
+}
+
+.site-top .tk-menu-card--ai[data-reveal] {
+  transform: translateY(8px);
+  transition: opacity 880ms ease-out, transform 880ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .site-top .tk-menu-card--profile {
@@ -2483,7 +2488,7 @@ h1 {
   }
 
   .site-top .tk-hero--text-only .tk-hero__copy {
-    padding-top: 40px;
+    padding-top: 24px;
     padding-bottom: 30px;
   }
 
