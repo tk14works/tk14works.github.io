@@ -1775,10 +1775,11 @@ h1 {
   grid-template-columns: 62px minmax(0, 1fr);
   gap: 24px;
   padding: 30px 34px;
-  border: 1px solid #cbdce3;
-  border-radius: 3px;
+  border: 1px solid #c4d8e0;
+  border-left: 3px solid #75d4cd;
+  border-radius: 5px;
   background: rgba(255, 255, 255, 0.84);
-  box-shadow: 0 10px 24px rgba(16, 42, 67, 0.05);
+  box-shadow: 0 12px 26px rgba(16, 42, 67, 0.07);
 }
 
 .ai-service-cards span,
@@ -1940,8 +1941,13 @@ h1 {
   }
 
   .ai-hero__inner--single .ai-hero__copy {
-    width: min(100%, 520px);
+    width: min(100%, 620px);
     margin: 0 auto;
+  }
+
+  .ai-hero__inner--single .ai-hero__copy h1 {
+    font-size: clamp(3.7rem, 5.4vw, 4.6rem);
+    line-height: 1.16;
   }
 }
 
@@ -1984,6 +1990,8 @@ h1 {
     grid-template-columns: 44px minmax(0, 1fr);
     gap: 14px;
     padding: 24px 20px;
+    border-radius: 6px;
+    box-shadow: 0 12px 28px rgba(16, 42, 67, 0.1);
   }
 
   .ai-service-list article {
