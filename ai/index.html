@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>tk14 AI | AI・DX活用サポート</title>
   <meta name="description" content="生成AIを活用した業務効率化、文章作成、発信整理、日々の作業改善をわかりやすくサポートします。">
-  <link rel="stylesheet" href="/assets/css/site.css?v=26">
+  <link rel="stylesheet" href="/assets/css/site.css?v=27">
 </head>
 <body class="profile-minimal site-ai">
   <header class="profile-header">
@@ -31,7 +31,7 @@
 
   <main>
     <section class="ai-hero" id="home">
-      <div class="ai-hero__inner">
+      <div class="ai-hero__inner ai-hero__inner--single">
         <div class="ai-hero__copy" data-reveal>
           <p class="ai-hero__eyebrow">AI・DX活用サポート</p>
           <h1>AIで、<br>仕事を整える。</h1>
@@ -39,37 +39,6 @@
           <a class="ai-hero__button" href="#contact">AI・DXについて相談する</a>
         </div>
 
-        <div class="ai-feature" data-ai-feature-carousel aria-label="注目の取り組み">
-          <div class="ai-feature__heading">
-            <p>FEATURED WORK</p>
-          </div>
-          <div class="ai-feature__track">
-            <article class="ai-feature__card is-active" data-ai-feature-slide>
-              <p class="ai-feature__category">WEB SITE</p>
-              <h2>事業の魅力を伝える<br>ホームページ制作</h2>
-              <p>伝えることを整理し、相談につながるサイトへ。</p>
-            </article>
-            <article class="ai-feature__card" data-ai-feature-slide>
-              <p class="ai-feature__category">WORK APP</p>
-              <h2>現場に合わせた<br>業務支援アプリづくり</h2>
-              <p>日々の小さな困りごとを、使いやすい仕組みへ変えていきます。</p>
-            </article>
-            <article class="ai-feature__card" data-ai-feature-slide>
-              <p class="ai-feature__category">AI &amp; DX</p>
-              <h2>AIで定型作業を<br>続けやすく整える</h2>
-              <p>導入して終わりではなく、仕事の中で使える形まで一緒に調整します。</p>
-            </article>
-          </div>
-          <div class="ai-feature__controls" aria-label="注目の取り組みを切り替える">
-            <button type="button" aria-label="前の取り組み" data-ai-feature-prev>←</button>
-            <div class="ai-feature__dots" aria-label="表示中の取り組み">
-              <button type="button" class="is-active" aria-label="1件目を表示" data-ai-feature-dot></button>
-              <button type="button" aria-label="2件目を表示" data-ai-feature-dot></button>
-              <button type="button" aria-label="3件目を表示" data-ai-feature-dot></button>
-            </div>
-            <button type="button" aria-label="次の取り組み" data-ai-feature-next>→</button>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -77,37 +46,35 @@
       <div class="tk-container">
         <h2 class="tk-title" data-reveal>サポートできること</h2>
         <p class="tk-section-lead" data-reveal>仕事や活動に合わせて、<br class="tk-mobile-break">AIを使いやすい形に整えます。</p>
-        <div class="tk-menu-grid tk-support-carousel" data-carousel>
-          <article class="tk-menu-card" data-reveal>
+        <div class="ai-service-list" data-reveal>
+          <article>
             <span>01</span>
-            <h3>AI活用の相談</h3>
-            <p>今の仕事や活動をヒアリングし、ChatGPTなどをどこで使えるか一緒に整理します。</p>
+            <div>
+              <h3>AI活用の相談</h3>
+              <p>今の仕事や活動をヒアリングし、ChatGPTなどをどこで使えるか一緒に整理します。</p>
+            </div>
           </article>
-          <article class="tk-menu-card" data-reveal>
+          <article>
             <span>02</span>
-            <h3>パソコン作業の効率化</h3>
-            <p>メール返信、文章作成、情報整理など、時間がかかっている作業を見直します。</p>
+            <div>
+              <h3>パソコン作業の効率化</h3>
+              <p>メール返信、文章作成、情報整理など、時間がかかっている作業を見直します。</p>
+            </div>
           </article>
-          <article class="tk-menu-card" data-reveal>
+          <article>
             <span>03</span>
-            <h3>ホームページ制作サポート</h3>
-            <p>構成づくり、文章整理、見た目の調整など、サイトづくりに必要な内容を整えます。</p>
+            <div>
+              <h3>ホームページ制作サポート</h3>
+              <p>構成づくり、文章整理、見た目の調整など、サイトづくりに必要な内容を整えます。</p>
+            </div>
           </article>
-          <article class="tk-menu-card" data-reveal>
+          <article>
             <span>04</span>
-            <h3>AIでできることの整理</h3>
-            <p>何から始めればいいかわからない段階から、無理なく試せる使い方を考えます。</p>
+            <div>
+              <h3>AIでできることの整理</h3>
+              <p>何から始めればいいかわからない段階から、無理なく試せる使い方を考えます。</p>
+            </div>
           </article>
-        </div>
-        <div class="tk-carousel-controls" aria-label="サポートできることの切り替え">
-          <button class="tk-carousel-arrow" type="button" aria-label="前のサポートできることへ" data-carousel-prev>‹</button>
-          <button class="tk-carousel-arrow" type="button" aria-label="次のサポートできることへ" data-carousel-next>›</button>
-        </div>
-        <div class="tk-carousel-dots" aria-label="サポートできることの表示位置" data-carousel-dots>
-          <span class="is-active"></span>
-          <span></span>
-          <span></span>
-          <span></span>
         </div>
       </div>
     </section>
@@ -116,21 +83,11 @@
       <div class="tk-container">
         <h2 class="tk-title" data-reveal>AI活用の進め方</h2>
         <p class="tk-section-lead" data-reveal>AIに詳しくなくても大丈夫です。<br class="tk-mobile-break">導入から本運用まで、使いやすい形に整えます。</p>
-        <div class="tk-flow tk-flow-carousel" data-carousel>
-          <article data-reveal><span>01</span><h3>ヒアリング</h3><p>現在の仕事内容、困っている作業、AIで試してみたいことを確認します。</p></article>
-          <article data-reveal><span>02</span><h3>使うAIの選定・導入</h3><p>ChatGPT、Gemini、Claudeなどから、目的や使いやすさに合わせて使うAIを選び、導入をサポートします。</p></article>
-          <article data-reveal><span>03</span><h3>実践導入・調整</h3><p>導入したAIを実際の作業で使いながら、活用方法や使いにくい部分を一緒に調整します。</p></article>
-          <article data-reveal><span>04</span><h3>本運用・伴走サポート</h3><p>日々の業務や活動の中で、無理なく使い続けられるようにサポートします。</p></article>
-        </div>
-        <div class="tk-carousel-controls" aria-label="AI活用の進め方の切り替え">
-          <button class="tk-carousel-arrow" type="button" aria-label="前のAI活用の進め方へ" data-carousel-prev>‹</button>
-          <button class="tk-carousel-arrow" type="button" aria-label="次のAI活用の進め方へ" data-carousel-next>›</button>
-        </div>
-        <div class="tk-carousel-dots" aria-label="AI活用の進め方の表示位置" data-carousel-dots>
-          <span class="is-active"></span>
-          <span></span>
-          <span></span>
-          <span></span>
+        <div class="tk-flow-list ai-flow-list" data-reveal>
+          <article><span>01</span><div><h3>ヒアリング</h3><p>現在の仕事内容、困っている作業、AIで試してみたいことを確認します。</p></div></article>
+          <article><span>02</span><div><h3>使うAIの選定・導入</h3><p>ChatGPT、Gemini、Claudeなどから、目的や使いやすさに合わせて使うAIを選び、導入をサポートします。</p></div></article>
+          <article><span>03</span><div><h3>実践導入・調整</h3><p>導入したAIを実際の作業で使いながら、活用方法や使いにくい部分を一緒に調整します。</p></div></article>
+          <article><span>04</span><div><h3>本運用・伴走サポート</h3><p>日々の業務や活動の中で、無理なく使い続けられるようにサポートします。</p></div></article>
         </div>
       </div>
     </section>
