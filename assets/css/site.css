@@ -1026,6 +1026,7 @@ h1 {
   --tk-card-green: #dff2d7;
   --tk-card-blue: #e8f6e1;
   --tk-card-beige: #d3edc9;
+  --tk-celebration: #c66d58;
 }
 
 /* 主役のリーフグリーンは濃色文字で使い、明るさと読みやすさを両立する。 */
@@ -1085,6 +1086,62 @@ h1 {
 
 .site-family .tk-section-lead {
   margin-bottom: 28px;
+}
+
+/* 撮影メニューは、料金と撮影体験の価値が伝わる落ち着いたカードに整える。 */
+.site-family .tk-price-card {
+  position: relative;
+  overflow: hidden;
+  padding: 52px 34px 42px;
+  border: 1px solid rgba(73, 104, 90, 0.18);
+  border-radius: 8px;
+  background: #fbfef9;
+  box-shadow: 0 18px 42px rgba(44, 51, 46, 0.08);
+}
+
+.site-family .tk-price-card::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 5px;
+  background: var(--tk-gold);
+  content: "";
+}
+
+.site-family .tk-price-card--location {
+  background: linear-gradient(145deg, rgba(123, 207, 99, 0.16), transparent 46%), #fbfef9;
+}
+
+.site-family .tk-price-card--studio {
+  border-color: rgba(198, 109, 88, 0.3);
+  background: linear-gradient(145deg, rgba(198, 109, 88, 0.18), transparent 48%), #fffdf9;
+}
+
+.site-family .tk-price-card--studio::before {
+  background: var(--tk-celebration);
+}
+
+.site-family .tk-price-card--full {
+  background: linear-gradient(145deg, rgba(143, 190, 122, 0.16), transparent 46%), #fbfef9;
+}
+
+.site-family .tk-price-card h3 span {
+  color: #718071;
+}
+
+.site-family .tk-price {
+  color: var(--tk-ink);
+  letter-spacing: 0.01em;
+}
+
+.site-family .tk-price-card--studio .tk-price,
+.site-family .tk-price-card--studio h3 span {
+  color: #9d4f3f;
+}
+
+.site-family .tk-price-card li {
+  border-top-color: rgba(73, 104, 90, 0.14);
 }
 
 .tk-menu-card--link {
