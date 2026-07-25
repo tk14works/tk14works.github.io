@@ -1015,14 +1015,23 @@ h1 {
 }
 
 .site-family {
-  --tk-gold: #d8a48f;
-  --tk-ink: #2b2b2b;
-  --tk-muted: #766b65;
-  --tk-bg: #faf7f2;
-  --tk-line: #eadfd6;
-  --tk-card-green: #fbf4ef;
-  --tk-card-blue: #f8f1ea;
-  --tk-card-beige: #f6ece5;
+  /* Moment: 明るい家族の時間を表す、やわらかなリーフグリーン */
+  --tk-gold: #7bcf63;
+  --tk-ink: #2c332e;
+  --tk-muted: #667367;
+  --tk-bg: #faf9f5;
+  --tk-line: #dce7da;
+  --tk-card-green: #edf3ee;
+  --tk-card-blue: #f5f6f1;
+  --tk-card-beige: #f6f0e8;
+}
+
+/* 明るい緑は白文字と組み合わせず、読みやすい深色のボタンを維持する。 */
+.site-family .tk-button:hover {
+  border-color: var(--tk-ink);
+  background: var(--tk-ink);
+  box-shadow: 0 8px 18px rgba(44, 51, 46, 0.16);
+  transform: translateY(-1px);
 }
 
 .tk-menu-card--link {
