@@ -1867,8 +1867,14 @@ h1 {
   }
 
   .ai-hero__inner--single {
-    grid-template-columns: minmax(0, 1fr);
-    margin-left: max(0px, calc((100% - 1020px) / 2));
+    grid-template-columns: minmax(0, 760px);
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .ai-hero__inner--single .ai-hero__copy {
+    width: min(100%, 520px);
+    margin: 0 auto;
   }
 }
 
