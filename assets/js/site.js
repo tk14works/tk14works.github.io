@@ -142,6 +142,60 @@ document.querySelectorAll("[data-carousel]").forEach((carousel) => {
   updateCarouselState();
 });
 
+document.querySelectorAll("[data-ai-feature-carousel]").forEach((carousel) => {
+  const slides = Array.from(carousel.querySelectorAll("[data-ai-feature-slide]"));
+  const dots = Array.from(carousel.querySelectorAll("[data-ai-feature-dot]"));
+  const prevButton = carousel.querySelector("[data-ai-feature-prev]");
+  const nextButton = carousel.querySelector("[data-ai-feature-next]");
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  let activeIndex = 0;
+  let timerId = null;
+  let pausedByInteraction = false;
+
+  const showSlide = (nextIndex) => {
+    activeIndex = (nextIndex + slides.length) % slides.length;
+    slides.forEach((slide, index) => {
+      slide.classList.toggle("is-active", index === activeIndex);
+    });
+    dots.forEach((dot, index) => {
+      dot.classList.toggle("is-active", index === activeIndex);
+      dot.setAttribute("aria-current", index === activeIndex ? "true" : "false");
+    });
+  };
+
+  const stopAutoplay = () => {
+    pausedByInteraction = true;
+    if (timerId) window.clearInterval(timerId);
+    timerId = null;
+  };
+
+  const startAutoplay = () => {
+    if (reducedMotion.matches || pausedByInteraction || slides.length < 2) return;
+    timerId = window.setInterval(() => showSlide(activeIndex + 1), 8000);
+  };
+
+  prevButton?.addEventListener("click", () => {
+    stopAutoplay();
+    showSlide(activeIndex - 1);
+  });
+
+  nextButton?.addEventListener("click", () => {
+    stopAutoplay();
+    showSlide(activeIndex + 1);
+  });
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+      stopAutoplay();
+      showSlide(index);
+    });
+  });
+
+  carousel.addEventListener("pointerdown", stopAutoplay, { once: true });
+  showSlide(0);
+  startAutoplay();
+});
+
 document.querySelectorAll("[data-gallery-filters]").forEach((filters) => {
   const container = filters.closest(".tk-container");
   const grid = container?.querySelector("[data-gallery-grid]");

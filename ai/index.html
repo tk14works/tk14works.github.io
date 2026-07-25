@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>tk14 AI | AI・DX活用サポート</title>
   <meta name="description" content="生成AIを活用した業務効率化、文章作成、発信整理、日々の作業改善をわかりやすくサポートします。">
-  <link rel="stylesheet" href="/assets/css/site.css?v=23">
+  <link rel="stylesheet" href="/assets/css/site.css?v=24">
 </head>
 <body class="profile-minimal site-ai">
   <header class="profile-header">
@@ -30,20 +30,50 @@
   </nav>
 
   <main>
-    <section class="tk-hero" id="home">
-      <div class="tk-hero__image" data-reveal>
-        <picture>
-          <source media="(max-width: 759px)" srcset="/images/ai-hero-sp.jpg">
-          <img src="/images/ai-hero.jpg" alt="AI活用サポートをイメージしたデスク風景">
-        </picture>
-      </div>
-      <div class="tk-hero__copy" data-reveal>
-        <p class="tk-label">AI support</p>
-        <h1>AIで、<br>仕事を整える。</h1>
-        <p>
-          AIの導入から活用まで、<br class="tk-mobile-break">あなたの仕事に合わせてサポートします。
-        </p>
-        <a class="tk-button" href="#contact">AIについて相談する</a>
+    <section class="ai-hero" id="home">
+      <div class="ai-hero__inner">
+        <div class="ai-hero__copy" data-reveal>
+          <p class="ai-hero__eyebrow">AI・DX活用サポート</p>
+          <h1>AIで、<br>仕事を整える。</h1>
+          <p class="ai-hero__lead">業務整理、文章・発信、ホームページ制作まで。<br>あなたの仕事に合う、続けられる仕組みをつくります。</p>
+          <a class="ai-hero__button" href="#contact">AI・DXについて相談する</a>
+        </div>
+
+        <div class="ai-feature" data-ai-feature-carousel aria-label="注目の取り組み">
+          <div class="ai-feature__heading">
+            <p>FEATURED WORK</p>
+            <span>注目の取り組み</span>
+          </div>
+          <div class="ai-feature__track">
+            <article class="ai-feature__card is-active" data-ai-feature-slide>
+              <p class="ai-feature__number">01</p>
+              <p class="ai-feature__category">WEB SITE</p>
+              <h2>事業の魅力を伝える<br>ホームページ制作</h2>
+              <p>伝えたいことを整理し、見つけてもらい、相談につながるサイトへ。</p>
+            </article>
+            <article class="ai-feature__card" data-ai-feature-slide>
+              <p class="ai-feature__number">02</p>
+              <p class="ai-feature__category">WORK APP</p>
+              <h2>現場に合わせた<br>業務支援アプリづくり</h2>
+              <p>日々の小さな困りごとを、使いやすい仕組みへ変えていきます。</p>
+            </article>
+            <article class="ai-feature__card" data-ai-feature-slide>
+              <p class="ai-feature__number">03</p>
+              <p class="ai-feature__category">AI &amp; DX</p>
+              <h2>AIで定型作業を<br>続けやすく整える</h2>
+              <p>導入して終わりではなく、仕事の中で使える形まで一緒に調整します。</p>
+            </article>
+          </div>
+          <div class="ai-feature__controls" aria-label="注目の取り組みを切り替える">
+            <button type="button" aria-label="前の取り組み" data-ai-feature-prev>←</button>
+            <div class="ai-feature__dots" aria-label="表示中の取り組み">
+              <button type="button" class="is-active" aria-label="1件目を表示" data-ai-feature-dot></button>
+              <button type="button" aria-label="2件目を表示" data-ai-feature-dot></button>
+              <button type="button" aria-label="3件目を表示" data-ai-feature-dot></button>
+            </div>
+            <button type="button" aria-label="次の取り組み" data-ai-feature-next>→</button>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -177,6 +207,6 @@
     <a href="/">© <span class="tk-footer__year">2026</span> tk14</a>
   </footer>
 
-  <script src="/assets/js/site.js?v=7"></script>
+  <script src="/assets/js/site.js?v=8"></script>
 </body>
 </html>
