@@ -1076,6 +1076,7 @@ h1 {
 /* Momentは写真と情報の移動を軽くするため、通常セクションの余白を少し詰める。 */
 .site-family .tk-section {
   padding: clamp(74px, 7vw, 92px) 0;
+  padding-top: clamp(56px, 5.25vw, 69px);
 }
 
 .site-family .tk-title {
