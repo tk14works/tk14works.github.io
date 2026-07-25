@@ -1021,11 +1021,11 @@ h1 {
   --tk-accent-deep: #49685a;
   --tk-ink: #2c332e;
   --tk-muted: #5f6f61;
-  --tk-bg: #abff86;
+  --tk-bg: #eef8e9;
   --tk-line: #cfe4c8;
-  --tk-card-green: #abff86;
-  --tk-card-blue: #abff86;
-  --tk-card-beige: #abff86;
+  --tk-card-green: #dff2d7;
+  --tk-card-blue: #e8f6e1;
+  --tk-card-beige: #d3edc9;
 }
 
 /* 主役のリーフグリーンは濃色文字で使い、明るさと読みやすさを両立する。 */
