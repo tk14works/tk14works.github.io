@@ -1016,20 +1016,33 @@ h1 {
 
 .site-family {
   /* Moment: 明るい家族の時間を表す、やわらかなリーフグリーン */
+  --tk-white: #fbfef9;
   --tk-gold: #7bcf63;
   --tk-ink: #2c332e;
-  --tk-muted: #667367;
-  --tk-bg: #faf9f5;
-  --tk-line: #dce7da;
-  --tk-card-green: #edf3ee;
-  --tk-card-blue: #f5f6f1;
-  --tk-card-beige: #f6f0e8;
+  --tk-muted: #5f6f61;
+  --tk-bg: #eef8e9;
+  --tk-line: #cfe4c8;
+  --tk-card-green: #dff2d7;
+  --tk-card-blue: #e8f6e1;
+  --tk-card-beige: #d3edc9;
 }
 
-/* 明るい緑は白文字と組み合わせず、読みやすい深色のボタンを維持する。 */
+/* 主役のリーフグリーンは濃色文字で使い、明るさと読みやすさを両立する。 */
+.site-family .tk-button:not(.tk-button--outline) {
+  border-color: var(--tk-gold);
+  background: var(--tk-gold);
+  color: var(--tk-ink);
+}
+
+.site-family .tk-button--outline {
+  border-color: var(--tk-gold);
+  color: var(--tk-ink);
+}
+
 .site-family .tk-button:hover {
   border-color: var(--tk-ink);
   background: var(--tk-ink);
+  color: #fff;
   box-shadow: 0 8px 18px rgba(44, 51, 46, 0.16);
   transform: translateY(-1px);
 }
