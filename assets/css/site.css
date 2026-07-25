@@ -2492,7 +2492,7 @@ h1 {
   }
 
   .site-top .tk-hero--text-only .tk-hero__copy {
-    padding-top: 30px;
+    padding-top: 24px;
     padding-bottom: 30px;
   }
 
@@ -2502,7 +2502,7 @@ h1 {
   }
 
   .site-top .tk-hero__copy h1 {
-    font-size: clamp(1.05rem, 4.4vw, 1.12rem);
+    font-size: clamp(1.17rem, 4.95vw, 1.24rem);
     line-height: 1.45;
     letter-spacing: 0.035em;
   }
