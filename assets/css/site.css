@@ -1763,25 +1763,25 @@ h1 {
   transform: translateY(-2px);
 }
 
-.ai-service-list {
+.ai-service-cards {
   display: grid;
+  gap: 16px;
   max-width: 860px;
   margin: 42px auto 0;
 }
 
-.ai-service-list article {
+.ai-service-cards article {
   display: grid;
   grid-template-columns: 62px minmax(0, 1fr);
   gap: 24px;
-  padding: 28px 0;
-  border-top: 1px solid var(--tk-line);
+  padding: 30px 34px;
+  border: 1px solid #cbdce3;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.84);
+  box-shadow: 0 10px 24px rgba(16, 42, 67, 0.05);
 }
 
-.ai-service-list article:last-child {
-  border-bottom: 1px solid var(--tk-line);
-}
-
-.ai-service-list span,
+.ai-service-cards span,
 .ai-flow-list article > span {
   color: var(--tk-gold);
   font-size: 0.84rem;
@@ -1789,14 +1789,14 @@ h1 {
   letter-spacing: 0.14em;
 }
 
-.ai-service-list h3 {
+.ai-service-cards h3 {
   margin: 0 0 8px;
   color: var(--tk-ink);
-  font-size: 1.18rem;
+  font-size: 1.22rem;
   font-weight: 500;
 }
 
-.ai-service-list p {
+.ai-service-cards p {
   margin: 0;
   color: var(--tk-muted);
   line-height: 1.8;
@@ -1971,9 +1971,19 @@ h1 {
     font-size: 1.5rem;
   }
 
-  .ai-service-list,
+  .ai-service-cards,
   .ai-flow-list {
     margin-top: 32px;
+  }
+
+  .ai-service-cards {
+    gap: 12px;
+  }
+
+  .ai-service-cards article {
+    grid-template-columns: 44px minmax(0, 1fr);
+    gap: 14px;
+    padding: 24px 20px;
   }
 
   .ai-service-list article {
