@@ -1109,6 +1109,23 @@ h1 {
   margin-top: 17px;
 }
 
+/* 内容の性質に合わせ、写真・FAQ・お問い合わせだけ間隔を微調整する。 */
+.site-family #photographer .tk-title {
+  margin-bottom: 26px;
+}
+
+.site-family #faq .tk-title {
+  margin-bottom: 14px;
+}
+
+.site-family .tk-contact h2::after {
+  display: none;
+}
+
+.site-family .tk-contact p {
+  margin-top: 22px;
+}
+
 /* 撮影メニューは、料金と撮影体験の価値が伝わる落ち着いたカードに整える。 */
 .site-family .tk-price-card {
   position: relative;
