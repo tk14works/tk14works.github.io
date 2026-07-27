@@ -1792,7 +1792,7 @@ h1 {
 }
 
 .ai-flow-lead-break {
-  display: block;
+  display: none;
 }
 
 .ai-flow-mobile-break {
@@ -2028,7 +2028,7 @@ h1 {
   }
 
   .ai-flow-lead-break {
-    display: none;
+    display: block;
   }
 
   .ai-flow-mobile-break {
