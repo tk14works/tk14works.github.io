@@ -1767,7 +1767,15 @@ h1 {
   display: grid;
   gap: 16px;
   max-width: 860px;
-  margin: 42px auto 0;
+  margin: 0 auto;
+}
+
+.site-ai #support .tk-section-lead {
+  margin-bottom: 24px;
+}
+
+.ai-support-lead--sp {
+  display: none;
 }
 
 .ai-service-cards article {
@@ -1979,7 +1987,21 @@ h1 {
 
   .ai-service-cards,
   .ai-flow-list {
-    margin-top: 32px;
+    margin-top: 0;
+  }
+
+  .site-ai #support .tk-section-lead {
+    margin-bottom: 24px;
+  }
+
+  .ai-support-lead--pc {
+    display: none;
+  }
+
+  .ai-support-lead--sp {
+    display: inline;
+    font-size: 0.88rem;
+    letter-spacing: -0.02em;
   }
 
   .ai-service-cards {
