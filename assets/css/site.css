@@ -1644,6 +1644,12 @@ h1 {
   color: #8ce0d9;
 }
 
+@media (min-width: 760px) {
+  .site-ai .tk-faq {
+    max-width: 980px;
+  }
+}
+
 .site-ai .tk-footer {
   border-top: 1px solid rgba(140, 224, 217, 0.16);
   background: #0d2037;
