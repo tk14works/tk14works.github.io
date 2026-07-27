@@ -1782,6 +1782,10 @@ h1 {
   display: block;
 }
 
+.ai-flow-mobile-break {
+  display: none;
+}
+
 .ai-service-cards article {
   display: grid;
   grid-template-columns: 62px minmax(0, 1fr);
@@ -2010,6 +2014,10 @@ h1 {
 
   .ai-flow-lead-break {
     display: none;
+  }
+
+  .ai-flow-mobile-break {
+    display: block;
   }
 
   .ai-service-cards {
