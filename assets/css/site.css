@@ -1983,9 +1983,13 @@ h1 {
   }
 
   .ai-hero__lead {
-    font-size: clamp(0.64rem, 3vw, 0.72rem);
+    font-size: clamp(0.62rem, 2.9vw, 0.69rem);
     letter-spacing: -0.03em;
     white-space: nowrap;
+  }
+
+  .ai-hero-lead__mobile-period {
+    display: none;
   }
 
   .ai-feature {
