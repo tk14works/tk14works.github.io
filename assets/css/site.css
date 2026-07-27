@@ -1778,6 +1778,10 @@ h1 {
   display: none;
 }
 
+.ai-flow-lead-break {
+  display: block;
+}
+
 .ai-service-cards article {
   display: grid;
   grid-template-columns: 62px minmax(0, 1fr);
@@ -2002,6 +2006,10 @@ h1 {
     display: inline;
     font-size: 0.88rem;
     letter-spacing: -0.02em;
+  }
+
+  .ai-flow-lead-break {
+    display: none;
   }
 
   .ai-service-cards {
