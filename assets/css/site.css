@@ -1699,9 +1699,7 @@ h1 {
 .ai-hero {
   overflow: hidden;
   padding: clamp(56px, 8vw, 108px) 20px;
-  background:
-    radial-gradient(circle at 92% 8%, rgba(56, 182, 174, 0.18), transparent 28%),
-    linear-gradient(125deg, #0d2037 0%, #102a43 58%, #153d50 100%);
+  background: linear-gradient(135deg, #0E2340 0%, #1B3A63 100%);
   color: #fff;
 }
 
