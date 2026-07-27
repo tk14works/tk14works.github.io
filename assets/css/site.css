@@ -1390,6 +1390,10 @@ h1 {
   display: block;
 }
 
+.ai-support-lead-break {
+  display: none;
+}
+
 .tk-br-sp {
   display: block;
 }
@@ -2828,6 +2832,10 @@ h1 {
 
   .tk-br-mobile {
     display: none;
+  }
+
+  .ai-support-lead-break {
+    display: block;
   }
 
   .tk-br-sp {
