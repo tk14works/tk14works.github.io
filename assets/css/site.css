@@ -1750,8 +1750,6 @@ h1 {
   line-height: 1.9;
 }
 
-.ai-hero-lead--sp { display: none; }
-
 .ai-hero__button {
   display: inline-flex;
   align-items: center;
@@ -1989,9 +1987,6 @@ h1 {
     letter-spacing: -0.03em;
     white-space: nowrap;
   }
-
-  .ai-hero-lead--pc { display: none; }
-  .ai-hero-lead--sp { display: inline; }
 
   .ai-feature {
     padding: 22px;
