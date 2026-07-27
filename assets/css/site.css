@@ -1791,8 +1791,8 @@ h1 {
   display: none;
 }
 
-.ai-flow-lead-break {
-  display: none;
+.ai-flow-desktop-break {
+  display: block;
 }
 
 .ai-flow-mobile-break {
@@ -2027,8 +2027,8 @@ h1 {
     letter-spacing: -0.02em;
   }
 
-  .ai-flow-lead-break {
-    display: block;
+  .ai-flow-desktop-break {
+    display: none;
   }
 
   .ai-flow-mobile-break {
