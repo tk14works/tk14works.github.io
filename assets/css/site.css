@@ -1750,6 +1750,8 @@ h1 {
   line-height: 1.9;
 }
 
+.ai-hero-lead--sp { display: none; }
+
 .ai-hero__button {
   display: inline-flex;
   align-items: center;
@@ -1983,10 +1985,13 @@ h1 {
   }
 
   .ai-hero__lead {
-    font-size: clamp(0.65rem, 3.1vw, 0.75rem);
+    font-size: clamp(0.64rem, 3vw, 0.72rem);
     letter-spacing: -0.03em;
     white-space: nowrap;
   }
+
+  .ai-hero-lead--pc { display: none; }
+  .ai-hero-lead--sp { display: inline; }
 
   .ai-feature {
     padding: 22px;
