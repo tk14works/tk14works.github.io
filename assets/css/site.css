@@ -1983,7 +1983,9 @@ h1 {
   }
 
   .ai-hero__lead {
-    font-size: 0.9rem;
+    font-size: 0.75rem;
+    letter-spacing: -0.03em;
+    white-space: nowrap;
   }
 
   .ai-feature {
