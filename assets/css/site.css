@@ -2835,7 +2835,7 @@ h1 {
   }
 
   .ai-support-lead-break {
-    display: block;
+    display: none;
   }
 
   .tk-br-sp {
@@ -2985,6 +2985,10 @@ h1 {
 }
 
 @media (max-width: 759px) {
+  .ai-support-lead-break {
+    display: block;
+  }
+
   .profile-minimal .profile-header__inner {
     min-height: 72px;
   }
