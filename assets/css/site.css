@@ -1630,14 +1630,15 @@ h1 {
 }
 
 .site-ai #contact .tk-button {
-  border-color: #8ce0d9;
-  background: #8ce0d9;
-  color: #102a43;
+  border-color: #BFDCE5;
+  background: #BFDCE5;
+  color: #1B2F4A;
 }
 
 .site-ai #contact .tk-button:hover {
-  border-color: #fff;
-  background: #fff;
+  border-color: #BFDCE5;
+  background: #BFDCE5;
+  color: #1B2F4A;
 }
 
 .site-ai #contact .tk-contact__links a:hover {
@@ -1754,16 +1755,16 @@ h1 {
   min-height: 52px;
   margin-top: 30px;
   padding: 0 24px;
-  border: 1px solid #75d4cd;
-  background: #75d4cd;
-  color: #102a43;
+  border: 1px solid #BFDCE5;
+  background: #BFDCE5;
+  color: #1B2F4A;
   font-weight: 700;
   letter-spacing: 0.05em;
   transition: transform 180ms ease, background-color 180ms ease;
 }
 
 .ai-hero__button:hover {
-  background: #a7ebe5;
+  background: #BFDCE5;
   transform: translateY(-2px);
 }
 
