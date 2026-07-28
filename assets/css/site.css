@@ -631,6 +631,10 @@ h1 {
   color: var(--muted);
 }
 
+.profile-hero-mobile-break {
+  display: none;
+}
+
 .profile-hero__media {
   position: relative;
   order: -1;
@@ -3110,6 +3114,10 @@ h1 {
 
   .profile-page .tk-hero__copy {
     padding-bottom: 36px;
+  }
+
+  .profile-hero-mobile-break {
+    display: block;
   }
 
   .profile-page #works {
