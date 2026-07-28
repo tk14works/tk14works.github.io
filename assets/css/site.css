@@ -3119,7 +3119,20 @@ h1 {
   }
 
   .profile-page .tk-hero__copy {
+    padding-top: 22px;
     padding-bottom: 36px;
+  }
+
+  .profile-page .tk-hero__copy .tk-label {
+    margin-bottom: 13px;
+  }
+
+  .profile-page .tk-hero-title--profile {
+    line-height: 1.38;
+  }
+
+  .profile-page .tk-hero__copy p:not(.tk-label) {
+    margin-top: 15px;
   }
 
   .profile-hero-mobile-break {
