@@ -3085,6 +3085,12 @@ h1 {
     margin-left: 0;
   }
 
+  .profile-page .tk-hero__image {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
   .tk-hero__image img {
     min-height: 0;
     max-height: none;
