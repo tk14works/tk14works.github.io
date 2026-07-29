@@ -2831,6 +2831,17 @@ h1 {
   background: #f7f6f3;
 }
 
+.profile-page #works,
+.profile-page #flow,
+.profile-page #faq {
+  background: #fefefe;
+}
+
+.profile-page #works .tk-gallery-card,
+.profile-page #flow .tk-flow article {
+  background: #f7f6f3;
+}
+
 .profile-page #contact {
   background: #2a2d34;
   color: #f8f8f8;
