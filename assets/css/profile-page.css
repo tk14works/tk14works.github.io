@@ -1,0 +1,106 @@
+/* Profile Photo page: cache-resilient visual overrides */
+.profile-page .profile-header {
+  background: #23252d;
+  border-bottom-color: rgba(248, 248, 248, 0.14);
+  color: #f8f8f8;
+}
+
+.profile-page .profile-nav,
+.profile-page .profile-menu-button {
+  color: #f8f8f8;
+}
+
+.profile-page .profile-menu-button::before,
+.profile-page .profile-menu-button::after {
+  background: #f8f8f8;
+}
+
+.profile-page .tk-breadcrumb {
+  background: #e4e4e4;
+}
+
+.profile-page .tk-breadcrumb a {
+  color: #61666c;
+}
+
+.profile-page .tk-breadcrumb li + li::before {
+  color: #7a7f85;
+}
+
+.profile-page .tk-section[id] {
+  scroll-margin-top: 72px;
+}
+
+.profile-page #pricing,
+.profile-page #about {
+  background: #f7f6f3;
+}
+
+.profile-page #pricing .tk-price-card {
+  border: 1px solid #e4e4e4;
+  background: #fefefe;
+}
+
+.profile-page #works,
+.profile-page #flow,
+.profile-page #faq {
+  background: #fefefe;
+}
+
+.profile-page #works .tk-gallery-card,
+.profile-page #flow .tk-flow article {
+  background: #f7f6f3;
+}
+
+.profile-page .tk-hero__copy p:not(.tk-label),
+.profile-page .tk-label,
+.profile-page .tk-section-lead,
+.profile-page .tk-gallery-card figcaption,
+.profile-page .tk-faq p,
+.profile-page .tk-price-card h3 span {
+  color: #69717a;
+}
+
+.profile-page #contact {
+  background: #2a2d34;
+  color: #f8f8f8;
+}
+
+.profile-page #contact .tk-contact h2,
+.profile-page #contact .tk-contact p,
+.profile-page #contact .tk-contact__links,
+.profile-page #contact .tk-contact__links a,
+.profile-page #contact .tk-contact__links a:hover {
+  color: #f8f8f8;
+}
+
+.profile-page #contact .tk-button,
+.profile-page #contact .tk-button:hover {
+  border-color: #f7f6f3;
+  background: #f7f6f3;
+  color: #2a2d34;
+}
+
+.profile-page .tk-footer,
+.profile-page .tk-footer--white {
+  border-top-color: rgba(248, 248, 248, 0.14);
+  background: #23252d;
+  color: #f8f8f8;
+}
+
+.profile-page .tk-footer a {
+  color: #f8f8f8;
+}
+
+@media (min-width: 760px) {
+  .profile-page .tk-section[id] {
+    scroll-margin-top: 82px;
+  }
+}
+
+@media (max-width: 759px) {
+  .profile-page .profile-nav {
+    border-color: rgba(248, 248, 248, 0.18);
+    background: #23252d;
+  }
+}
