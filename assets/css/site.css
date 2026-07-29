@@ -1403,7 +1403,7 @@ h1 {
 }
 
 .tk-lead-line {
-  display: block;
+  display: inline;
 }
 
 .tk-section-action {
@@ -2989,6 +2989,10 @@ h1 {
 }
 
 @media (max-width: 759px) {
+  .tk-lead-line {
+    display: block;
+  }
+
   .ai-support-lead-break {
     display: block;
   }
