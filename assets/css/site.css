@@ -3183,6 +3183,10 @@ h1 {
     font-size: 0.78rem;
   }
 
+  .site-family #news .tk-text-list {
+    width: calc(100% - 20px);
+  }
+
   .tk-flow-list article {
     grid-template-columns: 42px minmax(0, 1fr);
     gap: 16px;
