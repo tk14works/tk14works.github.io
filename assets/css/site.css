@@ -1584,7 +1584,13 @@ h1 {
 }
 
 .site-family .tk-section[id] {
-  scroll-margin-top: 92px;
+  scroll-margin-top: 72px;
+}
+
+@media (min-width: 760px) {
+  .site-family .tk-section[id] {
+    scroll-margin-top: 82px;
+  }
 }
 
 .site-ai #support {
