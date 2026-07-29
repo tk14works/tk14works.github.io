@@ -52,6 +52,10 @@
   background: #f7f6f3;
 }
 
+.profile-page #works .tk-gallery-card {
+  border: 1px solid var(--tk-line);
+}
+
 .profile-page .tk-hero__copy p:not(.tk-label),
 .profile-page .tk-label,
 .profile-page .tk-section-lead,
