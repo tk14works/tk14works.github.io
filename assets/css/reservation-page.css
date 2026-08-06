@@ -11,6 +11,10 @@
 .reservation-hero__copy .ai-hero__button { margin-top: 28px; }
 .reservation-section { padding: clamp(72px, 9vw, 112px) 0; background: #fff; }
 .reservation-section h2 { color: #102a43; font-size: clamp(1.7rem, 3.2vw, 2.55rem); }
+.reservation-section .reservation-kicker,
+.reservation-section h2,
+.reservation-section .reservation-lead { text-align: center; }
+.reservation-section .reservation-lead { margin-right: auto; margin-left: auto; }
 .reservation-section--issues { background: #eaf2f5; }
 .reservation-section--issues .reservation-kicker { color: #245966; }
 .reservation-section#screens .reservation-kicker { color: #245966; }
