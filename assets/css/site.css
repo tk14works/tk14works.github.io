@@ -1275,7 +1275,7 @@ h1 {
   font: inherit;
   font-size: 0.82rem;
   letter-spacing: 0.08em;
-  text-transform: uppercase;
+  text-transform: none;
 }
 
 .profile-minimal .profile-menu-button::before,
