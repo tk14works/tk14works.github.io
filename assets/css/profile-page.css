@@ -65,6 +65,10 @@
   color: #69717a;
 }
 
+.profile-page .tk-hero__copy .tk-label {
+  text-transform: none;
+}
+
 .profile-page #contact {
   background: #2a2d34;
   color: #f8f8f8;
