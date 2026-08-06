@@ -39,11 +39,11 @@
 .reservation-slot strong { font-size: 1.05rem; font-weight: 500; }
 .reservation-slot small { color: #62798a; }
 .reservation-slot figcaption { padding-top: 14px; color: #62798a; font-size: .9rem; line-height: 1.7; }
-.reservation-page.site-ai #flow { background: #e6f3f2; color: #102a43; }
-.reservation-page.site-ai #flow .reservation-kicker { color: #245966; }
-.reservation-page.site-ai #flow h2, .reservation-page.site-ai #flow h3 { color: #102a43; }
-.reservation-page.site-ai #flow .reservation-flow > article > span { color: #2b7a82; }
-.reservation-page.site-ai #flow .reservation-flow p { color: #30475f; }
+.reservation-page.site-ai #flow { background: #e6f3f2 !important; color: #102a43 !important; }
+.reservation-page.site-ai #flow .reservation-kicker { color: #245966 !important; }
+.reservation-page.site-ai #flow h2, .reservation-page.site-ai #flow h3 { color: #102a43 !important; }
+.reservation-page.site-ai #flow .reservation-flow > article > span { color: #2b7a82 !important; }
+.reservation-page.site-ai #flow .reservation-flow p { color: #30475f !important; }
 .reservation-flow { max-width: 820px; margin-top: 40px; }
 .reservation-flow article { display: grid; grid-template-columns: 54px 1fr; gap: 24px; padding: 25px 0; border-top: 1px solid #bcd7d7; }
 .reservation-flow article:last-child { border-bottom: 1px solid #bcd7d7; }
