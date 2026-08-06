@@ -29,12 +29,10 @@
 .reservation-features h3 { grid-column: 2; grid-row: 1; margin: 0; color: #102a43; font-size: 1.06rem; font-weight: 500; }
 .reservation-features p { grid-column: 1 / -1; grid-row: 2; margin: 14px 0 0; color: #30475f; font-size: .9rem; line-height: 1.75; }
 .reservation-screens { display: grid; gap: 24px; margin-top: 42px; }
-.reservation-screens--phone { grid-template-columns: repeat(4, minmax(0,1fr)); margin-right: auto; margin-left: auto; }
-.reservation-screens--desktop { grid-template-columns: repeat(2, minmax(0,1fr)); }
+.reservation-screens--phone { grid-template-columns: repeat(2, minmax(0, 300px)); justify-content: center; }
 .reservation-slot { margin: 0; }
 .reservation-slot > div { display: grid; align-content: center; gap: 12px; border: 1px dashed #abc5d0; background: #edf5f7; color: #1b3a63; text-align: center; }
 .reservation-slot--phone > div { aspect-ratio: 9 / 16; padding: 22px; }
-.reservation-slot--desktop > div { aspect-ratio: 16 / 10; padding: 22px; }
 .reservation-slot span { color: #2b7a82; font-size: .7rem; font-weight: 700; letter-spacing: .14em; }
 .reservation-slot strong { font-size: 1.05rem; font-weight: 500; }
 .reservation-slot small { color: #62798a; }
@@ -75,7 +73,7 @@
   .reservation-section--dark h2 { font-size: clamp(1.3rem, 5.5vw, 1.4rem); letter-spacing: -.01em; }
   .reservation-hero__copy > p br, .reservation-contact > p br { display: none; }
   .reservation-section { padding: 72px 0; }
-  .reservation-issues, .reservation-features, .reservation-screens--phone, .reservation-screens--desktop { grid-template-columns: 1fr; }
+  .reservation-issues, .reservation-features { grid-template-columns: 1fr; }
   .reservation-features article:last-child { grid-column: auto; }
   .reservation-features article { min-height: 0; }
   .reservation-screens--phone { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 18px; max-width: 560px; }
