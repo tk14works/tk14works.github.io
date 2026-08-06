@@ -1623,6 +1623,25 @@ h1 {
   color: #fff;
 }
 
+.site-ai .ai-section-kicker {
+  margin: 0 0 14px;
+  color: #245966;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-align: center;
+}
+
+.site-ai #flow .ai-section-kicker,
+.site-ai #faq .ai-section-kicker,
+.site-ai #contact .ai-section-kicker {
+  color: #8ce0d9;
+}
+
+.site-ai #contact .tk-contact .ai-section-kicker {
+  color: #8ce0d9;
+}
+
 .site-ai #flow .tk-title,
 .site-ai #faq .tk-title,
 .site-ai #contact .tk-contact h2,
