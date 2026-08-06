@@ -1488,6 +1488,7 @@ h1 {
 
 .site-top .tk-hero__copy .tk-label {
   margin-bottom: 6px;
+  text-transform: none;
 }
 
 .site-top .tk-hero__copy h1 {
