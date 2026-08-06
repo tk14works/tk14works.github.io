@@ -5,8 +5,8 @@
 .reservation-hero__inner { display: grid; grid-template-columns: minmax(0, 1fr) minmax(290px, .72fr); gap: clamp(40px, 7vw, 100px); align-items: center; }
 .reservation-eyebrow, .reservation-kicker { margin: 0 0 16px; color: #75d4cd; font-size: .72rem; font-weight: 700; letter-spacing: .16em; }
 .reservation-hero h1, .reservation-section h2 { margin: 0; font-weight: 400; letter-spacing: .035em; line-height: 1.45; }
-.reservation-hero h1 { font-size: clamp(2.2rem, 4.2vw, 3.65rem); }
-.reservation-hero__copy > p:not(.reservation-eyebrow) { margin: 24px 0 0; color: rgba(255,255,255,.78); line-height: 1.9; }
+.reservation-hero h1 { font-size: clamp(2.3rem, 3.1vw, 2.5rem); }
+.reservation-hero__copy > p:not(.reservation-eyebrow) { margin: 24px 0 0; color: rgba(255,255,255,.78); font-size: .9rem; line-height: 1.9; }
 .reservation-hero__copy .ai-hero__button { margin-top: 28px; }
 .reservation-hero__panel { display: grid; gap: 13px; padding: 30px; border: 1px solid rgba(140,224,217,.34); background: rgba(255,255,255,.07); box-shadow: 18px 18px 0 rgba(0,0,0,.12); }
 .reservation-hero__panel span { color: #8ce0d9; font-size: .72rem; font-weight: 700; letter-spacing: .16em; }
@@ -62,6 +62,7 @@
   .reservation-shell { width: min(100% - 40px, 560px); }
   .reservation-hero__inner, .ai-reservation-preview__card { grid-template-columns: 1fr; }
   .reservation-hero { padding: 64px 0 72px; }
+  .reservation-hero h1 { font-size: clamp(2.2rem, 4.2vw, 3.65rem); }
   .reservation-hero__copy > p:not(.reservation-eyebrow) { font-size: .91rem; }
   .reservation-hero__copy > p br, .reservation-contact > p br { display: none; }
   .reservation-hero__panel { max-width: 300px; padding: 24px; }
