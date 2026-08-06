@@ -51,7 +51,7 @@
 .reservation-flow h3 { margin: 0 0 7px; color: #102a43; font-size: 1.08rem; font-weight: 500; }
 .reservation-flow p { margin: 0; color: #526d7c; line-height: 1.8; }
 .reservation-section--contact { background: #0d2037; color: #fff; text-align: center; }
-.reservation-section--contact h2 { color: #fff; }
+.reservation-section--contact h2 { color: #e1eaef; }
 .reservation-contact .reservation-kicker { margin-bottom: 16px; }
 .reservation-contact > p:not(.reservation-kicker) { margin: 22px auto 0; color: rgba(255,255,255,.72); line-height: 1.9; }
 .reservation-contact .tk-button { margin-top: 30px; border-color: #bfdce5; background: #bfdce5; color: #1b2f4a; }
@@ -64,6 +64,7 @@
 .ai-reservation-preview__points { display: grid; gap: 12px; padding: 25px; border-left: 2px solid #75d4cd; background: #e6f3f2; color: #1b3a63; }
 .ai-reservation-preview__points span { font-size: .9rem; }
 @media (max-width: 759px) {
+  .reservation-section--contact h2 { font-size: clamp(1.7rem, 3.2vw, 2.55rem); }
   .reservation-flow-title__mobile-break { display: inline; }
   .reservation-shell { width: min(100% - 40px, 560px); }
   .reservation-hero__inner, .ai-reservation-preview__card { grid-template-columns: 1fr; }
