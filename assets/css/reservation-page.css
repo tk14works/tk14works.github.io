@@ -1,14 +1,14 @@
 /* Reservation service page and AI-page feature */
 .reservation-page { background: #f4f8f9; }
 .reservation-shell { width: min(100% - 40px, 1080px); margin: 0 auto; }
-.reservation-hero { padding: clamp(76px, 10vw, 132px) 0; background: #0e2340; color: #fff; }
+.reservation-hero { padding: clamp(48px, 5vw, 64px) 0; background: #0e2340; color: #fff; }
 .reservation-hero__inner { display: block; }
 .reservation-hero__copy { max-width: 720px; }
 .reservation-eyebrow, .reservation-kicker { margin: 0 0 16px; color: #75d4cd; font-size: .72rem; font-weight: 700; letter-spacing: .16em; }
 .reservation-hero h1, .reservation-section h2 { margin: 0; font-weight: 400; letter-spacing: .035em; line-height: 1.45; }
 .reservation-hero h1 { font-size: clamp(2.65rem, 3.8vw, 3.05rem); }
-.reservation-hero__copy > p:not(.reservation-eyebrow) { margin: 24px 0 0; color: rgba(255,255,255,.78); font-size: .9rem; line-height: 1.9; }
-.reservation-hero__copy .ai-hero__button { margin-top: 28px; }
+.reservation-hero__copy > p:not(.reservation-eyebrow) { margin: 18px 0 0; color: rgba(255,255,255,.78); font-size: .9rem; line-height: 1.9; }
+.reservation-hero__copy .ai-hero__button { margin-top: 22px; }
 .reservation-section { padding: clamp(72px, 9vw, 112px) 0; background: #fff; }
 .reservation-section h2 { color: #102a43; font-size: clamp(1.7rem, 3.2vw, 2.55rem); }
 .reservation-section .reservation-kicker,
@@ -64,7 +64,7 @@
 @media (min-width: 760px) {
   .reservation-hero__inner { width: min(100% - 40px, 840px); }
   .reservation-hero__copy { width: min(100%, 760px); margin: 0 auto; }
-  .reservation-hero h1 { font-size: clamp(3.2rem, 4.35vw, 3.45rem); line-height: 1.25; }
+  .reservation-hero h1 { font-size: clamp(2.45rem, 3.15vw, 2.7rem); line-height: 1.25; }
 }
 @media (max-width: 759px) {
   .reservation-section--contact h2 { font-size: clamp(1.48rem, 6.1vw, 1.58rem); }
@@ -73,7 +73,7 @@
   .reservation-flow-title__mobile-break { display: inline; }
   .reservation-shell { width: min(100% - 40px, 560px); }
   .reservation-hero__inner, .ai-reservation-preview__card { grid-template-columns: 1fr; }
-  .reservation-hero { padding: 64px 0 72px; }
+  .reservation-hero { padding: 42px 0 46px; }
   .reservation-hero h1 { font-size: clamp(1.65rem, 6.9vw, 1.85rem); }
   .reservation-hero__copy > p:not(.reservation-eyebrow) { font-size: .91rem; }
   .reservation-section--issues h2 { font-size: clamp(1.43rem, 6.1vw, 1.52rem); letter-spacing: .01em; }
