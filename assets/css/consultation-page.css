@@ -52,11 +52,8 @@
 .consultation-faq { display: grid; max-width: 820px; margin: 42px auto 0; }
 .consultation-faq details { border-top: 1px solid #d3e1e6; }
 .consultation-faq details:last-child { border-bottom: 1px solid #d3e1e6; }
-.consultation-faq summary { position: relative; cursor: pointer; padding: 22px 48px 22px 0; color: #102a43; font-weight: 600; line-height: 1.7; list-style: none; }
-.consultation-faq summary::-webkit-details-marker { display: none; }
-.consultation-faq summary::after { position: absolute; top: 50%; right: 8px; color: #2b7a82; content: '+'; font-size: 1.45rem; font-weight: 300; line-height: 1; transform: translateY(-50%); }
-.consultation-faq details[open] summary::after { content: '−'; }
-.consultation-faq p { margin: 0; padding: 0 48px 22px 0; color: #526d7c; line-height: 1.85; }
+.consultation-faq summary { cursor: pointer; padding: 20px 0; color: #102a43; font-weight: 600; line-height: 1.7; }
+.consultation-faq p { margin: 0; padding: 0 0 20px; color: #526d7c; line-height: 1.85; }
 .consultation-contact > p:not(.consultation-kicker) { margin: 22px auto 0; color: rgba(255,255,255,.74); line-height: 1.9; }
 .consultation-contact .tk-button { margin-top: 30px; border-color: #bfdce5; background: #bfdce5; color: #1b2f4a; }
 @media (min-width: 760px) {
@@ -78,7 +75,5 @@
   .consultation-audience article, .consultation-topic-grid article, .consultation-results article { padding: 24px; }
   .consultation-flow article { grid-template-columns: 40px 1fr; gap: 14px; }
   .consultation-faq { margin-top: 32px; }
-  .consultation-faq summary { padding: 20px 38px 20px 0; }
-  .consultation-faq p { padding-right: 12px; }
   .consultation-price { margin-top: 28px; padding: 22px 14px; }
 }
