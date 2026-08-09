@@ -21,11 +21,12 @@
 .consultation-section--dark h2, .consultation-section--contact h2 { color: #fff; }
 .consultation-section > .consultation-shell > .consultation-kicker { text-align: center; }
 .consultation-section--pricing .consultation-pricing .consultation-kicker { color: #245966; }
+.consultation-section-lead { max-width: 720px; margin: 18px auto 0; color: #526d7c; text-align: center; line-height: 1.85; }
 .consultation-audience { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; max-width: 860px; margin: 44px auto 0; }
 .consultation-audience article { padding: 30px; border: 1px solid #d3e1e6; background: rgba(255,255,255,.74); }
 .consultation-audience h3, .consultation-topic-grid h3, .consultation-results h3, .consultation-flow h3 { margin: 0; color: #102a43; font-size: 1.08rem; font-weight: 500; }
 .consultation-audience p, .consultation-topic-grid p, .consultation-results p, .consultation-flow p { margin: 12px 0 0; color: #30475f; line-height: 1.8; }
-.consultation-topic-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; max-width: 900px; margin: 44px auto 0; }
+.consultation-topic-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; max-width: 1080px; margin: 42px auto 0; }
 .consultation-topic-grid article { padding: 28px; border: 1px solid #d3e1e6; background: #f8fcfd; }
 .consultation-topic-grid span, .consultation-results span, .consultation-flow > article > span { display: block; margin-bottom: 18px; color: #2b7a82; font-size: .76rem; font-weight: 700; letter-spacing: .12em; }
 .consultation-results { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 44px; }
