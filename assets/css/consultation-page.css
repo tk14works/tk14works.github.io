@@ -47,6 +47,7 @@
 .consultation-contact .tk-button { margin-top: 30px; border-color: #bfdce5; background: #bfdce5; color: #1b2f4a; }
 @media (min-width: 760px) {
   .consultation-hero__inner { width: min(100%, 720px); margin: 0 auto; }
+  #topics h2 { max-width: 920px; }
 }
 @media (max-width: 759px) {
   .consultation-page.site-ai .profile-nav { border-color: #d3e1e6; background: #e6f3f2; box-shadow: 0 20px 60px rgba(16,42,67,.14); }
