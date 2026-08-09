@@ -68,7 +68,7 @@
   .reservation-flow-title__mobile-break { display: inline; }
   .reservation-shell { width: min(100% - 40px, 560px); }
   .reservation-hero__inner, .ai-reservation-preview__card { grid-template-columns: 1fr; }
-  .reservation-hero { padding: 64px 0 72px; }
+  .reservation-hero { padding: 64px 0 72px; background: #0e2340; }
   .reservation-hero h1 { font-size: clamp(1.65rem, 6.9vw, 1.85rem); }
   .reservation-hero__copy > p:not(.reservation-eyebrow) { font-size: .91rem; }
   .reservation-section--issues h2 { font-size: clamp(1.43rem, 6.1vw, 1.52rem); letter-spacing: .01em; }
