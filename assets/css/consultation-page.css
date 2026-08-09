@@ -32,8 +32,8 @@
 .consultation-results h3 { color: #fff; }
 .consultation-results p { color: rgba(255,255,255,.74); }
 .consultation-flow { max-width: 820px; margin: 42px auto 0; }
-.consultation-flow article { display: grid; grid-template-columns: 54px 1fr; gap: 24px; padding: 26px 0; border-top: 1px solid #bcd7d7; }
-.consultation-flow article:last-child { border-bottom: 1px solid #bcd7d7; }
+.consultation-flow article { display: grid; grid-template-columns: 54px 1fr; gap: 24px; padding: 26px 0; border-top: 1px solid #d3e1e6; }
+.consultation-flow article:last-child { border-bottom: 1px solid #d3e1e6; }
 .consultation-flow > article > span { margin: 3px 0 0; }
 .consultation-pricing { max-width: 700px; text-align: center; }
 .consultation-pricing .consultation-kicker { text-align: center; }
