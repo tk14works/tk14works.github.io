@@ -12,6 +12,7 @@
 .consultation-hero__inner > p:not(.consultation-kicker) { margin: 20px 0 0; color: rgba(255,255,255,.78); line-height: 1.9; }
 .consultation-hero .ai-hero__button { margin-top: 24px; }
 .consultation-section { padding: clamp(76px, 9vw, 116px) 0; background: #fff; }
+.consultation-page #flow { background: #fff; color: #102a43; }
 .consultation-section--soft { background: #eaf2f5; }
 .consultation-section--dark { background: #102a43; color: #fff; }
 .consultation-section--pricing { background: #42627f; color: #fff; }
