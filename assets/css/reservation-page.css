@@ -61,6 +61,11 @@
 .ai-reservation-preview .tk-button { margin-top: 24px; border-color: #1b3a63; background: #1b3a63; color: #fff; }
 .ai-reservation-preview__points { display: grid; gap: 12px; padding: 25px; border-left: 2px solid #75d4cd; background: #e6f3f2; color: #1b3a63; }
 .ai-reservation-preview__points span { font-size: .9rem; }
+@media (min-width: 760px) {
+  .reservation-hero__inner { width: min(100% - 40px, 840px); }
+  .reservation-hero__copy { width: min(100%, 760px); margin: 0 auto; }
+  .reservation-hero h1 { font-size: clamp(3.2rem, 4.35vw, 3.45rem); line-height: 1.25; }
+}
 @media (max-width: 759px) {
   .reservation-section--contact h2 { font-size: clamp(1.48rem, 6.1vw, 1.58rem); }
   .reservation-page.site-ai .profile-nav { border-color: #d3e1e6; background: #e6f3f2; box-shadow: 0 20px 60px rgba(16,42,67,.14); }
