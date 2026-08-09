@@ -15,12 +15,12 @@
 .consultation-page #flow { background: #fff; color: #102a43; }
 .consultation-section--soft { background: #eaf2f5; }
 .consultation-section--dark { background: #102a43; color: #fff; }
-.consultation-section--pricing { background: #42627f; color: #fff; }
+.consultation-section--pricing { background: #f1f6f8; color: #102a43; }
 .consultation-section--contact { background: #0d2037; color: #fff; text-align: center; }
 .consultation-section h2 { max-width: 760px; margin-right: auto; margin-left: auto; color: #102a43; text-align: center; font-size: clamp(1.8rem, 3.5vw, 2.65rem); }
-.consultation-section--dark h2, .consultation-section--pricing h2, .consultation-section--contact h2 { color: #fff; }
+.consultation-section--dark h2, .consultation-section--contact h2 { color: #fff; }
 .consultation-section > .consultation-shell > .consultation-kicker { text-align: center; }
-.consultation-section--pricing .consultation-kicker { color: #c5edeb; }
+.consultation-section--pricing .consultation-pricing .consultation-kicker { color: #245966; }
 .consultation-audience { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; max-width: 860px; margin: 44px auto 0; }
 .consultation-audience article { padding: 30px; border: 1px solid #d3e1e6; background: rgba(255,255,255,.74); }
 .consultation-audience h3, .consultation-topic-grid h3, .consultation-results h3, .consultation-flow h3 { margin: 0; color: #102a43; font-size: 1.08rem; font-weight: 500; }
@@ -42,8 +42,8 @@
 .consultation-price span { font-size: 1.1rem; }
 .consultation-price strong { font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 400; letter-spacing: .04em; }
 .consultation-pricing > p { margin: 24px 0 0; color: #526d7c; line-height: 1.85; }
-.consultation-section--pricing .consultation-price { border-color: rgba(255,255,255,.42); background: rgba(255,255,255,.1); color: #fff; }
-.consultation-section--pricing .consultation-pricing > p { color: rgba(255,255,255,.82); }
+.consultation-section--pricing .consultation-price { border-color: #d3e1e6; background: #fff; color: #102a43; }
+.consultation-section--pricing .consultation-pricing > p { color: #526d7c; }
 .consultation-contact > p:not(.consultation-kicker) { margin: 22px auto 0; color: rgba(255,255,255,.74); line-height: 1.9; }
 .consultation-contact .tk-button { margin-top: 30px; border-color: #bfdce5; background: #bfdce5; color: #1b2f4a; }
 @media (min-width: 760px) {
