@@ -45,7 +45,7 @@
 .consultation-price__title { font-size: 1.15rem; font-weight: 500; }
 .consultation-price__format { margin-top: 8px !important; color: #526d7c; font-size: .92rem; }
 .consultation-price strong { display: block; margin-top: 8px; font-size: clamp(1.45rem, 2.5vw, 1.85rem); font-weight: 400; letter-spacing: .03em; white-space: nowrap; }
-.consultation-price__tax { font-size: calc(1em - 2px); }
+.consultation-price__tax { font-size: calc(1em - 9px); }
 .consultation-section--pricing .consultation-price { border-color: #d3e1e6; background: #fff; color: #102a43; }
 .consultation-section--pricing .consultation-pricing > p { color: #526d7c; }
 .consultation-contact > p:not(.consultation-kicker) { margin: 22px auto 0; color: rgba(255,255,255,.74); line-height: 1.9; }
