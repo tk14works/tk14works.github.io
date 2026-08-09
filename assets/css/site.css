@@ -1867,6 +1867,22 @@ h1 {
   line-height: 1.8;
 }
 
+.ai-service-cards__link {
+  display: inline-block;
+  margin-top: 18px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid currentColor;
+  color: #1b5661;
+  font-size: 0.94rem;
+  font-weight: 600;
+  line-height: 1.4;
+  text-decoration: none;
+}
+
+.ai-service-cards__link:hover {
+  color: #0e3540;
+}
+
 .ai-flow-list {
   margin-top: 42px;
 }
