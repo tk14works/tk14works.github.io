@@ -1,7 +1,7 @@
 /* Reservation service page and AI-page feature */
 .reservation-page { background: #f4f8f9; }
 .reservation-shell { width: min(100% - 40px, 1080px); margin: 0 auto; }
-.reservation-hero { padding: clamp(76px, 10vw, 132px) 0; background: radial-gradient(circle at 78% 45%, rgba(75, 155, 191, .16), transparent 30%), linear-gradient(135deg, #0e2340, #1b3a63); color: #fff; }
+.reservation-hero { padding: clamp(76px, 10vw, 132px) 0; background: #0e2340; color: #fff; }
 .reservation-hero__inner { display: block; }
 .reservation-hero__copy { max-width: 720px; }
 .reservation-eyebrow, .reservation-kicker { margin: 0 0 16px; color: #75d4cd; font-size: .72rem; font-weight: 700; letter-spacing: .16em; }
@@ -34,9 +34,9 @@
 .reservation-features p { grid-column: 1 / -1; grid-row: 2; margin: 14px 0 0; color: #30475f; font-size: .9rem; line-height: 1.75; }
 .reservation-screens { display: grid; gap: 24px; margin-top: 42px; }
 .reservation-screens--phone { grid-template-columns: repeat(4, minmax(0, 240px)); justify-content: center; }
-.reservation-slot { margin: 0; }
+.reservation-slot { margin: 0; padding: 12px; background: #0e2340; }
 .reservation-slot img { display: block; width: 100%; aspect-ratio: 4 / 5; border: 1px solid #d3e1e6; object-fit: cover; }
-.reservation-slot figcaption { padding-top: 14px; color: #62798a; font-size: .9rem; line-height: 1.7; }
+.reservation-slot figcaption { padding: 14px 3px 2px; color: rgba(255,255,255,.8); font-size: .9rem; line-height: 1.7; }
 .reservation-page.site-ai #flow { background: #e6f3f2 !important; color: #102a43 !important; }
 .reservation-page.site-ai #flow .reservation-kicker { color: #245966 !important; }
 .reservation-page.site-ai #flow h2, .reservation-page.site-ai #flow h3 { color: #102a43 !important; }
@@ -73,7 +73,7 @@
   .reservation-flow-title__mobile-break { display: inline; }
   .reservation-shell { width: min(100% - 40px, 560px); }
   .reservation-hero__inner, .ai-reservation-preview__card { grid-template-columns: 1fr; }
-  .reservation-hero { padding: 64px 0 72px; background: #0e2340; }
+  .reservation-hero { padding: 64px 0 72px; }
   .reservation-hero h1 { font-size: clamp(1.65rem, 6.9vw, 1.85rem); }
   .reservation-hero__copy > p:not(.reservation-eyebrow) { font-size: .91rem; }
   .reservation-section--issues h2 { font-size: clamp(1.43rem, 6.1vw, 1.52rem); letter-spacing: .01em; }
@@ -84,7 +84,8 @@
   .reservation-features article:last-child { grid-column: auto; }
   .reservation-features article { min-height: 0; }
   .reservation-screens--phone { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 18px; max-width: 560px; }
-  .reservation-slot figcaption { font-size: .8rem; }
+  .reservation-slot { padding: 9px; }
+  .reservation-slot figcaption { padding: 11px 2px 1px; font-size: .8rem; }
   .reservation-flow article { grid-template-columns: 40px 1fr; gap: 14px; }
   .ai-reservation-preview__card { gap: 24px; padding: 28px 24px; }
   .ai-reservation-preview h2 { font-size: clamp(1.02rem, 4.55vw, 1.18rem); letter-spacing: -0.045em; white-space: nowrap; }
