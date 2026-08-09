@@ -86,9 +86,9 @@
   .reservation-issues, .reservation-features { grid-template-columns: 1fr; }
   .reservation-features article:last-child { grid-column: auto; }
   .reservation-features article { min-height: 0; }
-  .reservation-screens--phone { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 18px; max-width: 560px; }
+  .reservation-screens--phone { grid-template-columns: 1fr; gap: 32px; width: min(100%, 360px); max-width: none; margin-right: auto; margin-left: auto; }
   .reservation-slot img { border-width: 4px; }
-  .reservation-slot figcaption { font-size: .8rem; }
+  .reservation-slot figcaption { font-size: .9rem; }
   .reservation-flow article { grid-template-columns: 40px 1fr; gap: 14px; }
   .ai-reservation-preview__card { gap: 24px; padding: 28px 24px; }
   .ai-reservation-preview h2 { font-size: clamp(1.02rem, 4.55vw, 1.18rem); letter-spacing: -0.045em; white-space: nowrap; }
