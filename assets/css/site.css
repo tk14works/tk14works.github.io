@@ -1601,21 +1601,21 @@ h1 {
 
 .site-ai #support {
   border-top: 1px solid rgba(44, 47, 51, 0.06);
-  background: #eaf2f5;
+  background: #fff;
 }
 
 .site-ai #flow {
-  background: #102a43;
-  color: #fff;
+  background: #f1f6f8;
+  color: #102a43;
 }
 
 .site-ai #about {
-  background: #e6f3f2;
+  background: #fff;
 }
 
 .site-ai #faq {
-  background: #1D3A54;
-  color: #fff;
+  background: #f1f6f8;
+  color: #102a43;
 }
 
 .site-ai #contact {
@@ -1633,9 +1633,16 @@ h1 {
 }
 
 .site-ai #flow .ai-section-kicker,
-.site-ai #faq .ai-section-kicker,
 .site-ai #contact .ai-section-kicker {
   color: #8ce0d9;
+}
+
+.site-ai #faq .ai-section-kicker {
+  color: #245966;
+}
+
+.site-ai #flow .ai-section-kicker {
+  color: #245966;
 }
 
 .site-ai #contact .tk-contact .ai-section-kicker {
@@ -1644,20 +1651,26 @@ h1 {
 
 .site-ai #flow .tk-title,
 .site-ai #faq .tk-title,
-.site-ai #contact .tk-contact h2,
 .site-ai #flow .tk-flow-list h3,
 .site-ai #faq .tk-faq summary {
+  color: #102a43;
+}
+
+.site-ai #contact .tk-contact h2 {
   color: #fff;
 }
 
 .site-ai #flow .tk-title::after,
 .site-ai #faq .tk-title::after {
-  background: #8ce0d9;
+  background: #2b7a82;
 }
 
 .site-ai #flow .tk-section-lead,
 .site-ai #flow .tk-flow-list p,
-.site-ai #faq .tk-faq p,
+.site-ai #faq .tk-faq p {
+  color: #526d7c;
+}
+
 .site-ai #contact .tk-contact p,
 .site-ai #contact .tk-contact__links {
   color: rgba(255, 255, 255, 0.72);
@@ -1665,11 +1678,11 @@ h1 {
 
 .site-ai #flow .tk-flow-list article,
 .site-ai #faq .tk-faq details {
-  border-color: rgba(140, 224, 217, 0.26);
+  border-color: #d3e1e6;
 }
 
 .site-ai #flow .ai-flow-list article > span {
-  color: #8ce0d9;
+  color: #2b7a82;
 }
 
 .site-ai #contact .tk-button {
