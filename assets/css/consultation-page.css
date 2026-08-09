@@ -66,7 +66,7 @@
   .consultation-section h2 { font-size: clamp(1.55rem, 7vw, 1.85rem); }
   .consultation-audience, .consultation-topic-grid, .consultation-results { grid-template-columns: 1fr; }
   .consultation-audience article, .consultation-topic-grid article, .consultation-results article { padding: 24px; }
-  .consultation-results-note { margin-top: 20px; padding: 16px 18px; }
+  .consultation-results-note { margin-top: 20px; padding: 16px 9px; font-size: calc(.92rem - .5px); letter-spacing: -.04em; }
   .consultation-flow article { grid-template-columns: 40px 1fr; gap: 14px; }
   .consultation-price { margin-top: 28px; padding: 22px 14px; }
 }
