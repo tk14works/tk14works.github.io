@@ -1425,6 +1425,10 @@ h1 {
   text-transform: uppercase;
 }
 
+.site-family .tk-hero__copy .tk-label {
+  text-transform: none;
+}
+
 .tk-button {
   display: inline-flex;
   align-items: center;
