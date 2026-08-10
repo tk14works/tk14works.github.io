@@ -40,6 +40,8 @@
 .reservation-slot { margin: 0; }
 .reservation-slot img { display: block; box-sizing: border-box; width: 100%; aspect-ratio: 4 / 5; border: 5px solid #0e2340; object-fit: cover; }
 .reservation-slot figcaption { padding-top: 14px; color: #30475f; font-size: .9rem; line-height: 1.7; }
+.reservation-slot figcaption strong { display: block; color: #102a43; font-size: 1rem; font-weight: 500; line-height: 1.5; }
+.reservation-slot figcaption span { display: block; margin-top: 6px; }
 .reservation-section#screens { background: #f1f6f8; }
 .reservation-page.site-ai #flow { background: #fff !important; color: #102a43 !important; }
 .reservation-page.site-ai #flow .reservation-kicker { color: #245966 !important; }
