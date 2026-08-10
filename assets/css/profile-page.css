@@ -77,6 +77,15 @@
   text-transform: none;
 }
 
+.profile-page .profile-section-kicker {
+  margin: 0 0 14px;
+  color: var(--tk-gold);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-align: center;
+}
+
 .profile-page #contact {
   background: #23252d;
   color: #f8f8f8;
@@ -88,6 +97,10 @@
 .profile-page #contact .tk-contact__links a,
 .profile-page #contact .tk-contact__links a:hover {
   color: #f8f8f8;
+}
+
+.profile-page #contact .tk-contact p.profile-section-kicker {
+  color: var(--tk-gold);
 }
 
 .profile-page #contact .tk-button,
