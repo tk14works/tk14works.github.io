@@ -47,35 +47,33 @@
   margin-left: 0;
 }
 
-/* 写真だけを下から上へ見せる、最初の表示時のワイプ演出 */
-.profile-page .profile-hero-wipe {
+/* スクロールに合わせ、写真の下側から隠していくワイプ演出 */
+.profile-page .profile-hero-scroll-wipe {
   position: relative;
+  --profile-hero-wipe-inset: 0%;
+  clip-path: inset(0 0 var(--profile-hero-wipe-inset) 0);
+  will-change: clip-path;
 }
 
-.profile-page .profile-hero-wipe::after {
-  position: absolute;
-  z-index: 1;
-  inset: 0;
-  background: #f7f6f3;
-  content: "";
-  pointer-events: none;
-  animation: profile-hero-bottom-up-wipe 1.15s cubic-bezier(0.65, 0, 0.35, 1) 0.2s both;
-}
-
-@keyframes profile-hero-bottom-up-wipe {
-  from {
-    clip-path: inset(0 0 0 0);
+@media (min-width: 760px) {
+  .profile-page .profile-hero-scroll-wipe {
+    position: sticky;
+    top: 82px;
   }
+}
 
-  to {
-    clip-path: inset(0 0 100% 0);
+@media (max-width: 759px) {
+  .profile-page .profile-hero-scroll-wipe {
+    position: sticky;
+    top: 72px;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .profile-page .profile-hero-wipe::after {
-    display: none;
-    animation: none;
+  .profile-page .profile-hero-scroll-wipe {
+    position: relative;
+    clip-path: none;
+    will-change: auto;
   }
 }
 

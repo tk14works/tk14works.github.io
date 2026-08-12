@@ -81,6 +81,24 @@ document.querySelectorAll("[data-hero-slideshow]").forEach((slideshow) => {
   scheduleNextSlide(initialSlideDelay);
 });
 
+document.querySelectorAll("[data-profile-hero-scroll-wipe]").forEach((heroImage) => {
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+  if (reducedMotion.matches) return;
+
+  const updateWipe = () => {
+    const headerHeight = window.innerWidth >= 760 ? 82 : 72;
+    const { top, height } = heroImage.getBoundingClientRect();
+    const progress = Math.min(Math.max((headerHeight - top) / (height * 0.72), 0), 1);
+
+    heroImage.style.setProperty("--profile-hero-wipe-inset", `${progress * 100}%`);
+  };
+
+  window.addEventListener("scroll", updateWipe, { passive: true });
+  window.addEventListener("resize", updateWipe);
+  updateWipe();
+});
+
 document.querySelectorAll("[data-carousel]").forEach((carousel) => {
   const container = carousel.closest(".tk-container") || carousel.parentElement;
   if (!container) return;
