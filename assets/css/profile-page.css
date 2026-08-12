@@ -156,6 +156,7 @@
 @media (min-width: 760px) {
   .profile-page .tk-hero {
     position: relative;
+    padding-bottom: 50px;
     background: #f7f6f3;
     background-image: linear-gradient(#fefefe, #fefefe);
     background-repeat: no-repeat;
