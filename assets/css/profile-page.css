@@ -41,27 +41,10 @@
 }
 
 .profile-page .tk-hero__image {
-  position: relative;
   width: 100%;
   max-width: none;
   margin-right: 0;
   margin-left: 0;
-}
-
-.profile-page .tk-hero__image::after {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  background: rgba(18, 20, 24, 0.34);
-  content: "";
-  opacity: 0;
-  pointer-events: none;
-  animation: profile-hero-light-reveal 850ms cubic-bezier(0.22, 1, 0.36, 1) both;
-}
-
-@keyframes profile-hero-light-reveal {
-  from { opacity: 1; }
-  to { opacity: 0; }
 }
 
 .profile-page #pricing .tk-price-card {
@@ -155,12 +138,6 @@
 
   .profile-page .tk-section[id] {
     scroll-margin-top: 82px;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .profile-page .tk-hero__image::after {
-    animation: none;
   }
 }
 
