@@ -50,9 +50,6 @@
 /* スクロールに合わせ、写真の下側から隠していくワイプ演出 */
 .profile-page .profile-hero-scroll-wipe {
   position: relative;
-  --profile-hero-wipe-inset: 0%;
-  clip-path: inset(0 0 var(--profile-hero-wipe-inset) 0);
-  will-change: clip-path;
 }
 
 @media (min-width: 760px) {
@@ -66,14 +63,6 @@
   .profile-page .profile-hero-scroll-wipe {
     position: sticky;
     top: 72px;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .profile-page .profile-hero-scroll-wipe {
-    position: relative;
-    clip-path: none;
-    will-change: auto;
   }
 }
 
@@ -162,16 +151,10 @@
   .profile-page .tk-hero {
     position: relative;
     background: #f7f6f3;
-  }
-
-  .profile-page .tk-hero::before {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    height: min(calc((100vw - 80px) / 2), 560px);
-    background: #fefefe;
-    content: "";
+    background-image: linear-gradient(#fefefe, #fefefe);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100% min(calc((100vw - 80px) / 2), 560px);
   }
 
   .profile-page .tk-hero__image {
@@ -185,6 +168,9 @@
   .profile-page .tk-hero__copy {
     position: relative;
     z-index: 1;
+    background: #f7f6f3;
+    box-shadow: 0 0 0 100vmax #f7f6f3;
+    clip-path: inset(0 -100vmax);
   }
 
   .profile-page .tk-section[id] {
