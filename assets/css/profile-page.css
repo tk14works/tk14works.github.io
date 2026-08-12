@@ -161,19 +161,17 @@
 @media (min-width: 760px) {
   .profile-page .tk-hero {
     position: relative;
-    background: #fefefe;
+    background: #f7f6f3;
   }
 
   .profile-page .tk-hero::before {
     position: absolute;
     top: 0;
-    left: 50%;
-    width: calc(100% - 80px);
-    max-width: 1120px;
-    aspect-ratio: 2 / 1;
-    background: #f7f6f3;
+    right: 0;
+    left: 0;
+    height: min(calc((100vw - 80px) / 2), 560px);
+    background: #fefefe;
     content: "";
-    transform: translateX(-50%);
   }
 
   .profile-page .tk-hero__image {
