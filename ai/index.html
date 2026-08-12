@@ -25,6 +25,27 @@
         white-space: nowrap;
       }
     }
+
+    .site-ai #contact .tk-button,
+    .ai-hero__button {
+      border-color: #E7F3F6;
+      background: #E7F3F6;
+      color: #1B2F4A;
+    }
+
+    .ai-hero__button {
+      transition: border-color 180ms ease, background-color 180ms ease, color 180ms ease;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      .site-ai #contact .tk-button:hover,
+      .ai-hero__button:hover {
+        border-color: #2b7a82;
+        background: #2b7a82;
+        color: #fff;
+        transform: none;
+      }
+    }
   </style>
 </head>
 <body class="profile-minimal site-ai">
