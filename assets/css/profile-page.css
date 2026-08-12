@@ -150,11 +150,27 @@
   color: var(--tk-gold);
 }
 
-.profile-page #contact .tk-button,
-.profile-page #contact .tk-button:hover {
+.profile-page #contact .tk-button {
   border-color: #f7f6f3;
   background: #f7f6f3;
   color: #2a2d34;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .profile-page #contact .tk-button:hover {
+    border-color: var(--tk-gold);
+    background: var(--tk-gold);
+    color: #fff;
+  }
+
+  .profile-page #contact .tk-contact__links a:hover {
+    color: #f8f8f8;
+  }
+
+  .profile-page #contact .tk-contact__links a:hover::after {
+    background: var(--tk-gold);
+    opacity: 1;
+  }
 }
 
 .profile-page .tk-footer,
