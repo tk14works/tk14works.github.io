@@ -1719,15 +1719,17 @@ body.site-family .tk-hero__image.moment-hero-scroll-image {
 }
 
 .site-ai #contact .tk-button {
-  border-color: #BFDCE5;
-  background: #BFDCE5;
+  border-color: #E7F3F6;
+  background: #E7F3F6;
   color: #1B2F4A;
 }
 
-.site-ai #contact .tk-button:hover {
-  border-color: #BFDCE5;
-  background: #BFDCE5;
-  color: #1B2F4A;
+@media (hover: hover) and (pointer: fine) {
+  .site-ai #contact .tk-button:hover {
+    border-color: #2b7a82;
+    background: #2b7a82;
+    color: #fff;
+  }
 }
 
 .site-ai #contact .tk-contact__links a:hover {
@@ -1844,17 +1846,20 @@ body.site-family .tk-hero__image.moment-hero-scroll-image {
   min-height: 52px;
   margin-top: 30px;
   padding: 0 24px;
-  border: 1px solid #BFDCE5;
-  background: #BFDCE5;
+  border: 1px solid #E7F3F6;
+  background: #E7F3F6;
   color: #1B2F4A;
   font-weight: 700;
   letter-spacing: 0.05em;
-  transition: transform 180ms ease, background-color 180ms ease;
+  transition: border-color 180ms ease, background-color 180ms ease, color 180ms ease;
 }
 
-.ai-hero__button:hover {
-  background: #BFDCE5;
-  transform: translateY(-2px);
+@media (hover: hover) and (pointer: fine) {
+  .ai-hero__button:hover {
+    border-color: #2b7a82;
+    background: #2b7a82;
+    color: #fff;
+  }
 }
 
 .ai-service-cards {
