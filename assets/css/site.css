@@ -1726,8 +1726,8 @@ body.site-family .tk-hero__image.moment-hero-scroll-image {
 
 @media (hover: hover) and (pointer: fine) {
   .site-ai #contact .tk-button:hover {
-    border-color: #2b7a82;
-    background: #2b7a82;
+    border-color: #66717C;
+    background: #66717C;
     color: #fff;
   }
 }
@@ -1856,8 +1856,8 @@ body.site-family .tk-hero__image.moment-hero-scroll-image {
 
 @media (hover: hover) and (pointer: fine) {
   .ai-hero__button:hover {
-    border-color: #2b7a82;
-    background: #2b7a82;
+    border-color: #66717C;
+    background: #66717C;
     color: #fff;
   }
 }

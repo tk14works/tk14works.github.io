@@ -66,6 +66,7 @@
 .reservation-contact .reservation-kicker { margin-bottom: 16px; }
 .reservation-contact > p:not(.reservation-kicker) { margin: 22px auto 0; color: rgba(255,255,255,.72); line-height: 1.9; }
 .reservation-contact .tk-button { margin-top: 30px; border-color: #bfdce5; background: #bfdce5; color: #1b2f4a; }
+@media (hover: hover) and (pointer: fine) { .reservation-contact .tk-button:hover { border-color: #66717C; background: #66717C; color: #fff; transform: none; } }
 .ai-reservation-preview { padding: clamp(58px, 7vw, 86px) 0; background: #f1f6f8; }
 .ai-reservation-preview__card { display: grid; grid-template-columns: minmax(0,1fr) minmax(260px,.56fr); gap: 34px; align-items: center; padding: clamp(28px,4vw,48px); border: 1px solid #b8d3dc; background: #f8fcfd; box-shadow: 0 16px 34px rgba(16,42,67,.08); }
 .ai-reservation-preview__label { margin: 0 0 14px; color: #2b7a82; font-size: .72rem; font-weight: 700; letter-spacing: .14em; }
