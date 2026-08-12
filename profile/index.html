@@ -7,13 +7,7 @@
   <meta name="description" content="自然体で飾らない、あなたらしさが伝わるプロフィール写真・宣材写真を撮影します。SNS、ホームページ、起業・活動用の写真に。">
   <link rel="canonical" href="https://tk14.jp/profile/">
   <link rel="stylesheet" href="/assets/css/site.css?v=63">
-  <link rel="stylesheet" href="/assets/css/profile-page.css?v=18">
-  <style>
-    @media (min-width: 760px) {
-      .profile-page .tk-hero { padding-bottom: 0; }
-      .profile-page .profile-hero-sticky-spacer { height: 50px; }
-    }
-  </style>
+  <link rel="stylesheet" href="/assets/css/profile-page.css?v=19">
 </head>
 <body class="profile-page profile-minimal">
   <header class="profile-header">
@@ -39,13 +33,14 @@
   </nav>
 
   <main>
-    <section class="tk-hero" id="home">
+    <div class="profile-hero-scroll-stage">
       <div class="tk-hero__image profile-hero-scroll-wipe">
         <picture>
           <source media="(max-width: 759px)" srcset="../../images/profile-hero-mobile.jpg">
           <img src="/images/profile-hero-pc.jpg" alt="自然体で飾らないプロフィール写真">
         </picture>
       </div>
+      <section class="tk-hero" id="home">
       <div class="profile-hero-copy-surface">
         <div class="tk-hero__copy" data-reveal>
           <p class="tk-label">Profile Photo</p>
@@ -56,11 +51,10 @@
           </p>
           <a class="tk-button" href="#contact">撮影の相談をする</a>
         </div>
-        <div class="profile-hero-sticky-spacer" aria-hidden="true"></div>
       </div>
-    </section>
+      </section>
 
-    <section class="tk-section" id="works">
+      <section class="tk-section" id="works">
       <div class="tk-container">
         <p class="profile-section-kicker" data-reveal>Gallery</p>
         <h2 class="tk-title" data-reveal>撮影イメージ</h2>
@@ -100,7 +94,8 @@
           <span></span>
         </div>
       </div>
-    </section>
+      </section>
+    </div>
 
     <section class="tk-section" id="pricing">
       <div class="tk-container">

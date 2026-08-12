@@ -46,6 +46,21 @@
   background: #f7f6f3;
 }
 
+.profile-page .profile-hero-scroll-stage {
+  position: relative;
+  background: #fefefe;
+}
+
+.profile-page .tk-hero {
+  position: relative;
+  z-index: 2;
+}
+
+.profile-page #works {
+  position: relative;
+  z-index: 2;
+}
+
 .profile-page .tk-hero__image {
   width: 100%;
   max-width: none;
@@ -155,12 +170,7 @@
 
 @media (min-width: 760px) {
   .profile-page .tk-hero {
-    position: relative;
     background: #f7f6f3;
-    background-image: linear-gradient(#fefefe, #fefefe);
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: 100% min(calc((100vw - 80px) / 2), 560px);
   }
 
   .profile-page .tk-hero__image {
