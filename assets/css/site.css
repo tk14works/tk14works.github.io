@@ -1589,6 +1589,31 @@ h1 {
   border-bottom: 1px solid rgba(44, 47, 51, 0.06);
 }
 
+.site-family .moment-hero-scroll-stage {
+  position: relative;
+  background: #eef8e9;
+}
+
+.site-family .moment-hero-scroll-image {
+  position: sticky;
+  z-index: 1;
+  top: 72px;
+}
+
+.site-family .tk-hero,
+.site-family #news {
+  position: relative;
+  z-index: 2;
+}
+
+.site-family .tk-hero {
+  background: #fbfef9;
+}
+
+.site-family #news {
+  background: #eef8e9;
+}
+
 .site-family .tk-section[id] {
   scroll-margin-top: 72px;
 }
@@ -1600,6 +1625,10 @@ h1 {
 
   .site-family .tk-section[id] {
     scroll-margin-top: 82px;
+  }
+
+  .site-family .moment-hero-scroll-image {
+    top: 82px;
   }
 }
 
