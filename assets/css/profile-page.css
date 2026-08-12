@@ -40,6 +40,12 @@
   background: #f7f6f3;
 }
 
+.profile-page .profile-hero-copy-surface {
+  position: relative;
+  z-index: 2;
+  background: #f7f6f3;
+}
+
 .profile-page .tk-hero__image {
   width: 100%;
   max-width: none;
@@ -167,10 +173,6 @@
 
   .profile-page .tk-hero__copy {
     position: relative;
-    z-index: 2;
-    background: #f7f6f3;
-    box-shadow: 0 0 0 100vmax #f7f6f3;
-    clip-path: inset(0 -100vmax);
   }
 
   .profile-page .tk-section[id] {
