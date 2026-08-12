@@ -150,7 +150,8 @@
 
 @media (min-width: 760px) {
   .profile-page .tk-hero__image {
-    width: min(calc(100% - 80px), 1120px);
+    width: calc(100% - 80px);
+    max-width: 1120px;
     margin-right: auto;
     margin-left: auto;
   }
