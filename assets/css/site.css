@@ -1594,7 +1594,7 @@ h1 {
   background: #eef8e9;
 }
 
-.site-family .moment-hero-scroll-image {
+body.site-family .tk-hero__image.moment-hero-scroll-image {
   position: sticky;
   z-index: 1;
   top: 72px;
@@ -1627,7 +1627,7 @@ h1 {
     scroll-margin-top: 82px;
   }
 
-  .site-family .moment-hero-scroll-image {
+  body.site-family .tk-hero__image.moment-hero-scroll-image {
     top: 82px;
   }
 }
