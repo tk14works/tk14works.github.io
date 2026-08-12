@@ -167,7 +167,7 @@
 
   .profile-page .tk-hero__copy {
     position: relative;
-    z-index: 1;
+    z-index: 2;
     background: #f7f6f3;
     box-shadow: 0 0 0 100vmax #f7f6f3;
     clip-path: inset(0 -100vmax);
