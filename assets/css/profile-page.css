@@ -159,11 +159,34 @@
 }
 
 @media (min-width: 760px) {
+  .profile-page .tk-hero {
+    position: relative;
+    background: #fefefe;
+  }
+
+  .profile-page .tk-hero::before {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: calc(100% - 80px);
+    max-width: 1120px;
+    aspect-ratio: 2 / 1;
+    background: #f7f6f3;
+    content: "";
+    transform: translateX(-50%);
+  }
+
   .profile-page .tk-hero__image {
+    z-index: 1;
     width: calc(100% - 80px);
     max-width: 1120px;
     margin-right: auto;
     margin-left: auto;
+  }
+
+  .profile-page .tk-hero__copy {
+    position: relative;
+    z-index: 1;
   }
 
   .profile-page .tk-section[id] {
