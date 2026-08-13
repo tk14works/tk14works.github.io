@@ -71,6 +71,8 @@
 /* スクロールに合わせ、写真の下側から隠していくワイプ演出 */
 .profile-page .profile-hero-scroll-wipe {
   position: relative;
+  clip-path: inset(0 0 var(--tk-scroll-cover-clip, 0px) 0);
+  -webkit-clip-path: inset(0 0 var(--tk-scroll-cover-clip, 0px) 0);
 }
 
 @media (min-width: 760px) {
