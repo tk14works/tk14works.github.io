@@ -1598,6 +1598,8 @@ body.site-family .tk-hero__image.moment-hero-scroll-image {
   position: sticky;
   z-index: 1;
   top: 72px;
+  clip-path: inset(0 0 var(--tk-scroll-cover-clip, 0px) 0);
+  -webkit-clip-path: inset(0 0 var(--tk-scroll-cover-clip, 0px) 0);
 }
 
 .site-family .tk-hero,

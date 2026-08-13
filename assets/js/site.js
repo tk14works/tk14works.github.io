@@ -81,6 +81,35 @@ document.querySelectorAll("[data-hero-slideshow]").forEach((slideshow) => {
   scheduleNextSlide(initialSlideDelay);
 });
 
+document.querySelectorAll("[data-scroll-cover-image]").forEach((image) => {
+  const stage = image.parentElement;
+  const cover = stage?.querySelector(":scope > .tk-hero");
+  let frameId;
+
+  if (!stage || !cover) return;
+
+  const updateCoverClip = () => {
+    frameId = undefined;
+    const imageRect = image.getBoundingClientRect();
+    const coverRect = cover.getBoundingClientRect();
+    const visibleHeight = Math.max(0, Math.min(imageRect.height, coverRect.top - imageRect.top));
+    const hiddenHeight = Math.max(0, imageRect.height - visibleHeight);
+
+    image.style.setProperty("--tk-scroll-cover-clip", `${Math.ceil(hiddenHeight)}px`);
+  };
+
+  const requestCoverClipUpdate = () => {
+    if (frameId) return;
+    frameId = window.requestAnimationFrame(updateCoverClip);
+  };
+
+  window.addEventListener("scroll", requestCoverClipUpdate, { passive: true });
+  window.addEventListener("resize", requestCoverClipUpdate);
+  window.visualViewport?.addEventListener("resize", requestCoverClipUpdate);
+  window.addEventListener("load", requestCoverClipUpdate, { once: true });
+  requestCoverClipUpdate();
+});
+
 document.querySelectorAll("[data-carousel]").forEach((carousel) => {
   const container = carousel.closest(".tk-container") || carousel.parentElement;
   if (!container) return;
