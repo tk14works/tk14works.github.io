@@ -113,6 +113,35 @@
   background: #f7f6f3;
 }
 
+/* 撮影の流れ：番号と見出しを同じ行に置き、説明文は見出しの下へ */
+.profile-page .tk-profile-flow article {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  column-gap: 2em;
+  row-gap: 10px;
+  align-items: baseline;
+}
+
+.profile-page .tk-profile-flow article > span {
+  grid-column: 1;
+  grid-row: 1;
+  padding-top: 0;
+  line-height: 1.25;
+}
+
+.profile-page .tk-profile-flow article h3 {
+  grid-column: 2;
+  grid-row: 1;
+  margin: 0;
+  line-height: 1.25;
+}
+
+.profile-page .tk-profile-flow article p {
+  grid-column: 2;
+  grid-row: 2;
+  margin: 0;
+}
+
 .profile-page #works .tk-gallery-card {
   border: 1px solid var(--tk-line);
 }
