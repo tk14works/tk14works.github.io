@@ -1647,7 +1647,7 @@ body.site-family .tk-hero__image.moment-hero-scroll-image {
   }
 
   .site-family .tk-hero__copy h1 {
-    font-size: clamp(3.84rem, calc(4.05vw + 20px), 4.5rem);
+    font-size: clamp(3.4rem, calc(4.05vw + 13px), 4.0625rem);
     letter-spacing: 0.025em;
   }
 }
