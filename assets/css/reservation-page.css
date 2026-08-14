@@ -111,5 +111,5 @@
   .ai-reservation-preview h2 { order: 2; }
   .ai-reservation-preview__text { order: 3; }
   .ai-reservation-preview__points { order: 4; }
-  .ai-reservation-preview .tk-button { order: 5; justify-self: start; }
+  .ai-reservation-preview .tk-button { order: 5; justify-self: start; margin-top: 0; }
 }
