@@ -1648,6 +1648,8 @@ body.site-family .tk-hero__image.moment-hero-scroll-image {
   }
 
   .site-family .tk-hero__copy h1 {
+    width: 100%;
+    max-width: none;
     font-size: clamp(3.4rem, calc(4.05vw + 13px), 4.0625rem);
     letter-spacing: 0.025em;
   }
