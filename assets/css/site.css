@@ -1609,7 +1609,7 @@ body.site-family .tk-hero__image.moment-hero-scroll-image {
 }
 
 .site-family .tk-hero {
-  background: #fbfef9;
+  background: #eef8e9;
 }
 
 .site-family #news {
@@ -1617,13 +1617,28 @@ body.site-family .tk-hero__image.moment-hero-scroll-image {
 }
 
 .site-family #works {
+  background: #fbfef9;
+}
+
+/* 白いギャラリー面では、淡いグリーンのカードで写真とキャプションを明確に分ける。 */
+.site-family #works .tk-gallery-card {
+  border: 1px solid rgba(73, 104, 90, 0.16);
   background: #eef8e9;
 }
 
-/* 淡いグリーンのギャラリー面では、白いカードで写真とキャプションを明確に分ける。 */
-.site-family #works .tk-gallery-card {
-  border: 1px solid rgba(73, 104, 90, 0.16);
-  background: #fbfef9;
+.site-family .moment-hero-title-break {
+  display: none;
+}
+
+@media (min-width: 760px) {
+  .site-family .tk-hero__copy h1 {
+    font-size: clamp(2rem, 4.05vw, 3.25rem);
+    white-space: nowrap;
+  }
+
+  .site-family .tk-hero__copy {
+    padding-bottom: 54px;
+  }
 }
 
 .site-family .tk-section[id] {
@@ -1641,6 +1656,12 @@ body.site-family .tk-hero__image.moment-hero-scroll-image {
 
   body.site-family .tk-hero__image.moment-hero-scroll-image {
     top: 82px;
+  }
+}
+
+@media (max-width: 759px) {
+  .site-family .moment-hero-title-break {
+    display: block;
   }
 }
 
