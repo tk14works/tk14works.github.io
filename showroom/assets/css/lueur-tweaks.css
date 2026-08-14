@@ -1,13 +1,2 @@
-@media (min-width: 801px) {
-  .hero h1 { font-size: clamp(40px, 4.15vw, 62px); line-height: 1.3; }
-}
-
-@media (max-width: 800px) {
-  .hero h1 { font-size: 34px; line-height: 1.38; }
-}
-
-.staff-portrait {
-  background: linear-gradient(0deg, rgba(47, 43, 38, .32), rgba(47, 43, 38, 0)), url('../images/lueur/owner.png') center / cover;
-}
-.staff-portrait::before,
-.staff-portrait::after { display: none; }
+/* Photo-led portrait treatment kept separate for easy asset replacement. */
+.staff-portrait { background:linear-gradient(0deg,rgba(27,25,21,.38),rgba(27,25,21,.02) 56%),url('../images/lueur/owner.png') center/cover; }
