@@ -40,6 +40,10 @@
   background: #f7f6f3;
 }
 
+.profile-page .tk-hero__copy {
+  padding-bottom: 54px;
+}
+
 .profile-page .profile-hero-copy-surface {
   position: relative;
   z-index: 2;
@@ -209,6 +213,10 @@
 }
 
 @media (max-width: 759px) {
+  .profile-page .tk-hero__copy {
+    padding-bottom: 44px;
+  }
+
   .profile-page .profile-nav {
     border-color: rgba(248, 248, 248, 0.18);
     background: #23252d;
