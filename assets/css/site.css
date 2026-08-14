@@ -1644,11 +1644,20 @@ body.site-family .tk-hero__image.moment-hero-scroll-image {
 @media (min-width: 1024px) {
   .site-family .tk-hero__copy {
     width: min(100%, 1120px);
+    text-align: center;
   }
 
   .site-family .tk-hero__copy h1 {
     font-size: clamp(3.4rem, calc(4.05vw + 13px), 4.0625rem);
     letter-spacing: 0.025em;
+  }
+
+  .site-family .moment-hero-lead {
+    min-height: calc(2 * 1.8em);
+  }
+
+  .site-family .moment-hero-lead-break {
+    display: none;
   }
 }
 
