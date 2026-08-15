@@ -99,6 +99,7 @@ a { color:inherit; text-decoration:none; }
 .voice-grid article:nth-child(2) { margin-left:0; }
 .voice-grid span { color:var(--accent); font:10px var(--mono); }
 .voice-grid p { max-width:650px; margin:13px 0 0; font:500 24px/1.55 var(--serif); letter-spacing:.05em; }
+.voice-break-pc { display:none; }
 
 .flow { display:grid; grid-template-columns:1fr 1fr; gap:8vw; align-items:start; background:var(--deep); color:#fff; }
 .flow .section-title { padding-top:5vw; }
@@ -167,6 +168,8 @@ footer p { margin:0; color:#beb8ab; font:9px var(--mono); }
   .staff-copy { padding-right:5vw; padding-left:5vw; }
   .staff-copy p:not(.eyebrow) { max-width:540px; }
   .staff-signature { margin-right:9px; }
+  .voice-break-pc { display:block; }
+  .voice-grid article:first-child p { max-width:none; }
 }
 
 @media (max-width:800px) {
