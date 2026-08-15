@@ -165,6 +165,8 @@ footer p { margin:0; color:#beb8ab; font:9px var(--mono); }
   .gallery-copy h2,.gallery-copy>p:last-child { max-width:none; white-space:nowrap; }
   .gallery-copy>p:last-child br { display:none; }
   .gallery-interior { transform:translateY(50px); }
+  .staff-copy { padding-right:5vw; padding-left:5vw; }
+  .staff-copy p:not(.eyebrow) { max-width:540px; }
 }
 
 @media (max-width:800px) {
