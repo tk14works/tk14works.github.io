@@ -86,12 +86,10 @@ a { color:inherit; text-decoration:none; }
 
 .staff { display:grid; grid-template-columns:.8fr 1.2fr; min-height:750px; padding:0; margin-top:220px; background:var(--soft); }
 .staff-portrait { position:relative; min-height:760px; }
-.staff-portrait>div { position:absolute; z-index:1; right:-42px; bottom:10%; color:#fff; text-align:right; mix-blend-mode:screen; }
-.staff-portrait span { display:block; margin-bottom:12px; font:10px var(--mono); letter-spacing:.12em; }
-.staff-portrait b { font:500 42px/1.02 var(--serif); }
 .staff-copy { align-self:center; max-width:720px; padding:10vw 9vw; }
 .staff-copy p:not(.eyebrow) { max-width:470px; margin:0 0 17px; color:var(--muted); font-size:12px; line-height:2.2; }
-.signature { display:block; margin-top:42px; font:italic 29px var(--serif); }
+.staff-role { display:block; margin-top:42px; color:var(--ink); font:10px var(--mono); letter-spacing:.12em; text-align:right; }
+.signature { display:block; margin-top:9px; color:var(--ink); font:italic 29px var(--serif); text-align:right; }
 
 .voices { display:grid; grid-template-columns:.75fr 1.25fr; gap:10vw; padding-top:clamp(110px,14vw,180px); }
 .voices .section-title h2 { font-size:55px; }
@@ -179,7 +177,7 @@ footer p { margin:0; color:#beb8ab; font:9px var(--mono); }
   .features { padding-top:96px; overflow:hidden; }.features .section-title { display:block; margin-bottom:60px; }.features .section-title h2 { font-size:27px; }.feature-grid { display:block; margin-left:0; }.feature-grid article { grid-template-columns:37px minmax(0,1fr); min-height:auto; padding:26px 23px 31px; border-left:1px solid var(--line); border-bottom:1px solid var(--line); }.feature-grid article:nth-child(2) { transform:none; background:var(--soft); }.feature-grid b { transform:translateY(30px); font-size:12px; }.feature-grid h3 { margin:20px 0 14px; font-size:20px; }
   .menu { padding-top:96px; padding-bottom:96px; }.menu .section-title { display:block; margin-bottom:30px; }.menu .section-title>span { display:block; transform:translateY(20px); color:var(--muted); font-size:13px; text-align:right; }.menu .section-title h2 { font-size:27px; }.menu-cards { display:grid; grid-template-columns:1fr; gap:16px; }.menu-card { min-height:0; padding:27px 23px 29px; }.menu-card h3 { margin:27px 0 16px; font-size:22px; }.menu-card strong { font-size:27px; }.menu-card dl { margin-top:22px; padding-top:12px; }.recommend-label { top:25px; right:23px; }
   .gallery { display:block; padding:96px 0; }.gallery-image { width:100%; aspect-ratio:3/2; height:auto; }.gallery-copy { isolation:isolate; width:min(100%,340px); margin:-48px 0 0; padding:20px 24px 62px; background:transparent; }.gallery-copy:before { content:''; position:absolute; z-index:-1; top:0; right:0; bottom:0; left:0; background:rgba(255,255,255,.4); }.gallery-copy h2 { font-size:27px; }.gallery-interior { position:relative; right:auto; bottom:auto; width:75%; height:310px; margin:32px auto 0 0; }
-  .staff { display:block; min-height:0; margin-top:105px; }.staff-portrait { min-height:490px; }.staff-portrait>div { right:23px; bottom:25px; }.staff-copy { padding:88px 24px; }.staff-copy h2 { font-size:27px; }
+  .staff { display:block; min-height:0; margin-top:105px; }.staff-portrait { min-height:490px; }.staff-copy { padding:88px 24px; }.staff-copy h2 { font-size:27px; }
   .voices { display:block; padding-top:96px; }.voices .section-title h2 { font-size:27px; }.voice-grid { margin-top:56px; }.voice-grid article:nth-child(2) { margin-left:0; }.voice-grid article { padding:29px 0; }.voice-grid p { font-size:21px; }
   .flow { display:block; padding-top:96px; }.flow .section-title { padding:0; margin-bottom:56px; }.flow .section-title h2 { font-size:27px; }.flow-list li { grid-template-columns:35px 1fr; gap:4px; padding:22px 0; }.flow-list li span { grid-column:2; }.flow-list strong { font-size:20px; }
   .salon { padding-top:96px; }.salon .section-title { display:block; margin-bottom:52px; }.salon .section-title h2 { font-size:27px; }.salon-grid { display:block; }.salon-grid dl>div { grid-template-columns:92px 1fr; }.map-placeholder { min-height:290px; margin-top:62px; }
