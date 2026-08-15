@@ -158,6 +158,7 @@ footer p { margin:0; color:#beb8ab; font:9px var(--mono); }
   .worries .section-title { position:relative; top:-100px; }
   .worry-list article { font-size:24px; }
   .feature-grid h3 { font-size:24px; }
+  .feature-grid article:nth-child(2) { transform:none; }
   .features .section-title,.salon .section-title { display:grid; grid-template-columns:max-content; justify-content:end; justify-items:start; }
   .features .section-title>p,.salon .section-title>p { margin-bottom:18px; }
 }
