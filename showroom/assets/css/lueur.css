@@ -11,7 +11,7 @@ a { color:inherit; text-decoration:none; }
 .logo { font:500 33px/.82 var(--serif); letter-spacing:.02em; }
 .logo span { display:block; margin-top:9px; font:8px/1 var(--mono); letter-spacing:.16em; }
 .site-header nav { position:absolute; top:39px; left:50%; display:flex; gap:29px; font:10px var(--mono); letter-spacing:.12em; transform:translateX(-50%); }
-.header-cta { position:fixed; z-index:20; top:32px; right:clamp(26px,5.6vw,88px); display:flex; align-items:center; gap:18px; padding:13px 17px; color:var(--ink); background:rgba(255,255,255,.3); font-size:11px; box-shadow:0 9px 25px rgba(38,34,28,.18); transition:background .25s,color .25s,transform .25s; }
+.header-cta { position:fixed; z-index:20; top:32px; right:clamp(26px,5.6vw,88px); display:flex; align-items:center; gap:18px; padding:13px 17px; color:var(--ink); background:rgba(255,255,255,.6); font-size:11px; box-shadow:0 9px 25px rgba(38,34,28,.18); transition:background .25s,color .25s,transform .25s; }
 .header-cta span { font-size:17px; line-height:1; }
 .header-cta:hover { color:#fff; background:var(--deep); transform:translateY(-2px); }
 
