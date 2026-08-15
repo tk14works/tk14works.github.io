@@ -153,6 +153,7 @@ footer p { margin:0; color:#beb8ab; font:9px var(--mono); }
   .concept .section-title { top:-20px; }
   .worries .section-title { position:relative; top:-100px; }
   .worry-list article { font-size:24px; }
+  .menu-card h3 { min-height:2.9em; }
   .feature-grid b { transform:translateY(40px); }
   .feature-grid h3 { font-size:24px; }
   .feature-grid article:nth-child(2) { transform:none; }
