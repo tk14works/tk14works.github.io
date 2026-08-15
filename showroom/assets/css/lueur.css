@@ -37,7 +37,7 @@ a { color:inherit; text-decoration:none; }
 
 .concept { display:grid; grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr); column-gap:6vw; padding-bottom:clamp(110px,14vw,180px); }
 .concept .section-title { position:relative; z-index:1; }
-.concept .section-title h2 { font-size:clamp(36px,3.5vw,60px); white-space:nowrap; }
+.concept .section-title h2 { font-size:50px; white-space:nowrap; }
 .concept-copy { align-self:end; max-width:540px; padding:0 0 4px; font-size:15px; line-height:2.45; }
 .concept-copy p { margin:0 0 24px; }
 
