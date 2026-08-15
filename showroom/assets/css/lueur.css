@@ -155,6 +155,7 @@ footer p { margin:0; color:#beb8ab; font:9px var(--mono); }
 
 @media (min-width:801px) {
   .concept .section-title { top:-20px; }
+  .worries .section-title { position:relative; top:-50px; }
   .worry-list article { font-size:24px; }
   .features .section-title,.salon .section-title { display:grid; grid-template-columns:max-content; justify-content:end; justify-items:start; }
   .features .section-title>p,.salon .section-title>p { margin-bottom:18px; }
