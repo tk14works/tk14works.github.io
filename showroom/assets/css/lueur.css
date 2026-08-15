@@ -51,7 +51,7 @@ a { color:inherit; text-decoration:none; }
 .worry-list span { color:#c2bcae; font:10px var(--mono); }
 
 .features { padding-top:clamp(110px,14vw,180px); }
-.features .section-title { display:flex; align-items:flex-end; justify-content:space-between; gap:30px; margin-bottom:clamp(64px,8vw,110px); }
+.features .section-title { margin-bottom:clamp(64px,8vw,110px); }
 .features .section-title h2 { font-size:55px; }
 .feature-grid { display:grid; grid-template-columns:repeat(3,1fr); max-width:1180px; margin-left:auto; border-top:1px solid var(--line); }
 .feature-grid article { min-height:330px; padding:25px 30px 32px; border-right:1px solid var(--line); }
@@ -115,7 +115,7 @@ a { color:inherit; text-decoration:none; }
 .flow-list span { color:#ddd9d0; font-size:11px; }
 
 .salon { padding-top:clamp(110px,14vw,180px); }
-.salon .section-title { display:flex; align-items:end; justify-content:space-between; margin-bottom:90px; }
+.salon .section-title { margin-bottom:90px; }
 .salon .section-title h2 { font-size:55px; }
 .salon-grid { display:grid; grid-template-columns:.9fr 1.1fr; gap:8vw; align-items:start; }
 .salon-grid dl { margin:0; border-top:1px solid var(--line); }
