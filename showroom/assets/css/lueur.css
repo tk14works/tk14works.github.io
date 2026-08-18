@@ -27,7 +27,7 @@ a { color:inherit; text-decoration:none; }
 .button-dark:hover { color:#fff; background:var(--deep); }
 .hero-scroll { position:absolute; z-index:2; right:38px; bottom:39px; writing-mode:vertical-rl; font:9px var(--mono); letter-spacing:.16em; }
 .hero-scroll:after { content:''; display:block; width:1px; height:74px; margin:13px auto 0; background:#fff; }
-.hero-line-cta { position:absolute; z-index:6; top:27px; right:clamp(26px,5.6vw,88px); }
+.hero-line-cta { position:absolute; z-index:6; top:27px; right:clamp(26px,5.6vw,88px); background:rgba(255,255,255,.4); }
 
 .section { padding:clamp(110px,15vw,230px) clamp(25px,8.3vw,136px); }
 .soft-section { background:var(--soft); }
