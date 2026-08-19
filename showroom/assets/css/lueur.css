@@ -178,6 +178,9 @@ footer p { margin:0; color:#beb8ab; font:9px var(--mono); }
   .staff-copy p:not(.eyebrow) { max-width:540px; }
   .staff-signature { margin-right:9px; }
   .voices { padding-top:calc(clamp(110px,14vw,180px) - 25px); padding-bottom:calc(clamp(110px,15vw,230px) - 25px); }
+  .concept,.worries,.features,.menu,.gallery,.flow,.salon,.faq,.reserve { padding-top:calc(clamp(110px,14vw,180px) - 25px); padding-bottom:calc(clamp(110px,15vw,230px) - 25px); }
+  .concept .section-title,.worries .section-title { top:0; }
+  .worries .section-title,.flow .section-title { padding-top:0; }
   .voice-break-pc { display:block; }
   .voice-grid article:first-child p { max-width:none; }
 }
