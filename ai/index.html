@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>tk14 AI | AI・DX活用サポート</title>
   <meta name="description" content="生成AIを活用した業務効率化、文章作成、発信整理、日々の作業改善をわかりやすくサポートします。">
-  <link rel="stylesheet" href="/assets/css/site.css?v=68">
+  <link rel="stylesheet" href="/assets/css/site.css?v=69">
   <link rel="stylesheet" href="/assets/css/reservation-page.css?v=8">
   <style>
     @media (max-width: 759px) {
@@ -72,14 +72,88 @@
   </nav>
 
   <main>
-    <section class="ai-hero" id="home">
-      <div class="ai-hero__inner ai-hero__inner--single">
+    <section class="ai-hero ai-hero--connected" id="home">
+      <div class="ai-hero__inner ai-hero__inner--visual">
         <div class="ai-hero__copy" data-reveal>
           <p class="ai-hero__eyebrow">AI DX Support</p>
           <h1>AIで、<br>仕事を整える。</h1>
           <p class="ai-hero__lead">日々の業務を楽にする仕組みづくりから、ホームページ・LP制作まで。<br>今の活動に合わせて、必要なところから一緒に整えます。</p>
         </div>
+        <div class="ai-hero__visual" aria-hidden="true">
+          <svg viewBox="0 0 620 420" role="presentation" focusable="false">
+            <defs>
+              <linearGradient id="ai-hero-card-fill" x1="0" x2="1" y1="0" y2="1">
+                <stop offset="0" stop-color="#9ae7e0" stop-opacity=".16" />
+                <stop offset="1" stop-color="#75aeea" stop-opacity=".05" />
+              </linearGradient>
+              <linearGradient id="ai-hero-line" x1="0" x2="1">
+                <stop offset="0" stop-color="#75d4cd" stop-opacity=".18" />
+                <stop offset=".48" stop-color="#78dff0" stop-opacity=".92" />
+                <stop offset="1" stop-color="#8bbbf2" stop-opacity=".18" />
+              </linearGradient>
+              <filter id="ai-hero-glow" x="-80%" y="-80%" width="260%" height="260%">
+                <feGaussianBlur stdDeviation="4" result="blur" />
+                <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
+              </filter>
+              <pattern id="ai-hero-dots" width="14" height="14" patternUnits="userSpaceOnUse">
+                <circle cx="2" cy="2" r="1.25" fill="#8ce0d9" fill-opacity=".24" />
+              </pattern>
+            </defs>
 
+            <rect class="ai-hero__dot-grid" x="40" y="76" width="170" height="126" rx="18" fill="url(#ai-hero-dots)" />
+            <rect class="ai-hero__dot-grid" x="468" y="32" width="112" height="78" rx="16" fill="url(#ai-hero-dots)" />
+
+            <g class="ai-hero__connections" fill="none" stroke="url(#ai-hero-line)" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="3 6">
+              <path d="M322 92 H384 Q406 92 406 114 V142" />
+              <path d="M258 204 H198 Q174 204 174 228 V258" />
+              <path d="M368 210 H438 Q460 210 460 234 V268" />
+              <path d="M292 315 H244 Q224 315 224 336 V372" />
+              <path d="M526 174 H574 Q596 174 596 198 V252" />
+              <path d="M530 338 H572" />
+            </g>
+            <g class="ai-hero__nodes" fill="#83e4e3" filter="url(#ai-hero-glow)">
+              <circle cx="322" cy="92" r="3" /><circle cx="406" cy="142" r="3" />
+              <circle cx="258" cy="204" r="3" /><circle cx="174" cy="258" r="3" />
+              <circle cx="368" cy="210" r="3" /><circle cx="460" cy="268" r="3" />
+              <circle cx="292" cy="315" r="3" /><circle cx="224" cy="372" r="3" />
+              <circle cx="526" cy="174" r="3" /><circle cx="596" cy="252" r="3" />
+              <circle cx="572" cy="338" r="3" />
+            </g>
+
+            <g class="ai-hero__ui-card ai-hero__ui-card--chat">
+              <rect x="264" y="30" width="116" height="86" rx="12" />
+              <path d="M306 53c-12 0-22 8-22 19 0 8 5 14 12 17l-2 10 10-6c1 0 2 0 2 0 12 0 22-8 22-19s-10-21-22-21Z" fill="#7cddd5" fill-opacity=".78" stroke="none" />
+              <circle cx="298" cy="73" r="2" fill="#153452" /><circle cx="306" cy="73" r="2" fill="#153452" /><circle cx="314" cy="73" r="2" fill="#153452" />
+            </g>
+
+            <g class="ai-hero__ui-card ai-hero__ui-card--sheet">
+              <rect x="384" y="142" width="184" height="116" rx="12" />
+              <rect x="404" y="162" width="25" height="30" rx="3" fill="#7cddd5" fill-opacity=".74" stroke="none" />
+              <path d="M410 173h13M410 180h13M416.5 166v20" stroke="#153452" stroke-width="1.5" />
+              <path d="M442 168h102M442 184h102M442 200h102M442 216h102M462 168v48M484 168v48M508 168v48M532 168v48" />
+            </g>
+
+            <g class="ai-hero__ui-card ai-hero__ui-card--calendar">
+              <rect x="110" y="210" width="164" height="120" rx="12" />
+              <path d="M110 245h164M148 230v-13M236 230v-13" />
+              <rect x="130" y="264" width="17" height="14" rx="2" /><rect x="157" y="264" width="17" height="14" rx="2" /><rect x="184" y="264" width="17" height="14" rx="2" /><rect x="211" y="264" width="17" height="14" rx="2" />
+              <rect x="130" y="288" width="17" height="14" rx="2" /><rect x="157" y="288" width="17" height="14" rx="2" /><rect x="184" y="288" width="17" height="14" rx="2" fill="#75d4cd" fill-opacity=".64" />
+            </g>
+
+            <g class="ai-hero__ui-card ai-hero__ui-card--browser">
+              <rect x="272" y="286" width="258" height="112" rx="12" />
+              <path d="M272 314h258" />
+              <circle cx="292" cy="300" r="3" fill="#91d9e6" stroke="none" /><circle cx="304" cy="300" r="3" fill="#91d9e6" stroke="none" /><circle cx="316" cy="300" r="3" fill="#91d9e6" stroke="none" />
+              <rect x="294" y="332" width="66" height="44" rx="4" fill="#75aeea" fill-opacity=".25" stroke="none" />
+              <path d="M378 336h126M378 348h92M378 360h112M378 372h72" />
+            </g>
+
+            <g class="ai-hero__chart" fill="#7fb8eb" fill-opacity=".24" stroke="none">
+              <rect x="544" y="290" width="13" height="56" rx="2" /><rect x="565" y="272" width="13" height="74" rx="2" /><rect x="586" y="248" width="13" height="98" rx="2" />
+            </g>
+            <path class="ai-hero__chart-line" d="M62 367 100 344 132 358 168 330 202 344 240 312" fill="none" />
+          </svg>
+        </div>
       </div>
     </section>
 

@@ -1909,6 +1909,121 @@ body.site-family .tk-hero__image.moment-hero-scroll-image {
   transition: border-color 180ms ease, background-color 180ms ease, color 180ms ease;
 }
 
+/* AI page hero: a restrained visual of connected digital workflows. */
+.ai-hero--connected {
+  position: relative;
+  isolation: isolate;
+}
+
+.ai-hero--connected::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background:
+    radial-gradient(circle at 76% 50%, rgba(77, 170, 201, 0.16), transparent 30%),
+    radial-gradient(circle at 38% 78%, rgba(117, 212, 205, 0.08), transparent 26%);
+  content: "";
+}
+
+.ai-hero__inner--visual {
+  position: relative;
+  min-height: 380px;
+}
+
+.ai-hero__inner--visual .ai-hero__copy {
+  position: relative;
+  z-index: 1;
+}
+
+.ai-hero__visual {
+  position: relative;
+  align-self: center;
+  width: 100%;
+  max-width: 580px;
+  margin-left: auto;
+  opacity: 0.78;
+  pointer-events: none;
+}
+
+.ai-hero__visual svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.ai-hero__ui-card > rect:first-child {
+  fill: url(#ai-hero-card-fill);
+  stroke: rgba(171, 229, 235, 0.48);
+  stroke-width: 1.25;
+}
+
+.ai-hero__ui-card > path,
+.ai-hero__ui-card > rect:not(:first-child) {
+  fill: none;
+  stroke: rgba(184, 230, 236, 0.48);
+  stroke-width: 1.2;
+}
+
+.ai-hero__dot-grid {
+  opacity: 0.72;
+}
+
+.ai-hero__connections path {
+  animation: ai-hero-flow 12s linear infinite;
+}
+
+.ai-hero__nodes circle {
+  animation: ai-hero-pulse 3.8s ease-in-out infinite;
+}
+
+.ai-hero__nodes circle:nth-child(3n) {
+  animation-delay: -1.3s;
+}
+
+.ai-hero__ui-card--chat,
+.ai-hero__ui-card--sheet,
+.ai-hero__ui-card--calendar,
+.ai-hero__ui-card--browser {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: ai-hero-float 7s ease-in-out infinite;
+}
+
+.ai-hero__ui-card--sheet { animation-delay: -2.6s; }
+.ai-hero__ui-card--calendar { animation-delay: -4.1s; }
+.ai-hero__ui-card--browser { animation-delay: -1.3s; }
+
+.ai-hero__chart-line {
+  stroke: rgba(117, 212, 205, 0.36);
+  stroke-width: 1.2;
+}
+
+@keyframes ai-hero-flow {
+  to { stroke-dashoffset: -54; }
+}
+
+@keyframes ai-hero-pulse {
+  0%, 100% { opacity: 0.45; transform: scale(0.88); }
+  50% { opacity: 1; transform: scale(1.25); }
+}
+
+@keyframes ai-hero-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ai-hero__connections path,
+  .ai-hero__nodes circle,
+  .ai-hero__ui-card--chat,
+  .ai-hero__ui-card--sheet,
+  .ai-hero__ui-card--calendar,
+  .ai-hero__ui-card--browser {
+    animation: none;
+  }
+}
+
 @media (hover: hover) and (pointer: fine) {
   .ai-hero__button:hover {
     border-color: #66717C;
@@ -2126,6 +2241,22 @@ body.site-family .tk-hero__image.moment-hero-scroll-image {
     font-size: clamp(3.7rem, 5.4vw, 4.6rem);
     line-height: 1.16;
   }
+
+  .ai-hero__inner--visual {
+    grid-template-columns: minmax(0, 1.25fr) minmax(360px, 0.95fr);
+    gap: clamp(20px, 3vw, 50px);
+    align-items: center;
+  }
+
+  .ai-hero__inner--visual .ai-hero__copy {
+    width: min(100%, 600px);
+    margin: 0;
+  }
+
+  .ai-hero__inner--visual .ai-hero__copy h1 {
+    font-size: clamp(3.25rem, 4.7vw, 4.35rem);
+    line-height: 1.17;
+  }
 }
 
 @media (max-width: 759px) {
@@ -2141,6 +2272,30 @@ body.site-family .tk-hero__image.moment-hero-scroll-image {
     font-size: clamp(0.68rem, 3.1vw, 0.75rem);
     letter-spacing: -0.03em;
     white-space: nowrap;
+  }
+
+  .ai-hero__inner--visual {
+    display: block;
+    min-height: 0;
+  }
+
+  .ai-hero__inner--visual .ai-hero__copy {
+    max-width: 360px;
+  }
+
+  .ai-hero__visual {
+    position: absolute;
+    right: -160px;
+    bottom: -112px;
+    width: 500px;
+    max-width: none;
+    opacity: 0.36;
+  }
+
+  .ai-hero__chart,
+  .ai-hero__chart-line,
+  .ai-hero__dot-grid:first-of-type {
+    display: none;
   }
 
   .ai-feature {
