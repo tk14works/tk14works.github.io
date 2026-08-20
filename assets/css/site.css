@@ -2255,6 +2255,7 @@ body.site-family .tk-hero__image.moment-hero-scroll-image {
   .ai-hero__inner--visual .ai-hero__copy {
     width: min(100%, 600px);
     margin: 0;
+    transform: translateX(100px);
   }
 
   .ai-hero__inner--visual .ai-hero__copy h1 {
