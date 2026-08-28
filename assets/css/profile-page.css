@@ -307,3 +307,17 @@
     margin-left: auto;
   }
 }
+
+/* Keep Profile carousels full-bleed without using the scrollbar-inclusive viewport width. */
+@media (max-width: 759px) {
+  .profile-page .tk-gallery,
+  .profile-page .tk-pricing {
+    width: calc(100% + 40px);
+    margin-right: -20px;
+    margin-left: -20px;
+    padding-right: calc((100% - min(76vw, 350px)) / 2);
+    padding-left: calc((100% - min(76vw, 350px)) / 2);
+    scroll-padding-right: calc((100% - min(76vw, 350px)) / 2);
+    scroll-padding-left: calc((100% - min(76vw, 350px)) / 2);
+  }
+}
