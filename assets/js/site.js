@@ -93,18 +93,29 @@ document.querySelectorAll("[data-hero-slideshow]").forEach((slideshow) => {
 document.querySelectorAll("[data-scroll-cover-image]").forEach((image) => {
   const stage = image.parentElement;
   const cover = stage?.querySelector(":scope > .tk-hero");
+  const isProfilePage = document.body.classList.contains("profile-page");
+  const mobileViewport = window.matchMedia("(max-width: 759px)");
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   let frameId;
 
   if (!stage || !cover) return;
 
   const updateCoverClip = () => {
     frameId = undefined;
+
+    if (isProfilePage && reducedMotion.matches) {
+      image.style.setProperty("--tk-scroll-cover-clip", "0px");
+      return;
+    }
+
     const imageRect = image.getBoundingClientRect();
     const coverRect = cover.getBoundingClientRect();
     const visibleHeight = Math.max(0, Math.min(imageRect.height, coverRect.top - imageRect.top));
     const hiddenHeight = Math.max(0, imageRect.height - visibleHeight);
+    const coverProgress = imageRect.height ? Math.min(1, hiddenHeight / imageRect.height) : 0;
+    const adjustedProgress = isProfilePage && mobileViewport.matches ? coverProgress * coverProgress : coverProgress;
 
-    image.style.setProperty("--tk-scroll-cover-clip", `${Math.ceil(hiddenHeight)}px`);
+    image.style.setProperty("--tk-scroll-cover-clip", `${Math.ceil(imageRect.height * adjustedProgress)}px`);
   };
 
   const requestCoverClipUpdate = () => {

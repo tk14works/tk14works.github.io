@@ -44,6 +44,11 @@
   padding-bottom: 54px;
 }
 
+/* Hero copy uses phrase-level breaks on narrow screens. */
+.profile-hero-title-mobile-break {
+  display: none;
+}
+
 .profile-page .profile-hero-copy-surface {
   position: relative;
   z-index: 2;
@@ -233,11 +238,26 @@
   }
 
   .profile-page .tk-hero__copy {
+    width: min(100%, 900px);
     position: relative;
+  }
+
+  .profile-page .tk-hero-title--profile {
+    width: 100%;
+    max-width: none;
+    text-wrap: wrap;
   }
 
   .profile-page .tk-section[id] {
     scroll-margin-top: 82px;
+  }
+}
+
+/* Compact Profile Hero: settle into the existing Desktop frame at 1024px. */
+@media (min-width: 760px) and (max-width: 1023px) {
+  .profile-page .tk-hero__image {
+    aspect-ratio: auto;
+    height: clamp(472px, calc(600px - 12.5vw), 506px);
   }
 }
 
@@ -246,8 +266,44 @@
     padding-bottom: 44px;
   }
 
+  .profile-page .tk-hero-title--profile {
+    font-size: clamp(1.62rem, 7vw, 2.28rem);
+  }
+
+  .profile-hero-title-mobile-break {
+    display: block;
+  }
+
   .profile-page .profile-nav {
     border-color: rgba(248, 248, 248, 0.18);
     background: #23252d;
+  }
+}
+
+@media (max-width: 359px) {
+  .profile-page .tk-hero-title--profile {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 759px) {
+  .profile-page .tk-hero-title--profile {
+    width: calc(100% + 20px);
+    max-width: none;
+    margin-right: -10px;
+    margin-left: -10px;
+    font-size: clamp(1.4rem, 6vw, 2.28rem);
+    letter-spacing: 0.025em;
+    line-height: 1.45;
+  }
+
+  .profile-hero-title-mobile-break {
+    display: none;
+  }
+
+  .profile-page .tk-hero__copy > p:not(.tk-label) {
+    width: min(calc(100% + 20px), 680px);
+    margin-right: auto;
+    margin-left: auto;
   }
 }
