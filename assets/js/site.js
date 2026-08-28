@@ -103,7 +103,7 @@ document.querySelectorAll("[data-scroll-cover-image]").forEach((image) => {
   const updateCoverClip = () => {
     frameId = undefined;
 
-    if (isProfilePage && reducedMotion.matches) {
+    if (reducedMotion.matches) {
       image.style.setProperty("--tk-scroll-cover-clip", "0px");
       return;
     }
