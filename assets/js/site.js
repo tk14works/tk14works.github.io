@@ -1,16 +1,25 @@
+document.documentElement.classList.add("js-ready");
+
 const nav = document.querySelector("[data-nav]");
 const navToggle = document.querySelector("[data-nav-toggle]");
 
 if (nav && navToggle) {
+  const setNavState = (isOpen) => {
+    navToggle.setAttribute("aria-expanded", String(isOpen));
+    navToggle.setAttribute("aria-label", isOpen ? "メニューを閉じる" : "メニューを開く");
+  };
+
+  setNavState(nav.classList.contains("is-open"));
+
   navToggle.addEventListener("click", () => {
     const isOpen = nav.classList.toggle("is-open");
-    navToggle.setAttribute("aria-expanded", String(isOpen));
+    setNavState(isOpen);
   });
 
   nav.addEventListener("click", (event) => {
     if (event.target instanceof HTMLAnchorElement) {
       nav.classList.remove("is-open");
-      navToggle.setAttribute("aria-expanded", "false");
+      setNavState(false);
     }
   });
 }
