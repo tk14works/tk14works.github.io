@@ -3461,6 +3461,15 @@ body.site-family .tk-hero__image.moment-hero-scroll-image {
     color: var(--tk-muted);
   }
 
+  /* Family navigation uses a compact dropdown on mobile; the short labels do not need a full-width panel. */
+  .site-family .profile-nav {
+    top: 78px;
+    right: 14px;
+    left: auto;
+    width: min(220px, calc(100vw - 28px));
+    box-sizing: border-box;
+  }
+
   .profile-minimal .profile-nav a {
     padding: 13px 0;
   }
