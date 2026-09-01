@@ -3337,6 +3337,12 @@ body.site-family .tk-hero__image.moment-hero-scroll-image {
     gap: 32px;
   }
 
+  .profile-page #pricing .tk-pricing {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(2, auto);
+    grid-auto-flow: column;
+  }
+
   .tk-voices {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 24px;
