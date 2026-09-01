@@ -158,6 +158,7 @@ details p { margin:0; padding:0 35px 26px 0; color:var(--muted); font-size:11px;
 .reserve>p:not(.eyebrow) { margin:0 0 35px; color:#d7d2c7; font-size:12px; }
 .button-light { margin-right:18px; color:var(--ink); background:#fff; }
 .line-link { display:inline-block; border-bottom:1px solid #fff; padding:15px 1px; font-size:12px; }
+.reserve-note { margin:26px 0 0 !important; color:rgba(255,255,255,.62) !important; font-size:10px !important; line-height:1.8; }
 footer { display:flex; align-items:center; justify-content:space-between; padding:36px clamp(24px,7vw,120px); color:#fff; background:#252521; border-top:1px solid rgba(255,255,255,.25); }
 footer .logo { font-size:23px; }
 footer p { margin:0; color:#beb8ab; font:9px var(--mono); }
