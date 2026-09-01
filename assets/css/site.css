@@ -3679,6 +3679,10 @@ body.site-family .tk-hero__image.moment-hero-scroll-image {
     padding: 13px 0;
   }
 
+  .site-family .profile-nav {
+    width: min(220px, calc(100vw - 28px));
+  }
+
   .site-ai .profile-nav {
     border-color: rgba(140, 224, 217, 0.3);
     background: #102a43;
