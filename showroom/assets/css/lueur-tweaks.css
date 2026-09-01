@@ -1,2 +1,2 @@
 /* Photo-led portrait treatment kept separate for easy asset replacement. */
-.staff-portrait { background:linear-gradient(0deg,rgba(27,25,21,.38),rgba(27,25,21,.02) 56%),url('../images/lueur/owner.png') center/cover; }
+.staff-portrait { background-image:linear-gradient(0deg,rgba(27,25,21,.38),rgba(27,25,21,.02) 56%),url('../images/lueur/owner.png'); background-size:auto,cover; background-repeat:no-repeat; }
