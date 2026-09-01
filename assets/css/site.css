@@ -3470,6 +3470,15 @@ body.site-family .tk-hero__image.moment-hero-scroll-image {
     box-sizing: border-box;
   }
 
+  .site-ai .profile-nav,
+  .profile-page .profile-nav {
+    top: 78px;
+    right: 14px;
+    left: auto;
+    width: min(220px, calc(100vw - 28px));
+    box-sizing: border-box;
+  }
+
   .profile-minimal .profile-nav a {
     padding: 13px 0;
   }
@@ -3680,6 +3689,11 @@ body.site-family .tk-hero__image.moment-hero-scroll-image {
   }
 
   .site-family .profile-nav {
+    width: min(220px, calc(100vw - 28px));
+  }
+
+  .site-ai .profile-nav,
+  .profile-page .profile-nav {
     width: min(220px, calc(100vw - 28px));
   }
 
