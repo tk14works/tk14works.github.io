@@ -3698,13 +3698,13 @@ body.site-family .tk-hero__image.moment-hero-scroll-image {
   }
 
   .site-ai .profile-nav {
-    border-color: rgba(140, 224, 217, 0.3);
-    background: #102a43;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.24);
+    border-color: #d3e1e6;
+    background: #e6f3f2;
+    box-shadow: 0 20px 60px rgba(16, 42, 67, 0.14);
   }
 
   .site-ai .profile-nav a {
-    color: var(--tk-muted);
+    color: #102a43;
   }
 }
 
