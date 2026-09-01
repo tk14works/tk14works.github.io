@@ -3395,8 +3395,8 @@ body.site-family .tk-hero__image.moment-hero-scroll-image {
   }
 
   .site-top .tk-hero--text-only .tk-hero__copy {
-    padding-top: 24px;
-    padding-bottom: 30px;
+    padding-top: 40px;
+    padding-bottom: 46px;
   }
 
   .site-top #services {
@@ -3405,7 +3405,7 @@ body.site-family .tk-hero__image.moment-hero-scroll-image {
   }
 
   .site-top .tk-hero__copy h1 {
-    font-size: clamp(1.17rem, 4.95vw, 1.24rem);
+    font-size: clamp(1.35rem, 5.8vw, 1.55rem);
     line-height: 1.45;
     letter-spacing: 0.035em;
   }
@@ -3783,6 +3783,17 @@ body.site-family .tk-hero__image.moment-hero-scroll-image {
 
 /* At very narrow widths, let the heading wrap naturally instead of isolating a particle. */
 @media (max-width: 359px) {
+  .site-top .tk-hero--text-only .tk-hero__copy {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  .site-top .tk-hero__copy h1 {
+    font-size: 1.2rem;
+    letter-spacing: 0.02em;
+    line-height: 1.45;
+  }
+
   .site-family .tk-hero__copy h1 {
     font-size: 1.5rem;
     letter-spacing: 0;
