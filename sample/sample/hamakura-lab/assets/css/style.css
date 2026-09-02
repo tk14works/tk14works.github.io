@@ -49,7 +49,7 @@ h3 { font-weight: 750; }
 }
 .section-label--light { color: #b5edbe; }
 .section-heading { max-width: 680px; }
-.mobile-only { display: none; }
+.cta-copy-break { display: none; }
 .section-heading h2 { margin-bottom: 24px; font-size: clamp(1.95rem, 3.2vw, 2.8rem); }
 .section-heading > p:last-child { max-width: 680px; margin-bottom: 0; color: var(--muted); }
 .section--green .section-heading > p:last-child { color: rgba(255,255,255,.76); }
@@ -238,8 +238,10 @@ details p { max-width: 650px; margin: -5px 0 22px; color: var(--muted); font-siz
   /* Wider compact layouts use natural text flow instead of mobile-only line breaks. */
   .intro h2 span { display: inline; }
   .people h2 span { display: inline; }
+  .final-cta__inner > p:not(.section-label) { max-width: 680px; }
   .concept h2 br, .people h2 br, .feature-card h3 br, .person-card h3 br,
-  .message-card h3 br, .message .section-heading h2 br, .final-cta h2 br { display: none; }
+  .message-card h3 br, .message .section-heading h2 br { display: none; }
+  .final-cta h2 br { display: none; }
 }
 
 @media (max-width: 819px) {
@@ -288,9 +290,16 @@ details p { max-width: 650px; margin: -5px 0 22px; color: var(--muted); font-siz
   .site-footer__bottom { margin-top: 40px; }
 }
 
+@media (max-width: 819px) {
+  .cta-copy-break { display: inline; }
+}
+
 @media (max-width: 639px) {
-  .mobile-only { display: inline; }
   .final-cta__inner > p:not(.section-label) { font-size: .9rem; letter-spacing: -.02em; }
+}
+
+@media (min-width: 640px) and (max-width: 819px) {
+  .final-cta h2 br { display: block; }
 }
 
 @media (max-width: 479px) {
