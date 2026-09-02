@@ -240,8 +240,8 @@ details p { max-width: 650px; margin: -5px 0 22px; color: var(--muted); font-siz
   .brand__text small { font-size: .56rem; }
   .button--header { min-height: 44px; padding: 8px 13px; font-size: .72rem; }
   .hero { position: relative; padding: 34px 0 42px; }
-  .hero::before { position: absolute; top: 20px; right: -64px; width: 160px; aspect-ratio: 1; content: ""; border: 1px solid rgba(181,237,190,.4); border-radius: 50%; transform: rotate(12deg); }
-  .hero::after { position: absolute; top: 66px; right: 22px; width: 44px; height: 44px; content: ""; border: 1px solid rgba(181,237,190,.44); border-radius: 50%; }
+  .hero::before { position: absolute; top: 10px; right: clamp(10px, 4vw, 20px); width: clamp(120px, 28vw, 160px); aspect-ratio: 1; content: ""; border: 1px solid rgba(181,237,190,.34); border-radius: 50%; transform: rotate(12deg); }
+  .hero::after { display: none; }
   .hero__grid, .intro__grid, .actions__grid, .faq__grid { grid-template-columns: 1fr; gap: 28px; }
   .hero .eyebrow { display: none; }
   .hero h1 { margin-bottom: 20px; font-size: clamp(2.6rem, 11.8vw, 2.85rem); }
