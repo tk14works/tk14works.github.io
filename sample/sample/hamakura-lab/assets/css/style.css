@@ -51,7 +51,7 @@ h3 { font-weight: 750; }
 .section-heading { max-width: 680px; }
 .mobile-only { display: none; }
 .section-heading h2 { margin-bottom: 24px; font-size: clamp(1.95rem, 3.2vw, 2.8rem); }
-.section-heading > p:last-child { max-width: 540px; margin-bottom: 0; color: var(--muted); }
+.section-heading > p:last-child { max-width: 680px; margin-bottom: 0; color: var(--muted); }
 .section--green .section-heading > p:last-child { color: rgba(255,255,255,.76); }
 
 .site-header {
@@ -125,10 +125,10 @@ h3 { font-weight: 750; }
 .hero__line--one { top: 52px; left: 0; }
 .hero__line--two { right: 76px; bottom: 62px; width: 46px; height: 46px; }
 
-.intro__grid { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(330px, .88fr); gap: 80px; align-items: start; }
+.intro__grid { display: grid; grid-template-columns: 1fr; gap: 32px; align-items: start; }
 .intro h2 { margin-bottom: 0; font-size: clamp(1.95rem, 3.2vw, 2.8rem); }
 .intro h2 span { display: block; }
-.intro__body { padding-top: 18px; color: var(--muted); }
+.intro__body { max-width: 680px; padding-top: 0; color: var(--muted); }
 .intro__body p { margin-bottom: 20px; }
 .keyword-row { display: flex; align-items: center; gap: 12px; margin-top: 30px; color: var(--deep-green); font-size: 1.25rem; font-weight: 850; }
 .keyword-row span { padding: 7px 15px; background: var(--mint); border-radius: 999px; }
@@ -142,6 +142,8 @@ h3 { font-weight: 750; }
 
 .section-heading--split { display: flex; align-items: end; justify-content: space-between; gap: 60px; max-width: none; }
 .section-heading--split > p { max-width: 320px; margin-bottom: 8px; }
+.people .section-heading--split { display: block; }
+.people .section-heading--split > p { max-width: 680px; margin-top: 20px; margin-bottom: 0; }
 .people .section-heading h2 { font-size: clamp(2.05rem, 3.2vw, 2.8rem); }
 .people__cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 64px; }
 .person-card { overflow: hidden; background: #fff; border: 1px solid var(--line); border-radius: var(--radius-md); box-shadow: 0 8px 28px rgba(16,35,29,.05); }
@@ -158,11 +160,11 @@ h3 { font-weight: 750; }
 .person-card--community .person-card__visual { background: var(--sky); }
 .card-link { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 10px 0; color: var(--deep-green); font-size: .79rem; font-weight: 900; transition: color .2s ease; }
 
-.actions__grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 100px; align-items: center; }
+.actions__grid { display: grid; grid-template-columns: 1fr; gap: 44px; align-items: start; }
 .actions h2 { margin-bottom: 22px; font-size: clamp(2.05rem, 3.2vw, 2.8rem); }
-.actions__intro > p:not(.section-label) { max-width: 360px; margin-bottom: 30px; color: var(--muted); }
+.actions__intro > p:not(.section-label) { max-width: 680px; margin-bottom: 30px; color: var(--muted); }
 .actions__caption { display: inline-block; color: var(--deep-green); font-size: 1.35rem; font-weight: 850; transform: rotate(-4deg); }
-.actions__list { display: grid; gap: 0; background: rgba(255,255,255,.62); border: 1px solid rgba(16,35,29,.1); border-radius: var(--radius-md); }
+.actions__list { display: grid; max-width: 880px; gap: 0; background: rgba(255,255,255,.62); border: 1px solid rgba(16,35,29,.1); border-radius: var(--radius-md); }
 .action-row { display: grid; grid-template-columns: 48px 1fr; gap: 18px; padding: 29px 30px; border-bottom: 1px solid var(--line); }
 .action-row:last-child { border-bottom: 0; }
 .action-row > span { color: var(--green); font-size: .75rem; font-weight: 900; }
@@ -235,7 +237,7 @@ details p { max-width: 650px; margin: -5px 0 22px; color: var(--muted); font-siz
   /* Wider compact layouts use natural text flow instead of mobile-only line breaks. */
   .intro h2 span { display: inline; }
   .concept h2 br, .people h2 br, .feature-card h3 br, .person-card h3 br,
-  .message-card h3 br, .final-cta h2 br { display: none; }
+  .message-card h3 br, .message .section-heading h2 br, .final-cta h2 br { display: none; }
 }
 
 @media (max-width: 819px) {
