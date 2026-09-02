@@ -292,10 +292,10 @@ details p { max-width: 650px; margin: -5px 0 22px; color: var(--muted); font-siz
 
 @media (max-width: 819px) {
   .cta-copy-break { display: inline; }
+  .hero__actions .text-link { margin-left: 2em; }
 }
 
 @media (max-width: 639px) {
-  .hero__actions .text-link { margin-left: 2em; }
   .final-cta__inner > p:not(.section-label) { font-size: .9rem; letter-spacing: -.02em; }
 }
 
