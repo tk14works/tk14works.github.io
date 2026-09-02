@@ -280,6 +280,14 @@ details p { max-width: 650px; margin: -5px 0 22px; color: var(--muted); font-siz
   .site-footer__bottom { margin-top: 40px; }
 }
 
+@media (max-width: 479px) {
+  .hero__visual { top: 70px; width: 22%; height: 160px; }
+  .hero__visual::before { top: 10px; left: 50%; width: clamp(70px, 20vw, 84px); }
+  .hero__visual::after { top: 30px; left: 14%; width: clamp(36px, 10vw, 42px); height: clamp(36px, 10vw, 42px); }
+  .hero__line--one { top: 18px; left: 14%; width: clamp(40px, 11vw, 46px); height: clamp(40px, 11vw, 46px); }
+  .hero__line--two { top: 95px; right: 2px; bottom: auto; width: clamp(26px, 7vw, 30px); height: clamp(26px, 7vw, 30px); }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
 }
