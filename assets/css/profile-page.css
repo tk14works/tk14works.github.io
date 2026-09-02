@@ -137,6 +137,12 @@
   }
 }
 
+@media (min-width: 1024px) {
+  .profile-page #pricing .tk-pricing {
+    grid-auto-flow: row;
+  }
+}
+
 .profile-page #works,
 .profile-page #flow,
 .profile-page #faq {
