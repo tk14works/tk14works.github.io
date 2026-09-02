@@ -134,11 +134,6 @@
     margin-right: auto;
     margin-left: auto;
     justify-content: center;
-  }
-}
-
-@media (min-width: 1024px) {
-  .profile-page #pricing .tk-pricing {
     grid-auto-flow: row;
   }
 }
