@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 486 420" role="img" aria-labelledby="title desc">
+  <title id="title">つながりを表す円形モチーフ</title>
+  <desc id="desc">大きな円の周囲に複数の小さな円が重なった図形</desc>
+  <g fill="none" stroke="#b5edbe" stroke-width="1" stroke-opacity=".5" vector-effect="non-scaling-stroke">
+    <circle cx="243" cy="183" r="165" />
+    <circle cx="119" cy="75" r="41" />
+    <circle cx="46" cy="98" r="46" />
+    <circle cx="387" cy="335" r="23" />
+  </g>
+</svg>
