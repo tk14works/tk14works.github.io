@@ -230,6 +230,16 @@
   color: #2a2d34;
 }
 
+@media (max-width: 759px) {
+  .profile-page #contact .tk-contact > p:not(.profile-section-kicker) {
+    font-size: 0.9375rem;
+  }
+
+  .profile-contact-copy-phrase {
+    white-space: nowrap;
+  }
+}
+
 @media (hover: hover) and (pointer: fine) {
   .profile-page #contact .tk-button:hover {
     border-color: var(--tk-gold);
