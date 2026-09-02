@@ -242,7 +242,7 @@ details p { max-width: 650px; margin: -5px 0 22px; color: var(--muted); font-siz
   .hero { padding: 34px 0 42px; }
   .hero__grid, .intro__grid, .actions__grid, .faq__grid { grid-template-columns: 1fr; gap: 28px; }
   .hero .eyebrow { display: none; }
-  .hero h1 { margin-bottom: 20px; font-size: clamp(2.6rem, 11.8vw, 3.45rem); }
+  .hero h1 { margin-bottom: 20px; font-size: clamp(2.6rem, 11.8vw, 2.85rem); }
   .hero__lead { margin-bottom: 24px; font-size: .98rem; line-height: 1.8; }
   .hero__visual { display: none; }
   .hero__note { display: none; }
