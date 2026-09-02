@@ -230,6 +230,16 @@
   color: #2a2d34;
 }
 
+.profile-contact-copy-break {
+  display: none;
+}
+
+@media (max-width: 759px) {
+  .profile-contact-copy-break {
+    display: block;
+  }
+}
+
 @media (hover: hover) and (pointer: fine) {
   .profile-page #contact .tk-button:hover {
     border-color: var(--tk-gold);
