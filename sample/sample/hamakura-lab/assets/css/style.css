@@ -152,9 +152,11 @@ h3 { font-weight: 750; }
 .person-card__content { padding: 30px 26px 28px; }
 .person-card__kicker { margin-bottom: 13px; color: var(--green); font-size: .73rem; font-weight: 900; letter-spacing: .11em; }
 .person-card h3 { margin-bottom: 15px; font-size: 1.55rem; }
-.person-card__content > p:not(.person-card__kicker) { min-height: 78px; margin-bottom: 18px; color: var(--muted); font-size: .87rem; line-height: 1.75; }
-.person-card ul { display: grid; gap: 7px; min-height: 95px; margin: 0 0 25px; padding: 0; list-style: none; color: var(--ink); font-size: .82rem; font-weight: 700; }
+.person-card__content > p:not(.person-card__kicker):not(.person-card__benefit-label) { min-height: 78px; margin-bottom: 18px; color: var(--muted); font-size: .87rem; line-height: 1.75; }
+.person-card ul { display: grid; gap: 7px; min-height: 0; margin: 0 0 25px; padding: 0; list-style: none; color: var(--ink); font-size: .82rem; font-weight: 700; }
 .person-card li::before { margin-right: 8px; content: "✓"; color: var(--green); }
+.person-card__benefit-label { margin: 24px 0 12px; color: var(--green); font-size: .72rem; font-weight: 900; letter-spacing: .11em; }
+.person-card__list--benefits { margin-bottom: 25px; }
 .person-card--business .person-card__visual { background: var(--mint); }
 .person-card--maker .person-card__visual { background: var(--butter); }
 .person-card--community .person-card__visual { background: var(--sky); }
@@ -181,6 +183,7 @@ h3 { font-weight: 750; }
 .message-card__role { margin-bottom: 8px; color: var(--green); font-size: .7rem; font-weight: 900; letter-spacing: .12em; }
 .message-card h3 { margin-bottom: 24px; font-size: 1.45rem; }
 .message-card h3 small { font-size: .7em; font-weight: 700; }
+.message-card__lead { margin: 0 0 18px; font-size: .98rem; font-weight: 800; line-height: 1.6; }
 .message-card blockquote { margin: 0 0 20px; padding-left: 17px; border-left: 3px solid var(--coral); font-size: 1rem; font-weight: 800; line-height: 1.65; }
 .message-card__body > p:last-child { margin-bottom: 0; color: var(--muted); font-size: .84rem; }
 .message__note { margin: 18px 0 0; color: var(--muted); font-size: .72rem; }
