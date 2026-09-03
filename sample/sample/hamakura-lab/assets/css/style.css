@@ -158,6 +158,7 @@ h3 { font-weight: 750; }
 .person-card li::before { margin-right: 8px; content: "✓"; color: var(--green); }
 .person-card__benefit-label { margin: 0 0 12px; color: var(--green); font-size: .72rem; font-weight: 900; letter-spacing: .11em; }
 .person-card__list--benefits { margin-bottom: 25px; }
+.person-card--business h3 .person-card__keep-break { display: block; }
 .person-card--business .person-card__visual { background: var(--mint); }
 .person-card--maker .person-card__visual { background: var(--butter); }
 .person-card--community .person-card__visual { background: var(--sky); }
@@ -245,7 +246,7 @@ details p { max-width: 650px; margin: -5px 0 22px; color: var(--muted); font-siz
   .person-card__benefits { grid-column: 2; }
   .person-card__benefit-label { font-size: .78rem; }
   .person-card ul { gap: 10px; font-size: .95rem; }
-  .person-card .card-link { grid-column: 1 / -1; margin-top: 28px; }
+  .person-card .card-link { grid-column: 1 / -1; margin-top: 0; }
 }
 
 @media (min-width: 640px) {
