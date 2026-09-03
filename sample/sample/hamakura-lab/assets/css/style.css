@@ -111,7 +111,8 @@ h3 { font-weight: 750; }
 .hero__copy { position: relative; z-index: 1; }
 .hero h1 { margin-bottom: 24px; font-size: clamp(2.85rem, 4.2vw, 4rem); font-weight: 800; letter-spacing: -.05em; }
 .hero h1 em { color: #a9ecb7; font-style: normal; }
-.hero h1 span { display: block; margin-top: 12px; color: #a9ecb7; font-size: .42em; font-weight: 700; letter-spacing: .03em; }
+.hero h1 span { display: block; color: #a9ecb7; font-size: inherit; font-weight: inherit; letter-spacing: inherit; }
+.hero__mobile-break { display: none; }
 .hero__actions { display: flex; align-items: center; flex-wrap: wrap; gap: 20px; }
 .hero__visual { position: relative; min-height: 420px; display: grid; place-items: center; padding-bottom: 56px; }
 .hero__motif { display: none; width: 100%; height: auto; }
@@ -288,6 +289,7 @@ details p { max-width: 650px; margin: -5px 0 22px; color: var(--muted); font-siz
 }
 
 @media (max-width: 639px) {
+  .hero__mobile-break { display: block; }
   .final-cta__inner > p:not(.section-label) { font-size: .9rem; letter-spacing: -.02em; }
 }
 
