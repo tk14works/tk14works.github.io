@@ -292,7 +292,7 @@ details p { max-width: 650px; margin: -5px 0 22px; color: var(--muted); font-siz
 
 @media (max-width: 819px) {
   .cta-copy-break { display: inline; }
-  .hero__actions .text-link { margin-left: 2em; }
+  .hero__actions .text-link { margin-left: 1em; }
 }
 
 @media (max-width: 639px) {
