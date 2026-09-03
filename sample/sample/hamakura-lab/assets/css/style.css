@@ -184,7 +184,9 @@ h3 { font-weight: 750; }
 .message-card h3 { margin-bottom: 24px; font-size: 1.45rem; }
 .message-card h3 small { font-size: .7em; font-weight: 700; }
 .message-card blockquote { margin: 0 0 20px; padding-left: 17px; border-left: 3px solid var(--coral); font-size: 1rem; font-weight: 800; line-height: 1.65; }
-.message-card__body > p:last-child { margin-bottom: 0; color: var(--muted); font-size: .84rem; }
+.message-card__copy { color: var(--muted); font-size: .84rem; }
+.message-card__copy p { margin-bottom: 12px; }
+.message-card__copy p:last-child { margin-bottom: 0; }
 .message__note { margin: 18px 0 0; color: var(--muted); font-size: .72rem; }
 
 .faq__grid { display: grid; grid-template-columns: 1fr; gap: 44px; align-items: start; }
