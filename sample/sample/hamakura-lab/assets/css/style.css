@@ -256,7 +256,7 @@ details p { max-width: 650px; margin: -5px 0 22px; color: var(--muted); font-siz
   .hero::before, .hero::after { display: none; }
   .hero__visual { position: absolute; top: 0; right: 0; z-index: 0; display: block; width: 54%; height: 190px; min-height: 0; padding: 0; pointer-events: none; }
   .hero__visual::before, .hero__visual::after, .hero__line { display: none; }
-  .hero__motif { position: absolute; top: 0; right: 0; z-index: 0; display: block; width: clamp(150px, 34vw, 280px); height: auto; aspect-ratio: 486 / 420; object-fit: contain; }
+  .hero__motif { position: absolute; top: calc(34px - 2.02vw); right: 0; z-index: 0; display: block; width: clamp(150px, 34vw, 280px); height: auto; aspect-ratio: 486 / 420; object-fit: contain; }
   .hero__visual-note { display: none; }
   .hero__grid, .intro__grid, .actions__grid, .faq__grid { grid-template-columns: 1fr; gap: 28px; }
   .hero .eyebrow { display: none; }
