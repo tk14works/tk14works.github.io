@@ -243,10 +243,11 @@ details p { max-width: 650px; margin: -5px 0 22px; color: var(--muted); font-siz
   .person-card__content { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: 48px; padding: 34px 42px 30px; }
   .person-card__message { min-height: 0; }
   .person-card h3 { font-size: 1.8rem; }
-  .person-card__benefits { grid-column: 2; }
+  .person-card__message { grid-column: 1; grid-row: 1; }
+  .person-card__benefits { grid-column: 2; grid-row: 1; }
   .person-card__benefit-label { font-size: .78rem; }
   .person-card ul { gap: 10px; font-size: .95rem; }
-  .person-card .card-link { grid-column: 1 / -1; margin-top: 0; }
+  .person-card .card-link { grid-column: 1; grid-row: 1; align-self: end; min-height: 52px; margin-top: 0; padding: 0; align-items: flex-start; }
 }
 
 @media (min-width: 960px) and (max-width: 1099px) {
