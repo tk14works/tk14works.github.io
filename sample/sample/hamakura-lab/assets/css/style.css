@@ -202,7 +202,7 @@ details p { max-width: 650px; margin: -5px 0 22px; color: var(--muted); font-siz
 
 .final-cta { text-align: center; }
 .final-cta__inner { display: grid; justify-items: center; }
-.final-cta h2 { margin-bottom: 23px; font-size: clamp(2.3rem, 3.6vw, 3.3rem); }
+.final-cta h2 { margin-bottom: 23px; font-size: clamp(1.95rem, 3.2vw, 2.8rem); }
 .final-cta p:not(.section-label) { max-width: 520px; margin-bottom: 32px; color: var(--muted); }
 
 .site-footer { padding: 50px 0 24px; color: #fff; background: var(--ink); }
@@ -307,7 +307,7 @@ details p { max-width: 650px; margin: -5px 0 22px; color: var(--muted); font-siz
   .message-card__photo { aspect-ratio: 5 / 4; }
   .message-card__body { padding: 24px 21px; }
   .faq__grid { gap: 35px; }
-  .final-cta h2 { font-size: 2.45rem; }
+  .final-cta h2 { font-size: 1.9rem; }
   .site-footer__inner, .site-footer__meta { align-items: flex-start; flex-direction: column; }
   .site-footer__meta { gap: 8px; }
   .site-footer__bottom { margin-top: 40px; }
