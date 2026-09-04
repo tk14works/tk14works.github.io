@@ -225,6 +225,10 @@
   color: var(--tk-gold);
 }
 
+.profile-contact-copy-mobile-break {
+  display: none;
+}
+
 .profile-page #contact .tk-button {
   border-color: #f7f6f3;
   background: #f7f6f3;
@@ -238,6 +242,10 @@
 
   .profile-contact-copy-phrase {
     white-space: nowrap;
+  }
+
+  .profile-contact-copy-mobile-break {
+    display: block;
   }
 }
 
