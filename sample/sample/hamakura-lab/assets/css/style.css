@@ -131,12 +131,6 @@ h3 { font-weight: 750; }
 .intro__body p { margin-bottom: 20px; }
 .intro__source-copy p:last-child { margin-bottom: 0; }
 
-.concept__features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 64px; }
-.feature-card { min-height: 230px; padding: 30px; background: rgba(255,255,255,.72); border: 1px solid rgba(8,107,79,.12); border-radius: var(--radius-md); }
-.feature-card__number { display: block; margin-bottom: 28px; color: var(--green); font-size: .75rem; font-weight: 900; letter-spacing: .1em; }
-.feature-card h3 { margin-bottom: 13px; font-size: 1.42rem; }
-.feature-card p { margin-bottom: 0; color: var(--muted); font-size: .9rem; }
-
 .section-heading--split { display: flex; align-items: end; justify-content: space-between; gap: 60px; max-width: none; }
 .section-heading--split > p { max-width: 320px; margin-bottom: 8px; }
 .people .section-heading--split { display: block; }
@@ -229,7 +223,7 @@ details p { max-width: 650px; margin: -5px 0 22px; color: var(--muted); font-siz
 @media (max-width: 959px) {
   /* Tablet follows the mobile reading order until the desktop composition has room. */
   .intro__grid, .actions__grid, .faq__grid { grid-template-columns: 1fr; gap: 42px; }
-  .concept__features, .people__cards, .message__cards { grid-template-columns: 1fr; }
+  .people__cards, .message__cards { grid-template-columns: 1fr; }
   .people__cards .person-card:last-child { grid-column: auto; width: auto; justify-self: stretch; }
   .section-heading--split { display: block; }
   .section-heading--split > p { max-width: 540px; margin-top: 20px; }
@@ -258,7 +252,7 @@ details p { max-width: 650px; margin: -5px 0 22px; color: var(--muted); font-siz
   .intro h2 span { display: inline; }
   .people h2 span { display: inline; }
   .final-cta__inner > p:not(.section-label) { max-width: 680px; }
-  .concept h2 br, .people h2 br, .feature-card h3 br, .person-card h3 br,
+  .people h2 br, .person-card h3 br,
   .message-card h3 br, .message .section-heading h2 br { display: none; }
   .final-cta h2 br { display: none; }
 }
@@ -286,10 +280,7 @@ details p { max-width: 650px; margin: -5px 0 22px; color: var(--muted); font-siz
   .people .section-heading h2 { font-size: clamp(1.45rem, 7.2vw, 1.9rem); letter-spacing: -.045em; }
   .message .section-heading h2 { font-size: clamp(1.4rem, 7vw, 1.85rem); letter-spacing: -.045em; white-space: nowrap; }
   .intro__body { padding-top: 0; }
-  .keyword-row { gap: 7px; font-size: .95rem; }
-  .keyword-row span { padding: 6px 10px; }
-  .concept__features, .people__cards, .message__cards { grid-template-columns: 1fr; margin-top: 40px; }
-  .feature-card { min-height: 0; padding: 24px; }
+  .people__cards, .message__cards { grid-template-columns: 1fr; margin-top: 40px; }
   .section-heading--split { display: block; }
   .section-heading--split > p { margin-top: 20px; }
   .person-card__message { min-height: 0; }
