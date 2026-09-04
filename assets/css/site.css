@@ -3829,4 +3829,12 @@ body.site-family .tk-hero__image.moment-hero-scroll-image {
     width: 44px;
     height: 44px;
   }
+
+  .site-family #contact .tk-contact > p {
+    font-size: 0.9375rem;
+  }
+
+  .site-family #contact .family-contact-copy-phrase {
+    white-space: nowrap;
+  }
 }
