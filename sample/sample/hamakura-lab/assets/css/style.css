@@ -236,6 +236,8 @@ details p { max-width: 650px; margin: -5px 0 22px; color: var(--muted); font-siz
   .person-card__benefit-label { font-size: .78rem; }
   .person-card ul { gap: 10px; font-size: .95rem; }
   .person-card .card-link { grid-column: 1; grid-row: 1; align-self: end; min-height: 52px; margin-top: 0; padding: 0; align-items: flex-start; }
+  .person-card--community h3 { font-size: 1.5rem; letter-spacing: -.06em; white-space: nowrap; }
+  .person-card--community .person-card__message > p { font-size: .82rem; letter-spacing: -.04em; white-space: nowrap; }
 }
 
 @media (min-width: 820px) and (max-width: 833px) {
@@ -249,6 +251,8 @@ details p { max-width: 650px; margin: -5px 0 22px; color: var(--muted); font-siz
 
 @media (min-width: 960px) and (max-width: 1099px) {
   /* Give the longer business CTA the same top edge as the one-line CTAs. */
+  .person-card--community h3 { font-size: 1.3rem; letter-spacing: -.06em; white-space: nowrap; }
+  .person-card--community .person-card__message > p { font-size: .8rem; letter-spacing: -.04em; white-space: nowrap; }
   .people__cards .card-link { min-height: 66px; align-items: flex-start; }
 }
 
