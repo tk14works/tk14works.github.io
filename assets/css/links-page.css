@@ -1,0 +1,142 @@
+.links-page {
+  min-height: 100svh;
+  background: #f7f5ef;
+  color: var(--ink);
+}
+
+.links-main {
+  width: min(calc(100% - 40px), 560px);
+  margin: 0 auto;
+  padding: clamp(48px, 8vw, 86px) 0 36px;
+}
+
+.links-intro {
+  margin-bottom: 42px;
+}
+
+.links-brand {
+  display: inline-block;
+  font-size: clamp(1.5rem, 4vw, 1.9rem);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  line-height: 1.2;
+}
+
+.links-intro__label {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  line-height: 1.4;
+}
+
+.links-group + .links-group {
+  margin-top: 32px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+}
+
+.links-group h1,
+.links-group h2 {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 1.4;
+}
+
+.links-service-list {
+  display: grid;
+  gap: 0;
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.links-service {
+  padding: 18px 0 20px;
+  border-bottom: 1px solid var(--line);
+}
+
+.links-service:first-child {
+  padding-top: 8px;
+}
+
+.links-service:last-child {
+  padding-bottom: 8px;
+  border-bottom: 0;
+}
+
+.links-service h2 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 1rem;
+  font-weight: 650;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+}
+
+.links-service__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  margin-top: 8px;
+}
+
+.links-service__links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  min-height: 44px;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.45;
+  text-decoration: underline;
+  text-decoration-color: rgba(31, 36, 40, 0.24);
+  text-underline-offset: 4px;
+  transition: color 180ms ease, text-decoration-color 180ms ease;
+}
+
+.links-service__links a:hover {
+  color: var(--ink);
+  text-decoration-color: currentColor;
+}
+
+.links-service__links a span {
+  font-size: 0.9rem;
+  line-height: 1;
+}
+
+.links-footer {
+  margin-top: 50px;
+  color: var(--muted);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-align: center;
+}
+
+.links-footer a:hover {
+  color: var(--ink);
+}
+
+@media (min-width: 760px) {
+  .links-main {
+    padding-top: 72px;
+  }
+
+  .links-intro {
+    margin-bottom: 48px;
+  }
+
+  .links-service {
+    padding-top: 20px;
+    padding-bottom: 22px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .links-service__links a {
+    transition: none;
+  }
+}
