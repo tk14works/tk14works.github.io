@@ -1,119 +1,201 @@
 .links-page {
   min-height: 100svh;
-  background: #f7f5ef;
+  background: #f5f4ef;
   color: var(--ink);
 }
 
 .links-main {
-  width: min(calc(100% - 40px), 560px);
+  width: min(calc(100% - 40px), 620px);
   margin: 0 auto;
-  padding: clamp(48px, 8vw, 86px) 0 36px;
+  padding: 42px 0 28px;
 }
 
-.links-intro {
-  margin-bottom: 42px;
+.links-header {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 54px;
 }
 
 .links-brand {
-  display: inline-block;
-  font-size: clamp(1.5rem, 4vw, 1.9rem);
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  line-height: 1.2;
+  flex: 0 0 auto;
+  color: var(--ink);
+  font-size: 1.7rem;
+  font-weight: 750;
+  letter-spacing: 0.1em;
+  line-height: 1;
 }
 
-.links-intro__label {
-  margin: 10px 0 0;
+.links-header__label,
+.links-intro__eyebrow {
+  margin: 0;
   color: var(--muted);
-  font-size: 0.68rem;
+  font-size: 0.66rem;
+  font-weight: 700;
   letter-spacing: 0.16em;
   line-height: 1.4;
 }
 
-.links-group + .links-group {
-  margin-top: 32px;
-  padding-top: 28px;
+.links-intro {
+  margin-bottom: 46px;
+}
+
+.links-intro__eyebrow {
+  margin-bottom: 13px;
+}
+
+.links-intro h1 {
+  max-width: none;
+  font-size: clamp(1.45rem, 3.2vw, 1.9rem);
+  font-weight: 650;
+  letter-spacing: 0.02em;
+  line-height: 1.35;
+}
+
+.links-intro__description {
+  max-width: 32em;
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 0.86rem;
+  line-height: 1.8;
+}
+
+.links-nav {
+  display: grid;
+  gap: 0;
+}
+
+.links-group {
+  padding: 25px 0 28px;
   border-top: 1px solid var(--line);
 }
 
-.links-group h1,
-.links-group h2 {
-  margin: 0;
+.links-group:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.links-group--contact {
+  margin-top: 4px;
+  padding-bottom: 0;
+}
+
+.links-group__heading {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.links-group__number {
   color: var(--muted);
-  font-size: 0.72rem;
+  font-size: 0.64rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   line-height: 1.4;
 }
 
-.links-service-list {
-  display: grid;
-  gap: 0;
-  margin: 12px 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-.links-service {
-  padding: 18px 0 20px;
-  border-bottom: 1px solid var(--line);
-}
-
-.links-service:first-child {
-  padding-top: 8px;
-}
-
-.links-service:last-child {
-  padding-bottom: 8px;
-  border-bottom: 0;
-}
-
-.links-service h2 {
+.links-group h2 {
   margin: 0;
-  color: var(--ink);
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 650;
   letter-spacing: 0.02em;
-  line-height: 1.5;
-}
-
-.links-service__links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px 18px;
-  margin-top: 8px;
-}
-
-.links-service__links a {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  min-height: 44px;
-  color: var(--muted);
-  font-size: 0.82rem;
   line-height: 1.45;
-  text-decoration: underline;
-  text-decoration-color: rgba(31, 36, 40, 0.24);
-  text-underline-offset: 4px;
-  transition: color 180ms ease, text-decoration-color 180ms ease;
 }
 
-.links-service__links a:hover {
+.links-actions {
+  display: grid;
+  gap: 8px;
+}
+
+.links-action {
+  display: grid;
+  grid-template-columns: 22px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 12px;
+  min-height: 54px;
+  padding: 10px 15px;
+  border: 1px solid rgba(31, 36, 40, 0.18);
+  background: rgba(255, 255, 255, 0.54);
   color: var(--ink);
-  text-decoration-color: currentColor;
+  font-size: 0.86rem;
+  line-height: 1.45;
+  transition: background-color 180ms ease, border-color 180ms ease, transform 180ms ease;
 }
 
-.links-service__links a span {
-  font-size: 0.9rem;
+.links-action:hover {
+  border-color: rgba(31, 36, 40, 0.36);
+  background: rgba(255, 255, 255, 0.92);
+  transform: translateY(-1px);
+}
+
+.links-action:active {
+  transform: translateY(0);
+}
+
+.links-action__icon {
+  display: inline-grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.links-action__icon svg {
+  width: 19px;
+  height: 19px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.45;
+}
+
+.links-action__icon--home svg {
+  fill: none;
+}
+
+.links-action__icon--line svg path:first-child {
+  fill: currentColor;
+  stroke: none;
+}
+
+.links-action__icon--line svg path:last-child {
+  fill: #f5f4ef;
+  stroke: none;
+}
+
+.links-action__icon--instagram .links-icon-dot {
+  fill: currentColor;
+  stroke: none;
+}
+
+.links-action__icon--mail {
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  font-size: 0.7rem;
+}
+
+.links-action__label {
+  min-width: 0;
+  font-weight: 560;
+}
+
+.links-action__arrow {
+  color: var(--muted);
+  font-size: 0.96rem;
   line-height: 1;
 }
 
 .links-footer {
-  margin-top: 50px;
+  margin-top: 42px;
   color: var(--muted);
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   letter-spacing: 0.12em;
-  text-align: center;
+  line-height: 1.4;
 }
 
 .links-footer a:hover {
@@ -122,21 +204,66 @@
 
 @media (min-width: 760px) {
   .links-main {
-    padding-top: 72px;
+    padding-top: 60px;
+  }
+
+  .links-header {
+    margin-bottom: 66px;
   }
 
   .links-intro {
-    margin-bottom: 48px;
+    margin-bottom: 54px;
   }
 
-  .links-service {
-    padding-top: 20px;
-    padding-bottom: 22px;
+  .links-action {
+    min-height: 58px;
+    padding-right: 17px;
+    padding-left: 17px;
+  }
+}
+
+@media (max-width: 420px) {
+  .links-main {
+    width: min(calc(100% - 32px), 620px);
+    padding-top: 32px;
+  }
+
+  .links-header {
+    display: block;
+    margin-bottom: 46px;
+  }
+
+  .links-header__label {
+    margin-top: 10px;
+  }
+
+  .links-intro {
+    margin-bottom: 38px;
+  }
+
+  .links-intro h1 {
+    font-size: 1.4rem;
+  }
+
+  .links-intro__description {
+    margin-top: 10px;
+    font-size: 0.82rem;
+  }
+
+  .links-group {
+    padding-top: 22px;
+    padding-bottom: 24px;
+  }
+
+  .links-action {
+    min-height: 52px;
+    padding-right: 13px;
+    padding-left: 13px;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .links-service__links a {
+  .links-action {
     transition: none;
   }
 }
