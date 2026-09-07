@@ -127,6 +127,10 @@
   text-wrap: pretty;
 }
 
+.links-copy-lock {
+  white-space: nowrap;
+}
+
 .links-actions {
   display: grid;
   gap: 8px;
