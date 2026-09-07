@@ -139,25 +139,13 @@
 }
 
 .links-service-grid .links-actions {
-  width: 95%;
+  width: 85%;
   margin-inline: auto;
 }
 
-.links-service-grid .links-group--ai .links-actions {
-  width: 90%;
-}
-
-.links-service-grid .links-group--profile .links-actions {
-  width: 85%;
-}
-
-.links-service-grid .links-group--family .links-actions {
-  width: 80%;
-}
-
-@media (max-width: 359px) {
-  .links-service-grid .links-group--family .links-actions {
-    width: 90%;
+@media (min-width: 1024px) {
+  .links-service-grid .links-actions {
+    width: 80%;
   }
 }
 
