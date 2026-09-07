@@ -138,6 +138,11 @@
   max-width: 100%;
 }
 
+.links-service-grid .links-actions {
+  width: 95%;
+  margin-inline: auto;
+}
+
 .links-action {
   display: inline-flex;
   align-items: center;
