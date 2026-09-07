@@ -62,37 +62,37 @@
 
 .links-nav {
   display: grid;
-  gap: 0;
+  gap: 12px;
 }
 
 .links-group {
-  padding: 25px 0 28px;
-  border-top: 1px solid var(--line);
+  width: min(100%, 380px);
+  padding: 20px;
+  border: 1px solid rgba(31, 36, 40, 0.16);
+  background: rgba(255, 255, 255, 0.26);
 }
 
 .links-group:first-child {
-  padding-top: 0;
-  border-top: 0;
+  padding-top: 20px;
 }
 
 .links-group--contact {
   margin-top: 4px;
-  padding-bottom: 0;
 }
 
 .links-group__heading {
   display: flex;
   align-items: baseline;
-  gap: 12px;
-  margin-bottom: 14px;
+  gap: 10px;
+  margin-bottom: 5px;
 }
 
-.links-group__number {
-  color: var(--muted);
-  font-size: 0.64rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  line-height: 1.4;
+.links-group__heading::before {
+  content: "";
+  flex: 0 0 auto;
+  width: 22px;
+  height: 2px;
+  background: var(--group-accent, var(--muted));
 }
 
 .links-group h2 {
@@ -103,17 +103,44 @@
   line-height: 1.45;
 }
 
+.links-group--ai {
+  --group-accent: #607f8a;
+}
+
+.links-group--profile {
+  --group-accent: #9a7a61;
+}
+
+.links-group--family {
+  --group-accent: #a58278;
+}
+
+.links-group--contact {
+  --group-accent: #777c79;
+}
+
+.links-group__description {
+  margin: 0 0 14px 32px;
+  color: var(--muted);
+  font-size: 0.76rem;
+  line-height: 1.65;
+}
+
 .links-actions {
   display: grid;
   gap: 8px;
+  width: fit-content;
+  max-width: 100%;
 }
 
 .links-action {
-  display: grid;
-  grid-template-columns: 22px minmax(0, 1fr) auto;
+  display: inline-flex;
   align-items: center;
   gap: 12px;
-  min-height: 54px;
+  width: fit-content;
+  min-width: 238px;
+  max-width: 100%;
+  min-height: 52px;
   padding: 10px 15px;
   border: 1px solid rgba(31, 36, 40, 0.18);
   background: rgba(255, 255, 255, 0.54);
@@ -259,6 +286,18 @@
     min-height: 52px;
     padding-right: 13px;
     padding-left: 13px;
+  }
+
+  .links-group {
+    padding: 18px;
+  }
+
+  .links-group:first-child {
+    padding-top: 18px;
+  }
+
+  .links-group__description {
+    margin-left: 32px;
   }
 }
 
