@@ -119,7 +119,7 @@
 }
 
 .links-group__description {
-  min-height: 2.5em;
+  min-height: 0;
   margin: 0 0 14px;
   color: var(--muted);
   font-size: 0.76rem;
@@ -146,6 +146,10 @@
 @media (min-width: 1024px) {
   .links-service-grid .links-actions {
     width: 80%;
+  }
+
+  .links-service-grid .links-group__description {
+    min-height: 3.3em;
   }
 }
 
@@ -325,9 +329,6 @@
     padding-top: 18px;
   }
 
-  .links-group__description {
-    min-height: 0;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
