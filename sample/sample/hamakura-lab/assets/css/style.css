@@ -279,6 +279,7 @@ details p { max-width: 100%; margin: -5px 0 22px; color: var(--muted); font-size
 @media (min-width: 960px) {
   .site-nav > a:not(.button), .site-nav__contact { display: inline; }
   .site-nav > .button--header { display: none; }
+  .activity__copy { grid-template-columns: 36px minmax(0, 1fr); gap: 0; }
   .activity__photos:not(.activity__photos--pair) { max-width: calc(50% - 6px); justify-self: start; }
   .person-card--community h3 .community-wide-break { display: block; }
 }
