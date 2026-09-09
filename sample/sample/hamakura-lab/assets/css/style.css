@@ -125,6 +125,8 @@ h3 { font-weight: 750; }
 .intro-card { display: grid; grid-template-rows: minmax(0, 1fr) minmax(0, 1fr); min-height: 264px; padding: 0 32px; color: #FFFFFF; background: #339A48; border-radius: 12px; text-align: center; }
 .intro-card__top, .intro-card__bottom { display: flex; align-items: center; justify-content: center; margin: 0; padding: 0; font-size: 1rem; line-height: 1.7; text-align: center; }
 .intro-card__top { border-bottom: 1px solid #FFFFFF; }
+.intro-card__top > span { transform: translateY(6px); }
+.intro-card__bottom > span { transform: translateY(-6px); }
 .section-heading--split { display: flex; align-items: end; justify-content: space-between; gap: 60px; max-width: none; }
 .section-heading--split > p { max-width: 320px; margin-bottom: 8px; }
 .people .section-heading--split { display: block; }
