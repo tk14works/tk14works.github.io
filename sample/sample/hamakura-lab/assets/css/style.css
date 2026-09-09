@@ -198,6 +198,7 @@ details li + li { margin-top: 8px; }
 .final-cta p:not(.section-label) { max-width: 520px; margin-bottom: 32px; color: var(--muted); }
 .final-cta__email { margin-top: 16px; color: var(--deep-green); font-size: .88rem; font-weight: 700; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
 .final-cta__email:hover { color: var(--green); }
+.contact-copy-break { display: none; }
 
 .site-footer { padding: 35px 0; color: #fff; background: var(--ink); }
 .site-footer__meta { display: flex; align-items: center; gap: 25px; font-size: .78rem; font-weight: 700; }
@@ -326,6 +327,7 @@ details li + li { margin-top: 8px; }
 
 @media (max-width: 639px) {
   .final-cta__inner > p:not(.section-label) { font-size: .9rem; letter-spacing: -.02em; }
+  .contact-copy-break { display: block; }
   .faq-activity__photos--pair { grid-template-columns: minmax(0, 1fr); }
 }
 
