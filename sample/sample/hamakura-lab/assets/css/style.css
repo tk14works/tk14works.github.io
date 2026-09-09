@@ -122,7 +122,7 @@ h3 { font-weight: 750; }
 .intro__heading h2 { margin-bottom: 24px; font-size: clamp(1.75rem, 3.2vw, 2.8rem); }
 .intro__lead { margin: 0 0 36px; color: var(--ink); font-size: 1.08rem; font-weight: 700; line-height: 1.6; }
 .intro__cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
-.intro-card { display: grid; grid-template-rows: minmax(0, 1fr) minmax(0, 1fr); min-height: 264px; padding: 0 32px; color: #FFFFFF; background: #339A48; border-radius: 12px; text-align: center; }
+.intro-card { display: grid; grid-template-rows: minmax(0, 1fr) minmax(0, 1fr); min-height: 250px; padding: 0 32px; color: #FFFFFF; background: #339A48; border-radius: 12px; text-align: center; }
 .intro-card__top, .intro-card__bottom { display: flex; align-items: center; justify-content: center; margin: 0; padding: 0; font-size: 1rem; line-height: 1.7; text-align: center; }
 .intro-card__top { border-bottom: 1px solid #FFFFFF; }
 .intro-card__top > span { transform: translateY(6px); }
