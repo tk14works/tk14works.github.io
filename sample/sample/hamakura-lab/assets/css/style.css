@@ -122,10 +122,10 @@ h3 { font-weight: 750; }
 .intro__heading h2 { margin-bottom: 24px; font-size: clamp(1.75rem, 3.2vw, 2.8rem); }
 .intro__lead { margin: 0 0 36px; color: var(--ink); font-size: 1.08rem; font-weight: 700; line-height: 1.6; }
 .intro__cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
-.intro-card { display: flex; flex-direction: column; padding: 32px; color: #fff; background: var(--green); }
+.intro-card { display: flex; flex-direction: column; padding: 32px; color: #F3F6EE; background: #339A48; border-radius: 12px; }
 .intro-card__top, .intro-card__bottom { margin: 0; font-size: 1rem; line-height: 1.7; }
-.intro-card__top { padding-bottom: 24px; border-bottom: 1px solid rgba(255,255,255,.72); }
-.intro-card__bottom { margin-top: auto; padding-top: 24px; }
+.intro-card__top { padding-bottom: 19px; border-bottom: 1px solid rgba(243,246,238,.72); }
+.intro-card__bottom { margin-top: auto; padding-top: 19px; }
 .section-heading--split { display: flex; align-items: end; justify-content: space-between; gap: 60px; max-width: none; }
 .section-heading--split > p { max-width: 320px; margin-bottom: 8px; }
 .people .section-heading--split { display: block; }
@@ -285,6 +285,7 @@ details p { max-width: 100%; margin: -5px 0 22px; color: var(--muted); font-size
 
 @media (min-width: 1280px) {
   .intro-card__nowrap { white-space: nowrap; }
+  .intro-card__top { min-height: 3.4em; }
 }
 
 @media (min-width: 640px) and (max-width: 959px) {
