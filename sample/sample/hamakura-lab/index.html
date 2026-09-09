@@ -7,7 +7,7 @@
   <meta name="robots" content="noindex, nofollow, noarchive">
   <title>HamaKura Lab | 地域共助社会</title>
   <link rel="canonical" href="https://tk14.jp/sample/sample/hamakura-lab/">
-  <link rel="stylesheet" href="assets/css/style.css?v=20260909-75">
+  <link rel="stylesheet" href="assets/css/style.css?v=20260909-76">
 </head>
 <body>
   <header class="site-header">
@@ -171,7 +171,46 @@
       </div>
     </section>
 
-    <section class="faq section section--mint" id="faq" aria-labelledby="faq-title">
+    <section class="activities section section--mint" id="activities" aria-labelledby="activities-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">ACTIVITIES</p>
+          <h2 id="activities-title">活動実績</h2>
+        </div>
+        <ol class="activities__list">
+          <li class="activity">
+            <div class="activity__copy">
+              <span class="activity__number">01</span>
+              <p>当Labの開催する地域交流会やイベントに参加することが可能で、地域で活動する方との横の繋がり作りや活動促進・活動繁栄を行なうことができます。</p>
+            </div>
+            <figure class="activity__photos activity__photos--pair">
+              <img src="assets/faq/chiiki-event.jpg" width="1984" height="1417" alt="地域交流会・イベントに参加した人々" loading="lazy" decoding="async">
+              <img src="assets/faq/kouryuu.jpg" width="1405" height="1003" alt="地域交流会で参加者が交流する様子" loading="lazy" decoding="async">
+            </figure>
+          </li>
+          <li class="activity">
+            <div class="activity__copy">
+              <span class="activity__number">02</span>
+              <p>地域企業や行政とのイベントを開催しており、連携を図る事が可能です。</p>
+            </div>
+            <figure class="activity__photos activity__photos--company">
+              <img src="assets/faq/chiiki-kigyo.jpg" width="608" height="434" alt="連携イベントで意見交換する参加者" loading="lazy" decoding="async">
+            </figure>
+          </li>
+          <li class="activity">
+            <div class="activity__copy">
+              <span class="activity__number">03</span>
+              <p>拠点を活かしたリアルな場への参加が可能です。拠点にチラシを置いたり、地域の方と直接お会いし交流することで、活動の幅を広げることができます。</p>
+            </div>
+            <figure class="activity__photos">
+              <img src="assets/faq/kyoten.jpg" width="2556" height="1826" alt="拠点を活用してリアルで交流する参加者" loading="lazy" decoding="async">
+            </figure>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="faq section" id="faq" aria-labelledby="faq-title">
       <div class="container faq__grid">
         <div class="section-heading">
           <p class="section-label">FAQ</p>
@@ -181,30 +220,6 @@
           <details open>
             <summary>どんな人が参加できますか？</summary>
             <p>企業・店舗、活動家・個人事業主、フリーランス、地域で何かに挑戦したい方など、横浜・鎌倉で地域と関わりたい方を想定しています。</p>
-          </details>
-          <details>
-            <summary>どんな事ができますか？</summary>
-            <ol class="faq-activity-list">
-              <li>
-                当Labの開催する地域交流会やイベントに参加することが可能で、地域で活動する方との横の繋がり作りや活動促進・活動繁栄を行なうことができます。
-                <figure class="faq-activity__photos faq-activity__photos--pair">
-                  <img src="assets/faq/chiiki-event.jpg" width="1984" height="1417" alt="地域交流会・イベントに参加した人々" loading="lazy" decoding="async">
-                  <img src="assets/faq/kouryuu.jpg" width="1405" height="1003" alt="地域交流会で参加者が交流する様子" loading="lazy" decoding="async">
-                </figure>
-              </li>
-              <li>
-                地域企業や行政とのイベントを開催しており、連携を図る事が可能です。
-                <figure class="faq-activity__photos faq-activity__photos--company">
-                  <img src="assets/faq/chiiki-kigyo.jpg" width="608" height="434" alt="連携イベントで意見交換する参加者" loading="lazy" decoding="async">
-                </figure>
-              </li>
-              <li>
-                拠点を活かしたリアルな場への参加が可能です。拠点にチラシを置いたり、地域の方と直接お会いし交流することで、活動の幅を広げることができます。
-                <figure class="faq-activity__photos">
-                  <img src="assets/faq/kyoten.jpg" width="2556" height="1826" alt="拠点を活用してリアルで交流する参加者" loading="lazy" decoding="async">
-                </figure>
-              </li>
-            </ol>
           </details>
           <details>
             <summary>まだ具体的な企画がなくても参加できますか？</summary>
@@ -240,7 +255,7 @@
   <script>
     (() => {
       const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      const targets = [...document.querySelectorAll('.section-heading, .person-card, .message-card, .faq__list, .final-cta__inner')];
+      const targets = [...document.querySelectorAll('.section-heading, .person-card, .message-card, .activities__list, .faq__list, .final-cta__inner')];
       if (reduceMotion || !('IntersectionObserver' in window)) return;
 
       targets.forEach((element, index) => {
