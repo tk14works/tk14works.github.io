@@ -20,7 +20,7 @@
 .links-brand {
   flex: 0 0 auto;
   color: var(--ink);
-  font-size: 1.7rem;
+  font-size: calc(1.7rem + 4px);
   font-weight: 750;
   letter-spacing: 0.1em;
   line-height: 1;
