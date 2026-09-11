@@ -1014,15 +1014,15 @@ h1 {
 }
 
 .site-ai {
-  --tk-bg: #f3f7f8;
+  --tk-bg: #f7f7f5;
   --tk-white: #ffffff;
-  --tk-ink: #102a43;
-  --tk-muted: #62798a;
-  --tk-line: #d5e1e6;
-  --tk-gold: #2b7a82;
-  --tk-card-green: #e6f3f2;
-  --tk-card-blue: #eaf1f6;
-  --tk-card-beige: #edf6f7;
+  --tk-ink: #292929;
+  --tk-muted: #6b6b68;
+  --tk-line: #d5d5d1;
+  --tk-gold: #7e9186;
+  --tk-card-green: #edf2ee;
+  --tk-card-blue: #f1f1ef;
+  --tk-card-beige: #f6f1ef;
 }
 
 .site-photo {
@@ -1706,8 +1706,8 @@ body.site-family .tk-hero__image.moment-hero-scroll-image {
 }
 
 .site-ai #flow {
-  background: #f1f6f8;
-  color: #102a43;
+  background: #e7e7e5;
+  color: #292929;
 }
 
 .site-ai #about {
@@ -1715,18 +1715,18 @@ body.site-family .tk-hero__image.moment-hero-scroll-image {
 }
 
 .site-ai #faq {
-  background: #f1f6f8;
-  color: #102a43;
+  background: #e7e7e5;
+  color: #292929;
 }
 
 .site-ai #contact {
-  background: #0d2037;
-  color: #fff;
+  background: #dfdfdd;
+  color: #292929;
 }
 
 .site-ai .ai-section-kicker {
   margin: 0 0 14px;
-  color: #245966;
+  color: #71857a;
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.16em;
@@ -1735,7 +1735,7 @@ body.site-family .tk-hero__image.moment-hero-scroll-image {
 
 .site-ai #flow .ai-section-kicker,
 .site-ai #contact .ai-section-kicker {
-  color: #8ce0d9;
+  color: #71857a;
 }
 
 .site-ai #faq .ai-section-kicker {
@@ -1754,27 +1754,27 @@ body.site-family .tk-hero__image.moment-hero-scroll-image {
 .site-ai #faq .tk-title,
 .site-ai #flow .tk-flow-list h3,
 .site-ai #faq .tk-faq summary {
-  color: #102a43;
+  color: #292929;
 }
 
 .site-ai #contact .tk-contact h2 {
-  color: #fff;
+  color: #292929;
 }
 
 .site-ai #flow .tk-title::after,
 .site-ai #faq .tk-title::after {
-  background: #2b7a82;
+  background: #7e9186;
 }
 
 .site-ai #flow .tk-section-lead,
 .site-ai #flow .tk-flow-list p,
 .site-ai #faq .tk-faq p {
-  color: #526d7c;
+  color: #6b6b68;
 }
 
 .site-ai #contact .tk-contact p,
 .site-ai #contact .tk-contact__links {
-  color: rgba(255, 255, 255, 0.72);
+  color: #6b6b68;
 }
 
 .site-ai #flow .tk-flow-list article,
@@ -1783,25 +1783,25 @@ body.site-family .tk-hero__image.moment-hero-scroll-image {
 }
 
 .site-ai #flow .ai-flow-list article > span {
-  color: #2b7a82;
+  color: #7e9186;
 }
 
 .site-ai #contact .tk-button {
-  border-color: #E7F3F6;
-  background: #E7F3F6;
-  color: #1B2F4A;
+  border-color: #3f3f3f;
+  background: #3f3f3f;
+  color: #fff;
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .site-ai #contact .tk-button:hover {
-    border-color: #66717C;
-    background: #66717C;
+.site-ai #contact .tk-button:hover {
+    border-color: #666666;
+    background: #666666;
     color: #fff;
   }
 }
 
 .site-ai #contact .tk-contact__links a:hover {
-  color: #8ce0d9;
+  color: #7e9186;
 }
 
 @media (min-width: 760px) {
@@ -1811,14 +1811,14 @@ body.site-family .tk-hero__image.moment-hero-scroll-image {
 }
 
 .site-ai .tk-footer {
-  border-top: 1px solid rgba(140, 224, 217, 0.16);
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
   background: #0d2037;
   color: rgba(255, 255, 255, 0.56);
 }
 
 .site-ai .profile-header {
   background: rgba(13, 32, 55, 0.97);
-  border-bottom-color: rgba(140, 224, 217, 0.28);
+  border-bottom-color: rgba(255, 255, 255, 0.16);
   color: #fff;
 }
 
@@ -1834,18 +1834,18 @@ body.site-family .tk-hero__image.moment-hero-scroll-image {
 }
 
 .site-ai .tk-breadcrumb {
-  border-bottom-color: rgba(140, 224, 217, 0.2);
-  background: #102a43;
-  color: rgba(255, 255, 255, 0.62);
+  border-bottom-color: #d5d5d1;
+  background: #efefed;
+  color: #6b6b68;
 }
 
 .site-ai .tk-breadcrumb a,
 .site-ai .tk-breadcrumb li + li::before {
-  color: rgba(255, 255, 255, 0.62);
+  color: #6b6b68;
 }
 
 .site-ai .tk-breadcrumb [aria-current="page"] {
-  color: #8ce0d9;
+  color: #71857a;
 }
 
 @media (max-width: 759px) {
@@ -1859,8 +1859,8 @@ body.site-family .tk-hero__image.moment-hero-scroll-image {
 .ai-hero {
   overflow: hidden;
   padding: clamp(56px, 8vw, 108px) 20px;
-  background: linear-gradient(135deg, #0E2340 0%, #1B3A63 100%);
-  color: #fff;
+  background: linear-gradient(135deg, #f8f8f6 0%, #e7e7e5 100%);
+  color: #292929;
 }
 
 .ai-hero__inner {
@@ -1889,12 +1889,12 @@ body.site-family .tk-hero__image.moment-hero-scroll-image {
 }
 
 .ai-hero__eyebrow {
-  color: #75d4cd;
+  color: #71857a;
 }
 
 .ai-hero__copy h1 {
   margin: 16px 0 0;
-  color: #fff;
+  color: #292929;
   font-size: clamp(2.4rem, 4.2vw, 3.6rem);
   font-weight: 400;
   line-height: 1.2;
@@ -1903,7 +1903,7 @@ body.site-family .tk-hero__image.moment-hero-scroll-image {
 
 .ai-hero__lead {
   margin: 26px 0 0;
-  color: rgba(255, 255, 255, 0.78);
+  color: #6b6b68;
   font-size: 0.98rem;
   line-height: 1.9;
   overflow-wrap: anywhere;
@@ -1919,9 +1919,9 @@ body.site-family .tk-hero__image.moment-hero-scroll-image {
   min-height: 52px;
   margin-top: 30px;
   padding: 0 24px;
-  border: 1px solid #E7F3F6;
-  background: #E7F3F6;
-  color: #1B2F4A;
+  border: 1px solid #3f3f3f;
+  background: #3f3f3f;
+  color: #fff;
   font-weight: 700;
   letter-spacing: 0.05em;
   transition: border-color 180ms ease, background-color 180ms ease, color 180ms ease;
@@ -1931,7 +1931,7 @@ body.site-family .tk-hero__image.moment-hero-scroll-image {
 .ai-hero--connected {
   position: relative;
   isolation: isolate;
-  background: linear-gradient(135deg, #0E2340 0%, #1B3A63 100%);
+  background: linear-gradient(135deg, #f8f8f6 0%, #e7e7e5 100%);
 }
 
 .ai-hero--connected::before {
@@ -1939,8 +1939,8 @@ body.site-family .tk-hero__image.moment-hero-scroll-image {
   z-index: 0;
   inset: 0;
   background:
-    radial-gradient(circle at 76% 50%, rgba(77, 170, 201, 0.16), transparent 30%),
-    radial-gradient(circle at 38% 78%, rgba(117, 212, 205, 0.08), transparent 26%);
+    radial-gradient(circle at 76% 50%, rgba(126, 145, 134, 0.12), transparent 30%),
+    radial-gradient(circle at 38% 78%, rgba(180, 180, 174, 0.12), transparent 26%);
   content: "";
 }
 
@@ -1974,14 +1974,14 @@ body.site-family .tk-hero__image.moment-hero-scroll-image {
 
 .ai-hero__ui-card > rect:first-child {
   fill: url(#ai-hero-card-fill);
-  stroke: rgba(171, 229, 235, 0.48);
+  stroke: rgba(126, 145, 134, 0.48);
   stroke-width: 1.25;
 }
 
 .ai-hero__ui-card > path,
 .ai-hero__ui-card > rect:not(:first-child) {
   fill: none;
-  stroke: rgba(184, 230, 236, 0.48);
+  stroke: rgba(96, 104, 99, 0.36);
   stroke-width: 1.2;
 }
 
@@ -2010,19 +2010,19 @@ body.site-family .tk-hero__image.moment-hero-scroll-image {
 }
 
 .ai-hero__chart-line {
-  stroke: rgba(117, 212, 205, 0.36);
+  stroke: rgba(126, 145, 134, 0.48);
   stroke-width: 1.2;
 }
 
 @keyframes ai-hero-card-glint {
   0%, 15%, 100% {
     filter: none;
-    stroke: rgba(171, 229, 235, 0.48);
+    stroke: rgba(126, 145, 134, 0.48);
     stroke-width: 1.25;
   }
   20%, 25% {
-    filter: drop-shadow(0 0 5px rgba(137, 233, 229, 0.48));
-    stroke: rgba(191, 248, 243, 0.94);
+    filter: drop-shadow(0 0 5px rgba(126, 145, 134, 0.22));
+    stroke: rgba(105, 120, 111, 0.78);
     stroke-width: 1.7;
   }
 }
@@ -2082,11 +2082,11 @@ body.site-family .tk-hero__image.moment-hero-scroll-image {
   grid-template-columns: 62px minmax(0, 1fr);
   gap: 24px;
   padding: 30px 34px;
-  border: 1px solid #c4d8e0;
-  border-left: 3px solid #75d4cd;
+  border: 1px solid #d1d1ce;
+  border-left: 3px solid #9aa99f;
   border-radius: 5px;
   background: rgba(255, 255, 255, 0.84);
-  box-shadow: 0 12px 26px rgba(16, 42, 67, 0.07);
+  box-shadow: 0 12px 26px rgba(40, 40, 40, 0.06);
 }
 
 .ai-service-cards span,
@@ -2112,8 +2112,8 @@ body.site-family .tk-hero__image.moment-hero-scroll-image {
 
 .ai-service-cards__button {
   margin-top: 24px;
-  border-color: #1b3a63;
-  background: #1b3a63;
+  border-color: #3f3f3f;
+  background: #3f3f3f;
   color: #fff;
 }
 
@@ -3707,14 +3707,14 @@ body.site-family .tk-hero__image.moment-hero-scroll-image {
     width: min(220px, calc(100vw - 28px));
   }
 
-  .site-ai .profile-nav {
-    border-color: #d3e1e6;
-    background: #e6f3f2;
-    box-shadow: 0 20px 60px rgba(16, 42, 67, 0.14);
+.site-ai .profile-nav {
+    border-color: rgba(248, 248, 248, 0.18);
+    background: #23252d;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
   }
 
   .site-ai .profile-nav a {
-    color: #102a43;
+    color: #f8f8f8;
   }
 }
 
