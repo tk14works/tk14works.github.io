@@ -138,6 +138,22 @@
   max-width: 100%;
 }
 
+.links-contact-email {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 0.72rem;
+  line-height: 1.5;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.links-contact-email a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
 .links-service-grid .links-actions {
   width: 85%;
   margin-inline: auto;
