@@ -66,7 +66,6 @@ h3 { font-weight: 750; }
 .site-header__inner, .site-footer__inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 .site-header__inner { min-height: 78px; }
 .brand { display: inline-flex; align-items: center; gap: 10px; }
-.brand__logo-link { display: inline-flex; align-items: center; }
 .brand__name { color: var(--muted); font-size: .82rem; font-weight: 700; line-height: 1.2; white-space: nowrap; }
 .brand__logo-frame {
   display: block;
