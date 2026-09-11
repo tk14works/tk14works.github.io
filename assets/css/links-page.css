@@ -14,7 +14,14 @@
   display: flex;
   align-items: baseline;
   gap: 16px;
-  margin-bottom: 54px;
+  margin-bottom: 0;
+}
+
+.links-header-rule {
+  width: 320px;
+  height: 1px;
+  margin: 27px 0;
+  background: rgba(31, 36, 40, 0.22);
 }
 
 .links-brand {
@@ -277,7 +284,11 @@
   }
 
   .links-header {
-    margin-bottom: 66px;
+    margin-bottom: 0;
+  }
+
+  .links-header-rule {
+    margin: 32px 0 34px;
   }
 
   .links-intro {
@@ -311,7 +322,12 @@
 
   .links-header {
     display: block;
-    margin-bottom: 46px;
+    margin-bottom: 0;
+  }
+
+  .links-header-rule {
+    width: 200px;
+    margin: 22px 0 24px;
   }
 
   .links-header__label {
