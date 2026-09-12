@@ -80,3 +80,32 @@
   .consultation-faq { margin-top: 32px; }
   .consultation-price { margin-top: 28px; padding: 22px 14px; }
 }
+
+/* Consultation Contact follows the AI home Contact palette without being overridden by the shared AI selector. */
+.consultation-page.site-ai #contact {
+  border-top: 1px solid #d3e1e6;
+  background: #e3edf0;
+  color: #102a43;
+}
+
+.consultation-page.site-ai #contact .consultation-kicker {
+  color: #245966;
+}
+
+.consultation-page.site-ai #contact .consultation-contact > p:not(.consultation-kicker) {
+  color: #526d7c;
+}
+
+.consultation-page.site-ai #contact .tk-button {
+  border-color: #222222;
+  background: #222222;
+  color: #fff;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .consultation-page.site-ai #contact .tk-button:hover {
+    border-color: #333333;
+    background: #333333;
+    color: #fff;
+  }
+}
