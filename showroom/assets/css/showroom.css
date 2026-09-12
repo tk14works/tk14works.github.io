@@ -147,7 +147,8 @@ h1, h2, h3 { letter-spacing: -0.025em; }
 .portfolio-cta .button:hover, .portfolio-cta .button:focus-visible { border-color: #333333; background: #333333; color: #fff; transform: none; }
 .portfolio-cta__message { margin: 22px auto 0; color: #526d7c; line-height: 1.9; }
 
-.works-note { margin: 40px 0 0; color: var(--muted); font-size: 0.75rem; }
+.works-note { margin: 40px 0 10px; color: var(--muted); font-size: 0.75rem; }
+.works-note-mobile-break { display: none; }
 
 .tk-footer {
   padding: 42px 20px;
@@ -190,6 +191,7 @@ h1, h2, h3 { letter-spacing: -0.025em; }
   .portfolio-page-header h1 { margin: 14px 0 10px; font-size: clamp(30px, 7.4vw, 38px); line-height: 1.22; }
   .portfolio-page-header__lead { font-size: 0.88rem; }
   .works-section { padding: 40px 0 0; }
+  .works-note-mobile-break { display: block; }
   .work-grid { grid-template-columns: 1fr; gap: 18px; }
   .work-card__visual { aspect-ratio: 4 / 3; }
   .work-card__body { min-height: 0; padding: 16px 0 0; }
