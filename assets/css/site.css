@@ -1859,7 +1859,7 @@ body.site-family .tk-hero__image.moment-hero-scroll-image {
 .ai-hero {
   overflow: hidden;
   padding: clamp(56px, 8vw, 108px) 20px;
-  background: linear-gradient(135deg, #929292 0%, #e1e1e1 100%);
+  background: linear-gradient(135deg, #222222 0%, #333333 100%);
   color: #292929;
 }
 
@@ -1931,7 +1931,15 @@ body.site-family .tk-hero__image.moment-hero-scroll-image {
 .ai-hero--connected {
   position: relative;
   isolation: isolate;
-  background: linear-gradient(135deg, #929292 0%, #e1e1e1 100%);
+  background: linear-gradient(135deg, #222222 0%, #333333 100%);
+}
+
+.ai-hero--connected .ai-hero__copy h1 {
+  color: #f7f7f7;
+}
+
+.ai-hero--connected .ai-hero__lead {
+  color: #e8e8e8;
 }
 
 .ai-hero--connected::before {
