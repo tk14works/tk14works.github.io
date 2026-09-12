@@ -1,7 +1,7 @@
 /* AI & DX consultation page */
 .consultation-page { background: #f4f8f9; }
 .consultation-shell { width: min(100% - 40px, 1080px); margin: 0 auto; }
-.consultation-hero { padding: clamp(64px, 7vw, 88px) 0; background: linear-gradient(90deg, #222222 0%, #242424 100%); color: #fff; }
+.consultation-hero { padding: clamp(64px, 7vw, 88px) 0; background: linear-gradient(90deg, #151515 0%, #171717 100%); color: #fff; }
 .consultation-hero__inner { max-width: 760px; }
 .consultation-kicker { margin: 0 0 16px; color: #245966; font-size: .72rem; font-weight: 700; letter-spacing: .16em; }
 .consultation-hero .consultation-kicker, .consultation-section--dark .consultation-kicker, .consultation-section--contact .consultation-kicker { color: #8ce0d9; }
