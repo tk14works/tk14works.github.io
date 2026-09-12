@@ -1804,6 +1804,79 @@ body.site-family .tk-hero__image.moment-hero-scroll-image {
   color: #7e9186;
 }
 
+/* AI home palette: clean blue-white surfaces keep the content light and distinct. */
+.site-ai.ai-home {
+  background: #f4f8f9;
+}
+
+.site-ai.ai-home #support {
+  background: #fff;
+}
+
+.site-ai.ai-home #flow {
+  background: #f1f6f8;
+  color: #102a43;
+}
+
+.site-ai.ai-home #about {
+  background: #fff;
+}
+
+.site-ai.ai-home #faq {
+  background: #eaf2f5;
+  color: #102a43;
+}
+
+.site-ai.ai-home #contact {
+  background: #f1f6f8;
+  color: #102a43;
+}
+
+.site-ai.ai-home .ai-section-kicker,
+.site-ai.ai-home #flow .ai-section-kicker,
+.site-ai.ai-home #faq .ai-section-kicker {
+  color: #245966;
+}
+
+.site-ai.ai-home #support .tk-title,
+.site-ai.ai-home #flow .tk-title,
+.site-ai.ai-home #about .tk-title,
+.site-ai.ai-home #faq .tk-title,
+.site-ai.ai-home #contact .tk-contact h2,
+.site-ai.ai-home #flow .tk-flow-list h3,
+.site-ai.ai-home #faq .tk-faq summary {
+  color: #102a43;
+}
+
+.site-ai.ai-home #support .tk-section-lead,
+.site-ai.ai-home #flow .tk-section-lead,
+.site-ai.ai-home #flow .tk-flow-list p,
+.site-ai.ai-home #faq .tk-faq p,
+.site-ai.ai-home #contact .tk-contact p,
+.site-ai.ai-home #contact .tk-contact__links {
+  color: #526d7c;
+}
+
+.site-ai.ai-home #flow .tk-title::after,
+.site-ai.ai-home #faq .tk-title::after {
+  background: #6fa3a2;
+}
+
+.site-ai.ai-home #flow .tk-flow-list article,
+.site-ai.ai-home #faq .tk-faq details {
+  border-color: #d3e1e6;
+}
+
+.site-ai.ai-home #flow .ai-flow-list article > span {
+  color: #2b7a82;
+}
+
+.site-ai.ai-home .ai-service-cards article {
+  border-color: #d3e1e6;
+  border-left-color: #79a7a2;
+  background: #f8fcfd;
+}
+
 @media (min-width: 760px) {
   .site-ai .tk-faq {
     max-width: 980px;

@@ -77,6 +77,23 @@
 .ai-reservation-preview__points { display: grid; align-self: stretch; align-content: center; gap: 12px; padding: 25px; border-left: 2px solid #9aa99f; background: #f5f2f1; color: #4a4a48; }
 .ai-reservation-preview__points span { font-size: .9rem; }
 .ai-reservation-preview__desktop-only { display: block; }
+
+/* AI home: use the same clean blue-white surface rhythm as the consultation page. */
+.site-ai.ai-home .ai-reservation-preview {
+  background: #eaf2f5;
+}
+
+.site-ai.ai-home .ai-reservation-preview__card {
+  border-color: #d3e1e6;
+  background: #fff;
+}
+
+.site-ai.ai-home .ai-reservation-preview__points {
+  border-left-color: #8fb8bc;
+  background: #f8fcfd;
+  color: #30475f;
+}
+
 @media (min-width: 760px) {
   .reservation-hero__inner { width: min(100% - 40px, 840px); }
   .reservation-hero__copy { width: min(100%, 760px); }
