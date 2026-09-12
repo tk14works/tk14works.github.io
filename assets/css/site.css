@@ -1828,7 +1828,8 @@ body.site-family .tk-hero__image.moment-hero-scroll-image {
 }
 
 .site-ai.ai-home #contact {
-  background: #eaf2f5;
+  border-top: 1px solid #d3e1e6;
+  background: #e3edf0;
   color: #102a43;
 }
 
