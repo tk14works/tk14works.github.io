@@ -1787,15 +1787,15 @@ body.site-family .tk-hero__image.moment-hero-scroll-image {
 }
 
 .site-ai #contact .tk-button {
-  border-color: #666666;
-  background: #666666;
+  border-color: #222222;
+  background: #222222;
   color: #fff;
 }
 
 @media (hover: hover) and (pointer: fine) {
 .site-ai #contact .tk-button:hover {
-    border-color: #777777;
-    background: #777777;
+    border-color: #333333;
+    background: #333333;
     color: #fff;
   }
 }
@@ -1919,8 +1919,8 @@ body.site-family .tk-hero__image.moment-hero-scroll-image {
   min-height: 52px;
   margin-top: 30px;
   padding: 0 24px;
-  border: 1px solid #3f3f3f;
-  background: #3f3f3f;
+  border: 1px solid #222222;
+  background: #222222;
   color: #fff;
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -2047,9 +2047,9 @@ body.site-family .tk-hero__image.moment-hero-scroll-image {
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .ai-hero__button:hover {
-    border-color: #666;
-    background: #666;
+.ai-hero__button:hover {
+    border-color: #333333;
+    background: #333333;
     color: #fff;
   }
 }
@@ -2112,8 +2112,8 @@ body.site-family .tk-hero__image.moment-hero-scroll-image {
 
 .ai-service-cards__button {
   margin-top: 24px;
-  border-color: #666666;
-  background: #666666;
+  border-color: #222222;
+  background: #222222;
   color: #fff;
 }
 
