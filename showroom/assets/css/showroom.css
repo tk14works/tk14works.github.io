@@ -111,15 +111,18 @@ h1, h2, h3 { letter-spacing: -0.025em; }
 .portfolio-cta h2 { margin-bottom: 6px; font-size: clamp(20px, 2vw, 24px); line-height: 1.4; }
 .portfolio-cta p { max-width: 520px; margin-bottom: 10px; color: var(--muted); font-size: 0.86rem; }
 
-.showroom-footer { padding: 24px max(24px, calc((100vw - var(--container)) / 2)) 32px; border-top: 1px solid rgba(248, 248, 248, 0.18); background: #111111; color: #f8f8f8; }
-.showroom-footer__top { display: grid; grid-template-columns: 1fr auto; align-items: center; width: 100%; }
-.showroom-footer__top > div { display: flex; align-items: baseline; gap: 10px; }
-.showroom-footer__top > div p { margin: 0; }
-.showroom-footer strong { font-size: 0.88rem; }
-.showroom-footer p { margin: 5px 0 0; color: rgba(248, 248, 248, 0.72); font-size: 0.75rem; }
-.showroom-footer nav { display: flex; align-items: center; gap: 20px; font-size: 0.78rem; font-weight: 700; }
-.showroom-footer nav a { min-height: 44px; display: inline-flex; align-items: center; }
-.showroom-note { margin-top: 24px !important; padding-top: 16px; border-top: 1px solid rgba(248, 248, 248, 0.18); }
+.works-note { margin: 40px 0 0; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.75rem; }
+
+.tk-footer {
+  padding: 42px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+  background: #111111;
+  color: #f8f8f8;
+  text-align: center;
+  letter-spacing: 0.12em;
+}
+
+.tk-footer__year { display: inline-block; font-size: 0.88em; letter-spacing: 0.08em; }
 
 .js-enabled [data-reveal] { opacity: 0; transform: translateY(22px); transition: opacity 700ms ease, transform 700ms cubic-bezier(0.2, 0.7, 0.2, 1); }
 .js-enabled [data-reveal].is-visible { opacity: 1; transform: translateY(0); }
@@ -140,7 +143,6 @@ h1, h2, h3 { letter-spacing: -0.025em; }
   .portfolio-page-header h1 { margin-top: 16px; font-size: clamp(32px, 5.6vw, 44px); }
   .works-section { padding: 48px 0 78px; }
   .portfolio-cta__inner { margin-left: 20px; }
-  .showroom-footer { padding-right: 20px; padding-left: 20px; }
 }
 
 @media (max-width: 639px) {
@@ -159,10 +161,6 @@ h1, h2, h3 { letter-spacing: -0.025em; }
   .work-card h3 { font-size: 25px; }
   .portfolio-cta { padding: 28px 0 24px; }
   .portfolio-cta__inner { width: min(calc(100% - 36px), var(--container)); margin-left: auto; }
-  .showroom-footer { padding: 24px 18px 30px; }
-  .showroom-footer__top { grid-template-columns: 1fr auto; }
-  .showroom-footer nav { gap: 10px 14px; }
-  .showroom-note { width: 100%; }
 }
 
 @media (prefers-reduced-motion: reduce) {
