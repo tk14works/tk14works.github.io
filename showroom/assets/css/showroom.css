@@ -111,7 +111,7 @@ h1, h2, h3 { letter-spacing: -0.025em; }
 .portfolio-cta h2 { margin-bottom: 6px; font-size: clamp(20px, 2vw, 24px); line-height: 1.4; }
 .portfolio-cta p { max-width: 520px; margin-bottom: 10px; color: var(--muted); font-size: 0.86rem; }
 
-.works-note { margin: 40px 0 0; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.75rem; }
+.works-note { margin: 40px 0 0; color: var(--muted); font-size: 0.75rem; }
 
 .tk-footer {
   padding: 42px 20px;
