@@ -19,7 +19,8 @@
 .consultation-section--pricing { background: #f1f6f8; color: #102a43; }
 .consultation-section--contact { background: #0d2037; color: #fff; text-align: center; }
 .consultation-section h2 { max-width: 760px; margin-right: auto; margin-left: auto; color: #102a43; text-align: center; font-size: clamp(1.8rem, 3.5vw, 2.65rem); }
-.consultation-section--dark h2, .consultation-section--contact h2 { color: #fff; }
+.consultation-section--dark h2 { color: #fff; }
+.consultation-section--contact h2 { color: #102a43; }
 .consultation-section > .consultation-shell > .consultation-kicker { text-align: center; }
 .consultation-section--pricing .consultation-pricing .consultation-kicker { color: #245966; }
 .consultation-section-lead { max-width: 720px; margin: 18px auto 0; color: #526d7c; text-align: center; line-height: 1.85; }
@@ -54,7 +55,7 @@
 .consultation-faq details:last-child { border-bottom: 1px solid #d3e1e6; }
 .consultation-faq summary { cursor: pointer; padding: 20px 0; color: #102a43; font-weight: 600; line-height: 1.7; }
 .consultation-faq p { margin: 0; padding: 0 0 20px; color: #526d7c; line-height: 1.85; }
-.consultation-contact > p:not(.consultation-kicker) { margin: 22px auto 0; color: rgba(255,255,255,.74); line-height: 1.9; }
+.consultation-contact > p:not(.consultation-kicker) { margin: 22px auto 0; color: #526d7c; line-height: 1.9; }
 .consultation-contact .tk-button { margin-top: 30px; border-color: #bfdce5; background: #bfdce5; color: #1b2f4a; }
 @media (hover: hover) and (pointer: fine) { .consultation-contact .tk-button:hover { border-color: #66717C; background: #66717C; color: #fff; transform: none; } }
 @media (min-width: 760px) {
