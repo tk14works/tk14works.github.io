@@ -74,7 +74,7 @@
 .ai-reservation-preview__text { margin: 17px 0 0; color: #6b6b68; line-height: 1.85; }
 .ai-reservation-preview .tk-button { margin-top: 24px; border-color: #222222; background: #222222; color: #fff; }
 @media (hover: hover) and (pointer: fine) { .ai-reservation-preview .tk-button:hover { border-color: #333333; background: #333333; color: #fff; } }
-.ai-reservation-preview__points { display: grid; gap: 12px; padding: 25px; border-left: 2px solid #9aa99f; background: #f5f2f1; color: #4a4a48; }
+.ai-reservation-preview__points { display: grid; align-self: stretch; align-content: center; gap: 12px; padding: 25px; border-left: 2px solid #9aa99f; background: #f5f2f1; color: #4a4a48; }
 .ai-reservation-preview__points span { font-size: .9rem; }
 @media (min-width: 760px) {
   .reservation-hero__inner { width: min(100% - 40px, 840px); }
