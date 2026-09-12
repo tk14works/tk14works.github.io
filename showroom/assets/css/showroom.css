@@ -138,15 +138,14 @@ h1, h2, h3 { letter-spacing: -0.025em; }
 .work-card__description { flex: 0 1 auto; max-width: 100%; margin: 0; color: var(--muted); font-size: 0.84rem; }
 .work-card__link { display: inline-flex; flex: 0 0 auto; align-items: center; gap: 7px; min-height: 44px; margin: 0; color: var(--ink); font-size: 0.84rem; font-weight: 800; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 5px; white-space: nowrap; }
 
-.portfolio-cta { padding: clamp(64px, 8vw, 100px) 0; border-top: 1px solid #2b2b2b; color: #f8f8f8; background: #111111; text-align: center; }
-.portfolio-cta__inner { width: min(calc(100% - 48px), 760px); margin: 0 auto; }
-.portfolio-cta__eyebrow { margin: 0 0 18px; color: #bfc1c3; font-size: 0.72rem; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; }
-.portfolio-cta h2 { margin: 0 0 18px; color: #f8f8f8; font-size: clamp(28px, 4vw, 48px); line-height: 1.28; }
-.portfolio-cta__lead { max-width: 520px; margin: 0 auto; color: #d1d3d5; font-size: 0.92rem; }
-.portfolio-cta__list { display: flex; flex-wrap: wrap; justify-content: center; gap: 0; margin: 30px 0 32px; padding: 0; color: #d1d3d5; font-size: 0.84rem; list-style: none; }
-.portfolio-cta__list li { padding: 0 14px; border-right: 1px solid rgba(248, 248, 248, 0.28); }
-.portfolio-cta__list li:last-child { border-right: 0; }
-.portfolio-cta .button { min-width: min(100%, 320px); }
+.portfolio-cta { padding: clamp(76px, 9vw, 116px) 0; border-top: 1px solid #d3e1e6; color: #102a43; background: #e3edf0; text-align: center; }
+.portfolio-cta__inner { width: min(calc(100% - 40px), 1080px); margin: 0 auto; }
+.portfolio-cta__eyebrow { margin: 0 0 16px; color: #245966; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.16em; }
+.portfolio-cta h2 { margin: 0; color: #102a43; font-size: clamp(1.8rem, 3.5vw, 2.65rem); font-weight: 400; letter-spacing: 0.035em; line-height: 1.35; }
+.portfolio-cta__lead { margin: 22px auto 0; color: #526d7c; line-height: 1.9; }
+.portfolio-cta .button { min-height: 48px; margin-top: 30px; padding: 0 30px; border-color: #222222; border-radius: 3px; background: #222222; color: #fff; font-size: 1rem; font-weight: 600; letter-spacing: 0.06em; }
+.portfolio-cta .button:hover, .portfolio-cta .button:focus-visible { border-color: #333333; background: #333333; color: #fff; transform: none; }
+.portfolio-cta__message { margin: 22px auto 0; color: #526d7c; line-height: 1.9; }
 
 .works-note { margin: 40px 0 0; color: var(--muted); font-size: 0.75rem; }
 
@@ -198,11 +197,10 @@ h1, h2, h3 { letter-spacing: -0.025em; }
   .work-card__support { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; }
   .work-card__description { width: 100%; }
   .work-card h3 { font-size: 25px; }
-  .portfolio-cta { padding: 56px 0 48px; }
+  .portfolio-cta { padding: 72px 0; }
   .portfolio-cta__inner { width: min(calc(100% - 36px), var(--container)); margin: 0 auto; }
-  .portfolio-cta h2 { font-size: 32px; }
-  .portfolio-cta__list { flex-direction: column; align-items: center; gap: 7px; margin: 26px 0 28px; }
-  .portfolio-cta__list li { padding: 0; border-right: 0; }
+  .portfolio-cta h2 { font-size: clamp(1.55rem, 7vw, 1.85rem); }
+  .portfolio-cta__lead br { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
