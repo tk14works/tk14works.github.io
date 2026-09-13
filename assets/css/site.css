@@ -3294,6 +3294,13 @@ body.site-family .tk-hero__image.moment-hero-scroll-image {
   color: #f8f8f8;
 }
 
+.site-top .tk-footer,
+.site-ai .tk-footer,
+.profile-page .tk-footer,
+.site-family .tk-footer {
+  padding: 34px 20px 37px;
+}
+
 .tk-footer__year {
   display: inline-block;
   font-size: 0.88em;
