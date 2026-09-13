@@ -147,7 +147,9 @@ h1, h2, h3 { letter-spacing: -0.025em; }
 .portfolio-cta__lead { margin: 22px auto 0; color: #526d7c; line-height: 1.9; }
 .portfolio-cta .button { min-height: 48px; margin-top: 30px; padding: 0 30px; border-color: #222222; border-radius: 3px; background: #222222; color: #fff; font-size: 1rem; font-weight: 600; letter-spacing: 0.06em; }
 .portfolio-cta .button:hover, .portfolio-cta .button:focus-visible { border-color: #333333; background: #333333; color: #fff; transform: none; }
-.portfolio-cta__message { margin: 22px auto 0; color: #526d7c; line-height: 1.9; }
+.portfolio-cta__email { margin: 18px auto 0; color: #526d7c; line-height: 1.9; }
+.portfolio-cta__email a { color: inherit; text-decoration: underline; text-underline-offset: 0.2em; }
+.portfolio-cta__email a:hover, .portfolio-cta__email a:focus-visible { color: #245966; }
 
 .works-note { margin: 40px 0 10px; color: var(--muted); font-size: 0.75rem; }
 .works-note-mobile-break { display: none; }
