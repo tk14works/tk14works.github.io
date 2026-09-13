@@ -1,7 +1,7 @@
 /* AI & DX consultation page */
 .consultation-page { background: #f4f8f9; }
 .consultation-shell { width: min(100% - 40px, 1080px); margin: 0 auto; }
-.consultation-hero { padding: clamp(43px, 4.7vw, 59px) 0; background: linear-gradient(90deg, #1e1e1e 0%, #202020 100%); color: #fff; }
+.consultation-hero { padding: clamp(51px, 5.6vw, 70px) 0; background: linear-gradient(90deg, #1e1e1e 0%, #202020 100%); color: #fff; }
 .consultation-hero__inner { position: relative; top: -8px; max-width: 760px; }
 .consultation-kicker { margin: 0 0 16px; color: #245966; font-size: .72rem; font-weight: 700; letter-spacing: .16em; }
 .consultation-hero .consultation-kicker, .consultation-section--dark .consultation-kicker { color: #8ce0d9; }
@@ -11,7 +11,7 @@
 .consultation-section__mobile-break { display: none; }
 .consultation-hero__inner > p:not(.consultation-kicker) { margin: 20px 0 0; color: rgba(255,255,255,.78); line-height: 1.9; }
 .consultation-hero .ai-hero__button { margin-top: 24px; }
-.consultation-section { padding: clamp(51px, 6vw, 77px) 0; background: #fff; }
+.consultation-section { padding: clamp(61px, 7.2vw, 93px) 0; background: #fff; }
 .consultation-page #flow { background: #fff; color: #102a43; }
 .consultation-page #faq { background: #fff; color: #102a43; }
 .consultation-section--soft { background: #eaf2f5; }
@@ -67,12 +67,12 @@
 @media (max-width: 759px) {
   .consultation-page.site-ai .profile-nav { border-color: #d3e1e6; background: #e6f3f2; box-shadow: 0 20px 60px rgba(16,42,67,.14); }
   .consultation-page.site-ai .profile-nav a { color: #102a43; }
-  .consultation-hero { padding: 28px 0 31px; }
+  .consultation-hero { padding: 34px 0 37px; }
   .consultation-hero h1 { font-size: clamp(2rem, 9vw, 2.45rem); }
   .consultation-hero__mobile-break { display: inline; }
   .consultation-section__mobile-break { display: inline; }
   .consultation-hero__inner > p:not(.consultation-kicker) br { display: none; }
-  .consultation-section { padding: 48px 0; }
+  .consultation-section { padding: 58px 0; }
   .consultation-section h2 { font-size: clamp(1.55rem, 7vw, 1.85rem); }
   .consultation-audience, .consultation-topic-grid, .consultation-results { grid-template-columns: 1fr; }
   .consultation-audience article, .consultation-topic-grid article, .consultation-results article { padding: 24px; }
