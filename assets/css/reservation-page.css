@@ -10,7 +10,7 @@
 .reservation-hero__mobile-break { display: none; }
 .reservation-hero__copy > p:not(.reservation-eyebrow) { margin: 18px 0 0; color: rgba(255,255,255,.78); font-size: .9rem; line-height: 1.9; }
 .reservation-hero__copy .ai-hero__button { margin-top: 22px; }
-.reservation-section { padding: clamp(72px, 9vw, 112px) 0; background: #fff; }
+.reservation-section { padding: clamp(65px, 7.7vw, 99px) 0 clamp(76px, 9vw, 116px); background: #fff; }
 .reservation-section h2 { color: #102a43; font-size: clamp(1.7rem, 3.2vw, 2.55rem); }
 .reservation-section .reservation-kicker,
 .reservation-section h2,
@@ -112,7 +112,7 @@
   .reservation-hero__copy > p:not(.reservation-eyebrow) { font-size: .91rem; }
   .reservation-section--issues h2 { font-size: clamp(1.43rem, 6.1vw, 1.52rem); letter-spacing: .01em; }
   .reservation-hero__copy > p br, .reservation-contact > p br { display: none; }
-  .reservation-section { padding: 72px 0; }
+  .reservation-section { padding: 61px 0 72px; }
   .reservation-issues, .reservation-features { grid-template-columns: 1fr; }
   .reservation-features article:last-child { grid-column: auto; }
   .reservation-features article { min-height: 0; }
