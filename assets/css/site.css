@@ -1943,7 +1943,7 @@ body.site-family .tk-hero__image.moment-hero-scroll-image {
 
 .ai-hero {
   overflow: hidden;
-  padding: clamp(56px, 8vw, 108px) 20px;
+  padding: clamp(50px, 7.2vw, 97px) 20px;
   background: linear-gradient(135deg, #222222 0%, #333333 100%);
   color: #292929;
 }
