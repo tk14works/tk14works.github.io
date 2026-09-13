@@ -153,7 +153,7 @@ h1, h2, h3 { letter-spacing: -0.025em; }
 .works-note-mobile-break { display: none; }
 
 .tk-footer {
-  padding: 42px 20px;
+  padding: 34px 20px 37px;
   border-top: 1px solid rgba(255, 255, 255, 0.16);
   background: #111111;
   color: #f8f8f8;
