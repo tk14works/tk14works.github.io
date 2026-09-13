@@ -1,7 +1,7 @@
 /* Reservation service page and AI-page feature */
 .reservation-page { background: #f4f8f9; }
 .reservation-shell { width: min(100% - 40px, 1080px); margin: 0 auto; }
-.reservation-hero { padding: clamp(48px, 5vw, 64px) 0; background: #0e2340; color: #fff; }
+.reservation-hero { padding: clamp(48px, 5vw, 64px) 0; background: linear-gradient(90deg, #1e1e1e 0%, #202020 100%); color: #fff; }
 .reservation-hero__inner { display: block; }
 .reservation-hero__copy { max-width: 720px; margin: 0 auto; text-align: center; }
 .reservation-eyebrow, .reservation-kicker { margin: 0 0 16px; color: #75d4cd; font-size: .72rem; font-weight: 700; letter-spacing: .16em; }
@@ -61,12 +61,13 @@
 .reservation-faq details:last-child { border-bottom: 1px solid #d3e1e6; }
 .reservation-faq summary { cursor: pointer; padding: 20px 0; color: #102a43; font-weight: 600; line-height: 1.7; }
 .reservation-faq p { margin: 0; padding: 0 0 20px; color: #526d7c; line-height: 1.85; }
-.reservation-section--contact { background: #0d2037; color: #fff; text-align: center; }
-.reservation-section--contact h2 { color: #e1eaef; }
+.reservation-section--contact { background: #e3edf0; color: #102a43; text-align: center; }
+.reservation-section--contact h2 { color: #102a43; }
+.reservation-section--contact .reservation-kicker { color: #245966; }
 .reservation-contact .reservation-kicker { margin-bottom: 16px; }
-.reservation-contact > p:not(.reservation-kicker) { margin: 22px auto 0; color: rgba(255,255,255,.72); line-height: 1.9; }
-.reservation-contact .tk-button { margin-top: 30px; border-color: #bfdce5; background: #bfdce5; color: #1b2f4a; }
-@media (hover: hover) and (pointer: fine) { .reservation-contact .tk-button:hover { border-color: #66717C; background: #66717C; color: #fff; transform: none; } }
+.reservation-contact > p:not(.reservation-kicker) { margin: 22px auto 0; color: #526d7c; line-height: 1.9; }
+.reservation-contact .tk-button { margin-top: 30px; border-color: #222222; background: #222222; color: #fff; }
+@media (hover: hover) and (pointer: fine) { .reservation-contact .tk-button:hover { border-color: #333333; background: #333333; color: #fff; transform: none; } }
 .ai-reservation-preview { padding: clamp(58px, 7vw, 86px) 0; background: #f5f5f5; }
 .ai-reservation-preview__card { display: grid; grid-template-columns: minmax(0,1fr) minmax(260px,.56fr); gap: 34px; align-items: center; padding: clamp(28px,4vw,48px); border: 1px solid #d1d1ce; background: #fafafa; box-shadow: 0 16px 34px rgba(40,40,40,.07); }
 .ai-reservation-preview__label { margin: 0 0 14px; color: #71857a; font-size: .72rem; font-weight: 700; letter-spacing: .14em; }
