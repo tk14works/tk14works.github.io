@@ -1809,6 +1809,17 @@ body.site-family .tk-hero__image.moment-hero-scroll-image {
   background: #f4f8f9;
 }
 
+/* AI home section rhythm follows the consultation page while preserving its hero and pickup block. */
+.site-ai.ai-home .tk-section {
+  padding: clamp(65px, 7.7vw, 99px) 0 clamp(76px, 9vw, 116px);
+}
+
+@media (max-width: 759px) {
+  .site-ai.ai-home .tk-section {
+    padding: 61px 0 72px;
+  }
+}
+
 .site-ai.ai-home #support {
   background: #fff;
 }
