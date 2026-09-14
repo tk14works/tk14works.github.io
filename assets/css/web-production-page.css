@@ -27,8 +27,8 @@
 .webprod-section-lead { max-width: 720px; margin: 18px auto 0; color: var(--webprod-muted); line-height: 1.85; text-align: center; text-wrap: pretty; }
 
 .webprod-prose { max-width: 760px; text-align: center; }
-.webprod-prose p { margin: 24px auto 0; max-width: 720px; color: #526d7c; line-height: 1.9; text-wrap: pretty; }
-.webprod-prose p + p { margin-top: 14px; }
+.webprod-prose p:not(.webprod-kicker) { margin: 24px auto 0; max-width: 720px; color: #526d7c; line-height: 1.9; text-wrap: pretty; }
+.webprod-prose p:not(.webprod-kicker) + p:not(.webprod-kicker) { margin-top: 14px; }
 
 .webprod-problem-grid, .webprod-benefit-grid, .webprod-plan-grid, .webprod-flow-grid, .webprod-support-grid { display: grid; gap: 16px; margin-top: 42px; }
 .webprod-problem-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
