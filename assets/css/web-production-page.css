@@ -129,6 +129,11 @@
   .webprod-concept-break { display: block; }
 }
 
+@media (min-width: 1024px) {
+  #concept .webprod-prose { max-width: 1080px; }
+  #concept-title { max-width: none; font-size: clamp(1.85rem, 3vw, 2.35rem); }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .webprod-work-card { transition: none; }
 }
