@@ -69,6 +69,7 @@
 .webprod-plan-grid dt { color: #71857a; white-space: nowrap; }
 .webprod-plan-grid dd { color: #526d7c; }
 .webprod-plan-grid .tk-button { width: 100%; box-sizing: border-box; min-height: 46px; margin-top: 20px; }
+.webprod-plan-carousel-controls, .webprod-plan-carousel-dots { display: none; }
 
 .webprod-works-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; max-width: 920px; margin: 42px auto 0; }
 .webprod-work-card { display: block; padding: 30px; border: 1px solid var(--webprod-line); background: #fafafa; color: inherit; transition: border-color 180ms ease, transform 180ms ease; }
@@ -106,11 +107,10 @@
 
 @media (min-width: 760px) and (max-width: 1023px) {
   .webprod-shell { width: min(100% - 56px, 900px); }
-  .webprod-plan-grid, .webprod-flow-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .webprod-flow-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .webprod-choice-grid { grid-template-columns: 1fr; }
   .webprod-choice-grid article { width: 100%; max-width: 452px; box-sizing: border-box; margin-inline: auto; }
   .webprod-reassurance-break { display: inline; }
-  .webprod-plan-grid .webprod-plan--recommended { order: -1; }
 }
 
 @media (max-width: 759px) {
@@ -123,17 +123,87 @@
   .webprod-section h2 { font-size: clamp(1.4rem, 6vw, 1.75rem); letter-spacing: .025em; }
   .webprod-section-lead { margin-top: 16px; }
   .webprod-prose p { margin-top: 20px; }
-  .webprod-problem-grid, .webprod-benefit-grid, .webprod-choice-grid, .webprod-plan-grid, .webprod-works-grid, .webprod-flow-grid, .webprod-support-grid { grid-template-columns: 1fr; }
-  .webprod-problem-grid, .webprod-benefit-grid, .webprod-plan-grid, .webprod-flow-grid, .webprod-support-grid { margin-top: 32px; }
+  .webprod-problem-grid, .webprod-benefit-grid, .webprod-choice-grid, .webprod-works-grid, .webprod-flow-grid, .webprod-support-grid { grid-template-columns: 1fr; }
+  .webprod-problem-grid, .webprod-benefit-grid, .webprod-flow-grid, .webprod-support-grid { margin-top: 32px; }
   .webprod-problem-grid article, .webprod-benefit-grid article, .webprod-choice-grid article, .webprod-plan-grid article, .webprod-work-card, .webprod-flow-grid article, .webprod-support-grid article { padding: 22px 20px; }
   .webprod-work-card img { width: calc(100% + 40px); margin: -22px -20px 20px; }
   .webprod-choice-grid, .webprod-works-grid, .webprod-faq { margin-top: 32px; }
   .webprod-choice-grid article { width: 100%; max-width: 452px; box-sizing: border-box; margin-inline: auto; }
   .webprod-reassurance-break { display: inline; }
-  .webprod-plan-grid .webprod-plan--recommended { order: 0; }
   .webprod-plan-grid .tk-button { min-height: 48px; }
   .webprod-faq summary { padding: 18px 0; }
   .webprod-contact > p:not(.webprod-kicker) { margin-top: 18px; }
+}
+
+@media (max-width: 1023px) {
+  .webprod-plan-grid {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .webprod-plan-grid::-webkit-scrollbar { display: none; }
+  .webprod-plan-grid article {
+    flex: 0 0 min(76vw, 317px);
+    scroll-snap-align: center;
+  }
+  .webprod-plan-grid[data-carousel-ready] ~ .webprod-plan-carousel-controls {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 18px;
+  }
+  .webprod-plan-grid[data-carousel-ready] ~ .webprod-plan-carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 12px;
+  }
+  .webprod-plan-carousel-arrow {
+    display: inline-grid;
+    width: 40px;
+    height: 40px;
+    place-items: center;
+    padding: 0 0 2px;
+    border: 1px solid var(--webprod-line);
+    border-radius: 50%;
+    background: #fff;
+    color: var(--webprod-ink);
+    font-size: 1.45rem;
+    line-height: 1;
+    cursor: pointer;
+  }
+  .webprod-plan-carousel-arrow:hover:not(:disabled) { border-color: #71857a; }
+  .webprod-plan-carousel-arrow:disabled { opacity: .35; cursor: default; }
+  .webprod-plan-carousel-dots span {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #ccd3d0;
+  }
+  .webprod-plan-carousel-dots span.is-active { width: 20px; border-radius: 8px; background: #71857a; }
+}
+
+@media (min-width: 760px) and (max-width: 1023px) {
+  .webprod-plan-grid {
+    padding-inline: max(0px, calc((100% - 317px) / 2));
+    scroll-padding-inline: max(0px, calc((100% - 317px) / 2));
+  }
+}
+
+@media (max-width: 759px) {
+  .webprod-plan-grid {
+    width: calc(100% + 40px);
+    box-sizing: border-box;
+    margin-top: 32px;
+    margin-right: -20px;
+    margin-left: -20px;
+    padding-inline: calc((100vw - min(76vw, 317px)) / 2);
+    scroll-padding-inline: calc((100vw - min(76vw, 317px)) / 2);
+  }
 }
 
 @media (max-width: 359px) {

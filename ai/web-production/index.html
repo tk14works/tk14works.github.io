@@ -7,7 +7,7 @@
   <meta name="description" content="事業やサービスの目的に合わせたHP・LP制作。公開後の運用まで、今の仕事に合うWebサイトづくりを一緒に整理します。">
   <link rel="canonical" href="https://tk14.jp/ai/web-production/">
   <link rel="stylesheet" href="/assets/css/site.css?v=120">
-  <link rel="stylesheet" href="/assets/css/web-production-page.css?v=22">
+  <link rel="stylesheet" href="/assets/css/web-production-page.css?v=23">
 </head>
 <body class="profile-minimal site-ai web-production-page">
   <header class="profile-header">
@@ -113,7 +113,7 @@
         <p class="webprod-kicker" data-reveal>Plans</p>
         <h2 id="plans-title" data-reveal>制作プラン</h2>
         <p class="webprod-section-lead" data-reveal>ご希望の内容に合わせて、制作範囲と料金をご提案します。</p>
-        <div class="webprod-plan-grid" data-reveal>
+        <div class="webprod-plan-grid" data-reveal data-carousel data-carousel-initial-index="1" aria-label="HP・LP制作プラン">
           <article>
             <p class="webprod-plan__eyebrow">STARTER</p>
             <h3>まずは1ページから</h3>
@@ -135,6 +135,13 @@
             <dl><div><dt>価格</dt><dd>内容に応じてご提案</dd></div><div><dt>制作</dt><dd>目的に合わせたページ設計</dd></div><div><dt>規模</dt><dd>追加・更新を含む構成</dd></div><div><dt>サポート</dt><dd>公開後の更新・改善相談</dd></div></dl>
             <a class="tk-button tk-button--outline" href="#contact">相談する</a>
           </article>
+        </div>
+        <div class="webprod-plan-carousel-controls" aria-label="制作プランの切り替え">
+          <button class="webprod-plan-carousel-arrow" type="button" aria-label="前の制作プランへ" data-carousel-prev>‹</button>
+          <button class="webprod-plan-carousel-arrow" type="button" aria-label="次の制作プランへ" data-carousel-next>›</button>
+        </div>
+        <div class="webprod-plan-carousel-dots" data-carousel-dots aria-hidden="true">
+          <span></span><span></span><span></span>
         </div>
       </div>
     </section>
@@ -222,6 +229,6 @@
   </main>
 
   <footer class="tk-footer"><a href="/">© <span class="tk-footer__year">2026</span> tk14</a></footer>
-  <script src="/assets/js/site.js?v=15"></script>
+  <script src="/assets/js/site.js?v=16"></script>
 </body>
 </html>

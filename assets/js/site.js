@@ -139,7 +139,12 @@ document.querySelectorAll("[data-carousel]").forEach((carousel) => {
   const prevButton = container.querySelector("[data-carousel-prev]");
   const nextButton = container.querySelector("[data-carousel-next]");
   const cards = Array.from(carousel.children);
+  const requestedInitialIndex = Number.parseInt(carousel.dataset.carouselInitialIndex || "", 10);
+  const hasRequestedInitialIndex = Number.isInteger(requestedInitialIndex)
+    && requestedInitialIndex >= 0
+    && requestedInitialIndex < cards.length;
   let activeIndex = 0;
+  let initialPositionApplied = false;
 
   const updateCarouselState = () => {
     const center = carousel.scrollLeft + carousel.clientWidth / 2;
@@ -178,6 +183,21 @@ document.querySelectorAll("[data-carousel]").forEach((carousel) => {
     });
   };
 
+  const applyRequestedInitialPosition = () => {
+    const canScroll = carousel.scrollWidth > carousel.clientWidth + 1;
+    if (!canScroll) {
+      initialPositionApplied = false;
+      return;
+    }
+    if (!hasRequestedInitialIndex || initialPositionApplied) return;
+
+    const card = cards[requestedInitialIndex];
+    const maxScrollLeft = carousel.scrollWidth - carousel.clientWidth;
+    const centeredScrollLeft = card.offsetLeft - (carousel.clientWidth - card.clientWidth) / 2;
+    carousel.scrollLeft = Math.max(0, Math.min(centeredScrollLeft, maxScrollLeft));
+    initialPositionApplied = true;
+  };
+
   prevButton?.addEventListener("click", () => {
     scrollToCard(Math.max(activeIndex - 1, 0));
   });
@@ -187,8 +207,15 @@ document.querySelectorAll("[data-carousel]").forEach((carousel) => {
   });
 
   carousel.addEventListener("scroll", updateCarouselState, { passive: true });
-  window.addEventListener("resize", updateCarouselState);
-  updateCarouselState();
+  window.addEventListener("resize", () => {
+    applyRequestedInitialPosition();
+    updateCarouselState();
+  });
+  window.requestAnimationFrame(() => {
+    applyRequestedInitialPosition();
+    updateCarouselState();
+    carousel.dataset.carouselReady = "true";
+  });
 });
 
 document.querySelectorAll("[data-ai-feature-carousel]").forEach((carousel) => {
