@@ -106,16 +106,11 @@
 
 @media (min-width: 760px) and (max-width: 1023px) {
   .webprod-shell { width: min(100% - 56px, 900px); }
-  .webprod-problem-grid { grid-template-columns: 1fr; }
   .webprod-plan-grid, .webprod-flow-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .webprod-choice-grid { grid-template-columns: 1fr; }
   .webprod-choice-grid article { width: 100%; max-width: 452px; box-sizing: border-box; margin-inline: auto; }
   .webprod-reassurance-break { display: inline; }
   .webprod-plan-grid .webprod-plan--recommended { order: -1; }
-}
-
-@media (max-width: 1023px) {
-  .webprod-problem-grid article { width: 100%; max-width: 360px; box-sizing: border-box; margin-inline: auto; }
 }
 
 @media (max-width: 759px) {
@@ -131,7 +126,6 @@
   .webprod-problem-grid, .webprod-benefit-grid, .webprod-choice-grid, .webprod-plan-grid, .webprod-works-grid, .webprod-flow-grid, .webprod-support-grid { grid-template-columns: 1fr; }
   .webprod-problem-grid, .webprod-benefit-grid, .webprod-plan-grid, .webprod-flow-grid, .webprod-support-grid { margin-top: 32px; }
   .webprod-problem-grid article, .webprod-benefit-grid article, .webprod-choice-grid article, .webprod-plan-grid article, .webprod-work-card, .webprod-flow-grid article, .webprod-support-grid article { padding: 22px 20px; }
-  .webprod-problem-grid article { display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center; }
   .webprod-work-card img { width: calc(100% + 40px); margin: -22px -20px 20px; }
   .webprod-choice-grid, .webprod-works-grid, .webprod-faq { margin-top: 32px; }
   .webprod-choice-grid article { width: 100%; max-width: 452px; box-sizing: border-box; margin-inline: auto; }
@@ -140,6 +134,14 @@
   .webprod-plan-grid .tk-button { min-height: 48px; }
   .webprod-faq summary { padding: 18px 0; }
   .webprod-contact > p:not(.webprod-kicker) { margin-top: 18px; }
+}
+
+@media (min-width: 760px) and (max-width: 1099px) {
+  .webprod-problem-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 1099px) {
+  .webprod-problem-grid article { display: flex; flex-direction: column; align-items: center; gap: 12px; width: 100%; max-width: 360px; box-sizing: border-box; margin-inline: auto; text-align: center; }
 }
 
 @media (max-width: 1023px) {
