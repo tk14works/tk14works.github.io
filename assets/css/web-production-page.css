@@ -59,14 +59,14 @@
 .webprod-plan-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: start; }
 .webprod-plan-grid article { padding: 28px 24px; border: 1px solid var(--webprod-line); background: #fff; }
 .webprod-plan-grid .webprod-plan--recommended { border-color: #71857a; box-shadow: inset 0 2px 0 #71857a; }
-.webprod-plan__eyebrow { margin: 0; color: #71857a; font-size: .74rem; font-weight: 700; letter-spacing: .13em; }
+.webprod-plan__eyebrow { margin: 0; color: #71857a; font-size: .74rem; font-weight: 700; letter-spacing: .13em; text-align: center; }
 .webprod-plan__eyebrow span { display: inline-block; margin-left: 6px; padding: 3px 6px; border: 1px solid #9db7ad; color: #526d7c; font-size: .66rem; letter-spacing: .04em; }
-.webprod-plan-grid h3 { margin: 14px 0 0; font-size: 1.2rem; font-weight: 500; line-height: 1.5; }
-.webprod-plan__for { margin: 8px 0 0; color: var(--webprod-muted); font-size: .9rem; line-height: 1.6; }
+.webprod-plan-grid h3 { margin: 14px 0 0; font-size: 1.2rem; font-weight: 500; line-height: 1.5; text-align: center; }
+.webprod-plan__for { margin: 8px 0 0; color: var(--webprod-muted); font-size: .9rem; line-height: 1.6; text-align: center; }
 .webprod-plan-grid dl { display: grid; gap: 0; margin: 24px 0 0; }
-.webprod-plan-grid dl div { display: grid; grid-template-columns: 44px 1fr; gap: 10px; padding: 10px 0; border-top: 1px solid #e5e5e1; }
+.webprod-plan-grid dl div { display: grid; grid-template-columns: 4.25em minmax(0, 1fr); gap: 10px; padding: 10px 0; border-top: 1px solid #e5e5e1; }
 .webprod-plan-grid dt, .webprod-plan-grid dd { margin: 0; font-size: .86rem; line-height: 1.55; }
-.webprod-plan-grid dt { color: #71857a; }
+.webprod-plan-grid dt { color: #71857a; white-space: nowrap; }
 .webprod-plan-grid dd { color: #526d7c; }
 .webprod-plan-grid .tk-button { width: 100%; box-sizing: border-box; min-height: 46px; margin-top: 20px; }
 
