@@ -106,6 +106,9 @@
 @media (min-width: 760px) and (max-width: 1023px) {
   .webprod-shell { width: min(100% - 56px, 900px); }
   .webprod-problem-grid, .webprod-plan-grid, .webprod-flow-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .webprod-choice-grid { grid-template-columns: 1fr; }
+  .webprod-choice-grid article { width: 100%; max-width: 452px; box-sizing: border-box; margin-inline: auto; }
+  .webprod-reassurance-break { display: inline; }
   .webprod-plan-grid .webprod-plan--recommended { order: -1; }
 }
 
