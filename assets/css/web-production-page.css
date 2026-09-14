@@ -34,6 +34,7 @@
 .webprod-problem-grid, .webprod-benefit-grid, .webprod-plan-grid, .webprod-flow-grid, .webprod-support-grid { display: grid; gap: 16px; margin-top: 42px; }
 .webprod-problem-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .webprod-problem-grid article { display: grid; grid-template-columns: 30px 1fr; gap: 14px; align-items: start; padding: 24px; border: 1px solid var(--webprod-line); background: var(--webprod-card); }
+.webprod-problem-break { display: inline; }
 .webprod-problem-grid span, .webprod-flow-grid span { color: #71857a; font-size: .76rem; font-weight: 700; letter-spacing: .12em; }
 .webprod-problem-grid p, .webprod-benefit-grid p, .webprod-flow-grid p, .webprod-support-grid p { margin: 0; color: #526d7c; line-height: 1.75; text-wrap: pretty; }
 
@@ -105,11 +106,16 @@
 
 @media (min-width: 760px) and (max-width: 1023px) {
   .webprod-shell { width: min(100% - 56px, 900px); }
-  .webprod-problem-grid, .webprod-plan-grid, .webprod-flow-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .webprod-problem-grid { grid-template-columns: 1fr; }
+  .webprod-plan-grid, .webprod-flow-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .webprod-choice-grid { grid-template-columns: 1fr; }
   .webprod-choice-grid article { width: 100%; max-width: 452px; box-sizing: border-box; margin-inline: auto; }
   .webprod-reassurance-break { display: inline; }
   .webprod-plan-grid .webprod-plan--recommended { order: -1; }
+}
+
+@media (max-width: 1023px) {
+  .webprod-problem-grid article { width: 100%; max-width: 360px; box-sizing: border-box; margin-inline: auto; }
 }
 
 @media (max-width: 759px) {
