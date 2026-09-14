@@ -137,7 +137,7 @@
 }
 
 @media (min-width: 760px) and (max-width: 1099px) {
-  .webprod-problem-grid { grid-template-columns: 1fr; }
+  .webprod-problem-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 736px; margin-inline: auto; }
 }
 
 @media (max-width: 1099px) {
