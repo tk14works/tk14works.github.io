@@ -24,6 +24,7 @@
 .webprod-section h2 { max-width: 860px; margin-right: auto; margin-left: auto; color: var(--webprod-ink); font-size: clamp(1.8rem, 3.5vw, 2.65rem); text-align: center; }
 .webprod-section > .webprod-shell > .webprod-kicker { text-align: center; }
 .webprod-mobile-break { display: none; }
+.webprod-concept-break { display: none; }
 .webprod-section-lead { max-width: 720px; margin: 18px auto 0; color: var(--webprod-muted); line-height: 1.85; text-align: center; text-wrap: pretty; }
 
 .webprod-prose { max-width: 760px; text-align: center; }
@@ -122,6 +123,10 @@
   .webprod-plan-grid .tk-button { min-height: 48px; }
   .webprod-faq summary { padding: 18px 0; }
   .webprod-contact > p:not(.webprod-kicker) { margin-top: 18px; }
+}
+
+@media (max-width: 1023px) {
+  .webprod-concept-break { display: block; }
 }
 
 @media (prefers-reduced-motion: reduce) {
