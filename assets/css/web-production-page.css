@@ -37,6 +37,8 @@
 .webprod-problem-break { display: inline; }
 .webprod-problem-grid span, .webprod-flow-grid span { color: #71857a; font-size: .76rem; font-weight: 700; letter-spacing: .12em; }
 .webprod-problem-grid p, .webprod-benefit-grid p, .webprod-flow-grid p, .webprod-support-grid p { margin: 0; color: #526d7c; line-height: 1.75; text-wrap: pretty; }
+.webprod-benefit-grid p, .webprod-flow-grid p, .webprod-support-grid p { font-size: .94rem; text-wrap: wrap; }
+.webprod-copy-segment { white-space: nowrap; }
 
 .webprod-benefit-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .webprod-benefit-grid article { padding: 28px; border-top: 1px solid #9db7ad; border-bottom: 1px solid var(--webprod-line); }
@@ -108,6 +110,7 @@
 @media (min-width: 760px) and (max-width: 1023px) {
   .webprod-shell { width: min(100% - 56px, 900px); }
   .webprod-flow-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .webprod-support-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .webprod-choice-grid { grid-template-columns: 1fr; }
   .webprod-choice-grid article { width: 100%; max-width: 452px; box-sizing: border-box; margin-inline: auto; }
   .webprod-reassurance-break { display: inline; }
