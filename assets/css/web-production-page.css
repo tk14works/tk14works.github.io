@@ -1,4 +1,4 @@
-/* HP・LP制作 service page: calm AI brand system, with a compact service-detail rhythm. */
+/* ホームページ・LP制作 service page: calm AI brand system, with a compact service-detail rhythm. */
 .web-production-page {
   --webprod-ink: #292929;
   --webprod-muted: #6b6b68;
@@ -23,7 +23,7 @@
 .webprod-section--soft { background: var(--webprod-soft); }
 .webprod-section h2 { max-width: 860px; margin-right: auto; margin-left: auto; color: var(--webprod-ink); font-size: clamp(1.8rem, 3.5vw, 2.65rem); text-align: center; }
 .webprod-section > .webprod-shell > .webprod-kicker { text-align: center; }
-.webprod-mobile-break { display: none; }
+.webprod-mobile-break, .webprod-title-break, .webprod-concept-service-break, .webprod-faq-summary-break, .webprod-plan-spec-break { display: none; }
 .webprod-concept-break { display: none; }
 .webprod-section-lead { max-width: 720px; margin: 18px auto 0; color: var(--webprod-muted); line-height: 1.85; text-align: center; text-wrap: pretty; }
 
@@ -206,7 +206,17 @@
   }
 }
 
+@media (max-width: 479px) {
+  .webprod-concept-service-break { display: inline; }
+}
+
+@media (max-width: 1099px) {
+  .webprod-plan-spec-break { display: inline; }
+}
+
 @media (max-width: 359px) {
+  .webprod-title-break { display: inline; }
+  .webprod-faq-summary-break { display: inline; }
   .webprod-choice-title { column-gap: 14px; font-size: 1rem; }
   .webprod-choice-title__type { padding: 5px 8px 6px; font-size: 1.45rem; }
 }
