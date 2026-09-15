@@ -96,7 +96,7 @@
 .webprod-support-note { max-width: 760px; margin: 28px auto 0; color: var(--webprod-muted); font-size: .92rem; line-height: 1.8; text-align: center; }
 #after-support > .webprod-shell > .webprod-section-lead, .webprod-support-note { text-wrap: wrap; }
 
-.webprod-faq { display: grid; max-width: 860px; margin: 42px auto 0; }
+.webprod-faq { display: grid; max-width: 720px; margin: 42px auto 0; }
 .webprod-faq details { border-top: 1px solid var(--webprod-line); }
 .webprod-faq details:last-child { border-bottom: 1px solid var(--webprod-line); }
 .webprod-faq summary { cursor: pointer; padding: 20px 0; color: var(--webprod-ink); font-weight: 600; line-height: 1.7; }
