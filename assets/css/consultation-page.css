@@ -9,6 +9,10 @@
 .consultation-hero h1 { font-size: clamp(2.65rem, 4.5vw, 4.1rem); }
 .consultation-hero__mobile-break { display: none; }
 .consultation-section__mobile-break { display: none; }
+.consultation-for-you__compact-break { display: none; }
+.consultation-results__compact-break { display: none; }
+.consultation-faq__compact-line { display: inline; }
+.consultation-keep-together { white-space: nowrap; }
 .consultation-hero__inner > p:not(.consultation-kicker) { margin: 20px 0 0; color: rgba(255,255,255,.78); line-height: 1.9; }
 .consultation-hero .ai-hero__button { margin-top: 24px; }
 .consultation-section { padding: clamp(65px, 7.7vw, 99px) 0 clamp(76px, 9vw, 116px); background: #fff; }
@@ -31,7 +35,7 @@
 .consultation-audience p, .consultation-topic-grid p, .consultation-results p, .consultation-flow p { margin: 12px 0 0; color: #30475f; line-height: 1.8; }
 .consultation-topic-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; max-width: 1080px; margin: 42px auto 0; }
 .consultation-topic-grid article { padding: 28px; border: 1px solid #d3e1e6; background: #f8fcfd; }
-.consultation-topic-grid span, .consultation-results span, .consultation-flow > article > span { display: block; margin-bottom: 18px; color: #2b7a82; font-size: .76rem; font-weight: 700; letter-spacing: .12em; }
+.consultation-topic-grid > article > span, .consultation-results > article > span, .consultation-flow > article > span { display: block; margin-bottom: 18px; color: #2b7a82; font-size: .76rem; font-weight: 700; letter-spacing: .12em; }
 .consultation-results { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 44px; }
 .consultation-results article { padding: 30px; border: 1px solid #e1e9ed; background: #fff; box-shadow: 0 2px 8px rgba(16,42,67,.025); }
 .consultation-results h3 { color: #102a43; }
@@ -64,6 +68,10 @@
   #topics h2 { max-width: 920px; }
   #results h2 { max-width: 920px; }
 }
+@media (min-width: 760px) and (max-width: 919px) {
+  .consultation-topic-grid, .consultation-results { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .consultation-topic-grid article:last-child, .consultation-results article:last-child { grid-column: 1 / -1; width: calc((100% - 16px) / 2); justify-self: center; }
+}
 @media (max-width: 759px) {
   .consultation-page.site-ai .profile-nav { border-color: #d3e1e6; background: #e6f3f2; box-shadow: 0 20px 60px rgba(16,42,67,.14); }
   .consultation-page.site-ai .profile-nav a { color: #102a43; }
@@ -79,6 +87,22 @@
   .consultation-flow article { grid-template-columns: 40px 1fr; gap: 14px; }
   .consultation-faq { margin-top: 32px; }
   .consultation-price { margin-top: 28px; padding: 22px 14px; }
+}
+@media (max-width: 409px) {
+  .consultation-faq details:nth-child(1) .consultation-faq__compact-line,
+  .consultation-faq details:nth-child(2) .consultation-faq__compact-line { display: block; }
+}
+@media (max-width: 359px) {
+  .consultation-for-you__compact-break { display: inline; }
+  .consultation-results__compact-break { display: inline; }
+  .consultation-audience h3 { font-size: 1rem; }
+  .consultation-audience p { font-size: .94rem; letter-spacing: -.01em; }
+  .consultation-topic-grid article, .consultation-results article { padding: 20px; }
+  .consultation-topic-grid p, .consultation-results p { font-size: .94rem; letter-spacing: -.03em; }
+  .consultation-flow p { font-size: .94rem; letter-spacing: -.025em; }
+  .consultation-flow article { grid-template-columns: 30px 1fr; gap: 8px; }
+  .consultation-price__consultation-time { white-space: nowrap; }
+  .consultation-faq__compact-line--narrow { display: block; }
 }
 
 /* Consultation Contact follows the AI home Contact palette without being overridden by the shared AI selector. */
