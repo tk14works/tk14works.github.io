@@ -23,7 +23,7 @@
 .webprod-section--soft { background: var(--webprod-soft); }
 .webprod-section h2 { max-width: 860px; margin-right: auto; margin-left: auto; color: var(--webprod-ink); font-size: clamp(1.8rem, 3.5vw, 2.65rem); text-align: center; }
 .webprod-section > .webprod-shell > .webprod-kicker { text-align: center; }
-.webprod-mobile-break, .webprod-title-break, .webprod-concept-service-break, .webprod-faq-summary-break, .webprod-plan-spec-break, .webprod-contact-break--narrow-first, .webprod-contact-break--sentence, .webprod-contact-break--narrow-final, .webprod-after-support-lead-break, .webprod-after-support-note-break { display: none; }
+.webprod-mobile-break, .webprod-title-break, .webprod-concept-service-break, .webprod-faq-summary-break, .webprod-faq-summary-break--narrow, .webprod-faq-summary-break--compact, .webprod-plan-spec-break, .webprod-contact-break--narrow-first, .webprod-contact-break--sentence, .webprod-contact-break--narrow-final, .webprod-after-support-lead-break, .webprod-after-support-note-break { display: none; }
 .webprod-concept-break { display: none; }
 .webprod-after-support-lead-break { display: inline; }
 .webprod-section-lead { max-width: 720px; margin: 18px auto 0; color: var(--webprod-muted); line-height: 1.85; text-align: center; text-wrap: pretty; }
@@ -233,8 +233,13 @@
 
 @media (max-width: 409px) {
   .webprod-faq-summary-break { display: inline; }
+  .webprod-faq-summary-break--narrow { display: inline; }
   .webprod-contact-break--sentence { display: none; }
   .webprod-contact-break--narrow-first, .webprod-contact-break--narrow-final { display: inline; }
+}
+
+@media (max-width: 339px) {
+  .webprod-faq-summary-break--compact { display: inline; }
 }
 
 @media (max-width: 359px) {

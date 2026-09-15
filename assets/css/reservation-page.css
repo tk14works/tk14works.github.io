@@ -57,7 +57,7 @@
 .reservation-flow p { margin: 0; color: #526d7c; line-height: 1.8; }
 .reservation-page.site-ai #faq { background: #f1f6f8; color: #102a43; }
 .reservation-page.site-ai #faq .reservation-kicker { color: #245966; }
-.reservation-faq { display: grid; max-width: 760px; margin: 42px auto 0; }
+.reservation-faq { display: grid; max-width: 720px; margin: 42px auto 0; }
 .reservation-faq details { border-top: 1px solid #d3e1e6; }
 .reservation-faq details:last-child { border-bottom: 1px solid #d3e1e6; }
 .reservation-faq summary { display: grid; grid-template-columns: 8px 24px minmax(0, 1fr); column-gap: 8px; cursor: pointer; padding: 20px 0; color: #102a43; font-weight: 600; line-height: 1.7; list-style: none; }
