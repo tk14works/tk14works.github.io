@@ -127,6 +127,11 @@
   .reservation-page.site-ai .profile-nav { border-color: #d3e1e6; background: #e6f3f2; box-shadow: 0 20px 60px rgba(16,42,67,.14); }
   .reservation-page.site-ai .profile-nav a { color: #102a43; }
 }
+
+@media (max-width: 409px) {
+  .reservation-faq__mobile-break { display: inline; }
+}
+
 @media (max-width: 759px) {
   .reservation-section--contact h2 { font-size: clamp(1.48rem, 6.1vw, 1.58rem); }
   .reservation-page.site-ai .profile-nav { border-color: #d3e1e6; background: #e6f3f2; box-shadow: 0 20px 60px rgba(16,42,67,.14); }
@@ -150,7 +155,6 @@
   .reservation-slot figcaption { font-size: .9rem; }
   .reservation-flow article { grid-template-columns: 40px 1fr; gap: 14px; }
   .reservation-faq { margin-top: 32px; }
-  .reservation-faq__mobile-break { display: inline; }
   .reservation-faq p { font-size: .875rem; }
   .reservation-contact__mobile-break { display: inline; }
   .ai-reservation-preview__card { gap: 24px; padding: 28px 24px 24px; }
