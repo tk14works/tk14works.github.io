@@ -23,8 +23,9 @@
 .webprod-section--soft { background: var(--webprod-soft); }
 .webprod-section h2 { max-width: 860px; margin-right: auto; margin-left: auto; color: var(--webprod-ink); font-size: clamp(1.8rem, 3.5vw, 2.65rem); text-align: center; }
 .webprod-section > .webprod-shell > .webprod-kicker { text-align: center; }
-.webprod-mobile-break, .webprod-title-break, .webprod-concept-service-break, .webprod-faq-summary-break, .webprod-plan-spec-break, .webprod-contact-break--narrow-first, .webprod-contact-break--sentence, .webprod-contact-break--narrow-final { display: none; }
+.webprod-mobile-break, .webprod-title-break, .webprod-concept-service-break, .webprod-faq-summary-break, .webprod-plan-spec-break, .webprod-contact-break--narrow-first, .webprod-contact-break--sentence, .webprod-contact-break--narrow-final, .webprod-after-support-lead-break, .webprod-after-support-note-break { display: none; }
 .webprod-concept-break { display: none; }
+.webprod-after-support-lead-break { display: inline; }
 .webprod-section-lead { max-width: 720px; margin: 18px auto 0; color: var(--webprod-muted); line-height: 1.85; text-align: center; text-wrap: pretty; }
 
 .webprod-prose { max-width: 760px; text-align: center; }
@@ -93,6 +94,7 @@
 .webprod-support-grid h3 { margin: 0; font-size: 1.05rem; font-weight: 500; line-height: 1.6; }
 .webprod-support-grid p { margin-top: 10px; }
 .webprod-support-note { max-width: 760px; margin: 28px auto 0; color: var(--webprod-muted); font-size: .92rem; line-height: 1.8; text-align: center; }
+#after-support > .webprod-shell > .webprod-section-lead, .webprod-support-note { text-wrap: wrap; }
 
 .webprod-faq { display: grid; max-width: 860px; margin: 42px auto 0; }
 .webprod-faq details { border-top: 1px solid var(--webprod-line); }
@@ -114,6 +116,10 @@
   .webprod-choice-grid { grid-template-columns: 1fr; }
   .webprod-choice-grid article { width: 100%; max-width: 452px; box-sizing: border-box; margin-inline: auto; }
   .webprod-reassurance-break { display: inline; }
+}
+
+@media (min-width: 430px) {
+  .webprod-after-support-note-break { display: inline; }
 }
 
 @media (max-width: 759px) {
