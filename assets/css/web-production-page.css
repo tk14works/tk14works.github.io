@@ -231,7 +231,8 @@
   .webprod-choice-title__type { padding: 5px 8px 6px; font-size: 1.45rem; }
 }
 
-@media (max-width: 399px) {
+@media (max-width: 409px) {
+  .webprod-faq-summary-break { display: inline; }
   .webprod-contact-break--sentence { display: none; }
   .webprod-contact-break--narrow-first, .webprod-contact-break--narrow-final { display: inline; }
 }
