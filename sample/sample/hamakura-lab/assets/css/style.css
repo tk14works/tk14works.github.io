@@ -126,10 +126,10 @@ h3 { font-weight: 750; }
 @media (min-width: 820px) {
   .news-list__date {
     margin: 0;
-    align-self: end;
+    align-self: center;
     line-height: 1.25;
+    transform: translateY(3px);
   }
-  .news-list__title { align-self: end; }
 }
 .news-list__title { margin: 0; font-size: clamp(1.05rem, 1.8vw, 1.35rem); }
 .news-list__link { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 0 18px; border-radius: 999px; background: var(--deep-green); color: #fff; font-size: .82rem; font-weight: 900; white-space: nowrap; box-shadow: 0 3px 10px rgba(20, 92, 57, .08); }
