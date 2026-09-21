@@ -7,7 +7,7 @@
   <meta name="robots" content="noindex, nofollow, noarchive">
   <title>HamaKura Lab | 地域共助社会</title>
   <link rel="canonical" href="https://tk14.jp/sample/sample/hamakura-lab/">
-  <link rel="stylesheet" href="assets/css/style.css?v=20260911-100">
+  <link rel="stylesheet" href="assets/css/style.css?v=20260921-01">
 </head>
 <body id="top">
   <header class="site-header">
@@ -41,6 +41,24 @@
           <img class="hero__motif" src="assets/hero-connection.svg" alt="" aria-hidden="true">
           <div class="hero__line hero__line--one" aria-hidden="true"></div>
           <div class="hero__line hero__line--two" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="news section section--mint" id="news" aria-labelledby="news-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">NEW INFORMATION</p>
+          <h2 id="news-title">最新のお知らせ</h2>
+          <p class="section-lead">最新のお知らせや受付状況をこちらでご案内します。</p>
+        </div>
+
+        <div class="news-list">
+          <article class="news-list__item">
+            <p class="news-list__date">掲載年月</p>
+            <h3 class="news-list__title">お知らせのタイトル</h3>
+            <a class="news-list__link" href="news/notice-template/">詳しく見る <span aria-hidden="true">→</span></a>
+          </article>
         </div>
       </div>
     </section>
@@ -267,7 +285,7 @@
   <script>
     (() => {
       const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      const targets = [...document.querySelectorAll('.section-heading, .person-card, .message-card, .activities__list, .faq__list, .final-cta__inner')];
+      const targets = [...document.querySelectorAll('.section-heading, .news-list, .person-card, .message-card, .activities__list, .faq__list, .final-cta__inner')];
       if (reduceMotion || !('IntersectionObserver' in window)) return;
 
       targets.forEach((element, index) => {
