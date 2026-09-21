@@ -123,6 +123,9 @@ h3 { font-weight: 750; }
 .news-list { margin-top: 48px; border-top: 1px solid var(--line); }
 .news-list__item { display: grid; grid-template-columns: 132px minmax(0, 1fr) auto; gap: 24px; align-items: center; padding: 25px 4px; border-bottom: 1px solid var(--line); }
 .news-list__date { color: var(--deep-green); font-size: .8rem; font-weight: 900; letter-spacing: .06em; white-space: nowrap; }
+@media (min-width: 820px) {
+  .news-list__date { transform: translateY(4px); }
+}
 .news-list__title { margin: 0; font-size: clamp(1.05rem, 1.8vw, 1.35rem); }
 .news-list__link { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 0 18px; border-radius: 999px; background: var(--deep-green); color: #fff; font-size: .82rem; font-weight: 900; white-space: nowrap; box-shadow: 0 3px 10px rgba(20, 92, 57, .08); }
 .news-list__link:hover { background: var(--green); color: #fff; }
