@@ -124,7 +124,11 @@ h3 { font-weight: 750; }
 .news-list__item { display: grid; grid-template-columns: 132px minmax(0, 1fr) auto; gap: 24px; align-items: center; padding: 25px 4px; border-bottom: 1px solid var(--line); }
 .news-list__date { color: var(--deep-green); font-size: .8rem; font-weight: 900; letter-spacing: .06em; white-space: nowrap; }
 @media (min-width: 820px) {
-  .news-list__date,
+  .news-list__date {
+    margin: 0;
+    align-self: end;
+    line-height: 1.25;
+  }
   .news-list__title { align-self: end; }
 }
 .news-list__title { margin: 0; font-size: clamp(1.05rem, 1.8vw, 1.35rem); }
