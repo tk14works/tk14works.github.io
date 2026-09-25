@@ -164,6 +164,7 @@ h3 { font-weight: 750; }
 .tsunagu-section__inner { max-width: 860px; }
 .tsunagu-section h1, .tsunagu-section h2 { margin: 0; color: var(--ink); font-size: clamp(2rem, 4vw, 3.7rem); }
 .tsunagu-section h2 { font-size: clamp(1.7rem, 3.1vw, 2.75rem); }
+.tsunagu-activities-title__phrase { white-space: nowrap; }
 .tsunagu-section p { max-width: 800px; margin: 0 0 22px; font-size: 1.03rem; }
 .tsunagu-section__lead { max-width: 760px !important; margin: 32px 0 36px !important; color: var(--deep-green); font-size: clamp(1.2rem, 2vw, 1.55rem) !important; font-weight: 900; line-height: 1.65; }
 .tsunagu-inline-link { color: var(--deep-green); font-weight: 900; text-decoration: underline; text-underline-offset: .18em; }
