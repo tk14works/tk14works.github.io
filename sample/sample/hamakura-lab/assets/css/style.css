@@ -149,7 +149,7 @@ h3 { font-weight: 750; }
 .news-detail h1 { max-width: 760px; margin-bottom: 10px; overflow-wrap: anywhere; color: var(--ink); font-size: clamp(2.15rem, 4.4vw, 4.4rem); }
 .news-detail__image { width: min(100%, 460px); margin: 0 auto 22px; }
 .news-detail__image img { display: block; width: 100%; height: auto; border-radius: 18px; box-shadow: 0 12px 28px rgba(20, 92, 57, .12); }
-.news-detail__copy { max-width: 680px; margin: 0 auto; line-height: 1.8; }
+.news-detail__copy { max-width: 680px; margin: 0 auto; line-height: 1.8; text-align: center; }
 .news-detail__copy p { margin: 0; }
 .news-detail__copy p + p { margin-top: 10px; }
 .news-detail__mobile-break { display: none; }
