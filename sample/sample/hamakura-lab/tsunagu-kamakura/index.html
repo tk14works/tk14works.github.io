@@ -6,7 +6,7 @@
   <meta name="robots" content="noindex, nofollow, noarchive">
   <title>つなぐ鎌倉 | HamaKura Lab</title>
   <link rel="canonical" href="https://tk14.jp/sample/sample/hamakura-lab/tsunagu-kamakura/">
-  <link rel="stylesheet" href="../assets/css/style.css?v=20260925-2">
+  <link rel="stylesheet" href="../assets/css/style.css?v=20260925-3">
 </head>
 <body class="tsunagu-page" id="top">
   <header class="site-header">
@@ -15,7 +15,8 @@
         <span class="brand__logo-frame"><img class="brand__logo" src="../assets/hamakura-logo.png" width="2000" height="2000" alt=""></span>
         <span class="brand__name">HamaKura Lab</span>
       </a>
-      <nav class="site-nav" aria-label="メインナビゲーション">
+      <button class="site-menu-toggle" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="tsunagu-main-nav" data-home-nav-toggle>Menu</button>
+      <nav class="site-nav site-nav--home" id="tsunagu-main-nav" aria-label="メインナビゲーション" data-home-nav>
         <a href="../#people">対象の方</a>
         <a href="../#message">代表メッセージ</a>
         <a href="../#activities">活動実績</a>
@@ -132,5 +133,35 @@
   <footer class="site-footer">
     <div class="container site-footer__bottom"><small>© HamaKura Lab</small></div>
   </footer>
+  <script>
+    (() => {
+      const nav = document.querySelector('[data-home-nav]');
+      const toggle = document.querySelector('[data-home-nav-toggle]');
+      if (!nav || !toggle) return;
+
+      const setOpen = (isOpen) => {
+        nav.classList.toggle('is-open', isOpen);
+        toggle.setAttribute('aria-expanded', String(isOpen));
+        toggle.setAttribute('aria-label', isOpen ? 'メニューを閉じる' : 'メニューを開く');
+      };
+
+      toggle.addEventListener('click', () => setOpen(!nav.classList.contains('is-open')));
+      nav.addEventListener('click', (event) => {
+        if (event.target.closest('a')) setOpen(false);
+      });
+      document.addEventListener('click', (event) => {
+        if (!nav.contains(event.target) && !toggle.contains(event.target)) setOpen(false);
+      });
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && nav.classList.contains('is-open')) {
+          setOpen(false);
+          toggle.focus();
+        }
+      });
+      window.addEventListener('resize', () => {
+        if (window.innerWidth >= 960) setOpen(false);
+      });
+    })();
+  </script>
 </body>
 </html>
