@@ -394,7 +394,9 @@ details p { max-width: 100%; margin: -5px 0 22px; color: var(--muted); font-size
   .tsunagu-people-grid { grid-template-columns: 1fr; gap: 16px; }
   .tsunagu-people-grid section { padding: 24px 20px; }
   .tsunagu-access-image { margin-top: 32px; }
-  .tsunagu-page-actions { margin-top: 30px; }
+  .tsunagu-page-actions { gap: 8px; margin-top: 30px; }
+  .tsunagu-back-to-top { padding-inline: 14px; font-size: .8rem; }
+  .tsunagu-open-day-link { padding-inline: 10px; }
   .news-detail__image { margin-bottom: 18px; }
   .news-detail__back { margin-top: 32px; }
   .intro__heading h2 { font-size: clamp(1.35rem, 7vw, 1.75rem); letter-spacing: -.045em; }
