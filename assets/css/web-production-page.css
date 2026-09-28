@@ -178,6 +178,15 @@
   .webprod-contact-break--sentence { display: inline; }
 }
 
+@media (max-width: 369px) {
+  #benefits-title { font-size: 1.2rem; }
+}
+
+@media (max-width: 329px) {
+  .webprod-hero__lead { font-size: .95rem; }
+  .webprod-benefit-grid article > span { font-size: 1rem; }
+}
+
 @media (min-width: 760px) and (max-width: 1023px) {
   .webprod-plan { padding: 26px 22px; }
 }
