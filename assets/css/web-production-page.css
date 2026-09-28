@@ -81,7 +81,7 @@
 .webprod-plan-support__intro { margin: 0; color: var(--webprod-muted); font-size: .8rem; }
 .webprod-plan-support h3 { margin: 6px 0 0; font-size: 1.15rem; font-weight: 500; line-height: 1.5; }
 .webprod-plan-support__options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; max-width: 840px; margin: 22px auto 0; }
-.webprod-plan-support__option { padding-top: 15px; border-top: 1px solid var(--webprod-line); }
+.webprod-plan-support__option { min-width: 0; padding: 20px; border: 1px solid var(--webprod-line); background: var(--webprod-card); }
 .webprod-plan-support__option h4 { margin: 0; font-size: .96rem; font-weight: 600; }
 .webprod-plan-support__option p { margin: 6px 0 0; color: #526d7c; font-size: .88rem; line-height: 1.7; text-wrap: pretty; }
 .webprod-plan-support__option .webprod-plan-support__price { color: var(--webprod-muted); font-size: .84rem; }
