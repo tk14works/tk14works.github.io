@@ -23,7 +23,7 @@
 .webprod-section--soft { background: var(--webprod-soft); }
 .webprod-section h2 { max-width: 860px; margin-right: auto; margin-left: auto; color: var(--webprod-ink); font-size: clamp(1.8rem, 3.5vw, 2.65rem); text-align: center; }
 .webprod-section > .webprod-shell > .webprod-kicker { text-align: center; }
-.webprod-mobile-break, .webprod-title-break, .webprod-concept-service-break, .webprod-faq-summary-break, .webprod-faq-summary-break--narrow, .webprod-faq-summary-break--compact, .webprod-plan-spec-break, .webprod-contact-break--narrow-first, .webprod-contact-break--sentence, .webprod-contact-break--narrow-final, .webprod-after-support-lead-break, .webprod-after-support-note-break { display: none; }
+.webprod-mobile-break, .webprod-title-break, .webprod-concept-service-break, .webprod-faq-summary-break, .webprod-faq-summary-break--narrow, .webprod-faq-summary-break--compact, .webprod-contact-break--narrow-first, .webprod-contact-break--sentence, .webprod-contact-break--narrow-final, .webprod-after-support-lead-break, .webprod-after-support-note-break { display: none; }
 .webprod-concept-break { display: none; }
 .webprod-after-support-lead-break { display: inline; }
 .webprod-section-lead { max-width: 720px; margin: 18px auto 0; color: var(--webprod-muted); line-height: 1.85; text-align: center; text-wrap: pretty; }
@@ -59,20 +59,34 @@
   .webprod-choice-title > span:last-child { min-width: 0; }
 }
 
-.webprod-plan-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: stretch; }
-.webprod-plan-grid article { display: flex; flex-direction: column; padding: 28px 24px; border: 1px solid var(--webprod-line); background: #fff; }
-.webprod-plan-grid .webprod-plan--recommended { border-color: #71857a; box-shadow: inset 0 2px 0 #71857a; }
-.webprod-plan__eyebrow { margin: 0; color: #71857a; font-size: .74rem; font-weight: 700; letter-spacing: .13em; text-align: center; }
-.webprod-plan__eyebrow span { display: inline-block; margin-left: 6px; padding: 3px 6px; border: 1px solid #9db7ad; color: #526d7c; font-size: .66rem; letter-spacing: .04em; }
-.webprod-plan-grid h3 { margin: 14px 0 0; font-size: 1.2rem; font-weight: 500; line-height: 1.5; text-align: center; }
-.webprod-plan__for { margin: 8px 0 0; color: var(--webprod-muted); font-size: .9rem; line-height: 1.6; text-align: center; }
-.webprod-plan-grid dl { display: grid; gap: 0; margin: 24px 0 20px; }
-.webprod-plan-grid dl div { display: grid; grid-template-columns: 4.25em minmax(0, 1fr); gap: 10px; padding: 10px 0; border-top: 1px solid #e5e5e1; }
-.webprod-plan-grid dt, .webprod-plan-grid dd { margin: 0; font-size: .86rem; line-height: 1.55; }
-.webprod-plan-grid dt { color: #71857a; white-space: nowrap; }
-.webprod-plan-grid dd { color: #526d7c; }
-.webprod-plan-grid .tk-button { width: 100%; box-sizing: border-box; min-height: 46px; margin-top: auto; }
-.webprod-plan-carousel-controls, .webprod-plan-carousel-dots { display: none; }
+.webprod-plan-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: stretch; }
+.webprod-plan { display: flex; min-width: 0; flex-direction: column; padding: 30px; border: 1px solid var(--webprod-line); background: #fff; }
+.webprod-plan__eyebrow { margin: 0; color: #71857a; font-size: .74rem; font-weight: 700; letter-spacing: .1em; }
+.webprod-plan h3 { min-height: 3em; margin: 16px 0 0; font-size: 1.22rem; font-weight: 500; line-height: 1.5; text-wrap: balance; }
+.webprod-plan__for { min-height: 3.2em; margin: 8px 0 0; color: var(--webprod-muted); font-size: .9rem; line-height: 1.6; text-wrap: balance; }
+.webprod-plan__price { margin: 26px 0 0; color: var(--webprod-ink); line-height: 1.4; }
+.webprod-plan__price strong { font-size: clamp(1.5rem, 2.5vw, 1.85rem); font-weight: 600; letter-spacing: .02em; white-space: nowrap; }
+.webprod-plan__price span, .webprod-plan-support__price span { margin-left: 4px; color: var(--webprod-muted); font-size: .82rem; }
+.webprod-plan dl { display: grid; margin: 20px 0 24px; }
+.webprod-plan dl div { display: grid; grid-template-columns: 5.4em minmax(0, 1fr); gap: 12px; padding: 10px 0; border-top: 1px solid #e5e5e1; }
+.webprod-plan dt, .webprod-plan dd { margin: 0; font-size: .87rem; line-height: 1.55; }
+.webprod-plan dt { color: #71857a; white-space: nowrap; }
+.webprod-plan dd { color: #526d7c; }
+.webprod-plan .tk-button { width: 100%; box-sizing: border-box; min-height: 46px; margin-top: auto; }
+.webprod-plan .tk-button, .webprod-plan-support .tk-button { flex-wrap: wrap; }
+.webprod-plan-cta-phrase { white-space: nowrap; }
+.webprod-plan-support { display: flex; align-items: flex-end; justify-content: space-between; gap: 32px; margin-top: 32px; padding: 28px 30px; border: 1px solid var(--webprod-line); background: #fafafa; }
+.webprod-plan-support__body { max-width: 720px; }
+.webprod-plan-support__intro { margin: 0; color: #71857a; font-size: .82rem; font-weight: 600; }
+.webprod-plan-support h3 { margin: 9px 0 0; font-size: 1.15rem; font-weight: 500; line-height: 1.5; }
+.webprod-plan-support__price { margin: 12px 0 0; font-size: .94rem; }
+.webprod-plan-support__price strong { font-size: 1.3rem; font-weight: 600; white-space: nowrap; }
+.webprod-plan-support__description { margin: 12px 0 0; color: #526d7c; font-size: .9rem; line-height: 1.75; text-wrap: balance; }
+.webprod-plan-support .tk-button { flex: 0 0 auto; min-height: 46px; }
+.webprod-plan-notes { max-width: 840px; margin: 26px auto 0; color: var(--webprod-muted); text-align: center; }
+.webprod-plan-notes p { margin: 0; line-height: 1.8; }
+.webprod-plan-notes p + p { margin-top: 8px; font-size: .82rem; }
+.webprod-plan-lead-keep, .webprod-plan-support__phrase, .webprod-plan-note-keep { white-space: nowrap; }
 
 .webprod-works-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; max-width: 920px; margin: 42px auto 0; }
 .webprod-work-card { display: block; padding: 30px; border: 1px solid var(--webprod-line); background: #fafafa; color: inherit; transition: border-color 180ms ease, transform 180ms ease; }
@@ -134,94 +148,37 @@
   .webprod-prose p { margin-top: 20px; }
   .webprod-problem-grid, .webprod-benefit-grid, .webprod-choice-grid, .webprod-works-grid, .webprod-flow-grid, .webprod-support-grid { grid-template-columns: 1fr; }
   .webprod-problem-grid, .webprod-benefit-grid, .webprod-flow-grid, .webprod-support-grid { margin-top: 32px; }
-  .webprod-problem-grid article, .webprod-benefit-grid article, .webprod-choice-grid article, .webprod-plan-grid article, .webprod-work-card, .webprod-flow-grid article, .webprod-support-grid article { padding: 22px 20px; }
+  .webprod-problem-grid article, .webprod-benefit-grid article, .webprod-choice-grid article, .webprod-work-card, .webprod-flow-grid article, .webprod-support-grid article { padding: 22px 20px; }
   .webprod-work-card img { width: calc(100% + 40px); margin: -22px -20px 20px; }
   .webprod-choice-grid, .webprod-works-grid, .webprod-faq { margin-top: 32px; }
   .webprod-choice-grid article { width: 100%; max-width: 452px; box-sizing: border-box; margin-inline: auto; }
   .webprod-reassurance-break { display: inline; }
-  .webprod-plan-grid .tk-button { min-height: 48px; }
+  .webprod-plan-grid { grid-template-columns: 1fr; margin-top: 32px; }
+  .webprod-plan { padding: 22px 20px; }
+  .webprod-plan h3, .webprod-plan__for { min-height: 0; }
+  .webprod-plan__price { margin-top: 20px; }
+  .webprod-plan .tk-button { min-height: 48px; }
+  .webprod-plan-support { display: block; margin-top: 24px; padding: 22px 20px; }
+  .webprod-plan-support .tk-button { width: 100%; box-sizing: border-box; margin-top: 20px; }
+  .webprod-plan-notes { margin-top: 22px; text-align: left; }
   .webprod-faq summary { padding: 18px 0; }
   .webprod-contact > p:not(.webprod-kicker) { margin-top: 18px; }
   .webprod-contact-break--sentence { display: inline; }
 }
 
-@media (max-width: 1023px) {
-  .webprod-plan-grid {
-    display: flex;
-    gap: 16px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-  }
-
-  .webprod-plan-grid::-webkit-scrollbar { display: none; }
-  .webprod-plan-grid article {
-    flex: 0 0 min(76vw, 317px);
-    scroll-snap-align: center;
-  }
-  .webprod-plan-grid[data-carousel-ready] ~ .webprod-plan-carousel-controls {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    margin-top: 18px;
-  }
-  .webprod-plan-grid[data-carousel-ready] ~ .webprod-plan-carousel-dots {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-    margin-top: 12px;
-  }
-  .webprod-plan-carousel-arrow {
-    display: inline-grid;
-    width: 40px;
-    height: 40px;
-    place-items: center;
-    padding: 0 0 2px;
-    border: 1px solid var(--webprod-line);
-    border-radius: 50%;
-    background: #fff;
-    color: var(--webprod-ink);
-    font-size: 1.45rem;
-    line-height: 1;
-    cursor: pointer;
-  }
-  .webprod-plan-carousel-arrow:hover:not(:disabled) { border-color: #71857a; }
-  .webprod-plan-carousel-arrow:disabled { opacity: .35; cursor: default; }
-  .webprod-plan-carousel-dots span {
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background: #ccd3d0;
-  }
-  .webprod-plan-carousel-dots span.is-active { width: 20px; border-radius: 8px; background: #71857a; }
-}
-
 @media (min-width: 760px) and (max-width: 1023px) {
-  .webprod-plan-grid {
-    padding-inline: max(0px, calc((100% - 317px) / 2));
-    scroll-padding-inline: max(0px, calc((100% - 317px) / 2));
-  }
+  .webprod-plan { padding: 26px 22px; }
+  .webprod-plan__for { min-height: 4.8em; }
 }
 
-@media (max-width: 759px) {
-  .webprod-plan-grid {
-    width: calc(100% + 40px);
-    box-sizing: border-box;
-    margin-top: 32px;
-    margin-right: -20px;
-    margin-left: -20px;
-    padding-inline: calc((100vw - min(76vw, 317px)) / 2);
-    scroll-padding-inline: calc((100vw - min(76vw, 317px)) / 2);
-  }
+@media (max-width: 1023px) {
+  .webprod-plan .tk-button { padding-inline: 12px; font-size: .9rem; }
+  .webprod-plan-support { display: block; }
+  .webprod-plan-support .tk-button { margin-top: 20px; }
 }
 
 @media (max-width: 479px) {
   .webprod-concept-service-break { display: inline; }
-}
-
-@media (max-width: 1099px) {
-  .webprod-plan-spec-break { display: inline; }
 }
 
 @media (max-width: 359px) {
