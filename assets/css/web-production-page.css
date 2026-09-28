@@ -177,6 +177,10 @@
   .webprod-benefit-grid article > span { font-size: 1rem; }
 }
 
+@media (max-width: 327px) {
+  .webprod-plan-notes p:first-child { font-size: .96rem; }
+}
+
 @media (min-width: 760px) and (max-width: 1023px) {
   .webprod-plan { padding: 26px 22px; }
 }
