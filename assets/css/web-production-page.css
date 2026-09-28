@@ -84,7 +84,7 @@
 .webprod-plan-support__description { margin: 12px 0 0; color: #526d7c; font-size: .9rem; line-height: 1.75; text-wrap: balance; }
 .webprod-plan-support .tk-button { flex: 0 0 auto; min-height: 46px; }
 .webprod-plan-notes { max-width: 840px; margin: 26px auto 0; color: var(--webprod-muted); text-align: center; }
-.webprod-plan-notes p { margin: 0; line-height: 1.8; }
+.webprod-plan-notes p { margin: 0; line-height: 1.8; text-wrap: balance; }
 .webprod-plan-notes p + p { margin-top: 8px; font-size: .82rem; }
 .webprod-plan-lead-keep, .webprod-plan-support__phrase, .webprod-plan-note-keep { white-space: nowrap; }
 
