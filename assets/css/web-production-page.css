@@ -235,3 +235,7 @@
 @media (prefers-reduced-motion: reduce) {
   .webprod-work-card { transition: none; }
 }
+
+@media (max-width: 959px) {
+  .site-ai.web-production-page .profile-nav a { color: #f4fbfb; }
+}
