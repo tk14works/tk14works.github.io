@@ -1,0 +1,12 @@
+/* Shared compact-menu palette for the four AI pages. */
+@media (max-width: 959px) {
+  .profile-minimal.site-ai .profile-nav {
+    border-color: rgba(248, 248, 248, 0.18);
+    background: #272d36;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  }
+
+  .profile-minimal.site-ai .profile-nav a {
+    color: #f4fbfb;
+  }
+}

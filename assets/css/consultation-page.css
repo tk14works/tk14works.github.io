@@ -73,8 +73,6 @@
   .consultation-topic-grid article:last-child, .consultation-results article:last-child { grid-column: 1 / -1; width: calc((100% - 16px) / 2); justify-self: center; }
 }
 @media (max-width: 759px) {
-  .consultation-page.site-ai .profile-nav { border-color: #d3e1e6; background: #e6f3f2; box-shadow: 0 20px 60px rgba(16,42,67,.14); }
-  .consultation-page.site-ai .profile-nav a { color: #102a43; }
   .consultation-hero { padding: 42px 0 46px; }
   .consultation-hero h1 { font-size: clamp(2rem, 9vw, 2.45rem); }
   .consultation-hero__mobile-break { display: inline; }
